@@ -43,6 +43,13 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "a8ca3189-2ccc-44f8-94fe-36de10b42e12"
+      }
+    },
+    "owner": "the-duck-company"
   }
 }
