@@ -1,0 +1,174 @@
+definitions:
+    ErrorDetails:
+        description: Error response
+        example:
+            ErrorDetails:
+                ErrorDateTime: XXXXXXXXXX
+                Message: XXXXXXXXXX
+                RequestedMethod: XXXXXXXXXX
+                RequestedUrl: XXXXXXXXXX
+                TransactionId: XXXXXXXXXX
+        properties:
+            ErrorDateTime:
+                type: string
+            Message:
+                type: string
+            RequestedMethod:
+                type: string
+            RequestedUrl:
+                type: string
+            TransactionId:
+                type: string
+        required:
+        - TransactionId
+        - ErrorDateTime
+        - Message
+        - RequestedUrl
+        - RequestedMethod
+        type: object
+    Response:
+        description: Successful response
+        example:
+            ROUTES:
+            -   background_colour: XXXXXXXXXX
+                contract_id: XXXXXXXXXX
+                depot_name: XXXXXXXXXX
+                efa_route_name: XXXXXXXXXX
+                first_twitter_handle: XXXXXXXXXX
+                foreground_colour: XXXXXXXXXX
+                lp_contact_number: XXXXXXXXXX
+                lp_email: XXXXXXXXXX
+                lp_weekday_hours: XXXXXXXXXX
+                mot_for_interchange: XXXXXXXXXX
+                mot_for_interchange_id: XXXXXXXXXX
+                my_timetable_route_name: XXXXXXXXXX
+                operator_id: XXXXXXXXXX
+                operator_name: XXXXXXXXXX
+                region: XXXXXXXXXX
+                regional_trains: XXXXXXXXXX
+                route_search_name: XXXXXXXXXX
+                route_type: XXXXXXXXXX
+                route_variant_type: XXXXXXXXXX
+                second_twitter_handle: XXXXXXXXXX
+                service_direction_name: XXXXXXXXXX
+                start_date: XXXXXXXXXX
+                tariff_type: XXXXXXXXXX
+                text_colour: XXXXXXXXXX
+                transport_name: XXXXXXXXXX
+                transport_name_id: XXXXXXXXXX
+        properties:
+            ROUTE:
+                items:
+                    properties:
+                        background_colour:
+                            type: string
+                        contract_id:
+                            type: string
+                        depot_name:
+                            type: string
+                        efa_route_name:
+                            type: string
+                        first_twitter_handle:
+                            type: string
+                        foreground_colour:
+                            type: string
+                        lp_contact_number:
+                            type: string
+                        lp_email:
+                            type: string
+                        lp_weekday_hours:
+                            type: string
+                        mot_for_interchange:
+                            type: string
+                        mot_for_interchange_id:
+                            type: string
+                        my_timetable_route_name:
+                            type: string
+                        operator_id:
+                            type: string
+                        operator_name:
+                            type: string
+                        region:
+                            type: string
+                        regional_trains:
+                            type: string
+                        route_search_name:
+                            type: string
+                        route_type:
+                            type: string
+                        route_variant_type:
+                            type: string
+                        second_twitter_handle:
+                            type: string
+                        service_direction_name:
+                            type: string
+                        start_date:
+                            type: string
+                        tariff_type:
+                            type: string
+                        text_colour:
+                            type: string
+                        transport_name:
+                            type: string
+                        transport_name_id:
+                            type: string
+                    type: object
+                type: array
+        type: object
+host: api.transport.nsw.gov.au
+info:
+    description: Transport Routes
+    title: Transport Routes
+    version: '1.0'
+parameters:
+    route:
+        description: Route name to query
+        in: query
+        name: route
+        required: true
+        type: string
+paths:
+    /v1/routes:
+        get:
+            consumes:
+            - application/json
+            operationId: get-file-list
+            parameters:
+            -   $ref: '#/parameters/route'
+            produces:
+            - application/json
+            responses:
+                '200':
+                    description: Request has been processed successfully
+                    schema:
+                        $ref: '#/definitions/Response'
+                '401':
+                    description: The application calling the API has not been authenticated.
+                    schema:
+                        $ref: '#/definitions/ErrorDetails'
+                '404':
+                    description: The requested resource could not be found.
+                    schema:
+                        $ref: '#/definitions/ErrorDetails'
+                '500':
+                    description: An internal error has occurred.
+                    schema:
+                        $ref: '#/definitions/ErrorDetails'
+                '503':
+                    description: The server is currently unavailable.
+                    schema:
+                        $ref: '#/definitions/ErrorDetails'
+            summary: Transport Routes
+            tags:
+            - routes
+schemes:
+- https
+security:
+-   APIKey: []
+securityDefinitions:
+    APIKey:
+        description: 'Expected Format: apikey [TOKEN]'
+        in: header
+        name: Authorization
+        type: apiKey
+swagger: '2.0'
