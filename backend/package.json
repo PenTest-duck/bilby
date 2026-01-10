@@ -1,12 +1,28 @@
 {
-  "name": "express",
+  "name": "bilby-backend",
+  "version": "1.0.0",
   "type": "module",
+  "scripts": {
+    "dev": "tsx src/server.ts",
+    "dev:vercel": "vercel dev",
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "start": "node dist/index.js"
+  },
   "dependencies": {
-    "express": "5.1.0"
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "5.1.0",
+    "redis": "^5.10.0",
+    "zod": "^3.25.76"
   },
   "devDependencies": {
-    "@types/node": "20.11.17",
+    "@types/cors": "^2.8.17",
     "@types/express": "5.0.0",
-    "typescript": "5.8.3"
+    "@types/node": "20.11.17",
+    "@vercel/node": "^5.0.0",
+    "tsx": "^4.21.0",
+    "typescript": "5.8.3",
+    "vercel": "^41.0.0"
   }
 }

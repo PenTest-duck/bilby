@@ -1,17 +1,43 @@
-import express from 'express'
+/**
+ * Bilby Backend - Express Application
+ * Main entry point for Vercel serverless deployment
+ */
 
-const app = express()
+import express, { type Express } from 'express'
+import { corsMiddleware } from './middleware/cors.js'
+import { requestLogger } from './middleware/request-logger.js'
+import { errorHandler } from './middleware/error-handler.js'
+import { NotFoundError } from './lib/errors.js'
+import apiRouter from './api/index.js'
 
+const app: Express = express()
+
+// Trust proxy (for correct client IP behind Vercel)
+app.set('trust proxy', true)
+
+// Middleware stack
+app.use(corsMiddleware)
+app.use(express.json({ limit: '1mb' }))
+app.use(requestLogger)
+
+// API routes
+app.use('/api', apiRouter)
+
+// Root endpoint
 app.get('/', (_req, res) => {
-  res.send('Hello Express!')
+  res.json({ 
+    name: 'Bilby API',
+    version: '1.0.0',
+    docs: '/api/health'
+  })
 })
 
-app.get('/api/users/:id', (_req, res) => {
-  res.json({ id: _req.params.id })
+// 404 handler for unknown routes
+app.use((_req, _res, next) => {
+  next(new NotFoundError('Endpoint not found'))
 })
 
-app.get('/api/posts/:postId/comments/:commentId', (_req, res) => {
-  res.json({ postId: _req.params.postId, commentId: _req.params.commentId })
-})
+// Global error handler (must be last)
+app.use(errorHandler)
 
 export default app
