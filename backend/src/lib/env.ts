@@ -22,6 +22,7 @@ function loadEnvConfig(): EnvConfig {
     redisUrl: getEnvVar('REDIS_URL'),
     tfnswApiKey: getEnvVar('TFNSW_API_KEY'),
     supabaseUrl: getEnvVar('SUPABASE_URL'),
+    supabasePublishableKey: getEnvVar('SUPABASE_PUBLISHABLE_KEY'),
     supabaseSecretKey: getEnvVar('SUPABASE_SECRET_KEY'),
   }
 }

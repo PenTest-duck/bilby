@@ -42,5 +42,6 @@ export interface EnvConfig {
   redisUrl: string | undefined
   tfnswApiKey: string | undefined
   supabaseUrl: string | undefined
+  supabasePublishableKey: string | undefined
   supabaseSecretKey: string | undefined
 }
