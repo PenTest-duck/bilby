@@ -147,7 +147,7 @@ TFNSW_API_KEY=your_api_key_here
 
 # Supabase (for later use)
 SUPABASE_URL=https://your-project.supabase.co
-SUPABASE_SERVICE_KEY=your_service_key_here
+SUPABASE_SECRET_KEY=your_secret_key_here
 
 # Environment
 NODE_ENV=development

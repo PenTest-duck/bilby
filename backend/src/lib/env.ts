@@ -3,6 +3,7 @@
  * Validates required vars at startup
  */
 
+import 'dotenv/config'
 import type { EnvConfig } from '../types/index.js'
 
 function getEnvVar(key: string, required: boolean = false): string | undefined {
@@ -21,7 +22,7 @@ function loadEnvConfig(): EnvConfig {
     redisUrl: getEnvVar('REDIS_URL'),
     tfnswApiKey: getEnvVar('TFNSW_API_KEY'),
     supabaseUrl: getEnvVar('SUPABASE_URL'),
-    supabaseServiceKey: getEnvVar('SUPABASE_SERVICE_KEY'),
+    supabaseSecretKey: getEnvVar('SUPABASE_SECRET_KEY'),
   }
 }
 

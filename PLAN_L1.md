@@ -53,7 +53,7 @@
 
 ---
 
-## L1-02: TfNSW Data Layer
+## L1-02: TfNSW Data Layer ✅
 
 **Goal:** Build edge pollers that fetch, normalize, and cache TfNSW data in Redis.
 
