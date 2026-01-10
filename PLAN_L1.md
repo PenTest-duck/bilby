@@ -88,7 +88,7 @@
 
 ---
 
-## L1-03: Core Backend API
+## L1-03: Core Backend API ✅
 
 **Goal:** Expose mobile-friendly endpoints that read from Redis and apply ranking logic.
 
