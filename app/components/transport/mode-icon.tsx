@@ -3,7 +3,7 @@
  * Official TfNSW mode symbols
  */
 
-import { Image } from 'expo-image';
+import { Image, ImageStyle } from 'expo-image';
 import { View, StyleSheet, ViewStyle } from 'react-native';
 import { TransportColors } from '@/constants/theme';
 
@@ -12,7 +12,7 @@ type TransportMode = 'train' | 'metro' | 'bus' | 'ferry' | 'lightRail' | 'coach'
 interface ModeIconProps {
   mode: TransportMode | number;
   size?: 'sm' | 'md' | 'lg' | 'xl';
-  style?: ViewStyle;
+  style?: ViewStyle | ImageStyle;
 }
 
 const MODE_IMAGES = {
@@ -75,7 +75,7 @@ export function ModeIcon({ mode, size = 'md', style }: ModeIconProps) {
       source={imageSource}
       style={[
         { width: dimension, height: dimension, borderRadius: 6 },
-        style,
+        style as ImageStyle,
       ]}
       contentFit="contain"
       transition={200}

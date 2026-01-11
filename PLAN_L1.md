@@ -249,7 +249,7 @@
 
 ---
 
-## L1-07: Real-Time & Disruptions
+## L1-07: Real-Time & Disruptions ✅
 
 **Goal:** Implement live updates and disruption-first UX.
 
@@ -293,7 +293,7 @@
 
 ### Scope
 - **Map integration:**
-  - React Native Maps setup
+  - Expo Maps setup
   - Sydney-region default view
 - **Transit map view:**
   - Route polylines
@@ -505,12 +505,12 @@ Phase 4 (Launch):
 ## L2 Plans (To Be Created)
 
 - [x] L2-01: Backend Foundation → `PLAN_L2_01_SETUP.md`
-- [ ] L2-02: TfNSW Data Layer
-- [ ] L2-03: Core Backend API
-- [ ] L2-04: Supabase Integration
-- [ ] L2-05: Mobile App Foundation
-- [ ] L2-06: Core Mobile Screens
-- [ ] L2-07: Real-Time & Disruptions
+- [x] L2-02: TfNSW Data Layer
+- [x] L2-03: Core Backend API
+- [x] L2-04: Supabase Integration
+- [x] L2-05: Mobile App Foundation
+- [x] L2-06: Core Mobile Screens
+- [x] L2-07: Real-Time & Disruptions
 - [ ] L2-08: Maps & Visualization
 - [ ] L2-09: Widgets
 - [ ] L2-10: Offline Support

@@ -2,7 +2,8 @@
  * Home Tab - Quick Access Dashboard
  */
 
-import { View, Text, StyleSheet, ScrollView, Pressable, RefreshControl } from 'react-native';
+import { useState } from 'react';
+import { View, Text, StyleSheet, ScrollView, Pressable, Modal } from 'react-native';
 import { useRouter } from 'expo-router';
 import { Colors } from '@/constants/theme';
 import { useColorScheme } from '@/hooks/use-color-scheme';
@@ -11,8 +12,12 @@ import { Button } from '@/components/ui/button';
 import { IconSymbol } from '@/components/ui/icon-symbol';
 import { ModeIcon } from '@/components/transport/mode-icon';
 import { LineBadge } from '@/components/transport/line-badge';
+import { AlertBanner, AlertDetailModal } from '@/components/alerts';
+import { LiveIndicator, LastUpdated } from '@/components/realtime';
 import { useAuthStore } from '@/stores/auth-store';
+import { useServiceStatus } from '@/lib/api/alerts';
 import { formatTime, formatRelativeTime } from '@/lib/date';
+import type { Alert } from '@/lib/api/types';
 
 // Mock saved trips for demo
 const MOCK_SAVED_TRIPS = [
@@ -47,6 +52,9 @@ export default function HomeScreen() {
   const colors = Colors[colorScheme];
   const router = useRouter();
   const { isAuthenticated } = useAuthStore();
+  
+  const [selectedAlert, setSelectedAlert] = useState<Alert | null>(null);
+  const { data: statusData, dataUpdatedAt, isLoading: statusLoading } = useServiceStatus();
 
   const handleTripPress = (trip: typeof MOCK_SAVED_TRIPS[0]) => {
     // Navigate to Plan tab with pre-filled stops
@@ -57,6 +65,11 @@ export default function HomeScreen() {
     // Navigate to Departures tab with pre-selected stop
     router.push('/departures');
   };
+
+  // Derive status info
+  const networkStatus = statusData?.status ?? 'normal';
+  const alerts = statusData?.alerts ?? [];
+  const hasAlerts = alerts.length > 0;
 
   return (
     <View style={[styles.container, { backgroundColor: colors.background }]}>
@@ -171,19 +184,44 @@ export default function HomeScreen() {
 
         {/* Service Status */}
         <View style={styles.section}>
-          <Text style={[styles.sectionTitle, { color: colors.text }]}>
-            Service Status
-          </Text>
+          <View style={styles.sectionHeader}>
+            <Text style={[styles.sectionTitle, { color: colors.text }]}>
+              Service Status
+            </Text>
+            <LiveIndicator isLive={!statusLoading} size="sm" />
+          </View>
+          
+          {/* Alert Banners */}
+          {hasAlerts && alerts.slice(0, 2).map((alert) => (
+            <View key={alert.id} style={{ marginBottom: 8 }}>
+              <AlertBanner
+                alert={alert}
+                compact
+                onPress={() => setSelectedAlert(alert)}
+              />
+            </View>
+          ))}
+          
           <Card>
             <View style={styles.statusRow}>
-              <View style={[styles.statusDot, { backgroundColor: colors.success }]} />
+              <View style={[
+                styles.statusDot, 
+                { backgroundColor: networkStatus === 'normal' 
+                    ? colors.success 
+                    : networkStatus === 'minor' 
+                      ? colors.delayed 
+                      : colors.cancelled 
+                }
+              ]} />
               <Text style={[styles.statusText, { color: colors.text }]}>
-                All services running normally
+                {networkStatus === 'normal' 
+                  ? 'All services running normally'
+                  : networkStatus === 'minor'
+                    ? 'Minor delays on some services'
+                    : 'Major disruptions on the network'}
               </Text>
             </View>
-            <Text style={[styles.statusTime, { color: colors.textMuted }]}>
-              Updated just now
-            </Text>
+            <LastUpdated dataUpdatedAt={dataUpdatedAt} />
           </Card>
         </View>
 
@@ -211,6 +249,20 @@ export default function HomeScreen() {
           />
         </View>
       </ScrollView>
+
+      {/* Alert Detail Modal */}
+      <Modal
+        visible={selectedAlert !== null}
+        animationType="slide"
+        presentationStyle="pageSheet"
+      >
+        {selectedAlert && (
+          <AlertDetailModal
+            alert={selectedAlert}
+            onClose={() => setSelectedAlert(null)}
+          />
+        )}
+      </Modal>
     </View>
   );
 }

@@ -8,6 +8,7 @@ import { Colors } from '@/constants/theme';
 import { useColorScheme } from '@/hooks/use-color-scheme';
 import { ModeIcon } from '@/components/transport/mode-icon';
 import { LineBadge } from '@/components/transport/line-badge';
+import { FareDisplay } from '@/components/fare';
 import { formatTime, formatDuration } from '@/lib/date';
 import type { RankedJourney, Leg } from '@/lib/api/types';
 
@@ -87,18 +88,23 @@ export function JourneyCard({ journey, onPress, isBest = false }: JourneyCardPro
 
       {/* Footer Info */}
       <View style={styles.footer}>
-        <Text style={[styles.footerText, { color: colors.textSecondary }]}>
-          {journey.interchanges === 0 
-            ? 'Direct' 
-            : `${journey.interchanges} change${journey.interchanges > 1 ? 's' : ''}`}
-        </Text>
-        {journey.ranking?.why && (
-          <Text 
-            style={[styles.whyText, { color: colors.textMuted }]}
-            numberOfLines={1}
-          >
-            {journey.ranking.why}
+        <View style={styles.footerLeft}>
+          <Text style={[styles.footerText, { color: colors.textSecondary }]}>
+            {journey.interchanges === 0 
+              ? 'Direct' 
+              : `${journey.interchanges} change${journey.interchanges > 1 ? 's' : ''}`}
           </Text>
+          {journey.ranking?.why && (
+            <Text 
+              style={[styles.whyText, { color: colors.textMuted }]}
+              numberOfLines={1}
+            >
+              {journey.ranking.why}
+            </Text>
+          )}
+        </View>
+        {journey.fare && (
+          <FareDisplay fare={journey.fare} size="md" />
         )}
       </View>
     </Pressable>
@@ -219,16 +225,18 @@ const styles = StyleSheet.create({
   footer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItems: 'center',
+    alignItems: 'flex-start',
     marginTop: 12,
+  },
+  footerLeft: {
+    flex: 1,
+    marginRight: 12,
   },
   footerText: {
     fontSize: 13,
   },
   whyText: {
     fontSize: 12,
-    flex: 1,
-    textAlign: 'right',
-    marginLeft: 8,
+    marginTop: 2,
   },
 });

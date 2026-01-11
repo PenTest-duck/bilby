@@ -97,6 +97,7 @@ export interface RankedJourney extends Journey {
     };
     why: string;
   };
+  fare?: FareInfo;
 }
 
 /** Service alert */
@@ -115,3 +116,17 @@ export interface Alert {
 
 /** Ranking strategy */
 export type RankingStrategy = 'best' | 'fastest' | 'least_walking' | 'fewest_transfers';
+
+/** Opal card types */
+export type OpalCardType = 'adult' | 'child' | 'concession' | 'senior' | 'student';
+
+/** Fare information */
+export interface FareInfo {
+  adult: number;
+  child: number;
+  concession: number;
+  senior: number;
+  student: number;
+  peakMultiplier?: number;
+  isPeak?: boolean;
+}

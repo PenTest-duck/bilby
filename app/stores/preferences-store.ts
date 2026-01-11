@@ -6,16 +6,18 @@
 import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import type { RankingStrategy } from '@/lib/api/types';
+import type { RankingStrategy, OpalCardType } from '@/lib/api/types';
 
 interface PreferencesState {
   defaultStrategy: RankingStrategy;
   preferredModes: number[];
   accessibilityRequired: boolean;
+  opalCardType: OpalCardType;
   
   setDefaultStrategy: (strategy: RankingStrategy) => void;
   setPreferredModes: (modes: number[]) => void;
   setAccessibilityRequired: (required: boolean) => void;
+  setOpalCardType: (cardType: OpalCardType) => void;
   reset: () => void;
 }
 
@@ -23,6 +25,7 @@ const defaultState = {
   defaultStrategy: 'best' as RankingStrategy,
   preferredModes: [] as number[],
   accessibilityRequired: false,
+  opalCardType: 'adult' as OpalCardType,
 };
 
 export const usePreferencesStore = create<PreferencesState>()(
@@ -33,6 +36,7 @@ export const usePreferencesStore = create<PreferencesState>()(
       setDefaultStrategy: (strategy) => set({ defaultStrategy: strategy }),
       setPreferredModes: (modes) => set({ preferredModes: modes }),
       setAccessibilityRequired: (required) => set({ accessibilityRequired: required }),
+      setOpalCardType: (cardType) => set({ opalCardType: cardType }),
       reset: () => set(defaultState),
     }),
     {
