@@ -1,31 +1,70 @@
 /**
- * Below are the colors that are used in the app. The colors are defined in the light and dark mode.
- * There are many other ways to style your app. For example, [Nativewind](https://www.nativewind.dev/), [Tamagui](https://tamagui.dev/), [unistyles](https://reactnativeunistyles.vercel.app), etc.
+ * Bilby Design System
+ * Colors, typography, and spacing tokens
  */
 
 import { Platform } from 'react-native';
 
-const tintColorLight = '#0a7ea4';
-const tintColorDark = '#fff';
+/** TfNSW Transport Mode Colors */
+export const TransportColors = {
+  train: '#F6891F',
+  metro: '#009B77',
+  bus: '#00B5EF',
+  ferry: '#5AB031',
+  lightRail: '#EE343F',
+  coach: '#742283',
+  schoolBus: '#FDD835',
+  walking: '#666666',
+} as const;
+
+/** Primary brand color - TfNSW blue */
+const primaryLight = '#0078C8';
+const primaryDark = '#4DA3E0';
 
 export const Colors = {
   light: {
     text: '#11181C',
-    background: '#fff',
-    tint: tintColorLight,
+    textSecondary: '#687076',
+    textMuted: '#9BA1A6',
+    background: '#FFFFFF',
+    backgroundSecondary: '#F5F6F7',
+    backgroundTertiary: '#EBEDEF',
+    tint: primaryLight,
     icon: '#687076',
     tabIconDefault: '#687076',
-    tabIconSelected: tintColorLight,
+    tabIconSelected: primaryLight,
+    border: '#E1E4E8',
+    card: '#FFFFFF',
+    success: '#22C55E',
+    warning: '#F59E0B',
+    error: '#EF4444',
+    realtime: '#22C55E',
+    delayed: '#F59E0B',
+    cancelled: '#EF4444',
   },
   dark: {
     text: '#ECEDEE',
-    background: '#151718',
-    tint: tintColorDark,
+    textSecondary: '#9BA1A6',
+    textMuted: '#687076',
+    background: '#0D0D0D',
+    backgroundSecondary: '#1A1A1A',
+    backgroundTertiary: '#262626',
+    tint: primaryDark,
     icon: '#9BA1A6',
     tabIconDefault: '#9BA1A6',
-    tabIconSelected: tintColorDark,
+    tabIconSelected: primaryDark,
+    border: '#333333',
+    card: '#1A1A1A',
+    success: '#22C55E',
+    warning: '#F59E0B',
+    error: '#EF4444',
+    realtime: '#22C55E',
+    delayed: '#F59E0B',
+    cancelled: '#EF4444',
   },
 };
+
+export type ColorScheme = keyof typeof Colors;
 
 export const Fonts = Platform.select({
   ios: {

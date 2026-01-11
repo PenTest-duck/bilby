@@ -162,7 +162,7 @@
 
 ---
 
-## L1-05: Mobile App Foundation
+## L1-05: Mobile App Foundation ✅
 
 **Goal:** Establish Expo app structure, navigation, state management, and API client.
 
@@ -205,7 +205,7 @@
 
 ---
 
-## L1-06: Core Mobile Screens
+## L1-06: Core Mobile Screens ✅
 
 **Goal:** Build the primary user-facing screens for trip planning and departures.
 
