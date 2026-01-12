@@ -37,6 +37,13 @@ const SEVERITY_CONFIG = {
     textLight: '#C62828',
     textDark: '#EF5350',
   },
+  unknown: {
+    icon: 'questionmark.circle.fill',
+    bgLight: '#F5F5F5',
+    bgDark: '#424242',
+    textLight: '#757575',
+    textDark: '#BDBDBD',
+  },
 };
 
 export function AlertBanner({ 
@@ -46,7 +53,8 @@ export function AlertBanner({
   compact = false,
 }: AlertBannerProps) {
   const colorScheme = useColorScheme() ?? 'light';
-  const config = SEVERITY_CONFIG[alert.severity];
+  const severity = alert.severity as keyof typeof SEVERITY_CONFIG;
+  const config = SEVERITY_CONFIG[severity];
 
   const bgColor = colorScheme === 'light' ? config.bgLight : config.bgDark;
   const textColor = colorScheme === 'light' ? config.textLight : config.textDark;

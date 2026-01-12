@@ -1,34 +1,26 @@
 /**
  * Stops API
  * Stop search and lookup queries
+ * 
+ * Backend endpoints:
+ * - GET /api/stops/search?q={query}&limit={limit}
+ * - GET /api/stops/nearby?lat={lat}&lng={lng}&radius={radius}
+ * - GET /api/stops/:stopId
  */
 
 import { useQuery } from '@tanstack/react-query';
 import { api } from './client';
-import type { Stop } from './types';
-
-interface StopSearchResponse {
-  stops: Stop[];
-  query: string;
-  count: number;
-}
-
-interface StopDetailsResponse {
-  stop: Stop;
-}
-
-interface NearbyStopsResponse {
-  stops: Stop[];
-  center: { lat: number; lng: number };
-  radius: number;
-  count: number;
-}
+import type { 
+  StopsSearchResponse,
+  StopDetailsResponse,
+  StopsNearbyResponse,
+} from '@/lib/api-schema';
 
 /** Search stops by name */
 export function useStopSearch(query: string, options?: { enabled?: boolean }) {
   return useQuery({
     queryKey: ['stops', 'search', query],
-    queryFn: () => api.get<StopSearchResponse>(`/api/stops/search?q=${encodeURIComponent(query)}&limit=10`),
+    queryFn: () => api.get<StopsSearchResponse>(`/api/stops/search?q=${encodeURIComponent(query)}&limit=10`),
     enabled: (options?.enabled ?? true) && query.length >= 2,
     staleTime: 60 * 1000, // 1 minute
   });
@@ -53,7 +45,7 @@ export function useNearbyStops(
 ) {
   return useQuery({
     queryKey: ['stops', 'nearby', lat, lng, radius],
-    queryFn: () => api.get<NearbyStopsResponse>(`/api/stops/nearby?lat=${lat}&lng=${lng}&radius=${radius}`),
+    queryFn: () => api.get<StopsNearbyResponse>(`/api/stops/nearby?lat=${lat}&lng=${lng}&radius=${radius}`),
     enabled: (options?.enabled ?? true) && lat !== null && lng !== null,
     staleTime: 60 * 1000, // 1 minute
   });

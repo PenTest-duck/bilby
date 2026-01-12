@@ -34,7 +34,7 @@ function getModeColor(modeClass?: number): string {
 
 // Check if leg is walking
 function isWalkingLeg(leg: Leg): boolean {
-  if (leg.isWalking) return true;
+  // No isWalking field in backend schema - check transportation instead
   const modeClass = leg.transportation?.product?.class;
   return !leg.transportation || modeClass === 99 || modeClass === 100;
 }
@@ -42,10 +42,11 @@ function isWalkingLeg(leg: Leg): boolean {
 // Convert leg coordinates to map format
 function legToCoordinates(leg: Leg): Coordinates[] {
   // Use path if available, otherwise fallback to origin/destination
-  if (leg.path && leg.path.length > 0) {
-    return leg.path.map(([lat, lng]: [number, number]) => ({
-      latitude: lat,
-      longitude: lng,
+  // Backend uses 'coords' not 'path'
+  if (leg.coords && leg.coords.length > 0) {
+    return leg.coords.map((coord) => ({
+      latitude: coord[0],
+      longitude: coord[1],
     }));
   }
   

@@ -140,7 +140,7 @@ export default function DeparturesScreen() {
       ) : (
         <FlatList
           data={departures}
-          keyExtractor={(item, index) => item.id || `departure-${index}`}
+          keyExtractor={(item, index) => `${item.departureTimePlanned}-${item.transportation?.id ?? index}`}
           renderItem={({ item }) => <DepartureRow departure={item} />}
           ListHeaderComponent={<StopHeader stop={selectedStop} />}
           ItemSeparatorComponent={() => (

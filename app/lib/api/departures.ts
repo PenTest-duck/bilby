@@ -1,20 +1,15 @@
 /**
  * Departures API
  * Live departure queries with real-time polling
+ * 
+ * Backend endpoint: GET /api/departures/:stopId
  */
 
 import { useQuery } from '@tanstack/react-query';
 import { useEffect, useState } from 'react';
 import { AppState, AppStateStatus } from 'react-native';
 import { api } from './client';
-import type { Departure, Stop } from './types';
-
-interface DeparturesResponse {
-  stop: Stop;
-  departures: Departure[];
-  count: number;
-  timestamp?: string;
-}
+import type { DeparturesResponse } from '@/lib/api-schema';
 
 const POLLING_INTERVAL = 15 * 1000; // 15 seconds for live departures
 const STALE_TIME = 10 * 1000; // Consider data stale after 10s

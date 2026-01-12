@@ -8,7 +8,7 @@ import { Colors } from '@/constants/theme';
 import { useColorScheme } from '@/hooks/use-color-scheme';
 import { ModeIcon } from '@/components/transport/mode-icon';
 import { LineBadge } from '@/components/transport/line-badge';
-import { FareDisplay } from '@/components/fare';
+// FareDisplay removed - journey.fare (Fare) is incompatible with FareDisplay (FareBreakdown)
 import { formatTime, formatDuration } from '@/lib/date';
 import type { RankedJourney, Leg } from '@/lib/api/types';
 
@@ -22,9 +22,15 @@ export function JourneyCard({ journey, onPress, isBest = false }: JourneyCardPro
   const colorScheme = useColorScheme() ?? 'light';
   const colors = Colors[colorScheme];
 
-  const departureTime = formatTime(journey.departureTime);
-  const arrivalTime = formatTime(journey.arrivalTime);
-  const duration = formatDuration(journey.duration);
+  // Compute times from legs (backend doesn't include top-level computed fields)
+  const firstLeg = journey.legs[0];
+  const lastLeg = journey.legs[journey.legs.length - 1];
+  const departureTime = formatTime(firstLeg?.origin?.departureTimePlanned ?? '');
+  const arrivalTime = formatTime(lastLeg?.destination?.arrivalTimePlanned ?? '');
+  
+  // Compute total duration from legs
+  const totalDurationSecs = journey.legs.reduce((sum, leg) => sum + (leg.duration ?? 0), 0);
+  const duration = formatDuration(totalDurationSecs);
   const hasDelay = (journey.realtimeDelayMinutes ?? 0) > 0;
   const hasCancellation = journey.hasCancellations;
 
@@ -90,9 +96,9 @@ export function JourneyCard({ journey, onPress, isBest = false }: JourneyCardPro
       <View style={styles.footer}>
         <View style={styles.footerLeft}>
           <Text style={[styles.footerText, { color: colors.textSecondary }]}>
-            {journey.interchanges === 0 
+            {(journey.interchanges ?? 0) === 0 
               ? 'Direct' 
-              : `${journey.interchanges} change${journey.interchanges > 1 ? 's' : ''}`}
+              : `${journey.interchanges} change${(journey.interchanges ?? 0) > 1 ? 's' : ''}`}
           </Text>
           {journey.ranking?.why && (
             <Text 
@@ -103,9 +109,7 @@ export function JourneyCard({ journey, onPress, isBest = false }: JourneyCardPro
             </Text>
           )}
         </View>
-        {journey.fare && (
-          <FareDisplay fare={journey.fare} size="md" />
-        )}
+        {/* Fare display disabled - journey.fare (Fare) is incompatible with FareDisplay (FareBreakdown) */}
       </View>
     </Pressable>
   );
@@ -115,7 +119,12 @@ function LegIndicator({ leg, isLast }: { leg: Leg; isLast: boolean }) {
   const colorScheme = useColorScheme() ?? 'light';
   const colors = Colors[colorScheme];
 
-  if (leg.isWalking) {
+  // Check if walking leg (no transportation or mode 99/100)
+  const isWalking = !leg.transportation || 
+    leg.transportation.product?.class === 99 || 
+    leg.transportation.product?.class === 100;
+  
+  if (isWalking) {
     return (
       <View style={styles.legItem}>
         <ModeIcon mode="walking" size="sm" />

@@ -18,17 +18,20 @@ const SEVERITY_COLORS = {
   info: { light: '#1565C0', dark: '#64B5F6' },
   warning: { light: '#E65100', dark: '#FFB74D' },
   severe: { light: '#C62828', dark: '#EF5350' },
+  unknown: { light: '#757575', dark: '#BDBDBD' },
 };
 
 const SEVERITY_ICONS = {
   info: 'info.circle.fill',
   warning: 'exclamationmark.triangle.fill',
   severe: 'exclamationmark.octagon.fill',
+  unknown: 'questionmark.circle.fill',
 };
 
 export function AlertBadge({ severity, count, onPress }: AlertBadgeProps) {
   const colorScheme = useColorScheme() ?? 'light';
-  const color = SEVERITY_COLORS[severity][colorScheme];
+  const sev = severity as keyof typeof SEVERITY_COLORS;
+  const color = SEVERITY_COLORS[sev][colorScheme];
 
   const content = (
     <View style={styles.container}>

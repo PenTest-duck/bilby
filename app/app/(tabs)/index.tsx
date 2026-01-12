@@ -17,7 +17,7 @@ import { LiveIndicator, LastUpdated } from '@/components/realtime';
 import { useAuthStore } from '@/stores/auth-store';
 import { useServiceStatus } from '@/lib/api/alerts';
 import { formatTime, formatRelativeTime } from '@/lib/date';
-import type { Alert } from '@/lib/api/types';
+import type { StatusAlert } from '@/lib/api/types';
 
 // Mock saved trips for demo
 const MOCK_SAVED_TRIPS = [
@@ -53,7 +53,7 @@ export default function HomeScreen() {
   const router = useRouter();
   const { isAuthenticated } = useAuthStore();
   
-  const [selectedAlert, setSelectedAlert] = useState<Alert | null>(null);
+  const [selectedAlert, setSelectedAlert] = useState<StatusAlert | null>(null);
   const { data: statusData, dataUpdatedAt, isLoading: statusLoading } = useServiceStatus();
 
   const handleTripPress = (trip: typeof MOCK_SAVED_TRIPS[0]) => {

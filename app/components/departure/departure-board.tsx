@@ -67,7 +67,7 @@ export function DepartureBoard({
             onPress={onDeparturePress ? () => onDeparturePress(item) : undefined}
           />
         )}
-        keyExtractor={(item: Departure) => item.id}
+        keyExtractor={(item: Departure, index: number) => `${item.departureTimePlanned}-${item.transportation?.id ?? index}`}
         ListHeaderComponent={<StopHeader stop={stop} />}
         ItemSeparatorComponent={() => (
           <View style={[styles.separator, { backgroundColor: colors.border }]} />

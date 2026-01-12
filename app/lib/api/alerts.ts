@@ -1,68 +1,78 @@
 /**
- * Alerts API
+ * Alerts/Disruptions API
  * Service alerts and disruption queries
+ * 
+ * Backend endpoint: /api/disruptions (NOT /api/alerts)
  */
 
 import { useQuery } from '@tanstack/react-query';
 import { api } from './client';
-import type { Alert } from './types';
+import type { 
+  DisruptionsResponse, 
+  DisruptionsStopResponse,
+  DisruptionsRouteResponse,
+  ServiceStatusResponse,
+} from '@/lib/api-schema';
 
-interface AlertsResponse {
-  alerts: Alert[];
-  count: number;
-  lastUpdated: string;
-}
-
-interface ServiceStatusResponse {
-  status: 'normal' | 'minor' | 'major';
-  message?: string;
-  alerts: Alert[];
-  byMode: {
-    modeId: number;
-    modeName: string;
-    status: 'normal' | 'minor' | 'major';
-    alertCount: number;
-  }[];
-}
-
-/** Get service alerts for specific routes */
-export function useAlerts(options?: {
-  routes?: string[];
-  modes?: number[];
-  severity?: Alert['severity'];
+/**
+ * Get service disruptions/alerts
+ * Endpoint: GET /api/disruptions
+ */
+export function useDisruptions(options?: {
+  modes?: string[];
   enabled?: boolean;
 }) {
   const queryParams = new URLSearchParams({
-    ...(options?.routes?.length && { routes: options.routes.join(',') }),
     ...(options?.modes?.length && { modes: options.modes.join(',') }),
-    ...(options?.severity && { severity: options.severity }),
   }).toString();
 
   return useQuery({
-    queryKey: ['alerts', options?.routes, options?.modes, options?.severity],
-    queryFn: () => api.get<AlertsResponse>(`/api/alerts${queryParams ? `?${queryParams}` : ''}`),
+    queryKey: ['disruptions', options?.modes],
+    queryFn: () => api.get<DisruptionsResponse>(`/api/disruptions${queryParams ? `?${queryParams}` : ''}`),
     enabled: options?.enabled ?? true,
     staleTime: 60 * 1000, // 1 minute
     refetchInterval: 2 * 60 * 1000, // Refresh every 2 minutes
   });
 }
 
-/** Get overall network service status */
-export function useServiceStatus() {
+/**
+ * Get disruptions affecting a specific stop
+ * Endpoint: GET /api/disruptions/stop/:stopId
+ */
+export function useStopDisruptions(stopId: string | null, options?: { enabled?: boolean }) {
   return useQuery({
-    queryKey: ['service-status'],
-    queryFn: () => api.get<ServiceStatusResponse>('/api/status'),
-    staleTime: 60 * 1000, // 1 minute
-    refetchInterval: 2 * 60 * 1000, // Refresh every 2 minutes
+    queryKey: ['disruptions', 'stop', stopId],
+    queryFn: () => api.get<DisruptionsStopResponse>(`/api/disruptions/stop/${encodeURIComponent(stopId!)}`),
+    enabled: (options?.enabled ?? true) && !!stopId,
+    staleTime: 60 * 1000,
+    refetchInterval: 2 * 60 * 1000,
   });
 }
 
-/** Get alerts affecting a specific trip/journey */
-export function useTripAlerts(journeyId: string | null, options?: { enabled?: boolean }) {
+/**
+ * Get disruptions affecting a specific route
+ * Endpoint: GET /api/disruptions/route/:routeId
+ */
+export function useRouteDisruptions(routeId: string | null, options?: { enabled?: boolean }) {
   return useQuery({
-    queryKey: ['trip-alerts', journeyId],
-    queryFn: () => api.get<AlertsResponse>(`/api/trips/${journeyId}/alerts`),
-    enabled: (options?.enabled ?? true) && !!journeyId,
-    staleTime: 30 * 1000,
+    queryKey: ['disruptions', 'route', routeId],
+    queryFn: () => api.get<DisruptionsRouteResponse>(`/api/disruptions/route/${encodeURIComponent(routeId!)}`),
+    enabled: (options?.enabled ?? true) && !!routeId,
+    staleTime: 60 * 1000,
+    refetchInterval: 2 * 60 * 1000,
+  });
+}
+
+/**
+ * Get overall network service status
+ * Endpoint: GET /api/status
+ */
+export function useServiceStatus(options?: { enabled?: boolean }) {
+  return useQuery({
+    queryKey: ['service-status'],
+    queryFn: () => api.get<ServiceStatusResponse>('/api/status'),
+    enabled: options?.enabled ?? true,
+    staleTime: 60 * 1000, // 1 minute
+    refetchInterval: 2 * 60 * 1000, // Refresh every 2 minutes
   });
 }

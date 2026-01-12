@@ -20,37 +20,32 @@ type ViewMode = 'list' | 'map';
 
 // Mock journey data for demo (in production, fetch from params or API)
 const MOCK_JOURNEY: RankedJourney = {
-  id: 'mock-journey-1',
   interchanges: 1,
-  duration: 720,
-  departureTime: new Date(Date.now() + 5 * 60000).toISOString(),
-  arrivalTime: new Date(Date.now() + 17 * 60000).toISOString(),
   legs: [
     {
       duration: 180,
-      departure: new Date(Date.now() + 5 * 60000).toISOString(),
-      arrival: new Date(Date.now() + 8 * 60000).toISOString(),
-      isWalking: false,
       origin: {
         id: '10101100',
         name: 'Central Station',
         type: 'stop',
         coord: [-33.8833, 151.2060],
+        departureTimePlanned: new Date(Date.now() + 5 * 60000).toISOString(),
       },
       destination: {
         id: '10102000',
         name: 'Town Hall Station',
         type: 'stop',
         coord: [-33.8736, 151.2069],
+        arrivalTimePlanned: new Date(Date.now() + 8 * 60000).toISOString(),
       },
       transportation: {
         id: 'T1',
         name: 'T1 North Shore Line',
         number: 'T1',
-        product: { id: 1, class: 1, name: 'Train', iconId: 1 },
+        product: { class: 1, name: 'Train', iconId: 1 },
         destination: { id: 'ns', name: 'North Sydney', type: 'stop' },
       },
-      path: [
+      coords: [
         [-33.8833, 151.2060],
         [-33.8780, 151.2065],
         [-33.8736, 151.2069],
@@ -62,29 +57,28 @@ const MOCK_JOURNEY: RankedJourney = {
     },
     {
       duration: 120,
-      departure: new Date(Date.now() + 10 * 60000).toISOString(),
-      arrival: new Date(Date.now() + 12 * 60000).toISOString(),
-      isWalking: false,
       origin: {
         id: '10102000',
         name: 'Town Hall Station',
         type: 'stop',
         coord: [-33.8736, 151.2069],
+        departureTimePlanned: new Date(Date.now() + 10 * 60000).toISOString(),
       },
       destination: {
         id: '10102100',
         name: 'Wynyard Station',
         type: 'stop',
         coord: [-33.8664, 151.2063],
+        arrivalTimePlanned: new Date(Date.now() + 12 * 60000).toISOString(),
       },
       transportation: {
         id: 'T1',
         name: 'T1 North Shore Line',
         number: 'T1',
-        product: { id: 1, class: 1, name: 'Train', iconId: 1 },
+        product: { class: 1, name: 'Train', iconId: 1 },
         destination: { id: 'ns', name: 'North Sydney', type: 'stop' },
       },
-      path: [
+      coords: [
         [-33.8736, 151.2069],
         [-33.8700, 151.2065],
         [-33.8664, 151.2063],
@@ -119,8 +113,8 @@ export default function TripDetailScreen() {
 
   const firstLeg = journey.legs[0];
   const lastLeg = journey.legs[journey.legs.length - 1];
-  const departureTime = formatTime(firstLeg.departure);
-  const arrivalTime = formatTime(lastLeg.arrival);
+  const departureTime = formatTime(firstLeg.origin?.departureTimePlanned ?? '');
+  const arrivalTime = formatTime(lastLeg.destination?.arrivalTimePlanned ?? '');
   const totalDuration = journey.legs.reduce((sum, leg) => sum + (leg.duration || 0), 0);
 
   return (
@@ -176,9 +170,9 @@ export default function TripDetailScreen() {
             
             <View style={styles.summaryMeta}>
               <Text style={[styles.metaText, { color: colors.textMuted }]}>
-                {journey.interchanges === 0 
+                {(journey.interchanges ?? 0) === 0 
                   ? 'Direct' 
-                  : `${journey.interchanges} change${journey.interchanges > 1 ? 's' : ''}`}
+                  : `${journey.interchanges} change${(journey.interchanges ?? 0) > 1 ? 's' : ''}`}
               </Text>
               {journey.ranking?.why && (
                 <Text style={[styles.metaText, { color: colors.tint }]}>

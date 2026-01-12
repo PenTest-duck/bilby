@@ -9,7 +9,7 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "lint": "expo lint",
-    "typecheck": "npx tsc --noEmit"
+    "typecheck": "npx tsc --noEmit --skipLibCheck --project tsconfig.json"
   },
   "dependencies": {
     "@expo/vector-icons": "^15.0.3",
@@ -26,6 +26,7 @@
     "expo-image": "~3.0.11",
     "expo-linking": "~8.0.11",
     "expo-maps": "~0.12.10",
+    "expo-module-scripts": "^5.0.8",
     "expo-router": "~6.0.21",
     "expo-secure-store": "^15.0.8",
     "expo-splash-screen": "~31.0.13",

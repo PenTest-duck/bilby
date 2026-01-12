@@ -19,21 +19,21 @@ export function DepartureRow({ departure, onPress }: DepartureRowProps) {
   const colorScheme = useColorScheme() ?? 'light';
   const colors = Colors[colorScheme];
 
-  const modeId = departure.transportation.product?.class || 5;
-  const lineNumber = departure.transportation.number || 
-                     departure.transportation.disassembledName || '';
-  const destination = departure.transportation.destination?.name || 'Unknown';
+  const modeId = departure.transportation?.product?.class || 5;
+  const lineNumber = departure.transportation?.number || 
+                     departure.transportation?.disassembledName || '';
+  const destination = departure.transportation?.destination?.name || 'Unknown';
   const platform = departure.platform;
   
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const _plannedTime = formatTime(departure.plannedTime);
+  const _plannedTime = formatTime(departure.departureTimePlanned);
   
-  const countdown = departure.estimatedTime 
-    ? formatCountdown(departure.estimatedTime)
-    : formatCountdown(departure.plannedTime);
+  const countdown = departure.departureTimeEstimated 
+    ? formatCountdown(departure.departureTimeEstimated)
+    : formatCountdown(departure.departureTimePlanned);
   
-  const hasDelay = (departure.delayMinutes ?? 0) > 0;
-  const isCancelled = departure.isCancelled;
+  const hasDelay = (departure.realtimeDelayMinutes ?? 0) > 0;
+  const isCancelled = departure.cancelled;
   const isNow = countdown === 'Now';
 
   return (
@@ -70,7 +70,7 @@ export function DepartureRow({ departure, onPress }: DepartureRowProps) {
           )}
           {hasDelay && !isCancelled && (
             <Text style={[styles.delayText, { color: colors.delayed }]}>
-              +{departure.delayMinutes}m
+              +{departure.realtimeDelayMinutes}m
             </Text>
           )}
           {isCancelled && (

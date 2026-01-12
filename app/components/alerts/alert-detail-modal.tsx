@@ -41,20 +41,30 @@ const SEVERITY_CONFIG = {
     textLight: '#C62828',
     textDark: '#EF5350',
   },
+  unknown: {
+    icon: 'questionmark.circle.fill',
+    title: 'Service Alert',
+    bgLight: '#F5F5F5',
+    bgDark: '#424242',
+    textLight: '#757575',
+    textDark: '#BDBDBD',
+  },
 };
 
 export function AlertDetailModal({ alert, onClose }: AlertDetailModalProps) {
   const colorScheme = useColorScheme() ?? 'light';
   const colors = Colors[colorScheme];
   const insets = useSafeAreaInsets();
-  const config = SEVERITY_CONFIG[alert.severity];
+  const severity = alert.severity as keyof typeof SEVERITY_CONFIG;
+  const config = SEVERITY_CONFIG[severity];
 
   const bgColor = colorScheme === 'light' ? config.bgLight : config.bgDark;
   const accentColor = colorScheme === 'light' ? config.textLight : config.textDark;
 
   const handleMoreInfo = () => {
-    if (alert.url) {
-      Linking.openURL(alert.url);
+    const url = 'url' in alert ? alert.url : undefined;
+    if (url) {
+      Linking.openURL(url);
     }
   };
 
@@ -119,7 +129,7 @@ export function AlertDetailModal({ alert, onClose }: AlertDetailModalProps) {
               Affected services
             </Text>
             <View style={styles.routesList}>
-              {alert.affectedRoutes.map((route, index) => (
+              {alert.affectedRoutes.map((route: string, index: number) => (
                 <View 
                   key={index} 
                   style={[styles.routeBadge, { backgroundColor: colors.backgroundSecondary }]}
@@ -133,13 +143,13 @@ export function AlertDetailModal({ alert, onClose }: AlertDetailModalProps) {
           </View>
         )}
 
-        {/* Active Period */}
-        {alert.activePeriods && alert.activePeriods.length > 0 && (
+        {/* Active Period - only available on DisruptionAlert */}
+        {'activePeriods' in alert && alert.activePeriods && alert.activePeriods.length > 0 && (
           <View style={styles.section}>
             <Text style={[styles.sectionTitle, { color: colors.text }]}>
               When
             </Text>
-            {alert.activePeriods.map((period, index) => (
+            {alert.activePeriods.map((period: { start?: number; end?: number }, index: number) => (
               <Text 
                 key={index} 
                 style={[styles.sectionText, { color: colors.textSecondary }]}
@@ -150,9 +160,9 @@ export function AlertDetailModal({ alert, onClose }: AlertDetailModalProps) {
           </View>
         )}
 
-        {/* Actions */}
+        {/* Actions - url only exists on DisruptionAlert */}
         <View style={styles.actions}>
-          {alert.url && (
+          {'url' in alert && alert.url && (
             <Button
               title="More Information"
               variant="secondary"
@@ -165,8 +175,14 @@ export function AlertDetailModal({ alert, onClose }: AlertDetailModalProps) {
   );
 }
 
-function formatPeriod(period: { start: string; end?: string }): string {
-  const start = new Date(period.start);
+// Backend sends activePeriods as Unix timestamps (seconds), not ISO strings
+function formatPeriod(period: { start?: number; end?: number }): string {
+  if (!period.start) {
+    return 'Ongoing';
+  }
+  
+  // Convert Unix seconds to Date
+  const start = new Date(period.start * 1000);
   const startStr = start.toLocaleDateString('en-AU', {
     weekday: 'short',
     month: 'short',
@@ -179,7 +195,7 @@ function formatPeriod(period: { start: string; end?: string }): string {
     return `From ${startStr}`;
   }
 
-  const end = new Date(period.end);
+  const end = new Date(period.end * 1000);
   const endStr = end.toLocaleDateString('en-AU', {
     weekday: 'short',
     month: 'short',

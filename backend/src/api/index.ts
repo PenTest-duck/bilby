@@ -12,11 +12,13 @@ import disruptionsRouter from './disruptions.js'
 import tripsRouter from './trips.js'
 import authRouter from './auth.js'
 import userRouter from './user/index.js'
+import statusRouter from './status.js'
 
 const router: RouterType = Router()
 
 // Mount routes
 router.use('/health', healthRouter)
+router.use('/status', statusRouter)
 router.use('/pollers', pollersRouter)
 router.use('/stops', stopsRouter)
 router.use('/departures', departuresRouter)

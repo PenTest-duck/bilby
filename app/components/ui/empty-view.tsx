@@ -5,10 +5,10 @@
 import { View, Text, StyleSheet } from 'react-native';
 import { Colors } from '@/constants/theme';
 import { useColorScheme } from '@/hooks/use-color-scheme';
-import { IconSymbol } from './icon-symbol';
+import { IconSymbol, type IconSymbolName } from './icon-symbol';
 
 interface EmptyViewProps {
-  icon?: string;
+  icon?: IconSymbolName;
   title: string;
   message?: string;
 }

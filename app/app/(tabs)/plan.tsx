@@ -71,7 +71,10 @@ export default function PlanScreen() {
     console.log('Journey selected:', journey);
   }, []);
 
-  const results = data ? [data.best, ...data.alternatives] : [];
+  // Filter out null best journey and combine with alternatives
+  const results = data 
+    ? [data.best, ...data.alternatives].filter((j): j is RankedJourney => j !== null)
+    : [];
 
   return (
     <View style={[styles.container, { backgroundColor: colors.background }]}>
@@ -180,7 +183,7 @@ export default function PlanScreen() {
           <View style={styles.results}>
             {results.map((journey, index) => (
               <JourneyCard
-                key={journey.id || index}
+                key={`journey-${index}`}
                 journey={journey}
                 onPress={() => handleJourneyPress(journey)}
                 isBest={index === 0}

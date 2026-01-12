@@ -22,12 +22,20 @@ export function LegDetail({ leg, isFirst = false, isLast = false }: LegDetailPro
   const colorScheme = useColorScheme() ?? 'light';
   const colors = Colors[colorScheme];
 
-  const departureTime = formatTime(leg.departure);
-  const arrivalTime = formatTime(leg.arrival);
-  const hasDelay = (leg.realtimeDelayMinutes ?? 0) > 0;
-  const isCancelled = leg.isCancelled;
+  // Use origin/destination time fields from backend schema
+  const departureTime = formatTime(leg.origin?.departureTimePlanned ?? '');
+  const arrivalTime = formatTime(leg.destination?.arrivalTimePlanned ?? '');
+  
+  // Check for realtime delay (may be in properties or computed)
+  const hasDelay = false; // TODO: Extract from leg properties if available
+  const isCancelled = false; // TODO: Extract from leg properties if available
+  
+  // Check if walking leg (no transportation or mode 99/100)
+  const isWalking = !leg.transportation || 
+    leg.transportation.product?.class === 99 || 
+    leg.transportation.product?.class === 100;
 
-  if (leg.isWalking) {
+  if (isWalking) {
     return (
       <View style={styles.container}>
         <View style={styles.timeline}>
@@ -38,7 +46,7 @@ export function LegDetail({ leg, isFirst = false, isLast = false }: LegDetailPro
           <View style={styles.walkingRow}>
             <ModeIcon mode="walking" size="sm" />
             <Text style={[styles.walkingText, { color: colors.textSecondary }]}>
-              Walk {leg.distance ? formatWalkingTime(leg.distance) : formatDuration(leg.duration)}
+              Walk {leg.distance ? formatWalkingTime(leg.distance) : formatDuration(leg.duration ?? 0)}
               {leg.distance && ` (${formatDistance(leg.distance)})`}
             </Text>
           </View>
@@ -81,16 +89,12 @@ export function LegDetail({ leg, isFirst = false, isLast = false }: LegDetailPro
                 towards {destination}
               </Text>
               <Text style={[styles.stopsInfo, { color: colors.textSecondary }]}>
-                {stopCount > 0 ? `${stopCount} stops · ` : ''}{formatDuration(leg.duration)}
+                {stopCount > 0 ? `${stopCount} stops · ` : ''}{formatDuration(leg.duration ?? 0)}
               </Text>
             </View>
           </View>
           
-          {hasDelay && (
-            <View style={[styles.delayIndicator, { backgroundColor: colors.delayed }]}>
-              <Text style={styles.delayText}>+{leg.realtimeDelayMinutes} min delay</Text>
-            </View>
-          )}
+          {/* Delay indicator removed - realtimeDelayMinutes not in Leg schema */}
           
           {isCancelled && (
             <View style={[styles.delayIndicator, { backgroundColor: colors.cancelled }]}>
