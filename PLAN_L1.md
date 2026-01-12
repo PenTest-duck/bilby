@@ -287,7 +287,7 @@
 
 ---
 
-## L1-08: Maps & Visualization
+## L1-08: Maps & Visualization ✅
 
 **Goal:** Add map views for visual confirmation and vehicle tracking.
 
@@ -511,7 +511,7 @@ Phase 4 (Launch):
 - [x] L2-05: Mobile App Foundation
 - [x] L2-06: Core Mobile Screens
 - [x] L2-07: Real-Time & Disruptions
-- [ ] L2-08: Maps & Visualization
+- [x] L2-08: Maps & Visualization
 - [ ] L2-09: Widgets
 - [ ] L2-10: Offline Support
 - [ ] L2-11: Analytics & Reliability

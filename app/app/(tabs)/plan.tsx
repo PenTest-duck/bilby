@@ -15,8 +15,6 @@ import {
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Colors } from '@/constants/theme';
 import { useColorScheme } from '@/hooks/use-color-scheme';
-import { Card } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
 import { IconSymbol } from '@/components/ui/icon-symbol';
 import { StopSearchModal } from '@/components/stop-search';
 import { JourneyCard } from '@/components/trip';
@@ -38,7 +36,8 @@ const STRATEGIES: { value: RankingStrategy; label: string; icon: string }[] = [
 export default function PlanScreen() {
   const colorScheme = useColorScheme() ?? 'light';
   const colors = Colors[colorScheme];
-  const insets = useSafeAreaInsets();
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const _insets = useSafeAreaInsets();
   const { defaultStrategy } = usePreferencesStore();
 
   const [fromStop, setFromStop] = useState<Stop | null>(null);

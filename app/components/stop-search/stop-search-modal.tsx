@@ -42,7 +42,7 @@ export function StopSearchModal({
   const insets = useSafeAreaInsets();
   const [query, setQuery] = useState('');
 
-  const { data, isLoading, isError } = useStopSearch(query);
+  const { data, isLoading } = useStopSearch(query);
   const stops = data?.stops || [];
 
   const handleSelect = useCallback((stop: Stop) => {

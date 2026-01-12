@@ -8,7 +8,8 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "lint": "expo lint"
+    "lint": "expo lint",
+    "typecheck": "npx tsc --noEmit"
   },
   "dependencies": {
     "@expo/vector-icons": "^15.0.3",
@@ -24,6 +25,7 @@
     "expo-haptics": "~15.0.8",
     "expo-image": "~3.0.11",
     "expo-linking": "~8.0.11",
+    "expo-maps": "~0.12.10",
     "expo-router": "~6.0.21",
     "expo-secure-store": "^15.0.8",
     "expo-splash-screen": "~31.0.13",
@@ -43,6 +45,7 @@
     "zustand": "^5.0.9"
   },
   "devDependencies": {
+    "@types/invariant": "^2.2.37",
     "@types/react": "~19.1.0",
     "eslint": "^9.25.0",
     "eslint-config-expo": "~10.0.0",

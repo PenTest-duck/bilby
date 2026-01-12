@@ -92,7 +92,7 @@ export function AlertDetailModal({ alert, onClose }: AlertDetailModalProps) {
         {alert.cause && (
           <View style={styles.section}>
             <Text style={[styles.sectionTitle, { color: colors.text }]}>
-              What's happening
+              What&apos;s happening
             </Text>
             <Text style={[styles.sectionText, { color: colors.textSecondary }]}>
               {alert.cause}

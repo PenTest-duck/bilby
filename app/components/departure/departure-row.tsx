@@ -6,7 +6,6 @@
 import { View, Text, StyleSheet, Pressable } from 'react-native';
 import { Colors } from '@/constants/theme';
 import { useColorScheme } from '@/hooks/use-color-scheme';
-import { ModeIcon } from '@/components/transport/mode-icon';
 import { LineBadge } from '@/components/transport/line-badge';
 import { formatTime, formatCountdown } from '@/lib/date';
 import type { Departure } from '@/lib/api/types';
@@ -26,10 +25,8 @@ export function DepartureRow({ departure, onPress }: DepartureRowProps) {
   const destination = departure.transportation.destination?.name || 'Unknown';
   const platform = departure.platform;
   
-  const plannedTime = formatTime(departure.plannedTime);
-  const displayTime = departure.estimatedTime 
-    ? formatTime(departure.estimatedTime) 
-    : plannedTime;
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const _plannedTime = formatTime(departure.plannedTime);
   
   const countdown = departure.estimatedTime 
     ? formatCountdown(departure.estimatedTime)

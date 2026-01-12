@@ -20,7 +20,7 @@ import { DepartureRow } from '@/components/departure';
 import { useDepartures } from '@/lib/api/departures';
 import { SkeletonDeparture } from '@/components/ui/skeleton';
 import { ErrorView } from '@/components/ui/error-view';
-import type { Stop, Departure } from '@/lib/api/types';
+import type { Stop } from '@/lib/api/types';
 
 // Mock recent stops for demo - would come from store in real app
 const MOCK_RECENT_STOPS: Stop[] = [
@@ -140,7 +140,7 @@ export default function DeparturesScreen() {
       ) : (
         <FlatList
           data={departures}
-          keyExtractor={(item) => item.id}
+          keyExtractor={(item, index) => item.id || `departure-${index}`}
           renderItem={({ item }) => <DepartureRow departure={item} />}
           ListHeaderComponent={<StopHeader stop={selectedStop} />}
           ItemSeparatorComponent={() => (

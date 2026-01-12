@@ -6,8 +6,10 @@
 const SYDNEY_TIMEZONE = 'Australia/Sydney';
 
 /** Format time as HH:MM (e.g., "14:30") */
-export function formatTime(date: Date | string): string {
+export function formatTime(date: Date | string | undefined | null): string {
+  if (!date) return '--:--';
   const d = typeof date === 'string' ? new Date(date) : date;
+  if (isNaN(d.getTime())) return '--:--';
   return d.toLocaleTimeString('en-AU', {
     timeZone: SYDNEY_TIMEZONE,
     hour: '2-digit',
@@ -46,8 +48,10 @@ export function formatRelativeTime(date: Date | string): string {
 }
 
 /** Format countdown for departures (e.g., "2", "15", "1:05") */
-export function formatCountdown(date: Date | string): string {
+export function formatCountdown(date: Date | string | undefined | null): string {
+  if (!date) return '--';
   const d = typeof date === 'string' ? new Date(date) : date;
+  if (isNaN(d.getTime())) return '--';
   const now = new Date();
   const diffMs = d.getTime() - now.getTime();
   const diffMins = Math.floor(diffMs / 60000);
