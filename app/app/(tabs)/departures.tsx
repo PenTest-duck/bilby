@@ -2,7 +2,7 @@
  * Departures Tab - Live Departures
  */
 
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useMemo } from 'react';
 import { 
   View, 
   Text, 
@@ -12,23 +12,16 @@ import {
   FlatList,
   RefreshControl,
 } from 'react-native';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Colors } from '@/constants/theme';
 import { useColorScheme } from '@/hooks/use-color-scheme';
 import { IconSymbol } from '@/components/ui/icon-symbol';
 import { StopSearchModal, StopRow } from '@/components/stop-search';
 import { DepartureRow, RouteDetailModal } from '@/components/departure';
-import { useDepartures, useDataFreshness } from '@/lib/api/departures';
+import { useDepartures } from '@/lib/api/departures';
+import { useRecentStops, useAddRecentStop } from '@/lib/api/user';
 import { SkeletonDeparture } from '@/components/ui/skeleton';
 import { ErrorView } from '@/components/ui/error-view';
 import type { Stop, Departure } from '@/lib/api/types';
-
-// Mock recent stops for demo - would come from store in real app
-const MOCK_RECENT_STOPS: Stop[] = [
-  { id: '10101100', name: 'Central Station', type: 'stop', modes: [1, 2] },
-  { id: '10101200', name: 'Town Hall Station', type: 'stop', modes: [1] },
-  { id: '200060', name: 'Circular Quay', type: 'stop', modes: [1, 9] },
-];
 
 export default function DeparturesScreen() {
   const colorScheme = useColorScheme() ?? 'light';
@@ -37,6 +30,21 @@ export default function DeparturesScreen() {
   const [selectedStop, setSelectedStop] = useState<Stop | null>(null);
   const [showSearch, setShowSearch] = useState(false);
   const [selectedDeparture, setSelectedDeparture] = useState<Departure | null>(null);
+
+  // Fetch real recent stops from API
+  const { data: recentStopsData } = useRecentStops();
+  const addRecentStop = useAddRecentStop();
+  
+  // Convert recent stops to Stop format for display
+  const recentStops = useMemo<Stop[]>(() => {
+    if (!recentStopsData?.stops) return [];
+    return recentStopsData.stops.slice(0, 5).map(stop => ({
+      id: stop.stop_id,
+      name: stop.stop_name,
+      type: 'stop' as const,
+      modes: [1], // Default, could be enhanced with stop details
+    }));
+  }, [recentStopsData]);
 
   const { data, isLoading, isError, refetch, isRefetching } = useDepartures(
     selectedStop?.id ?? null,
@@ -48,7 +56,9 @@ export default function DeparturesScreen() {
   const handleStopSelect = useCallback((stop: Stop) => {
     setSelectedStop(stop);
     setShowSearch(false);
-  }, []);
+    // Track this stop in recents
+    addRecentStop.mutate({ stop_id: stop.id, stop_name: stop.name });
+  }, [addRecentStop]);
   
   const handleDeparturePress = useCallback((departure: Departure) => {
     setSelectedDeparture(departure);
@@ -100,7 +110,7 @@ export default function DeparturesScreen() {
                 Recent Stops
               </Text>
             </View>
-            {MOCK_RECENT_STOPS.map((stop) => (
+            {recentStops.map((stop) => (
               <StopRow
                 key={stop.id}
                 stop={stop}
@@ -180,7 +190,7 @@ export default function DeparturesScreen() {
           onSelect={handleStopSelect}
           onClose={() => setShowSearch(false)}
           placeholder="Search for a stop..."
-          recentStops={MOCK_RECENT_STOPS}
+          recentStops={recentStops}
         />
       </Modal>
       

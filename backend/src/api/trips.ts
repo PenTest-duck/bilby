@@ -4,7 +4,7 @@
  */
 
 import { Router, type Router as RouterType } from 'express'
-import { planTrip, planTripFromCoords, getModeCode } from '../lib/tfnsw-tp-client.js'
+import { planTrip, planTripFromCoords, planTripMixed, getModeCode } from '../lib/tfnsw-tp-client.js'
 import { loadRealtimeData, mergeJourneyRealtime, filterAlertsForJourney } from '../lib/realtime-merger.js'
 import { getBestAndAlternatives } from '../lib/ranking.js'
 import type { RankingStrategy, TripQuery } from '../types/trip-planner.js'
@@ -96,6 +96,7 @@ router.get('/', async (req, res) => {
 
     let journeys
     if (isFromCoord && isToCoord) {
+      // Both are coordinates
       const fromCoord = parseCoordinate(fromStr)!
       const toCoord = parseCoordinate(toStr)!
       journeys = await planTripFromCoords(
@@ -105,14 +106,29 @@ router.get('/', async (req, res) => {
         { arriveBy: arriveBy === 'true', accessible: accessible === 'true', modes: modeList }
       )
     } else if (isFromCoord || isToCoord) {
-      // Mixed coordinate and stop ID - not supported in simple form
-      // Fall back to using string values directly
-      journeys = await planTrip(fromStr, toStr, departureTime, {
-        arriveBy: arriveBy === 'true',
-        accessible: accessible === 'true',
-        modes: modeList,
-      })
+      // Mixed: one is coordinate, one is stop ID
+      // Use planTripMixed for proper TfNSW API formatting
+      const fromCoord = isFromCoord ? parseCoordinate(fromStr) : null
+      const toCoord = isToCoord ? parseCoordinate(toStr) : null
+      
+      journeys = await planTripMixed(
+        {
+          type: isFromCoord ? 'coord' : 'stop',
+          value: fromStr,
+          lat: fromCoord?.lat,
+          lng: fromCoord?.lng,
+        },
+        {
+          type: isToCoord ? 'coord' : 'stop',
+          value: toStr,
+          lat: toCoord?.lat,
+          lng: toCoord?.lng,
+        },
+        departureTime,
+        { arriveBy: arriveBy === 'true', accessible: accessible === 'true', modes: modeList }
+      )
     } else {
+      // Both are stop IDs
       journeys = await planTrip(fromStr, toStr, departureTime, {
         arriveBy: arriveBy === 'true',
         accessible: accessible === 'true',

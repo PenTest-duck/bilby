@@ -4,6 +4,7 @@
 
 import { useState } from 'react';
 import { View, Text, StyleSheet, ScrollView, Pressable, Modal, Switch } from 'react-native';
+import { useRouter } from 'expo-router';
 import { Colors } from '@/constants/theme';
 import { useColorScheme } from '@/hooks/use-color-scheme';
 import { Card } from '@/components/ui/card';
@@ -12,6 +13,7 @@ import { IconSymbol } from '@/components/ui/icon-symbol';
 import { OpalCardBadge, CARD_LABELS } from '@/components/fare';
 import { useAuthStore } from '@/stores/auth-store';
 import { usePreferencesStore } from '@/stores/preferences-store';
+import { auth } from '@/lib/supabase';
 import type { OpalCardType, RankingStrategy } from '@/lib/api/types';
 
 const OPAL_CARD_TYPES: OpalCardType[] = ['adult', 'child', 'concession', 'senior', 'student'];
@@ -26,8 +28,18 @@ const STRATEGIES: { value: RankingStrategy; label: string; description: string }
 export default function SettingsScreen() {
   const colorScheme = useColorScheme() ?? 'light';
   const colors = Colors[colorScheme];
+  const router = useRouter();
   
   const { isAuthenticated, user, logout } = useAuthStore();
+  
+  const handleSignOut = async () => {
+    try {
+      await auth.signOut();
+      logout();
+    } catch (error) {
+      console.error('Sign out failed:', error);
+    }
+  };
   const { 
     defaultStrategy, 
     accessibilityRequired, 
@@ -56,7 +68,7 @@ export default function SettingsScreen() {
               <Button 
                 title="Sign Out" 
                 variant="secondary" 
-                onPress={logout}
+                onPress={handleSignOut}
                 style={styles.button}
               />
             </View>
@@ -70,7 +82,7 @@ export default function SettingsScreen() {
               </Text>
               <Button 
                 title="Sign In" 
-                onPress={() => {/* TODO: Navigate to auth */}}
+                onPress={() => router.push('/auth/sign-in' as any)}
                 style={styles.button}
               />
             </View>

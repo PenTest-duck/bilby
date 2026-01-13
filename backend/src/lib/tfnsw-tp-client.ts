@@ -269,6 +269,54 @@ export async function planTripFromCoords(
   return data.journeys ?? []
 }
 
+/**
+ * Plan a trip with mixed origin/destination types (coord or stop ID)
+ * Per TfNSW API: coordinates must be in format LONGITUDE:LATITUDE:EPSG:4326
+ */
+export async function planTripMixed(
+  origin: { type: 'coord' | 'stop'; value: string; lat?: number; lng?: number },
+  destination: { type: 'coord' | 'stop'; value: string; lat?: number; lng?: number },
+  when: Date = new Date(),
+  options: TripOptions = {}
+): Promise<Journey[]> {
+  const params: Record<string, string | number | boolean> = {
+    ...COMMON_PARAMS,
+    TfNSWTR: 'true',
+    depArrMacro: options.arriveBy ? 'arr' : 'dep',
+    itdDate: formatDate(when),
+    itdTime: formatTime(when),
+    calcNumberOfTrips: 6,
+  }
+
+  // Set origin based on type
+  if (origin.type === 'coord' && origin.lat !== undefined && origin.lng !== undefined) {
+    params.type_origin = 'coord'
+    params.name_origin = `${origin.lng}:${origin.lat}:EPSG:4326`
+  } else {
+    params.type_origin = 'any'
+    params.name_origin = origin.value
+  }
+
+  // Set destination based on type
+  if (destination.type === 'coord' && destination.lat !== undefined && destination.lng !== undefined) {
+    params.type_destination = 'coord'
+    params.name_destination = `${destination.lng}:${destination.lat}:EPSG:4326`
+  } else {
+    params.type_destination = 'any'
+    params.name_destination = destination.value
+  }
+
+  if (options.accessible) {
+    params.wheelchair = 'on'
+  }
+
+  const url = buildUrl('/trip', params)
+  const response = await fetchWithTimeout(url, 15000)
+  const data = await response.json() as { journeys?: Journey[] }
+
+  return data.journeys ?? []
+}
+
 /** Options for service alerts */
 export interface AlertOptions {
   modes?: number[]

@@ -1,10 +1,13 @@
 /**
  * Trip Detail Screen
  * Shows journey details with list/map toggle
+ * 
+ * Receives journey data via route params (serialized as JSON)
+ * or fetches fresh data if only origin/destination IDs are provided
  */
 
-import { useState } from 'react';
-import { View, Text, StyleSheet, ScrollView, Pressable } from 'react-native';
+import { useState, useMemo } from 'react';
+import { View, Text, StyleSheet, ScrollView, Pressable, Modal } from 'react-native';
 import { useLocalSearchParams, Stack } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Colors } from '@/constants/theme';
@@ -13,109 +16,90 @@ import { Card } from '@/components/ui/card';
 import { IconSymbol } from '@/components/ui/icon-symbol';
 import { LegDetail } from '@/components/trip/leg-detail';
 import { TripMapView } from '@/components/maps';
+import { TripAlerts, AlertDetailModal } from '@/components/alerts';
 import { formatTime, formatDuration } from '@/lib/date';
-import type { RankedJourney } from '@/lib/api/types';
+import { useTripPlan } from '@/lib/api/trips';
+import type { RankedJourney, DisruptionAlert } from '@/lib/api/types';
 
 type ViewMode = 'list' | 'map';
 
-// Mock journey data for demo (in production, fetch from params or API)
-const MOCK_JOURNEY: RankedJourney = {
-  interchanges: 1,
-  legs: [
-    {
-      duration: 180,
-      origin: {
-        id: '10101100',
-        name: 'Central Station',
-        type: 'stop',
-        coord: [-33.8833, 151.2060],
-        departureTimePlanned: new Date(Date.now() + 5 * 60000).toISOString(),
-      },
-      destination: {
-        id: '10102000',
-        name: 'Town Hall Station',
-        type: 'stop',
-        coord: [-33.8736, 151.2069],
-        arrivalTimePlanned: new Date(Date.now() + 8 * 60000).toISOString(),
-      },
-      transportation: {
-        id: 'T1',
-        name: 'T1 North Shore Line',
-        number: 'T1',
-        product: { class: 1, name: 'Train', iconId: 1 },
-        destination: { id: 'ns', name: 'North Sydney', type: 'stop' },
-      },
-      coords: [
-        [-33.8833, 151.2060],
-        [-33.8780, 151.2065],
-        [-33.8736, 151.2069],
-      ],
-      stopSequence: [
-        { id: '10101100', name: 'Central', type: 'stop', coord: [-33.8833, 151.2060] },
-        { id: '10102000', name: 'Town Hall', type: 'stop', coord: [-33.8736, 151.2069] },
-      ],
-    },
-    {
-      duration: 120,
-      origin: {
-        id: '10102000',
-        name: 'Town Hall Station',
-        type: 'stop',
-        coord: [-33.8736, 151.2069],
-        departureTimePlanned: new Date(Date.now() + 10 * 60000).toISOString(),
-      },
-      destination: {
-        id: '10102100',
-        name: 'Wynyard Station',
-        type: 'stop',
-        coord: [-33.8664, 151.2063],
-        arrivalTimePlanned: new Date(Date.now() + 12 * 60000).toISOString(),
-      },
-      transportation: {
-        id: 'T1',
-        name: 'T1 North Shore Line',
-        number: 'T1',
-        product: { class: 1, name: 'Train', iconId: 1 },
-        destination: { id: 'ns', name: 'North Sydney', type: 'stop' },
-      },
-      coords: [
-        [-33.8736, 151.2069],
-        [-33.8700, 151.2065],
-        [-33.8664, 151.2063],
-      ],
-    },
-  ],
-  ranking: {
-    total: 0.85,
-    factors: {
-      arrivalTime: { value: 12, weight: 0.3, score: 0.9 },
-      duration: { value: 12, weight: 0.25, score: 0.85 },
-      walking: { value: 200, weight: 0.2, score: 0.8 },
-      transfers: { value: 1, weight: 0.15, score: 0.7 },
-      reliability: { value: 0.95, weight: 0.1, score: 0.95 },
-    },
-    why: 'Fastest option with minimal walking',
-  },
-};
+/** Route params for trip detail screen */
+interface TripParams {
+  /** Serialized journey data (if coming from trip planner) */
+  journey?: string;
+  /** Origin stop ID (for refetching) */
+  from?: string;
+  /** Destination stop ID (for refetching) */
+  to?: string;
+  /** Journey index in results (if refetching) */
+  index?: string;
+}
 
 export default function TripDetailScreen() {
   const colorScheme = useColorScheme() ?? 'light';
   const colors = Colors[colorScheme];
   const insets = useSafeAreaInsets();
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const params = useLocalSearchParams<{ id: string }>();
+  const params = useLocalSearchParams() as unknown as TripParams;
   
   const [viewMode, setViewMode] = useState<ViewMode>('list');
   const [selectedLegIndex, setSelectedLegIndex] = useState<number | undefined>(undefined);
+  const [selectedAlert, setSelectedAlert] = useState<DisruptionAlert | null>(null);
 
-  // In production, fetch journey by ID
-  const journey = MOCK_JOURNEY;
+  // Parse journey from params if provided (from trip planner navigation)
+  const parsedJourney = useMemo<RankedJourney | null>(() => {
+    if (params.journey) {
+      try {
+        return JSON.parse(params.journey) as RankedJourney;
+      } catch {
+        console.error('[TripDetail] Failed to parse journey from params');
+        return null;
+      }
+    }
+    return null;
+  }, [params.journey]);
+
+  // Fetch fresh journey data if we have origin/destination but no parsed journey
+  const { data: tripData } = useTripPlan(
+    !parsedJourney && params.from && params.to
+      ? { from: params.from, to: params.to }
+      : null,
+    { enabled: !parsedJourney && !!params.from && !!params.to }
+  );
+
+  // Get the journey to display (from params or fetched)
+  const journey = useMemo<RankedJourney | null>(() => {
+    if (parsedJourney) return parsedJourney;
+    
+    if (tripData) {
+      const index = params.index ? parseInt(params.index, 10) : 0;
+      if (index === 0 && tripData.best) return tripData.best;
+      if (tripData.alternatives?.[index - 1]) return tripData.alternatives[index - 1];
+      return tripData.best;
+    }
+    
+    return null;
+  }, [parsedJourney, tripData, params.index]);
+
+  // Handle loading/empty state
+  if (!journey) {
+    return (
+      <View style={[styles.container, { backgroundColor: colors.background }]}>
+        <Stack.Screen options={{ title: 'Trip Details' }} />
+        <View style={styles.emptyContainer}>
+          <IconSymbol name="clock" size={48} color={colors.textMuted} />
+          <Text style={[styles.emptyText, { color: colors.textSecondary }]}>
+            Loading journey details...
+          </Text>
+        </View>
+      </View>
+    );
+  }
 
   const firstLeg = journey.legs[0];
   const lastLeg = journey.legs[journey.legs.length - 1];
   const departureTime = formatTime(firstLeg.origin?.departureTimePlanned ?? '');
   const arrivalTime = formatTime(lastLeg.destination?.arrivalTimePlanned ?? '');
-  const totalDuration = journey.legs.reduce((sum, leg) => sum + (leg.duration || 0), 0);
+  const totalDuration = journey.legs.reduce((sum: number, leg) => sum + (leg.duration || 0), 0);
 
   return (
     <View style={[styles.container, { backgroundColor: colors.background }]}>
@@ -182,6 +166,14 @@ export default function TripDetailScreen() {
             </View>
           </Card>
 
+          {/* Trip Alerts */}
+          {journey.alerts && journey.alerts.length > 0 && (
+            <TripAlerts
+              journey={journey}
+              onAlertPress={setSelectedAlert}
+            />
+          )}
+
           {/* Legs Detail */}
           <View style={styles.legsSection}>
             <Text style={[styles.sectionTitle, { color: colors.text }]}>
@@ -210,6 +202,20 @@ export default function TripDetailScreen() {
           </Pressable>
         </ScrollView>
       )}
+
+      {/* Alert Detail Modal */}
+      <Modal
+        visible={selectedAlert !== null}
+        animationType="slide"
+        presentationStyle="pageSheet"
+      >
+        {selectedAlert && (
+          <AlertDetailModal
+            alert={selectedAlert}
+            onClose={() => setSelectedAlert(null)}
+          />
+        )}
+      </Modal>
     </View>
   );
 }
@@ -319,5 +325,16 @@ const styles = StyleSheet.create({
     borderRadius: 18,
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  emptyContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 24,
+  },
+  emptyText: {
+    fontSize: 16,
+    marginTop: 16,
+    textAlign: 'center',
   },
 });

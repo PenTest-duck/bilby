@@ -2,7 +2,7 @@
  * Home Tab - Quick Access Dashboard
  */
 
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { View, Text, StyleSheet, ScrollView, Pressable, Modal } from 'react-native';
 import { useRouter } from 'expo-router';
 import { Colors } from '@/constants/theme';
@@ -16,46 +16,46 @@ import { AlertBanner, AlertDetailModal } from '@/components/alerts';
 import { LiveIndicator, LastUpdated } from '@/components/realtime';
 import { useAuthStore } from '@/stores/auth-store';
 import { useServiceStatus } from '@/lib/api/alerts';
-import { formatTime, formatRelativeTime } from '@/lib/date';
-import type { StatusAlert } from '@/lib/api/types';
+import { useSavedTrips, useRecentStops } from '@/lib/api/user';
+import { formatTime } from '@/lib/date';
+import type { StatusAlert, SavedTrip, RecentStop } from '@/lib/api/types';
 
-// Mock saved trips for demo - includes upcoming departures with platform info
-const MOCK_SAVED_TRIPS = [
-  {
-    id: '1',
-    name: 'To Work',
-    from: 'Central Station',
-    to: 'North Sydney',
-    modes: [1],
-    line: 'T1',
-    platform: '16',
-    // Multiple upcoming departures
-    upcomingDepartures: [
-      new Date(Date.now() + 3 * 60000).toISOString(),
-      new Date(Date.now() + 8 * 60000).toISOString(),
-      new Date(Date.now() + 18 * 60000).toISOString(),
-    ],
-  },
-  {
-    id: '2', 
-    name: 'Home',
-    from: 'Martin Place',
-    to: 'Bondi Junction',
-    modes: [1],
-    line: 'T4',
-    platform: '3',
-    upcomingDepartures: [
-      new Date(Date.now() + 6 * 60000).toISOString(),
-      new Date(Date.now() + 16 * 60000).toISOString(),
-    ],
-  },
-];
+/** Display trip with computed upcoming departures */
+interface DisplayTrip {
+  id: string;
+  name: string;
+  from: string;
+  to: string;
+  modes: number[];
+  line?: string;
+  platform?: string;
+  upcomingDepartures: string[];
+}
 
-const MOCK_RECENT_STOPS = [
-  { id: '1', name: 'Central Station', modes: [1, 2] },
-  { id: '2', name: 'Town Hall', modes: [1] },
-  { id: '3', name: 'Circular Quay', modes: [1, 9] },
-];
+/** Convert saved trip to display format */
+function toDisplayTrip(trip: SavedTrip): DisplayTrip {
+  return {
+    id: trip.id,
+    name: trip.name,
+    from: trip.origin_name,
+    to: trip.destination_name,
+    modes: [1], // Default to train, could be enhanced later
+    line: undefined, // Would come from real-time trip planning
+    platform: undefined,
+    upcomingDepartures: [
+      // Placeholder departures - would come from real-time data
+      new Date(Date.now() + 5 * 60000).toISOString(),
+      new Date(Date.now() + 15 * 60000).toISOString(),
+    ],
+  };
+}
+
+/** Display stop format */
+interface DisplayStop {
+  id: string;
+  name: string;
+  modes: number[];
+}
 
 export default function HomeScreen() {
   const colorScheme = useColorScheme() ?? 'light';
@@ -65,13 +65,33 @@ export default function HomeScreen() {
   
   const [selectedAlert, setSelectedAlert] = useState<StatusAlert | null>(null);
   const { data: statusData, dataUpdatedAt, isLoading: statusLoading } = useServiceStatus();
+  
+  // Fetch user data (only when authenticated)
+  const { data: tripsData } = useSavedTrips();
+  const { data: recentStopsData } = useRecentStops();
+  
+  // Convert saved trips to display format
+  const savedTrips = useMemo<DisplayTrip[]>(() => {
+    if (!tripsData?.trips) return [];
+    return tripsData.trips.slice(0, 5).map(toDisplayTrip);
+  }, [tripsData]);
+  
+  // Convert recent stops to display format
+  const recentStops = useMemo<DisplayStop[]>(() => {
+    if (!recentStopsData?.stops) return [];
+    return recentStopsData.stops.slice(0, 5).map((stop: RecentStop) => ({
+      id: stop.stop_id,
+      name: stop.stop_name,
+      modes: [1], // Default, could be enhanced
+    }));
+  }, [recentStopsData]);
 
-  const handleTripPress = (trip: typeof MOCK_SAVED_TRIPS[0]) => {
+  const handleTripPress = (trip: DisplayTrip) => {
     // Navigate to Plan tab with pre-filled stops
     router.push('/plan');
   };
 
-  const handleStopPress = (stop: typeof MOCK_RECENT_STOPS[0]) => {
+  const handleStopPress = (stop: DisplayStop) => {
     // Navigate to Departures tab with pre-selected stop
     router.push('/departures');
   };
@@ -98,7 +118,7 @@ export default function HomeScreen() {
         </View>
 
         {/* Quick Trip Cards */}
-        {isAuthenticated || MOCK_SAVED_TRIPS.length > 0 ? (
+        {isAuthenticated && savedTrips.length > 0 ? (
           <View style={styles.section}>
             <View style={styles.sectionHeader}>
               <Text style={[styles.sectionTitle, { color: colors.text }]}>
@@ -114,7 +134,7 @@ export default function HomeScreen() {
               showsHorizontalScrollIndicator={false}
               contentContainerStyle={styles.tripsScroll}
             >
-              {MOCK_SAVED_TRIPS.map((trip) => (
+              {savedTrips.map((trip) => (
                 <QuickTripCard
                   key={trip.id}
                   trip={trip}
@@ -154,43 +174,45 @@ export default function HomeScreen() {
         )}
 
         {/* Recent Stops */}
-        <View style={styles.section}>
-          <View style={styles.sectionHeader}>
-            <Text style={[styles.sectionTitle, { color: colors.text }]}>
-              Recent Stops
-            </Text>
-            <Pressable onPress={() => router.push('/departures')}>
-              <Text style={[styles.seeAll, { color: colors.tint }]}>See All</Text>
-            </Pressable>
-          </View>
-          
-          <Card padding="none">
-            {MOCK_RECENT_STOPS.map((stop, index) => (
-              <Pressable
-                key={stop.id}
-                style={({ pressed }) => [
-                  styles.recentStopRow,
-                  pressed && { backgroundColor: colors.backgroundSecondary },
-                  index < MOCK_RECENT_STOPS.length - 1 && { 
-                    borderBottomWidth: StyleSheet.hairlineWidth,
-                    borderBottomColor: colors.border,
-                  },
-                ]}
-                onPress={() => handleStopPress(stop)}
-              >
-                <View style={styles.stopModes}>
-                  {stop.modes.slice(0, 2).map((mode, i) => (
-                    <ModeIcon key={i} mode={mode} size="sm" />
-                  ))}
-                </View>
-                <Text style={[styles.stopName, { color: colors.text }]} numberOfLines={1}>
-                  {stop.name}
-                </Text>
-                <IconSymbol name="chevron.right" size={16} color={colors.textMuted} />
+        {recentStops.length > 0 && (
+          <View style={styles.section}>
+            <View style={styles.sectionHeader}>
+              <Text style={[styles.sectionTitle, { color: colors.text }]}>
+                Recent Stops
+              </Text>
+              <Pressable onPress={() => router.push('/departures')}>
+                <Text style={[styles.seeAll, { color: colors.tint }]}>See All</Text>
               </Pressable>
-            ))}
-          </Card>
-        </View>
+            </View>
+            
+            <Card padding="none">
+              {recentStops.map((stop, index) => (
+                <Pressable
+                  key={stop.id}
+                  style={({ pressed }) => [
+                    styles.recentStopRow,
+                    pressed && { backgroundColor: colors.backgroundSecondary },
+                    index < recentStops.length - 1 && { 
+                      borderBottomWidth: StyleSheet.hairlineWidth,
+                      borderBottomColor: colors.border,
+                    },
+                  ]}
+                  onPress={() => handleStopPress(stop)}
+                >
+                  <View style={styles.stopModes}>
+                    {stop.modes.slice(0, 2).map((mode, i) => (
+                      <ModeIcon key={i} mode={mode} size="sm" />
+                    ))}
+                  </View>
+                  <Text style={[styles.stopName, { color: colors.text }]} numberOfLines={1}>
+                    {stop.name}
+                  </Text>
+                  <IconSymbol name="chevron.right" size={16} color={colors.textMuted} />
+                </Pressable>
+              ))}
+            </Card>
+          </View>
+        )}
 
         {/* Service Status */}
         <View style={styles.section}>
@@ -250,7 +272,7 @@ export default function HomeScreen() {
           <QuickAction
             icon="exclamationmark.triangle.fill"
             label="Alerts"
-            onPress={() => {}}
+            onPress={() => router.push('/alerts')}
           />
           <QuickAction
             icon="gearshape.fill"
@@ -281,7 +303,7 @@ function QuickTripCard({
   trip, 
   onPress 
 }: { 
-  trip: typeof MOCK_SAVED_TRIPS[0];
+  trip: DisplayTrip;
   onPress: () => void;
 }) {
   const colorScheme = useColorScheme() ?? 'light';
@@ -308,7 +330,7 @@ function QuickTripCard({
     >
       <View style={styles.tripHeader}>
         <Text style={[styles.tripName, { color: colors.text }]}>{trip.name}</Text>
-        <LineBadge line={trip.line} modeId={trip.modes[0]} size="sm" />
+        {trip.line && <LineBadge line={trip.line} modeId={trip.modes[0]} size="sm" />}
       </View>
       <Text style={[styles.tripRoute, { color: colors.textSecondary }]} numberOfLines={1}>
         {trip.from} → {trip.to}

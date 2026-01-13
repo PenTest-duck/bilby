@@ -13,7 +13,9 @@ import {
   KeyboardAvoidingView,
   Platform,
   Pressable,
+  Alert,
 } from 'react-native';
+import * as Location from 'expo-location';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Colors } from '@/constants/theme';
 import { useColorScheme } from '@/hooks/use-color-scheme';
@@ -29,6 +31,14 @@ interface StopSearchModalProps {
   onClose: () => void;
   placeholder?: string;
   recentStops?: Stop[];
+  /** Show "My Location" option (typically for origin selection) */
+  showMyLocation?: boolean;
+}
+
+// Extended stop type for "My Location" with coordinates
+interface LocationStop extends Stop {
+  isCurrentLocation?: boolean;
+  coordinates?: string;
 }
 
 export function StopSearchModal({
@@ -36,11 +46,13 @@ export function StopSearchModal({
   onClose,
   placeholder,
   recentStops = [],
+  showMyLocation = false,
 }: StopSearchModalProps) {
   const colorScheme = useColorScheme() ?? 'light';
   const colors = Colors[colorScheme];
   const insets = useSafeAreaInsets();
   const [query, setQuery] = useState('');
+  const [isGettingLocation, setIsGettingLocation] = useState(false);
 
   const { data, isLoading } = useStopSearch(query);
   const stops = data?.stops || [];
@@ -50,9 +62,50 @@ export function StopSearchModal({
     onSelect(stop);
   }, [onSelect]);
 
+  const handleMyLocationSelect = useCallback(async () => {
+    setIsGettingLocation(true);
+    try {
+      const { status } = await Location.requestForegroundPermissionsAsync();
+      
+      if (status !== 'granted') {
+        Alert.alert(
+          'Location Access Required',
+          'Please enable location access in your device settings to use this feature.'
+        );
+        return;
+      }
+      
+      const location = await Location.getCurrentPositionAsync({
+        accuracy: Location.Accuracy.High,
+      });
+      
+      const { latitude, longitude } = location.coords;
+      
+      const myLocation: LocationStop = {
+        id: 'my-location',
+        name: 'My Location',
+        disassembledName: 'Current Location',
+        type: 'poi',
+        isCurrentLocation: true,
+        coordinates: `${latitude},${longitude}`,
+        coord: [latitude, longitude],
+      };
+      
+      Keyboard.dismiss();
+      onSelect(myLocation);
+    } catch (error) {
+      console.error('Location error:', error);
+      Alert.alert('Error', 'Failed to get your location. Please try again.');
+    } finally {
+      setIsGettingLocation(false);
+    }
+  }, [onSelect]);
+
   const showRecent = query.length < 2 && recentStops.length > 0;
   const showResults = query.length >= 2;
   const showEmpty = showResults && !isLoading && stops.length === 0;
+  // Show My Location option when no query and showMyLocation is enabled
+  const showMyLocationOption = showMyLocation && query.length === 0;
 
   return (
     <KeyboardAvoidingView 
@@ -88,14 +141,41 @@ export function StopSearchModal({
           />
         )}
         ListHeaderComponent={
-          showRecent ? (
-            <View style={styles.sectionHeader}>
-              <IconSymbol name="clock" size={16} color={colors.textMuted} />
-              <Text style={[styles.sectionTitle, { color: colors.textSecondary }]}>
-                Recent
-              </Text>
-            </View>
-          ) : null
+          <>
+            {/* My Location Option - shows when no query and enabled */}
+            {showMyLocationOption && (
+              <Pressable
+                style={({ pressed }) => [
+                  styles.myLocationRow,
+                  { backgroundColor: pressed ? colors.backgroundSecondary : 'transparent' },
+                ]}
+                onPress={handleMyLocationSelect}
+                disabled={isGettingLocation}
+              >
+                <View style={[styles.myLocationIcon, { backgroundColor: colors.tint }]}>
+                  <IconSymbol name="location.fill" size={20} color="#FFFFFF" />
+                </View>
+                <View style={styles.myLocationContent}>
+                  <Text style={[styles.myLocationTitle, { color: colors.text }]}>
+                    My Location
+                  </Text>
+                  <Text style={[styles.myLocationSubtitle, { color: colors.textSecondary }]}>
+                    {isGettingLocation ? 'Getting location...' : 'Use current location'}
+                  </Text>
+                </View>
+                <IconSymbol name="chevron.right" size={16} color={colors.textMuted} />
+              </Pressable>
+            )}
+            {/* Recent section header */}
+            {showRecent && (
+              <View style={styles.sectionHeader}>
+                <IconSymbol name="clock" size={16} color={colors.textMuted} />
+                <Text style={[styles.sectionTitle, { color: colors.textSecondary }]}>
+                  Recent
+                </Text>
+              </View>
+            )}
+          </>
         }
         ListEmptyComponent={
           isLoading ? (
@@ -112,7 +192,7 @@ export function StopSearchModal({
                 Try a different search term
               </Text>
             </View>
-          ) : !showRecent ? (
+          ) : !showRecent && !showMyLocationOption ? (
             <View style={styles.empty}>
               <IconSymbol name="tram.fill" size={40} color={colors.textMuted} />
               <Text style={[styles.emptyTitle, { color: colors.text }]}>
@@ -221,5 +301,29 @@ const styles = StyleSheet.create({
     fontSize: 14,
     marginTop: 8,
     textAlign: 'center',
+  },
+  myLocationRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    padding: 14,
+    gap: 12,
+  },
+  myLocationIcon: {
+    width: 40,
+    height: 40,
+    borderRadius: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  myLocationContent: {
+    flex: 1,
+  },
+  myLocationTitle: {
+    fontSize: 16,
+    fontWeight: '600',
+  },
+  myLocationSubtitle: {
+    fontSize: 13,
+    marginTop: 2,
   },
 });

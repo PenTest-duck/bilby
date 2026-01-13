@@ -10,7 +10,13 @@
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true,
+      "appleTeamId": "LV5LL3GM2B",
       "bundleIdentifier": "com.pentestduck.bilby",
+      "entitlements": {
+        "com.apple.security.application-groups": [
+          "group.com.pentestduck.bilby"
+        ]
+      },
       "infoPlist": {
         "NSLocationAlwaysAndWhenInUseUsageDescription": "This app requires access to your location even when closed.",
         "NSLocationWhenInUseUsageDescription": "This app requires access to your location when open."
@@ -25,7 +31,8 @@
       },
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false,
-      "package": "com.pentestduck.bilby"
+      "package": "com.pentestduck.bilby",
+      "googleServicesFile": "./.credentials/google-services.json"
     },
     "web": {
       "output": "static",
@@ -52,7 +59,9 @@
           "locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location",
           "locationWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location"
         }
-      ]
+      ],
+      "expo-notifications",
+      "@bacons/apple-targets"
     ],
     "experiments": {
       "typedRoutes": true,

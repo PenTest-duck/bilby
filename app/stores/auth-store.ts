@@ -20,6 +20,7 @@ interface AuthState {
   
   setToken: (token: string | null) => void;
   setUser: (user: User | null) => void;
+  setLoading: (loading: boolean) => void;
   login: (token: string, user: User) => void;
   logout: () => void;
 }
@@ -39,6 +40,8 @@ export const useAuthStore = create<AuthState>()(
       }),
       
       setUser: (user) => set({ user }),
+      
+      setLoading: (loading) => set({ isLoading: loading }),
       
       login: (token, user) => set({ 
         token, 

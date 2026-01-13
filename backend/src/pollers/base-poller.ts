@@ -62,7 +62,8 @@ export abstract class BasePoller {
     }
 
     this.status.running = true
-    console.log(`[${this.config.name}] Starting with ${this.config.intervalMs}ms interval`)
+    const intervalSec = Math.round(this.config.intervalMs / 1000)
+    console.log(`[${this.config.name}] 🚀 Starting poller - interval: ${intervalSec}s, feeds: [${this.config.feeds.join(', ')}]`)
 
     // Initial poll
     this.pollAll()
@@ -90,15 +91,20 @@ export abstract class BasePoller {
    */
   async pollAll(): Promise<void> {
     if (this.isPolling) {
-      console.log(`[${this.config.name}] Skipping poll, previous still running`)
+      console.log(`[${this.config.name}] ⏭️ Skipping poll - previous still running`)
       return
     }
 
     this.isPolling = true
     this.status.lastPoll = Date.now()
     this.status.pollCount++
+    
+    const timestamp = new Date().toISOString().substring(11, 19)
+    console.log(`[${this.config.name}] 🔄 Poll #${this.status.pollCount} started at ${timestamp}`)
 
     const stagger = this.config.staggerMs ?? 500
+    let successCount = 0
+    let errorCount = 0
 
     for (let i = 0; i < this.config.feeds.length; i++) {
       const feed = this.config.feeds[i]
@@ -110,15 +116,18 @@ export abstract class BasePoller {
 
       try {
         await this.pollFeed(feed)
+        successCount++
       } catch (error) {
         const message = error instanceof Error ? error.message : 'Unknown error'
-        console.error(`[${this.config.name}] Error polling ${feed}:`, message)
+        console.error(`[${this.config.name}] ❌ Error polling ${feed}:`, message)
         this.status.lastError = message
         this.status.errorCount++
+        errorCount++
       }
     }
 
     this.isPolling = false
+    console.log(`[${this.config.name}] ✅ Poll #${this.status.pollCount} complete - success: ${successCount}, errors: ${errorCount}`)
   }
 
   /**
@@ -136,12 +145,14 @@ export abstract class BasePoller {
     )
 
     if (!checkResult.modified && meta) {
-      console.log(`[${this.config.name}] ${feed} not modified, skipping fetch`)
+      console.log(`[${this.config.name}] 📦 ${feed}: not modified (cached ${meta.count} items)`)
       return
     }
 
     // Fetch and cache new data
+    const startTime = Date.now()
     const result = await this.fetchAndCache(feed)
+    const duration = Date.now() - startTime
 
     // Update metadata
     const newMeta: FeedMeta = {
@@ -154,7 +165,7 @@ export abstract class BasePoller {
     await setFeedMeta(this.config.feedType, feed, newMeta)
 
     this.status.lastSuccess = Date.now()
-    console.log(`[${this.config.name}] ${feed} updated: ${result.count} items`)
+    console.log(`[${this.config.name}] 📥 ${feed}: fetched ${result.count} items in ${duration}ms`)
   }
 
   /**

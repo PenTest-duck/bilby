@@ -266,6 +266,7 @@ export default function PlanScreen() {
           onSelect={handleStopSelect}
           onClose={() => setSearchTarget(null)}
           placeholder={searchTarget === 'from' ? 'Where are you?' : 'Where to?'}
+          showMyLocation={searchTarget === 'from'}
         />
       </Modal>
     </View>
