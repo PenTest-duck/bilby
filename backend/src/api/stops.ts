@@ -28,12 +28,27 @@ router.get('/search', async (req, res) => {
       limit: limit ? parseInt(limit as string, 10) : 10,
     })
 
+    // Sort stops: prioritize 'stop' type first, then by match quality
+    const sortedStops = [...stops].sort((a, b) => {
+      // Type priority: 'stop' first, then 'platform', then others
+      const typeOrder: Record<string, number> = { stop: 0, platform: 1, poi: 2, locality: 3, suburb: 4, street: 5, singlehouse: 6 }
+      const aTypeScore = typeOrder[a.type] ?? 7
+      const bTypeScore = typeOrder[b.type] ?? 7
+      
+      if (aTypeScore !== bTypeScore) {
+        return aTypeScore - bTypeScore
+      }
+      
+      // Within same type, sort by match quality (higher is better)
+      return (b.matchQuality ?? 0) - (a.matchQuality ?? 0)
+    })
+
     res.json({
       success: true,
       data: {
-        stops,
+        stops: sortedStops,
         query: q,
-        count: stops.length,
+        count: sortedStops.length,
       },
       meta: {
         timestamp: Date.now(),

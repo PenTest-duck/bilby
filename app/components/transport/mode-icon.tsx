@@ -22,7 +22,7 @@ const MODE_IMAGES = {
   ferry: require('@/assets/tfnsw/ferry_mode_symbols_eps_png_white_colour/Ferry_Mode_Colour_Background_400x400.png'),
   lightRail: require('@/assets/tfnsw/lightrail_mode_symbols_eps_png_white_colour/LightRail_Mode_Colour_Background_400x400.png'),
   coach: require('@/assets/tfnsw/privatecoach_mode_symbols_eps_png_white_grey/Private_coach_grey_400x400.png'),
-  walking: null,
+  walking: require('@/assets/tfnsw/walking.png'),
 } as const;
 
 const SIZES = {

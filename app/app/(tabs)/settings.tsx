@@ -3,7 +3,7 @@
  */
 
 import { useState } from 'react';
-import { View, Text, StyleSheet, ScrollView, Pressable, Modal } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, Pressable, Modal, Switch } from 'react-native';
 import { Colors } from '@/constants/theme';
 import { useColorScheme } from '@/hooks/use-color-scheme';
 import { Card } from '@/components/ui/card';
@@ -12,17 +12,32 @@ import { IconSymbol } from '@/components/ui/icon-symbol';
 import { OpalCardBadge, CARD_LABELS } from '@/components/fare';
 import { useAuthStore } from '@/stores/auth-store';
 import { usePreferencesStore } from '@/stores/preferences-store';
-import type { OpalCardType } from '@/lib/api/types';
+import type { OpalCardType, RankingStrategy } from '@/lib/api/types';
 
 const OPAL_CARD_TYPES: OpalCardType[] = ['adult', 'child', 'concession', 'senior', 'student'];
+
+const STRATEGIES: { value: RankingStrategy; label: string; description: string }[] = [
+  { value: 'best', label: 'Best', description: 'Balanced recommendation' },
+  { value: 'fastest', label: 'Fastest', description: 'Minimize total journey time' },
+  { value: 'least_walking', label: 'Less Walking', description: 'Minimize walking distance' },
+  { value: 'fewest_transfers', label: 'Fewest Transfers', description: 'Minimize interchanges' },
+];
 
 export default function SettingsScreen() {
   const colorScheme = useColorScheme() ?? 'light';
   const colors = Colors[colorScheme];
   
   const { isAuthenticated, user, logout } = useAuthStore();
-  const { defaultStrategy, accessibilityRequired, opalCardType, setOpalCardType } = usePreferencesStore();
+  const { 
+    defaultStrategy, 
+    accessibilityRequired, 
+    opalCardType, 
+    setOpalCardType,
+    setDefaultStrategy,
+    setAccessibilityRequired,
+  } = usePreferencesStore();
   const [showOpalPicker, setShowOpalPicker] = useState(false);
+  const [showStrategyPicker, setShowStrategyPicker] = useState(false);
 
   return (
     <View style={[styles.container, { backgroundColor: colors.background }]}>
@@ -94,21 +109,36 @@ export default function SettingsScreen() {
           Preferences
         </Text>
         <Card>
-          <View style={styles.row}>
-            <Text style={[styles.label, { color: colors.textSecondary }]}>
-              Default Strategy
-            </Text>
-            <Text style={[styles.value, { color: colors.text }]}>
-              {defaultStrategy}
-            </Text>
-          </View>
+          <Pressable 
+            style={styles.row}
+            onPress={() => setShowStrategyPicker(true)}
+          >
+            <View style={styles.rowContent}>
+              <Text style={[styles.label, { color: colors.textSecondary }]}>
+                Default Strategy
+              </Text>
+              <Text style={[styles.value, { color: colors.text }]}>
+                {STRATEGIES.find(s => s.value === defaultStrategy)?.label || defaultStrategy}
+              </Text>
+            </View>
+            <IconSymbol name="chevron.right" size={16} color={colors.textMuted} />
+          </Pressable>
+          
           <View style={[styles.row, styles.rowBorder, { borderTopColor: colors.border }]}>
-            <Text style={[styles.label, { color: colors.textSecondary }]}>
-              Accessibility
-            </Text>
-            <Text style={[styles.value, { color: colors.text }]}>
-              {accessibilityRequired ? 'Required' : 'Not required'}
-            </Text>
+            <View style={styles.rowContent}>
+              <Text style={[styles.label, { color: colors.textSecondary }]}>
+                Accessibility Required
+              </Text>
+              <Text style={[styles.accessibilityHint, { color: colors.textMuted }]}>
+                Show only wheelchair accessible routes
+              </Text>
+            </View>
+            <Switch
+              value={accessibilityRequired}
+              onValueChange={setAccessibilityRequired}
+              trackColor={{ false: colors.border, true: colors.tint }}
+              thumbColor="#FFFFFF"
+            />
           </View>
         </Card>
 
@@ -165,6 +195,59 @@ export default function SettingsScreen() {
                   {CARD_LABELS[type]}
                 </Text>
                 {type === opalCardType && (
+                  <IconSymbol name="checkmark.circle.fill" size={24} color={colors.tint} />
+                )}
+              </Pressable>
+            ))}
+          </ScrollView>
+        </View>
+      </Modal>
+
+      {/* Strategy Picker Modal */}
+      <Modal
+        visible={showStrategyPicker}
+        animationType="slide"
+        presentationStyle="pageSheet"
+      >
+        <View style={[styles.modalContainer, { backgroundColor: colors.background }]}>
+          <View style={[styles.modalHeader, { borderBottomColor: colors.border }]}>
+            <Text style={[styles.modalTitle, { color: colors.text }]}>
+              Default Strategy
+            </Text>
+            <Pressable onPress={() => setShowStrategyPicker(false)}>
+              <IconSymbol name="xmark.circle.fill" size={28} color={colors.textMuted} />
+            </Pressable>
+          </View>
+          
+          <ScrollView contentContainerStyle={styles.cardGrid}>
+            {STRATEGIES.map((strategy) => (
+              <Pressable
+                key={strategy.value}
+                style={[
+                  styles.strategyOption,
+                  { 
+                    backgroundColor: colors.card,
+                    borderColor: strategy.value === defaultStrategy ? colors.tint : colors.border,
+                    borderWidth: strategy.value === defaultStrategy ? 2 : 1,
+                  },
+                ]}
+                onPress={() => {
+                  setDefaultStrategy(strategy.value);
+                  setShowStrategyPicker(false);
+                }}
+              >
+                <View style={styles.strategyInfo}>
+                  <Text style={[
+                    styles.strategyLabel, 
+                    { color: strategy.value === defaultStrategy ? colors.tint : colors.text }
+                  ]}>
+                    {strategy.label}
+                  </Text>
+                  <Text style={[styles.strategyDescription, { color: colors.textSecondary }]}>
+                    {strategy.description}
+                  </Text>
+                </View>
+                {strategy.value === defaultStrategy && (
                   <IconSymbol name="checkmark.circle.fill" size={24} color={colors.tint} />
                 )}
               </Pressable>
@@ -262,5 +345,30 @@ const styles = StyleSheet.create({
     flex: 1,
     fontSize: 16,
     fontWeight: '500',
+  },
+  rowContent: {
+    flex: 1,
+  },
+  accessibilityHint: {
+    fontSize: 12,
+    marginTop: 2,
+  },
+  strategyOption: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    padding: 16,
+    borderRadius: 12,
+    gap: 16,
+  },
+  strategyInfo: {
+    flex: 1,
+  },
+  strategyLabel: {
+    fontSize: 16,
+    fontWeight: '500',
+  },
+  strategyDescription: {
+    fontSize: 13,
+    marginTop: 2,
   },
 });

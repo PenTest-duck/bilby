@@ -155,7 +155,7 @@ export default function TripDetailScreen() {
               <View style={styles.durationBlock}>
                 <View style={[styles.durationLine, { backgroundColor: colors.border }]} />
                 <Text style={[styles.duration, { color: colors.textSecondary }]}>
-                  {formatDuration(totalDuration)}
+                  {formatDuration(Math.round(totalDuration / 60))}
                 </Text>
                 <View style={[styles.durationLine, { backgroundColor: colors.border }]} />
               </View>

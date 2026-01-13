@@ -46,7 +46,7 @@ export function LegDetail({ leg, isFirst = false, isLast = false }: LegDetailPro
           <View style={styles.walkingRow}>
             <ModeIcon mode="walking" size="sm" />
             <Text style={[styles.walkingText, { color: colors.textSecondary }]}>
-              Walk {leg.distance ? formatWalkingTime(leg.distance) : formatDuration(leg.duration ?? 0)}
+              Walk {leg.distance ? formatWalkingTime(leg.distance) : formatDuration(Math.round((leg.duration ?? 0) / 60))}
               {leg.distance && ` (${formatDistance(leg.distance)})`}
             </Text>
           </View>
@@ -89,7 +89,7 @@ export function LegDetail({ leg, isFirst = false, isLast = false }: LegDetailPro
                 towards {destination}
               </Text>
               <Text style={[styles.stopsInfo, { color: colors.textSecondary }]}>
-                {stopCount > 0 ? `${stopCount} stops · ` : ''}{formatDuration(leg.duration ?? 0)}
+                {stopCount > 0 ? `${stopCount} stops · ` : ''}{formatDuration(Math.round((leg.duration ?? 0) / 60))}
               </Text>
             </View>
           </View>

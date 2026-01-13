@@ -12,15 +12,16 @@ import {
   FlatList,
   RefreshControl,
 } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Colors } from '@/constants/theme';
 import { useColorScheme } from '@/hooks/use-color-scheme';
 import { IconSymbol } from '@/components/ui/icon-symbol';
 import { StopSearchModal, StopRow } from '@/components/stop-search';
-import { DepartureRow } from '@/components/departure';
-import { useDepartures } from '@/lib/api/departures';
+import { DepartureRow, RouteDetailModal } from '@/components/departure';
+import { useDepartures, useDataFreshness } from '@/lib/api/departures';
 import { SkeletonDeparture } from '@/components/ui/skeleton';
 import { ErrorView } from '@/components/ui/error-view';
-import type { Stop } from '@/lib/api/types';
+import type { Stop, Departure } from '@/lib/api/types';
 
 // Mock recent stops for demo - would come from store in real app
 const MOCK_RECENT_STOPS: Stop[] = [
@@ -35,6 +36,7 @@ export default function DeparturesScreen() {
 
   const [selectedStop, setSelectedStop] = useState<Stop | null>(null);
   const [showSearch, setShowSearch] = useState(false);
+  const [selectedDeparture, setSelectedDeparture] = useState<Departure | null>(null);
 
   const { data, isLoading, isError, refetch, isRefetching } = useDepartures(
     selectedStop?.id ?? null,
@@ -47,6 +49,17 @@ export default function DeparturesScreen() {
     setSelectedStop(stop);
     setShowSearch(false);
   }, []);
+  
+  const handleDeparturePress = useCallback((departure: Departure) => {
+    setSelectedDeparture(departure);
+  }, []);
+
+  const renderDeparture = useCallback(({ item }: { item: Departure }) => (
+    <DepartureRow 
+      departure={item} 
+      onPress={() => handleDeparturePress(item)}
+    />
+  ), [handleDeparturePress]);
 
   const handleClearStop = useCallback(() => {
     setSelectedStop(null);
@@ -141,7 +154,7 @@ export default function DeparturesScreen() {
         <FlatList
           data={departures}
           keyExtractor={(item, index) => `${item.departureTimePlanned}-${item.transportation?.id ?? index}`}
-          renderItem={({ item }) => <DepartureRow departure={item} />}
+          renderItem={renderDeparture}
           ListHeaderComponent={<StopHeader stop={selectedStop} />}
           ItemSeparatorComponent={() => (
             <View style={[styles.separator, { backgroundColor: colors.border }]} />
@@ -169,6 +182,20 @@ export default function DeparturesScreen() {
           placeholder="Search for a stop..."
           recentStops={MOCK_RECENT_STOPS}
         />
+      </Modal>
+      
+      {/* Route Detail Modal */}
+      <Modal
+        visible={selectedDeparture !== null}
+        animationType="slide"
+        presentationStyle="pageSheet"
+      >
+        {selectedDeparture && (
+          <RouteDetailModal
+            departure={selectedDeparture}
+            onClose={() => setSelectedDeparture(null)}
+          />
+        )}
       </Modal>
     </View>
   );

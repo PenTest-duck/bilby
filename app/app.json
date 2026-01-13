@@ -9,7 +9,12 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.pentestduck.bilby",
+      "infoPlist": {
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "This app requires access to your location even when closed.",
+        "NSLocationWhenInUseUsageDescription": "This app requires access to your location when open."
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -19,7 +24,8 @@
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.pentestduck.bilby"
     },
     "web": {
       "output": "static",
@@ -39,7 +45,14 @@
           }
         }
       ],
-      "expo-maps"
+      "expo-maps",
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location",
+          "locationWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location"
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true,

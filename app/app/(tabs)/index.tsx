@@ -19,25 +19,35 @@ import { useServiceStatus } from '@/lib/api/alerts';
 import { formatTime, formatRelativeTime } from '@/lib/date';
 import type { StatusAlert } from '@/lib/api/types';
 
-// Mock saved trips for demo
+// Mock saved trips for demo - includes upcoming departures with platform info
 const MOCK_SAVED_TRIPS = [
   {
     id: '1',
     name: 'To Work',
     from: 'Central Station',
     to: 'North Sydney',
-    nextDeparture: new Date(Date.now() + 8 * 60000).toISOString(),
     modes: [1],
     line: 'T1',
+    platform: '16',
+    // Multiple upcoming departures
+    upcomingDepartures: [
+      new Date(Date.now() + 3 * 60000).toISOString(),
+      new Date(Date.now() + 8 * 60000).toISOString(),
+      new Date(Date.now() + 18 * 60000).toISOString(),
+    ],
   },
   {
     id: '2', 
     name: 'Home',
     from: 'Martin Place',
     to: 'Bondi Junction',
-    nextDeparture: new Date(Date.now() + 15 * 60000).toISOString(),
     modes: [1],
     line: 'T4',
+    platform: '3',
+    upcomingDepartures: [
+      new Date(Date.now() + 6 * 60000).toISOString(),
+      new Date(Date.now() + 16 * 60000).toISOString(),
+    ],
   },
 ];
 
@@ -276,7 +286,16 @@ function QuickTripCard({
 }) {
   const colorScheme = useColorScheme() ?? 'light';
   const colors = Colors[colorScheme];
-  const countdown = formatRelativeTime(trip.nextDeparture);
+  
+  // Format upcoming departures as concise countdown (e.g., "3, 8, 18 min")
+  const upcomingCountdowns = trip.upcomingDepartures
+    .slice(0, 3)
+    .map(dep => {
+      const mins = Math.round((new Date(dep).getTime() - Date.now()) / 60000);
+      return mins <= 0 ? 'Now' : `${mins}`;
+    });
+  
+  const nextDeparture = trip.upcomingDepartures[0];
 
   return (
     <Pressable
@@ -294,12 +313,33 @@ function QuickTripCard({
       <Text style={[styles.tripRoute, { color: colors.textSecondary }]} numberOfLines={1}>
         {trip.from} → {trip.to}
       </Text>
+      
+      {/* Platform Badge */}
+      {trip.platform && (
+        <View style={[styles.tripPlatform, { backgroundColor: colors.backgroundSecondary }]}>
+          <Text style={[styles.tripPlatformText, { color: colors.textSecondary }]}>
+            Platform {trip.platform}
+          </Text>
+        </View>
+      )}
+      
+      {/* Concise departure times */}
       <View style={styles.tripFooter}>
-        <Text style={[styles.tripCountdown, { color: colors.tint }]}>
-          {countdown}
-        </Text>
+        <View style={styles.tripCountdowns}>
+          <Text style={[styles.tripCountdownMain, { color: colors.tint }]}>
+            {upcomingCountdowns[0]}
+          </Text>
+          {upcomingCountdowns.length > 1 && (
+            <Text style={[styles.tripCountdownOthers, { color: colors.textMuted }]}>
+              , {upcomingCountdowns.slice(1).join(', ')} min
+            </Text>
+          )}
+          {upcomingCountdowns.length === 1 && upcomingCountdowns[0] !== 'Now' && (
+            <Text style={[styles.tripCountdownOthers, { color: colors.textMuted }]}> min</Text>
+          )}
+        </View>
         <Text style={[styles.tripTime, { color: colors.textMuted }]}>
-          {formatTime(trip.nextDeparture)}
+          {formatTime(nextDeparture)}
         </Text>
       </View>
     </Pressable>
@@ -408,9 +448,27 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'baseline',
   },
-  tripCountdown: {
-    fontSize: 16,
-    fontWeight: '600',
+  tripPlatform: {
+    alignSelf: 'flex-start',
+    paddingHorizontal: 8,
+    paddingVertical: 4,
+    borderRadius: 6,
+    marginBottom: 8,
+  },
+  tripPlatformText: {
+    fontSize: 12,
+    fontWeight: '500',
+  },
+  tripCountdowns: {
+    flexDirection: 'row',
+    alignItems: 'baseline',
+  },
+  tripCountdownMain: {
+    fontSize: 18,
+    fontWeight: '700',
+  },
+  tripCountdownOthers: {
+    fontSize: 14,
   },
   tripTime: {
     fontSize: 13,

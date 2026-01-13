@@ -2,7 +2,7 @@
  * Plan Tab - Trip Planning
  */
 
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useRef } from 'react';
 import { 
   View, 
   Text, 
@@ -11,7 +11,10 @@ import {
   Pressable,
   Modal,
   RefreshControl,
+  Alert,
 } from 'react-native';
+import { useRouter } from 'expo-router';
+import * as Location from 'expo-location';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Colors } from '@/constants/theme';
 import { useColorScheme } from '@/hooks/use-color-scheme';
@@ -23,6 +26,12 @@ import { usePreferencesStore } from '@/stores/preferences-store';
 import { Skeleton } from '@/components/ui/skeleton';
 import { ErrorView } from '@/components/ui/error-view';
 import type { Stop, RankedJourney, RankingStrategy } from '@/lib/api/types';
+
+// Extended stop type for "My Location" with coordinates
+interface LocationStop extends Stop {
+  isCurrentLocation?: boolean;
+  coordinates?: string; // "lat,lng" format for API
+}
 
 type SearchTarget = 'from' | 'to' | null;
 
@@ -36,19 +45,28 @@ const STRATEGIES: { value: RankingStrategy; label: string; icon: string }[] = [
 export default function PlanScreen() {
   const colorScheme = useColorScheme() ?? 'light';
   const colors = Colors[colorScheme];
+  const router = useRouter();
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const _insets = useSafeAreaInsets();
-  const { defaultStrategy } = usePreferencesStore();
+  const { defaultStrategy, accessibilityRequired } = usePreferencesStore();
+  
+  // Store the selected journey for navigation
+  const selectedJourneyRef = useRef<RankedJourney | null>(null);
 
-  const [fromStop, setFromStop] = useState<Stop | null>(null);
-  const [toStop, setToStop] = useState<Stop | null>(null);
+  const [fromStop, setFromStop] = useState<LocationStop | null>(null);
+  const [toStop, setToStop] = useState<LocationStop | null>(null);
   const [strategy, setStrategy] = useState<RankingStrategy>(defaultStrategy);
   const [searchTarget, setSearchTarget] = useState<SearchTarget>(null);
+  const [isGettingLocation, setIsGettingLocation] = useState(false);
 
   const canSearch = fromStop && toStop;
   
+  // Use coordinates if available, otherwise use stop ID
+  const fromValue = fromStop?.coordinates || fromStop?.id || '';
+  const toValue = toStop?.coordinates || toStop?.id || '';
+  
   const { data, isLoading, isError, refetch, isRefetching } = useTripPlan(
-    canSearch ? { from: fromStop.id, to: toStop.id, strategy } : null
+    canSearch ? { from: fromValue, to: toValue, strategy, accessible: accessibilityRequired } : null
   );
 
   const handleStopSelect = useCallback((stop: Stop) => {
@@ -66,9 +84,51 @@ export default function PlanScreen() {
     setToStop(temp);
   }, [fromStop, toStop]);
 
-  const handleJourneyPress = useCallback((journey: RankedJourney) => {
-    // TODO: Navigate to trip detail screen
-    console.log('Journey selected:', journey);
+  const handleJourneyPress = useCallback((journey: RankedJourney, index: number) => {
+    // Store journey data and navigate to trip details
+    selectedJourneyRef.current = journey;
+    // Navigate to trip detail screen with index as ID
+    router.push(`/trip/${index}`);
+  }, [router]);
+  
+  const handleUseMyLocation = useCallback(async () => {
+    setIsGettingLocation(true);
+    try {
+      // Request foreground location permission
+      const { status } = await Location.requestForegroundPermissionsAsync();
+      
+      if (status !== 'granted') {
+        Alert.alert(
+          'Location Access Required',
+          'Please enable location access in your device settings to use this feature.'
+        );
+        return;
+      }
+      
+      // Get current position with high accuracy
+      const location = await Location.getCurrentPositionAsync({
+        accuracy: Location.Accuracy.High,
+      });
+      
+      const { latitude, longitude } = location.coords;
+      
+      const myLocation: LocationStop = {
+        id: 'my-location',
+        name: 'My Location',
+        disassembledName: 'Current Location',
+        type: 'poi',
+        isCurrentLocation: true,
+        coordinates: `${latitude},${longitude}`,
+        coord: [latitude, longitude],
+      };
+      
+      setFromStop(myLocation);
+    } catch (error) {
+      console.error('Location error:', error);
+      Alert.alert('Error', 'Failed to get your location. Please try again.');
+    } finally {
+      setIsGettingLocation(false);
+    }
   }, []);
 
   // Filter out null best journey and combine with alternatives
@@ -97,6 +157,9 @@ export default function PlanScreen() {
             stop={fromStop}
             placeholder="Where are you?"
             onPress={() => setSearchTarget('from')}
+            onUseMyLocation={handleUseMyLocation}
+            isGettingLocation={isGettingLocation}
+            showMyLocation
           />
           
           <Pressable 
@@ -185,7 +248,7 @@ export default function PlanScreen() {
               <JourneyCard
                 key={`journey-${index}`}
                 journey={journey}
-                onPress={() => handleJourneyPress(journey)}
+                onPress={() => handleJourneyPress(journey, index)}
                 isBest={index === 0}
               />
             ))}
@@ -213,32 +276,64 @@ function StopInput({
   label, 
   stop, 
   placeholder, 
-  onPress 
+  onPress,
+  onUseMyLocation,
+  isGettingLocation,
+  showMyLocation,
 }: { 
   label: string; 
   stop: Stop | null; 
   placeholder: string;
   onPress: () => void;
+  onUseMyLocation?: () => void;
+  isGettingLocation?: boolean;
+  showMyLocation?: boolean;
 }) {
   const colorScheme = useColorScheme() ?? 'light';
   const colors = Colors[colorScheme];
+  const isCurrentLocation = (stop as LocationStop)?.isCurrentLocation;
 
   return (
-    <Pressable 
-      style={[styles.stopInput, { backgroundColor: colors.card, borderColor: colors.border }]}
-      onPress={onPress}
-    >
-      <Text style={[styles.inputLabel, { color: colors.textSecondary }]}>{label}</Text>
-      <Text 
-        style={[
-          styles.inputValue, 
-          { color: stop ? colors.text : colors.textMuted }
-        ]}
-        numberOfLines={1}
+    <View style={styles.stopInputContainer}>
+      <Pressable 
+        style={[styles.stopInput, { backgroundColor: colors.card, borderColor: colors.border }]}
+        onPress={onPress}
       >
-        {stop?.disassembledName || stop?.name || placeholder}
-      </Text>
-    </Pressable>
+        <View style={styles.stopInputHeader}>
+          <Text style={[styles.inputLabel, { color: colors.textSecondary }]}>{label}</Text>
+          {showMyLocation && onUseMyLocation && (
+            <Pressable 
+              onPress={onUseMyLocation} 
+              disabled={isGettingLocation}
+              style={styles.myLocationButton}
+            >
+              <IconSymbol 
+                name="location.fill" 
+                size={14} 
+                color={isGettingLocation ? colors.textMuted : colors.tint} 
+              />
+              <Text style={[styles.myLocationText, { color: isGettingLocation ? colors.textMuted : colors.tint }]}>
+                {isGettingLocation ? 'Getting...' : 'My Location'}
+              </Text>
+            </Pressable>
+          )}
+        </View>
+        <View style={styles.stopInputValue}>
+          {isCurrentLocation && (
+            <IconSymbol name="location.fill" size={16} color={colors.tint} />
+          )}
+          <Text 
+            style={[
+              styles.inputValue, 
+              { color: stop ? colors.text : colors.textMuted }
+            ]}
+            numberOfLines={1}
+          >
+            {stop?.disassembledName || stop?.name || placeholder}
+          </Text>
+        </View>
+      </Pressable>
+    </View>
   );
 }
 
@@ -351,5 +446,30 @@ const styles = StyleSheet.create({
   },
   results: {
     paddingVertical: 8,
+  },
+  stopInputContainer: {
+    // Container for stop input
+  },
+  stopInputHeader: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: 4,
+  },
+  stopInputValue: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+  },
+  myLocationButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
+    paddingVertical: 2,
+    paddingHorizontal: 6,
+  },
+  myLocationText: {
+    fontSize: 12,
+    fontWeight: '600',
   },
 });

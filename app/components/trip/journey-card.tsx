@@ -8,9 +8,43 @@ import { Colors } from '@/constants/theme';
 import { useColorScheme } from '@/hooks/use-color-scheme';
 import { ModeIcon } from '@/components/transport/mode-icon';
 import { LineBadge } from '@/components/transport/line-badge';
-// FareDisplay removed - journey.fare (Fare) is incompatible with FareDisplay (FareBreakdown)
 import { formatTime, formatDuration } from '@/lib/date';
-import type { RankedJourney, Leg } from '@/lib/api/types';
+import { usePreferencesStore } from '@/stores/preferences-store';
+import type { RankedJourney, Leg, OpalCardType } from '@/lib/api/types';
+
+/** Map opal card type to TfNSW fare person type */
+const CARD_TYPE_TO_PERSON: Record<OpalCardType, string> = {
+  adult: 'ADULT',
+  child: 'CHILD',
+  concession: 'CONCESSION',
+  senior: 'PENSIONER',
+  student: 'STUDENT',
+};
+
+/** Extract fare for a specific card type from journey fare data */
+function extractFareForCardType(journey: RankedJourney, cardType: OpalCardType): number | null {
+  const fare = journey.fare;
+  if (!fare?.tickets?.length) return null;
+  
+  const personType = CARD_TYPE_TO_PERSON[cardType];
+  
+  // Find the total journey fare ticket for the specified card type
+  const totalTicket = fare.tickets.find(
+    t => t.person === personType && t.properties?.evaluationTicket
+  );
+  
+  if (totalTicket?.properties?.priceTotalFare) {
+    return totalTicket.properties.priceTotalFare as number;
+  }
+  
+  // Fallback: find any ticket for this person type
+  const anyTicket = fare.tickets.find(t => t.person === personType);
+  if (anyTicket?.priceBrutto) {
+    return anyTicket.priceBrutto;
+  }
+  
+  return null;
+}
 
 interface JourneyCardProps {
   journey: RankedJourney;
@@ -21,6 +55,7 @@ interface JourneyCardProps {
 export function JourneyCard({ journey, onPress, isBest = false }: JourneyCardProps) {
   const colorScheme = useColorScheme() ?? 'light';
   const colors = Colors[colorScheme];
+  const { opalCardType } = usePreferencesStore();
 
   // Compute times from legs (backend doesn't include top-level computed fields)
   const firstLeg = journey.legs[0];
@@ -28,11 +63,14 @@ export function JourneyCard({ journey, onPress, isBest = false }: JourneyCardPro
   const departureTime = formatTime(firstLeg?.origin?.departureTimePlanned ?? '');
   const arrivalTime = formatTime(lastLeg?.destination?.arrivalTimePlanned ?? '');
   
-  // Compute total duration from legs
+  // Compute total duration from legs (duration is in seconds, convert to minutes)
   const totalDurationSecs = journey.legs.reduce((sum, leg) => sum + (leg.duration ?? 0), 0);
-  const duration = formatDuration(totalDurationSecs);
+  const duration = formatDuration(Math.round(totalDurationSecs / 60));
   const hasDelay = (journey.realtimeDelayMinutes ?? 0) > 0;
   const hasCancellation = journey.hasCancellations;
+  
+  // Extract fare from journey if available
+  const fare = extractFareForCardType(journey, opalCardType);
 
   return (
     <Pressable
@@ -109,7 +147,13 @@ export function JourneyCard({ journey, onPress, isBest = false }: JourneyCardPro
             </Text>
           )}
         </View>
-        {/* Fare display disabled - journey.fare (Fare) is incompatible with FareDisplay (FareBreakdown) */}
+        {fare !== null && (
+          <View style={styles.fareContainer}>
+            <Text style={[styles.fareAmount, { color: colors.text }]}>
+              ${fare.toFixed(2)}
+            </Text>
+          </View>
+        )}
       </View>
     </Pressable>
   );
@@ -247,5 +291,13 @@ const styles = StyleSheet.create({
   whyText: {
     fontSize: 12,
     marginTop: 2,
+  },
+  fareContainer: {
+    alignItems: 'flex-end',
+  },
+  fareAmount: {
+    fontSize: 16,
+    fontWeight: '600',
+    fontVariant: ['tabular-nums'],
   },
 });
