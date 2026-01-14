@@ -219,6 +219,28 @@ export const VehicleStopStatusSchema = z.enum([
 ])
 export type VehicleStopStatus = z.infer<typeof VehicleStopStatusSchema>
 
+/** Carriage/consist details for trains/metro */
+export const CarriageDetailsSchema = z.object({
+  id: z.string().optional(),
+  label: z.string().optional(),              // e.g., "DTC1", "MC2"
+  positionInConsist: z.number(),             // 0-based or 1-based position
+  occupancyStatus: OccupancyStatusSchema.optional(),
+  occupancyPercentage: z.number().optional(),
+  quietCarriage: z.boolean().optional(),
+  toilet: z.enum(['none', 'normal', 'accessible']).optional(),
+  luggageRack: z.boolean().optional(),
+})
+export type CarriageDetails = z.infer<typeof CarriageDetailsSchema>
+
+/** TfNSW vehicle descriptor extensions */
+export const TfnswVehicleExtensionSchema = z.object({
+  airConditioned: z.boolean().optional(),
+  wheelchairAccessible: z.number().optional(),  // 0=unknown, 1=yes, 2=no
+  vehicleModel: z.string().optional(),
+  performingPriorTrip: z.boolean().optional(),
+})
+export type TfnswVehicleExtension = z.infer<typeof TfnswVehicleExtensionSchema>
+
 /** Vehicle position with trip info */
 export const VehiclePositionSchema = z.object({
   id: z.string(),
@@ -231,6 +253,9 @@ export const VehiclePositionSchema = z.object({
   timestamp: z.number().optional(),
   congestionLevel: CongestionLevelSchema.optional(),
   occupancyStatus: OccupancyStatusSchema.optional(),
+  // TfNSW extensions
+  carriages: z.array(CarriageDetailsSchema).optional(),
+  tfnswExtension: TfnswVehicleExtensionSchema.optional(),
 })
 export type VehiclePosition = z.infer<typeof VehiclePositionSchema>
 

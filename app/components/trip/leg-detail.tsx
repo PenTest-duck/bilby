@@ -16,11 +16,33 @@ interface LegDetailProps {
   leg: Leg;
   isFirst?: boolean;
   isLast?: boolean;
+  occupancy?: string;  // e.g., 'MANY_SEATS', 'FEW_SEATS', 'STANDING_ROOM'
+  travelInCars?: { from?: string; to?: string; message?: string };
 }
 
-export function LegDetail({ leg, isFirst = false, isLast = false }: LegDetailProps) {
+/** Map occupancy status to display info */
+function getOccupancyDisplay(status?: string): { label: string; color: string } | null {
+  if (!status) return null;
+  const normalized = status.toUpperCase().replace(/_/g, ' ');
+  if (normalized.includes('EMPTY') || normalized.includes('MANY SEATS')) {
+    return { label: 'Many seats', color: '#34C759' };
+  }
+  if (normalized.includes('FEW SEATS')) {
+    return { label: 'Few seats', color: '#FF9500' };
+  }
+  if (normalized.includes('STANDING')) {
+    return { label: 'Standing only', color: '#FF3B30' };
+  }
+  if (normalized.includes('FULL') || normalized.includes('NOT ACCEPTING')) {
+    return { label: 'Full', color: '#FF3B30' };
+  }
+  return null;
+}
+
+export function LegDetail({ leg, isFirst = false, isLast = false, occupancy, travelInCars }: LegDetailProps) {
   const colorScheme = useColorScheme() ?? 'light';
   const colors = Colors[colorScheme];
+  const occupancyDisplay = getOccupancyDisplay(occupancy);
 
   // Use origin/destination time fields from backend schema
   const departureTime = formatTime(leg.origin?.departureTimePlanned ?? '');
@@ -99,6 +121,25 @@ export function LegDetail({ leg, isFirst = false, isLast = false }: LegDetailPro
           {isCancelled && (
             <View style={[styles.delayIndicator, { backgroundColor: colors.cancelled }]}>
               <Text style={styles.delayText}>Cancelled</Text>
+            </View>
+          )}
+          
+          {/* Occupancy indicator */}
+          {occupancyDisplay && (
+            <View style={[styles.occupancyBadge, { backgroundColor: occupancyDisplay.color + '20' }]}>
+              <View style={[styles.occupancyDot, { backgroundColor: occupancyDisplay.color }]} />
+              <Text style={[styles.occupancyText, { color: occupancyDisplay.color }]}>
+                {occupancyDisplay.label}
+              </Text>
+            </View>
+          )}
+          
+          {/* Travel in cars info */}
+          {travelInCars?.message && (
+            <View style={[styles.travelInCarsInfo, { backgroundColor: colors.tint + '15' }]}>
+              <Text style={[styles.travelInCarsText, { color: colors.tint }]}>
+                🚃 {travelInCars.message}
+              </Text>
             </View>
           )}
         </View>
@@ -214,5 +255,35 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
     fontSize: 12,
     fontWeight: '600',
+  },
+  occupancyBadge: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    alignSelf: 'flex-start',
+    paddingHorizontal: 8,
+    paddingVertical: 4,
+    borderRadius: 6,
+    marginTop: 8,
+    gap: 6,
+  },
+  occupancyDot: {
+    width: 6,
+    height: 6,
+    borderRadius: 3,
+  },
+  occupancyText: {
+    fontSize: 12,
+    fontWeight: '500',
+  },
+  travelInCarsInfo: {
+    alignSelf: 'flex-start',
+    paddingHorizontal: 10,
+    paddingVertical: 6,
+    borderRadius: 6,
+    marginTop: 8,
+  },
+  travelInCarsText: {
+    fontSize: 12,
+    fontWeight: '500',
   },
 });

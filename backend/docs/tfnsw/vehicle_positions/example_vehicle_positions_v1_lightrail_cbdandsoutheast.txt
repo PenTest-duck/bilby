@@ -1,0 +1,583 @@
+header {
+  gtfs_realtime_version: "1.0"
+  incrementality: FULL_DATASET
+  timestamp: 1768353730
+}
+entity {
+  id: "0/2026-01-14T01:21:50Z/X53-X54"
+  vehicle {
+    trip {
+      trip_id: "47597-10317:1001"
+      start_time: "11:54:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "1001_L3"
+      direction_id: 0
+    }
+    position {
+      latitude: -33.906208
+      longitude: 151.2239
+      bearing: 186.0
+      speed: 0.0
+    }
+    current_stop_sequence: 11
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353710
+    congestion_level: SEVERE_CONGESTION
+    stop_id: "203353"
+    vehicle {
+      id: "X53-X54"
+      label: "X53-X54"
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "CitadisX05"
+        special_vehicle_attributes: 0
+      }
+    }
+  }
+}
+entity {
+  id: "1/2026-01-14T01:21:52Z/X15-X16"
+  vehicle {
+    trip {
+      trip_id: "47597-10315:1001"
+      start_time: "11:50:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "1001_L2"
+      direction_id: 0
+    }
+    position {
+      latitude: -33.916386
+      longitude: 151.23575
+      bearing: 99.0
+      speed: 4.0
+    }
+    current_stop_sequence: 13
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353712
+    congestion_level: CONGESTION
+    stop_id: "2031199"
+    vehicle {
+      id: "X15-X16"
+      label: "X15-X16"
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "CitadisX05"
+        special_vehicle_attributes: 0
+      }
+    }
+  }
+}
+entity {
+  id: "2/2026-01-14T01:21:48Z/X05-X06"
+  vehicle {
+    trip {
+      trip_id: "47597-10329:1001"
+      start_time: "12:10:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "1001_L3"
+      direction_id: 0
+    }
+    position {
+      latitude: -33.880188
+      longitude: 151.20514
+      bearing: 195.0
+      speed: 3.0
+    }
+    current_stop_sequence: 6
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353708
+    congestion_level: CONGESTION
+    stop_id: "2000443"
+    vehicle {
+      id: "X05-X06"
+      label: "X05-X06"
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "CitadisX05"
+        special_vehicle_attributes: 0
+      }
+    }
+  }
+}
+entity {
+  id: "3/2026-01-14T01:21:50Z/X17-X18"
+  vehicle {
+    trip {
+      trip_id: "47597-10327:1001"
+      start_time: "12:06:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "1001_L2"
+      direction_id: 0
+    }
+    position {
+      latitude: -33.88455
+      longitude: 151.2074
+      bearing: 212.0
+      speed: 0.0
+    }
+    current_stop_sequence: 8
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353710
+    congestion_level: SEVERE_CONGESTION
+    stop_id: "2000447"
+    vehicle {
+      id: "X17-X18"
+      label: "X17-X18"
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "CitadisX05"
+        special_vehicle_attributes: 0
+      }
+    }
+  }
+}
+entity {
+  id: "4/2026-01-14T01:21:52Z/X27-X28"
+  vehicle {
+    trip {
+      trip_id: "47597-10328:1001"
+      start_time: "12:09:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "1001_L2"
+      direction_id: 1
+    }
+    position {
+      latitude: -33.89
+      longitude: 151.21767
+      bearing: 278.0
+      speed: 3.0
+    }
+    current_stop_sequence: 5
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353712
+    congestion_level: RUNNING_SMOOTHLY
+    stop_id: "2021102"
+    vehicle {
+      id: "X27-X28"
+      label: "X27-X28"
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "CitadisX05"
+        special_vehicle_attributes: 0
+      }
+    }
+  }
+}
+entity {
+  id: "5/2026-01-14T01:21:50Z/X19-X20"
+  vehicle {
+    trip {
+      trip_id: "47597-10323:1001"
+      start_time: "12:02:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "1001_L3"
+      direction_id: 0
+    }
+    position {
+      latitude: -33.887936
+      longitude: 151.21156
+      bearing: 119.0
+      speed: 7.0
+    }
+    current_stop_sequence: 8
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353710
+    congestion_level: CONGESTION
+    stop_id: "2000447"
+    vehicle {
+      id: "X19-X20"
+      label: "X19-X20"
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "CitadisX05"
+        special_vehicle_attributes: 0
+      }
+    }
+  }
+}
+entity {
+  id: "6/2026-01-14T01:21:50Z/X47-X48"
+  vehicle {
+    trip {
+      trip_id: "47597-10326:1001"
+      start_time: "12:05:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "1001_L3"
+      direction_id: 1
+    }
+    position {
+      latitude: -33.88462
+      longitude: 151.20729
+      bearing: 32.0
+      speed: 4.0
+    }
+    current_stop_sequence: 7
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353710
+    congestion_level: RUNNING_SMOOTHLY
+    stop_id: "2010109"
+    vehicle {
+      id: "X47-X48"
+      label: "X47-X48"
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "CitadisX05"
+        special_vehicle_attributes: 0
+      }
+    }
+  }
+}
+entity {
+  id: "7/2026-01-14T01:21:48Z/X07-X22"
+  vehicle {
+    trip {
+      trip_id: "47597-10335:1001"
+      start_time: "12:18:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "1001_L3"
+      direction_id: 0
+    }
+    position {
+      latitude: -33.867004
+      longitude: 151.20715
+      bearing: 184.0
+      speed: 0.0
+    }
+    current_stop_sequence: 3
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353708
+    congestion_level: SEVERE_CONGESTION
+    stop_id: "2000454"
+    vehicle {
+      id: "X07-X22"
+      label: "X07-X22"
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "CitadisX05"
+        special_vehicle_attributes: 0
+      }
+    }
+  }
+}
+entity {
+  id: "8/2026-01-14T01:21:44Z/X34-X60"
+  vehicle {
+    trip {
+      trip_id: "47597-10320:1001"
+      start_time: "11:57:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "1001_L3"
+      direction_id: 1
+    }
+    position {
+      latitude: -33.87479
+      longitude: 151.2067
+      bearing: 13.0
+      speed: 3.0
+    }
+    current_stop_sequence: 10
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353704
+    congestion_level: CONGESTION
+    stop_id: "2000444"
+    vehicle {
+      id: "X34-X60"
+      label: "X34-X60"
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "CitadisX05"
+        special_vehicle_attributes: 0
+      }
+    }
+  }
+}
+entity {
+  id: "9/2026-01-14T01:21:50Z/X02-X59"
+  vehicle {
+    trip {
+      trip_id: "47597-10334:1001"
+      start_time: "12:17:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "1001_L2"
+      direction_id: 1
+    }
+    position {
+      latitude: -33.909702
+      longitude: 151.23465
+      bearing: 338.0
+      speed: 4.0
+    }
+    current_stop_sequence: 3
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353710
+    congestion_level: RUNNING_SMOOTHLY
+    stop_id: "2031198"
+    vehicle {
+      id: "X02-X59"
+      label: "X02-X59"
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "CitadisX05"
+        special_vehicle_attributes: 0
+      }
+    }
+  }
+}
+entity {
+  id: "10/2026-01-14T01:21:50Z/X01-X08"
+  vehicle {
+    trip {
+      trip_id: "47597-10332:1001"
+      start_time: "12:13:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "1001_L3"
+      direction_id: 1
+    }
+    position {
+      latitude: -33.897465
+      longitude: 151.22237
+      bearing: 351.0
+      speed: 11.0
+    }
+    current_stop_sequence: 5
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353710
+    congestion_level: RUNNING_SMOOTHLY
+    stop_id: "203354"
+    vehicle {
+      id: "X01-X08"
+      label: "X01-X08"
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "CitadisX05"
+        special_vehicle_attributes: 0
+      }
+    }
+  }
+}
+entity {
+  id: "11/2026-01-14T01:21:52Z/X33-X57"
+  vehicle {
+    trip {
+      trip_id: "47597-10321:1001"
+      start_time: "11:58:00"
+      start_date: "20260114"
+      schedule_relationship: REPLACEMENT
+      route_id: "1001_L2"
+      direction_id: 0
+    }
+    position {
+      latitude: -33.903946
+      longitude: 151.22641
+      bearing: 116.0
+      speed: 8.0
+    }
+    current_stop_sequence: 10
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353712
+    congestion_level: CONGESTION
+    stop_id: "2021101"
+    vehicle {
+      id: "X33-X57"
+      label: "X33-X57"
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "CitadisX05"
+        special_vehicle_attributes: 0
+      }
+    }
+  }
+}
+entity {
+  id: "12/2026-01-14T01:21:50Z/X26-X51"
+  vehicle {
+    trip {
+      trip_id: "47597-10333:1001"
+      start_time: "12:14:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "1001_L2"
+      direction_id: 0
+    }
+    position {
+      latitude: -33.871933
+      longitude: 151.20699
+      bearing: 177.0
+      speed: 0.0
+    }
+    current_stop_sequence: 4
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353710
+    congestion_level: SEVERE_CONGESTION
+    stop_id: "2000456"
+    vehicle {
+      id: "X26-X51"
+      label: "X26-X51"
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "CitadisX05"
+        special_vehicle_attributes: 0
+      }
+    }
+  }
+}
+entity {
+  id: "13/2026-01-14T01:21:44Z/X09-X46"
+  vehicle {
+    trip {
+      trip_id: "47597-10316:1001"
+      start_time: "11:53:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "1001_L2"
+      direction_id: 1
+    }
+    position {
+      latitude: -33.872227
+      longitude: 151.20697
+      bearing: 357.0
+      speed: 4.0
+    }
+    current_stop_sequence: 10
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353704
+    congestion_level: CONGESTION
+    stop_id: "2000459"
+    vehicle {
+      id: "X09-X46"
+      label: "X09-X46"
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "CitadisX05"
+        special_vehicle_attributes: 0
+      }
+    }
+  }
+}
+entity {
+  id: "14/2026-01-14T01:21:50Z/X39-X58"
+  vehicle {
+    trip {
+      trip_id: "47597-10314:1001"
+      start_time: "11:49:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "1001_L3"
+      direction_id: 1
+    }
+    position {
+      latitude: -33.866447
+      longitude: 151.20718
+      bearing: 4.0
+      speed: 3.0
+    }
+    current_stop_sequence: 13
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353710
+    congestion_level: CONGESTION
+    stop_id: "2000455"
+    vehicle {
+      id: "X39-X58"
+      label: "X39-X58"
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "CitadisX05"
+        special_vehicle_attributes: 0
+      }
+    }
+  }
+}
+entity {
+  id: "15/2026-01-14T01:21:48Z/X23-X24"
+  vehicle {
+    trip {
+      trip_id: "47597-10338:1001"
+      start_time: "12:21:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "1001_L3"
+      direction_id: 1
+    }
+    position {
+      latitude: -33.922943
+      longitude: 151.2272
+      bearing: 333.0
+      speed: 7.0
+    }
+    current_stop_sequence: 1
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353708
+    congestion_level: RUNNING_SMOOTHLY
+    stop_id: "203289"
+    vehicle {
+      id: "X23-X24"
+      label: "X23-X24"
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "CitadisX05"
+        special_vehicle_attributes: 0
+      }
+    }
+  }
+}
+entity {
+  id: "16/2026-01-14T01:21:52Z/X42-X45"
+  vehicle {
+    trip {
+      trip_id: "47597-10322:1001"
+      start_time: "12:01:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "1001_L2"
+      direction_id: 1
+    }
+    position {
+      latitude: -33.879982
+      longitude: 151.20517
+      bearing: 15.0
+      speed: 3.0
+    }
+    current_stop_sequence: 8
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353712
+    congestion_level: RUNNING_SMOOTHLY
+    stop_id: "2000446"
+    vehicle {
+      id: "X42-X45"
+      label: "X42-X45"
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "CitadisX05"
+        special_vehicle_attributes: 0
+      }
+    }
+  }
+}

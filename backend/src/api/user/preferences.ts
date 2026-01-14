@@ -63,7 +63,7 @@ router.get('/', async (req: AuthenticatedRequest, res) => {
 router.put('/', async (req: AuthenticatedRequest, res) => {
   const user = req.user!
   const supabase = req.supabase!
-  const { default_strategy, preferred_modes, accessibility_required, notifications_enabled, theme } = req.body
+  const { default_strategy, preferred_modes, accessibility_required, notifications_enabled, theme, opal_card_type } = req.body
   
   try {
     // Build updates object
@@ -73,6 +73,7 @@ router.put('/', async (req: AuthenticatedRequest, res) => {
     if (accessibility_required !== undefined) updates.accessibility_required = accessibility_required
     if (notifications_enabled !== undefined) updates.notifications_enabled = notifications_enabled
     if (theme !== undefined) updates.theme = theme
+    if (opal_card_type !== undefined) updates.opal_card_type = opal_card_type
     
     // Upsert to handle case where preferences don't exist yet
     const { data, error } = await supabase

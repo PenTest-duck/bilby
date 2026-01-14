@@ -581,6 +581,55 @@ export interface Fare {
 }
 
 /**
+ * GraphQL enriched fare data (from unofficial API)
+ * Only available when ENABLE_GRAPHQL_FARES=true
+ */
+export interface EnrichedFare {
+  /** Total journey fare in dollars */
+  total: number;
+  /** Per-leg fare breakdown */
+  legs: {
+    /** Adult fare amount */
+    adult?: number;
+    /** Child fare amount */
+    child?: number;
+    /** Concession fare amount */
+    concession?: number;
+    /** Senior fare amount */
+    senior?: number;
+    /** Station access fee (airport stations) */
+    stationAccessFee?: number;
+  }[];
+}
+
+/**
+ * Travel in cars info for trains
+ * Indicates which carriages to board for interchange
+ */
+export interface TravelInCarsInfo {
+  /** Leg index this applies to */
+  legIndex: number;
+  /** Total number of cars */
+  numberOfCars?: string;
+  /** Board in cars from */
+  from?: string;
+  /** Board in cars to */
+  to?: string;
+  /** Display message */
+  message?: string;
+}
+
+/**
+ * Occupancy info for a leg
+ */
+export interface OccupancyInfo {
+  /** Leg index */
+  legIndex: number;
+  /** Occupancy status (e.g., 'MANY_SEATS', 'FEW_SEATS', 'STANDING_ROOM') */
+  status: string;
+}
+
+/**
  * Ranking score breakdown (explainability)
  */
 export interface RankingScore {
@@ -624,6 +673,14 @@ export interface RankedJourney extends Journey {
   hasCancellations?: boolean;
   /** Alerts affecting this journey */
   alerts?: DisruptionAlert[];
+  /** Enriched fare from GraphQL (null if unavailable) */
+  enrichedFare?: EnrichedFare | null;
+  /** Travel in cars info for train legs */
+  travelInCars?: TravelInCarsInfo[];
+  /** Occupancy info per leg */
+  occupancy?: OccupancyInfo[];
+  /** Realtime trip IDs from GraphQL (for vehicle matching) */
+  realtimeTripIds?: string[];
 }
 
 /**
@@ -817,6 +874,8 @@ export interface UserPreferences {
   notifications_enabled?: boolean | null;
   /** UI theme preference */
   theme?: string | null;
+  /** Opal card type for fare display */
+  opal_card_type?: OpalCardType | null;
   /** Last update timestamp */
   updated_at: string;
 }
@@ -843,6 +902,7 @@ export interface UserPreferencesUpdateRequest {
   accessibility_required?: boolean;
   notifications_enabled?: boolean;
   theme?: 'light' | 'dark' | 'system';
+  opal_card_type?: OpalCardType;
 }
 
 // =============================================================================

@@ -48,6 +48,16 @@ const FEED_CONFIGS: Record<string, FeedConfig> = {
       lightrail: '/lightrail/innerwest',
     },
   },
+  // v1 feeds for buses and ferries (different base path)
+  vehiclepos_v1: {
+    basePath: '/v1/gtfs/vehiclepos',
+    endpoints: {
+      buses: '/buses',
+      ferries: '/ferries',
+      nswtrains: '/nswtrains',
+      regionbuses: '/regionbuses',
+    },
+  },
 }
 
 /** Result of a HEAD request to check if feed has changed */
@@ -64,13 +74,24 @@ interface FeedFetchResult<T> {
   fetchedAt: number
 }
 
+/** Check if a feed is v1 (buses, ferries, nswtrains, regionbuses) */
+function isV1Feed(feed: TfnswFeed): boolean {
+  return ['buses', 'ferries', 'nswtrains', 'regionbuses'].includes(feed)
+}
+
 /** Build full URL for a feed endpoint */
 function buildUrl(feedType: string, feed: TfnswFeed, useJson: boolean = false): string {
-  const config = FEED_CONFIGS[feedType]
-  if (!config) throw new Error(`Unknown feed type: ${feedType}`)
+  // For vehicle positions, check if it's a v1 feed
+  let actualFeedType = feedType
+  if (feedType === 'vehiclepos' && isV1Feed(feed)) {
+    actualFeedType = 'vehiclepos_v1'
+  }
+  
+  const config = FEED_CONFIGS[actualFeedType]
+  if (!config) throw new Error(`Unknown feed type: ${actualFeedType}`)
   
   const endpoint = config.endpoints[feed]
-  if (!endpoint) throw new Error(`Feed ${feed} not available for ${feedType}`)
+  if (!endpoint) throw new Error(`Feed ${feed} not available for ${actualFeedType}`)
   
   let url = `${TFNSW_BASE_URL}${config.basePath}${endpoint}`
   if (useJson && config.supportsJson) {

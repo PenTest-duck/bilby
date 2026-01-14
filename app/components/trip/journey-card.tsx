@@ -8,7 +8,7 @@ import { Colors } from '@/constants/theme';
 import { useColorScheme } from '@/hooks/use-color-scheme';
 import { ModeIcon } from '@/components/transport/mode-icon';
 import { LineBadge } from '@/components/transport/line-badge';
-import { formatTime, formatDuration } from '@/lib/date';
+import { formatTime, formatDuration, formatCountdown } from '@/lib/date';
 import { usePreferencesStore } from '@/stores/preferences-store';
 import type { RankedJourney, Leg, OpalCardType } from '@/lib/api/types';
 
@@ -23,6 +23,24 @@ const CARD_TYPE_TO_PERSON: Record<OpalCardType, string> = {
 
 /** Extract fare for a specific card type from journey fare data */
 function extractFareForCardType(journey: RankedJourney, cardType: OpalCardType): number | null {
+  // Priority 1: Use enriched fare from GraphQL (most reliable)
+  if (journey.enrichedFare?.total) {
+    // enrichedFare.total is already the adult fare
+    // For other card types, apply approximate discount (GraphQL may have per-type data)
+    const baseFare = journey.enrichedFare.total;
+    switch (cardType) {
+      case 'child':
+        return baseFare * 0.5; // Child is 50% off
+      case 'concession':
+      case 'senior':
+      case 'student':
+        return baseFare * 0.5; // Concession fares are approx 50% off
+      default:
+        return baseFare;
+    }
+  }
+  
+  // Priority 2: Fall back to REST API fare tickets
   const fare = journey.fare;
   if (!fare?.tickets?.length) return null;
   
@@ -60,8 +78,14 @@ export function JourneyCard({ journey, onPress, isBest = false }: JourneyCardPro
   // Compute times from legs (backend doesn't include top-level computed fields)
   const firstLeg = journey.legs[0];
   const lastLeg = journey.legs[journey.legs.length - 1];
-  const departureTime = formatTime(firstLeg?.origin?.departureTimePlanned ?? '');
+  const departurePlanned = firstLeg?.origin?.departureTimePlanned ?? '';
+  const departureEstimated = firstLeg?.origin?.departureTimeEstimated;
+  const departureTime = formatTime(departurePlanned);
   const arrivalTime = formatTime(lastLeg?.destination?.arrivalTimePlanned ?? '');
+  
+  // Countdown to departure (use estimated if available, otherwise planned)
+  const countdown = formatCountdown(departureEstimated || departurePlanned);
+  const isNow = countdown === 'Now';
   
   // Compute total duration from legs (duration is in seconds, convert to minutes)
   const totalDurationSecs = journey.legs.reduce((sum, leg) => sum + (leg.duration ?? 0), 0);
@@ -91,6 +115,19 @@ export function JourneyCard({ journey, onPress, isBest = false }: JourneyCardPro
           <Text style={styles.bestText}>Best</Text>
         </View>
       )}
+
+      {/* Countdown Badge */}
+      <View style={[
+        styles.countdownBadge, 
+        { backgroundColor: isNow ? colors.success : colors.backgroundSecondary }
+      ]}>
+        <Text style={[
+          styles.countdownText, 
+          { color: isNow ? '#FFFFFF' : colors.text }
+        ]}>
+          {isNow ? 'Now' : `${countdown} min`}
+        </Text>
+      </View>
 
       {/* Times Row */}
       <View style={styles.timesRow}>
@@ -212,6 +249,18 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
     fontSize: 12,
     fontWeight: '700',
+  },
+  countdownBadge: {
+    position: 'absolute',
+    top: 12,
+    right: 12,
+    paddingHorizontal: 10,
+    paddingVertical: 4,
+    borderRadius: 12,
+  },
+  countdownText: {
+    fontSize: 13,
+    fontWeight: '600',
   },
   timesRow: {
     flexDirection: 'row',

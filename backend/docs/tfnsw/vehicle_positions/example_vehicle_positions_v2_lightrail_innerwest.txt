@@ -1,0 +1,401 @@
+header {
+  gtfs_realtime_version: "2.0"
+  incrementality: FULL_DATASET
+  timestamp: 1768353495
+}
+entity {
+  id: "95303363"
+  vehicle {
+    trip {
+      trip_id: "48886-1128"
+      start_time: "12:18:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "IWLR-191"
+      direction_id: 0
+    }
+    position {
+      latitude: -33.882378
+      longitude: 151.20673
+      bearing: 355.28146
+      speed: 0.09139048
+    }
+    current_stop_sequence: 1
+    current_status: STOPPED_AT
+    timestamp: 1768353492
+    congestion_level: UNKNOWN_CONGESTION_LEVEL
+    stop_id: "2000257"
+    vehicle {
+      id: "810606"
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "CAF Urbos 100 Light Rail Vehicle"
+      }
+    }
+    [transit_realtime.consist] {
+      position_in_consist: 1
+      quiet_carriage: false
+      toilet: NONE
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      position_in_consist: 2
+      quiet_carriage: false
+      toilet: NONE
+      luggage_rack: false
+    }
+  }
+}
+entity {
+  id: "95303364"
+  vehicle {
+    trip {
+      trip_id: "48886-1122"
+      start_time: "11:48:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "IWLR-191"
+      direction_id: 0
+    }
+    position {
+      latitude: -33.888557
+      longitude: 151.14531
+      bearing: 182.29039
+      speed: 0.023389015
+    }
+    current_stop_sequence: 18
+    current_status: STOPPED_AT
+    timestamp: 1768353492
+    congestion_level: UNKNOWN_CONGESTION_LEVEL
+    stop_id: "2040108"
+    vehicle {
+      id: "283240"
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "Alstom Citadis X05 Light Rail Vehicle"
+      }
+    }
+    [transit_realtime.consist] {
+      position_in_consist: 1
+      quiet_carriage: false
+      toilet: NONE
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      position_in_consist: 2
+      quiet_carriage: false
+      toilet: NONE
+      luggage_rack: false
+    }
+  }
+}
+entity {
+  id: "95303361"
+  vehicle {
+    trip {
+      trip_id: "48886-1124"
+      start_time: "11:58:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "IWLR-191"
+      direction_id: 0
+    }
+    position {
+      latitude: -33.87709
+      longitude: 151.18835
+      bearing: 262.16168
+      speed: 6.567969
+    }
+    current_stop_sequence: 11
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353492
+    congestion_level: UNKNOWN_CONGESTION_LEVEL
+    stop_id: "203782"
+    vehicle {
+      id: "198295"
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "CAF Urbos 100 Light Rail Vehicle"
+      }
+    }
+    [transit_realtime.consist] {
+      position_in_consist: 1
+      quiet_carriage: false
+      toilet: NONE
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      position_in_consist: 2
+      quiet_carriage: false
+      toilet: NONE
+      luggage_rack: false
+    }
+  }
+}
+entity {
+  id: "95303362"
+  vehicle {
+    trip {
+      trip_id: "48886-1129"
+      start_time: "12:23:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "IWLR-191"
+      direction_id: 1
+    }
+    position {
+      latitude: -33.91033
+      longitude: 151.1401
+      bearing: 340.27194
+      speed: 0.20153652
+    }
+    current_stop_sequence: 1
+    current_status: STOPPED_AT
+    timestamp: 1768353492
+    congestion_level: UNKNOWN_CONGESTION_LEVEL
+    stop_id: "220363"
+    vehicle {
+      id: "669989"
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "Alstom Citadis X05 Light Rail Vehicle"
+      }
+    }
+    [transit_realtime.consist] {
+      position_in_consist: 1
+      quiet_carriage: false
+      toilet: NONE
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      position_in_consist: 2
+      quiet_carriage: false
+      toilet: NONE
+      luggage_rack: false
+    }
+  }
+}
+entity {
+  id: "95303355"
+  vehicle {
+    trip {
+      trip_id: "48886-1121"
+      start_time: "11:43:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "IWLR-191"
+      direction_id: 1
+    }
+    position {
+      latitude: -33.879684
+      longitude: 151.20525
+      bearing: 103.66324
+      speed: 4.647605
+    }
+    current_stop_sequence: 22
+    current_status: INCOMING_AT
+    timestamp: 1768353491
+    congestion_level: UNKNOWN_CONGESTION_LEVEL
+    stop_id: "2000255"
+    vehicle {
+      id: "425921"
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "CAF Urbos 3 Light Rail Vehicle"
+      }
+    }
+    [transit_realtime.consist] {
+      position_in_consist: 1
+      quiet_carriage: false
+      toilet: NONE
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      position_in_consist: 2
+      quiet_carriage: false
+      toilet: NONE
+      luggage_rack: false
+    }
+  }
+}
+entity {
+  id: "95303356"
+  vehicle {
+    trip {
+      trip_id: "48886-1125"
+      start_time: "12:03:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "IWLR-191"
+      direction_id: 1
+    }
+    position {
+      latitude: -33.871853
+      longitude: 151.17288
+      bearing: 117.84103
+      speed: 0.03859128
+    }
+    current_stop_sequence: 11
+    current_status: INCOMING_AT
+    timestamp: 1768353491
+    congestion_level: UNKNOWN_CONGESTION_LEVEL
+    stop_id: "203839"
+    vehicle {
+      id: "798600"
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "CAF Urbos 100 Light Rail Vehicle"
+      }
+    }
+    [transit_realtime.consist] {
+      position_in_consist: 1
+      quiet_carriage: false
+      toilet: NONE
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      position_in_consist: 2
+      quiet_carriage: false
+      toilet: NONE
+      luggage_rack: false
+    }
+  }
+}
+entity {
+  id: "95303353"
+  vehicle {
+    trip {
+      trip_id: "48886-1127"
+      start_time: "12:13:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "IWLR-191"
+      direction_id: 1
+    }
+    position {
+      latitude: -33.899506
+      longitude: 151.13919
+      bearing: 48.06403
+      speed: 9.483312
+    }
+    current_stop_sequence: 4
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353490
+    congestion_level: UNKNOWN_CONGESTION_LEVEL
+    stop_id: "220368"
+    vehicle {
+      id: "830694"
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "CAF Urbos 100 Light Rail Vehicle"
+      }
+    }
+    [transit_realtime.consist] {
+      position_in_consist: 1
+      quiet_carriage: false
+      toilet: NONE
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      position_in_consist: 2
+      quiet_carriage: false
+      toilet: NONE
+      luggage_rack: false
+    }
+  }
+}
+entity {
+  id: "95303339"
+  vehicle {
+    trip {
+      trip_id: "48886-1126"
+      start_time: "12:08:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "IWLR-191"
+      direction_id: 0
+    }
+    position {
+      latitude: -33.871906
+      longitude: 151.19814
+      bearing: 3.1223228
+      speed: 13.454552
+    }
+    current_stop_sequence: 5
+    current_status: STOPPED_AT
+    timestamp: 1768353488
+    congestion_level: UNKNOWN_CONGESTION_LEVEL
+    stop_id: "2000263"
+    vehicle {
+      id: "116996"
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "CAF Urbos 100 Light Rail Vehicle"
+      }
+    }
+    [transit_realtime.consist] {
+      position_in_consist: 1
+      quiet_carriage: false
+      toilet: NONE
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      position_in_consist: 2
+      quiet_carriage: false
+      toilet: NONE
+      luggage_rack: false
+    }
+  }
+}
+entity {
+  id: "95303161"
+  vehicle {
+    trip {
+      trip_id: "48886-1123"
+      start_time: "11:53:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "IWLR-191"
+      direction_id: 1
+    }
+    position {
+      latitude: -33.867275
+      longitude: 151.19221
+      bearing: 67.6995
+      speed: 2.3059762
+    }
+    current_stop_sequence: 16
+    current_status: INCOMING_AT
+    timestamp: 1768353458
+    congestion_level: UNKNOWN_CONGESTION_LEVEL
+    stop_id: "200939"
+    vehicle {
+      id: "496606"
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "CAF Urbos 100 Light Rail Vehicle"
+      }
+    }
+    [transit_realtime.consist] {
+      position_in_consist: 1
+      quiet_carriage: false
+      toilet: NONE
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      position_in_consist: 2
+      quiet_carriage: false
+      toilet: NONE
+      luggage_rack: false
+    }
+  }
+}

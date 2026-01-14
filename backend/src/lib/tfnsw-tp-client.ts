@@ -196,7 +196,8 @@ export async function getDepartures(
 /** Options for trip planning */
 export interface TripOptions {
   arriveBy?: boolean
-  modes?: number[]
+  includedModes?: number[]    // Only include these modes (if set)
+  excludedModes?: number[]    // Exclude these modes
   accessible?: boolean
   maxWalkingMinutes?: number
 }
@@ -227,11 +228,38 @@ export async function planTrip(
     params.wheelchair = 'on'
   }
 
+  // Apply mode exclusion
+  applyModeFilters(params, options)
+
   const url = buildUrl('/trip', params)
   const response = await fetchWithTimeout(url, 15000) // longer timeout for trip planning
   const data = await response.json() as { journeys?: Journey[] }
 
   return data.journeys ?? []
+}
+
+/**
+ * Apply mode inclusion/exclusion filters to params
+ */
+function applyModeFilters(
+  params: Record<string, string | number | boolean>,
+  options: TripOptions
+): void {
+  // Mode exclusion takes precedence
+  if (options.excludedModes?.length) {
+    params.excludedMeans = 'checkbox'
+    for (const mode of options.excludedModes) {
+      params[`exclMOT_${mode}`] = '1'
+    }
+  }
+  
+  // Mode inclusion (only these modes)
+  if (options.includedModes?.length) {
+    params.inclMOT = 'checkbox'
+    for (const mode of options.includedModes) {
+      params[`inclMOT_${mode}`] = '1'
+    }
+  }
 }
 
 /**
@@ -261,6 +289,9 @@ export async function planTripFromCoords(
   if (options.accessible) {
     params.wheelchair = 'on'
   }
+
+  // Apply mode exclusion
+  applyModeFilters(params, options)
 
   const url = buildUrl('/trip', params)
   const response = await fetchWithTimeout(url, 15000)
@@ -309,6 +340,9 @@ export async function planTripMixed(
   if (options.accessible) {
     params.wheelchair = 'on'
   }
+
+  // Apply mode exclusion
+  applyModeFilters(params, options)
 
   const url = buildUrl('/trip', params)
   const response = await fetchWithTimeout(url, 15000)

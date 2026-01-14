@@ -20,21 +20,20 @@ interface RealtimeData {
  * Load all realtime data from Redis
  */
 export async function loadRealtimeData(): Promise<RealtimeData> {
-  const feeds: TfnswFeed[] = ['sydneytrains', 'metro', 'lightrail']
+  // v2 feeds for trip updates, all feeds for vehicle positions
+  const tripUpdateFeeds: TfnswFeed[] = ['sydneytrains', 'metro', 'lightrail']
+  const vehiclePosFeeds: TfnswFeed[] = ['sydneytrains', 'metro', 'lightrail', 'buses', 'ferries']
+  const feeds = tripUpdateFeeds
   
   const tripUpdates = new Map<TfnswFeed, TripUpdate[]>()
   const vehiclePositions = new Map<TfnswFeed, VehiclePosition[]>()
   let oldestAge: number | null = null
   
-  for (const feed of feeds) {
+  // Load trip updates from v2 feeds
+  for (const feed of tripUpdateFeeds) {
     const updates = await getTripUpdates(feed)
     if (updates) {
       tripUpdates.set(feed, updates)
-    }
-    
-    const positions = await getVehiclePositions(feed)
-    if (positions) {
-      vehiclePositions.set(feed, positions)
     }
     
     const meta = await getFeedMeta('tripupdates', feed)
@@ -43,6 +42,14 @@ export async function loadRealtimeData(): Promise<RealtimeData> {
       if (oldestAge === null || age > oldestAge) {
         oldestAge = age
       }
+    }
+  }
+  
+  // Load vehicle positions from all feeds (v1 + v2)
+  for (const feed of vehiclePosFeeds) {
+    const positions = await getVehiclePositions(feed)
+    if (positions) {
+      vehiclePositions.set(feed, positions)
     }
   }
   
@@ -81,20 +88,75 @@ function findTripUpdate(
 }
 
 /**
- * Find vehicle position by trip ID
+ * Find vehicle position by trip ID (multi-strategy matching)
+ * Priority: 1) Direct trip ID match, 2) Route + time match
  */
 function findVehiclePosition(
   tripId: string | undefined,
-  vehiclePositions: Map<TfnswFeed, VehiclePosition[]>
+  vehiclePositions: Map<TfnswFeed, VehiclePosition[]>,
+  options?: {
+    realtimeTripId?: string  // From GraphQL enrichment
+    routeId?: string
+    departureTime?: string
+    directionId?: number
+  }
 ): VehiclePosition | null {
-  if (!tripId) return null
+  // Strategy 1: Use GraphQL realtimeTripId if available (most reliable)
+  if (options?.realtimeTripId) {
+    for (const positions of vehiclePositions.values()) {
+      const found = positions.find(p => p.trip?.tripId === options.realtimeTripId)
+      if (found) return found
+    }
+  }
   
-  for (const positions of vehiclePositions.values()) {
-    const found = positions.find(p => p.trip?.tripId === tripId)
-    if (found) return found
+  // Strategy 2: Direct trip ID match
+  if (tripId) {
+    for (const positions of vehiclePositions.values()) {
+      const found = positions.find(p => p.trip?.tripId === tripId)
+      if (found) return found
+    }
+  }
+  
+  // Strategy 3: Route + direction match (fallback for buses/ferries)
+  if (options?.routeId) {
+    for (const positions of vehiclePositions.values()) {
+      const found = positions.find(p => {
+        if (!p.trip?.routeId) return false
+        const routeMatch = p.trip.routeId.includes(options.routeId!) || 
+                          options.routeId!.includes(p.trip.routeId)
+        const directionMatch = options.directionId === undefined || 
+                               p.trip.directionId === options.directionId
+        return routeMatch && directionMatch
+      })
+      if (found) return found
+    }
   }
   
   return null
+}
+
+/**
+ * Get all vehicles on a specific route
+ */
+export function getVehiclesOnRoute(
+  routeId: string,
+  vehiclePositions: Map<TfnswFeed, VehiclePosition[]>
+): VehiclePosition[] {
+  const vehicles: VehiclePosition[] = []
+  const normalizedRoute = routeId.toUpperCase()
+  
+  for (const positions of vehiclePositions.values()) {
+    for (const pos of positions) {
+      if (!pos.trip?.routeId) continue
+      
+      const posRoute = pos.trip.routeId.toUpperCase()
+      if (posRoute.includes(normalizedRoute) || normalizedRoute.includes(posRoute)) {
+        vehicles.push(pos)
+      }
+    }
+  }
+  
+  return vehicles
 }
 
 /**

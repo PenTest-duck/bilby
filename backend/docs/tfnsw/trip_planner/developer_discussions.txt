@@ -1,0 +1,129 @@
+
+patrick.waters
+TfNSW would like to advise the trip planner has been updated with new fares effective 3rd of July.
+
+February 2020
+jayen
+I see Trip Planner has a “Connecting with public transport” set of options. How can I set these options through the API?
+
+1 reply
+February 2020▶ jayen
+eneida.raya
+Hi @jayen. We’ve asked internally and will get back to you.
+
+March 2020
+explosivegamma
+Hi - may just me being dumb but the trip planner api seems to be returning trips almost calculated 12 hours early. Just wondering if there is anything about this?
+
+1 reply
+March 2020▶ explosivegamma
+jayen
+Do you have an example? I think the API returns times in UTC in ISO 8601 format.
+
+1 reply
+March 2020▶ jayen
+explosivegamma
+That’s the issue - didn’t realize it returned times in UTC
+Kinda strange imo - but fair enough
+
+1 reply
+March 2020▶ explosivegamma
+jayen
+They’re in ISO 8601 format, which is totally normal. The Z at the end indicates UTC time: ISO 8601 - Wikipedia, which is also totally normal.
+
+It’s rare to see a date&time format which doesn’t also include the timezone. When date and time are separated, then the timezone may be implied.
+
+The strange part is that the API request uses separate date and time, but the response provides date&time together.
+
+1 reply
+March 2020▶ jayen
+explosivegamma
+All good - I’m just starting out using api’s personally so still learning everything :slight_smile:
+
+February 2022
+joaommartins
+Following the current documentation, the API does not generate a multimodal trip with cycling legs regardless of the options used. Is this expected behaviour?
+
+August 2023
+suds
+Hi,
+When using the /departure_mon endpoint, under the location.properties of each stopEvent, there is a “platform” field. I was not able to find any documentation on this field, but from experimentation, I’ve arrived at the following findings:
+
+For train trips, this platform field is given as the station’s 3-letter code, followed by the platform number. Eg. “PDH4” for Pendle Hill, Platform 4.
+
+For bus trips from major interchanges, the platform field is given as the bus stand that it departs from. Eg. “K” for Stand K
+
+For bus trips from most minor bus stops, the platform field is given as “X1” (eg. at stop 2065134).
+
+However, from North Sydney Girls High School (2065138), busses seem to depart from platform “X2”. Likewise with Pendle Hill Station (2145141), busses depart from “X4”.
+And at Westpoint Bus Interchange (2148373), the bus stands are labelled by number, not letter, and so a bus departing from platform “X8” denotes Stand 8.
+
+I am using this to filter the stand that busses depart from at bus stops. I had tried to filter stands by their reported “platform” field, and ignore when it equals “X1”, however there seem to be other values possible. I was wondering what the mechanism for the value in this “platform” field was?
+
+Thanks.
+
+Addendum: Platforms at Kogarah Station do NOT appear to be labelled with station code, instead being reported as “P1”, “P2”, “P3” and “P4”.
+
+September 2023
+manju_rn
+For the platform, the Light Rail stations have platform data as LR1, LR2. It will be good to have documentation so that this is made clear. I checked the feed data and this was not clearly specified and seems random
+
+January 2025
+karansyd4
+reg. the coord api in trip planning https://api.transport.nsw.gov.au/v1/tp/coord
+
+How to know if a stop is bus stop / train / metro station etc?
+What param can be used to filter out only bus stops from the api response ?
+January 2025
+balaji_srm
+Hello,
+
+Thank you for reaching out to Transport NSW. You can determine whether a stop is a train or bus by checking the GIS_DRAW_CLASS results. Bus stops are labeled as “StopArea,” while train stops are labeled as “StopPoint.”
+
+You can filter stops using the type_1 string as follows:
+
+Available values:
+
+GIS_POINT: GIS points, including Opal resellers (see inclDrawClasses_1)
+BUS_POINT: Bus stops/stations
+POI_POINT: Places of interest
+For more information, please visit: Trip Planner APIs Data
+
+Kind regards
+
+Balaji Subramanium
+
+Open Data & Innovation
+
+Planning, Integration & Passenger
+
+balaji.subramanium@transport.nsw.gov.au
+
+transport.nsw.gov.au
+
+May 2025
+Greenhouse
+I have been using this for a couple of years to make a departure monitor for my local train station. It has been working perfectly until a day or two ago.
+
+It appears the “departureTimeEstimated” is gone from the data I get back and now only “departureTimePlanned” and “departureTimeBaseTimetable” are returned.
+
+From the documentation, the “planned” was the timetabled departure, but has this changed now? I.e. which one is the ‘real time’ one?
+
+Edit: Have been using stopid 10101200, but have tried 211410 as well.
+
+1 reply
+May 2025▶ Greenhouse
+Marcie
+Hi @Greenhouse, just confirming the stop you’re set up for is Denistone train station?
+
+1 reply
+May 2025▶ Marcie
+Greenhouse
+Correct, but looks like it’s come back now after no changes on this side.
+
+1 reply
+May 2025▶ Greenhouse
+Marcie
+the “departureTimeEstimated” is related to real-time and there potentially has been a temporary closing/not stopping of the station - it’s on the T9 line so may have had issues with the disruption?
+
+Still trying to find out what happened. Glad it’s back though!

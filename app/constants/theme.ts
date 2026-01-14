@@ -5,17 +5,62 @@
 
 import { Platform } from 'react-native';
 
-/** TfNSW Transport Mode Colors */
+/** TfNSW Transport Mode Colors (from official colour chart) */
 export const TransportColors = {
-  train: '#F6891F',
-  metro: '#009B77',
-  bus: '#00B5EF',
-  ferry: '#5AB031',
-  lightRail: '#EE343F',
-  coach: '#742283',
+  train: '#F6891F',      // Regional trains - PMS 151C
+  metro: '#168388',      // M1 Metro - PMS 321
+  bus: '#00B5EF',        // Sydney Buses
+  ferry: '#5AB031',      // F10 default - PMS 361C
+  lightRail: '#EE343F',  // Newcastle Light Rail - PMS 185C
+  coach: '#732A82',      // Regional Coaches - PMS 7657C
   schoolBus: '#FDD835',
   walking: '#666666',
 } as const;
+
+/** Per-line colors for Sydney Trains */
+export const TrainLineColors: Record<string, string> = {
+  'T1': '#F99D1C',  // PMS 137C
+  'T2': '#0098CD',  // PMS 801C
+  'T3': '#F37021',  // PMS 158C
+  'T4': '#005AA3',  // PMS 2935C
+  'T5': '#C4258F',  // PMS 2395C
+  'T6': '#7C3E21',  // PMS 1685C
+  'T7': '#6F818E',  // PMS 7544C
+  'T8': '#00954C',  // PMS 355C
+  'T9': '#D11F2F',  // PMS 186C
+};
+
+/** Per-line colors for Intercity Trains */
+export const IntercityLineColors: Record<string, string> = {
+  'BMT': '#F99D1C',  // Blue Mountains - PMS 137C
+  'CCN': '#D11F2F',  // Central Coast & Newcastle - PMS 186C
+  'HUN': '#833134',  // Hunter - PMS 491C
+  'SCO': '#005AA3',  // South Coast - PMS 2935C
+  'SHL': '#00954C',  // Southern Highlands - PMS 355C
+};
+
+/** Per-line colors for Sydney Ferries */
+export const FerryLineColors: Record<string, string> = {
+  'F1': '#00774B',   // Manly - PMS 3415C
+  'F2': '#144734',   // Taronga Zoo - PMS 3435C
+  'F3': '#648C3C',   // Parramatta River - PMS 375C
+  'F4': '#BFD730',   // Pyrmont Bay
+  'F5': '#286142',   // Neutral Bay - PMS 7734C
+  'F6': '#00AB51',   // Mosman Bay - PMS 7481C
+  'F7': '#00B189',   // Double Bay - PMS 339C
+  'F8': '#55622B',   // Cockatoo Island - PMS 371C
+  'F9': '#65B32E',   // Watsons Bay
+  'F10': '#5AB031',  // Blackwattle Bay - PMS 361C
+};
+
+/** Per-line colors for Light Rail */
+export const LightRailLineColors: Record<string, string> = {
+  'L1': '#BE1622',   // Dulwich Hill - PMS 200C
+  'L2': '#DD1E25',   // Randwick - PMS 185C
+  'L3': '#781140',   // Kingsford - PMS 216C
+  'L4': '#BB2043',   // Westmead & Carlingford - PMS 7636C
+  'NLR': '#EE343F',  // Newcastle - PMS 185C
+};
 
 /** Primary brand color - TfNSW blue */
 const primaryLight = '#0078C8';

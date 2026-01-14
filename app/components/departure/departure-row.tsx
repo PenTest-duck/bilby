@@ -6,7 +6,7 @@
 import { View, Text, StyleSheet, Pressable } from 'react-native';
 import { Colors } from '@/constants/theme';
 import { useColorScheme } from '@/hooks/use-color-scheme';
-import { LineBadge } from '@/components/transport/line-badge';
+import { LineBadge, getLineAbbreviation, getLineColor } from '@/components/transport/line-badge';
 import { formatTime, formatCountdown } from '@/lib/date';
 import type { Departure } from '@/lib/api/types';
 
@@ -20,8 +20,10 @@ export function DepartureRow({ departure, onPress }: DepartureRowProps) {
   const colors = Colors[colorScheme];
 
   const modeId = departure.transportation?.product?.class || 5;
-  const lineNumber = departure.transportation?.number || 
-                     departure.transportation?.disassembledName || '';
+  const rawLineName = departure.transportation?.number || 
+                      departure.transportation?.disassembledName || '';
+  const lineCode = getLineAbbreviation(rawLineName, modeId);
+  const lineColor = getLineColor(lineCode, modeId);
   const destination = departure.transportation?.destination?.name || 'Unknown';
   const platform = departure.platform;
   
@@ -46,7 +48,7 @@ export function DepartureRow({ departure, onPress }: DepartureRowProps) {
     >
       {/* Mode & Line */}
       <View style={styles.lineContainer}>
-        <LineBadge line={lineNumber} modeId={modeId} size="md" />
+        <LineBadge line={lineCode} modeId={modeId} color={lineColor} size="md" />
       </View>
 
       {/* Destination & Info */}

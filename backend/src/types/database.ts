@@ -19,6 +19,7 @@ export type Database = {
           accessibility_required: boolean | null
           default_strategy: string | null
           notifications_enabled: boolean | null
+          opal_card_type: string | null
           preferred_modes: string[] | null
           theme: string | null
           updated_at: string
@@ -28,6 +29,7 @@ export type Database = {
           accessibility_required?: boolean | null
           default_strategy?: string | null
           notifications_enabled?: boolean | null
+          opal_card_type?: string | null
           preferred_modes?: string[] | null
           theme?: string | null
           updated_at?: string
@@ -37,6 +39,7 @@ export type Database = {
           accessibility_required?: boolean | null
           default_strategy?: string | null
           notifications_enabled?: boolean | null
+          opal_card_type?: string | null
           preferred_modes?: string[] | null
           theme?: string | null
           updated_at?: string

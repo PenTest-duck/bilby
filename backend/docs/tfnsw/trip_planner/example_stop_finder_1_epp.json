@@ -1,0 +1,879 @@
+{
+  "version": "10.6.21.17",
+  "locations": [
+    {
+      "id": "streetID:1500000021::95365003:-1:Epping Rd:Double Bay:Epping Rd::Epping Rd: 2028:ANY:DIVA_STREET:4892759:3757126:GDAV:nsw",
+      "name": "Epping Rd, Double Bay",
+      "disassembledName": "Epping Rd",
+      "coord": [
+        -33.881389,
+        151.245664
+      ],
+      "streetName": "Epping Rd",
+      "postCode": " 2028",
+      "type": "street",
+      "matchQuality": 234,
+      "isBest": false,
+      "parent": {
+        "id": "placeID:95365003:-1",
+        "name": "Double Bay",
+        "type": "locality"
+      }
+    },
+    {
+      "id": "streetID:1500000046::95332002:-1:Epping Rd:Lane Cove:Epping Rd::Epping Rd: 2066:ANY:DIVA_STREET:4885760:3749054:GDAV:nsw",
+      "name": "Epping Rd, Lane Cove",
+      "disassembledName": "Epping Rd",
+      "coord": [
+        -33.811362,
+        151.166651
+      ],
+      "streetName": "Epping Rd",
+      "postCode": " 2066",
+      "type": "street",
+      "matchQuality": 234,
+      "isBest": false,
+      "parent": {
+        "id": "placeID:95332002:-1",
+        "name": "Lane Cove",
+        "type": "locality"
+      }
+    },
+    {
+      "id": "streetID:1500000038::95332003:-1:Epping Rd:Lane Cove North:Epping Rd::Epping Rd: 2066:ANY:DIVA_STREET:4884992:3748846:GDAV:nsw",
+      "name": "Epping Rd, Lane Cove North",
+      "disassembledName": "Epping Rd",
+      "coord": [
+        -33.809771,
+        151.158284
+      ],
+      "streetName": "Epping Rd",
+      "postCode": " 2066",
+      "type": "street",
+      "matchQuality": 234,
+      "isBest": false,
+      "parent": {
+        "id": "placeID:95332003:-1",
+        "name": "Lane Cove North",
+        "type": "locality"
+      }
+    },
+    {
+      "id": "streetID:1500000020::95332004:-1:Epping Rd:Lane Cove West:Epping Rd::Epping Rd: 2066:ANY:DIVA_STREET:4885055:3748867:GDAV:nsw",
+      "name": "Epping Rd, Lane Cove West",
+      "disassembledName": "Epping Rd",
+      "coord": [
+        -33.809937,
+        151.158972
+      ],
+      "streetName": "Epping Rd",
+      "postCode": " 2066",
+      "type": "street",
+      "matchQuality": 234,
+      "isBest": false,
+      "parent": {
+        "id": "placeID:95332004:-1",
+        "name": "Lane Cove West",
+        "type": "locality"
+      }
+    },
+    {
+      "id": "streetID:1500000008::95330017:-1:Eppleston Pl:West Pymble:Eppleston Pl::Eppleston Pl: 2073:ANY:DIVA_STREET:4882572:3743430:GDAV:nsw",
+      "name": "Eppleston Pl, West Pymble",
+      "disassembledName": "Eppleston Pl",
+      "coord": [
+        -33.761928,
+        151.129862
+      ],
+      "streetName": "Eppleston Pl",
+      "postCode": " 2073",
+      "type": "street",
+      "matchQuality": 232,
+      "isBest": false,
+      "parent": {
+        "id": "placeID:95330017:-1",
+        "name": "West Pymble",
+        "type": "locality"
+      }
+    },
+    {
+      "id": "streetID:1500000110::95360013:-1:Epping Dr:Frenchs Forest:Epping Dr::Epping Dr: 2086:ANY:DIVA_STREET:4892162:3742043:GDAV:nsw",
+      "name": "Epping Dr, Frenchs Forest",
+      "disassembledName": "Epping Dr",
+      "coord": [
+        -33.745947,
+        151.232527
+      ],
+      "streetName": "Epping Dr",
+      "postCode": " 2086",
+      "type": "street",
+      "matchQuality": 234,
+      "isBest": false,
+      "parent": {
+        "id": "placeID:95360013:-1",
+        "name": "Frenchs Forest",
+        "type": "locality"
+      }
+    },
+    {
+      "id": "streetID:1500000026::95352007:-1:Epping Rd:Macquarie Park:Epping Rd::Epping Rd: 2113:ANY:DIVA_STREET:4882226:3746301:GDAV:nsw",
+      "name": "Epping Rd, Macquarie Park",
+      "disassembledName": "Epping Rd",
+      "coord": [
+        -33.78788,
+        151.127376
+      ],
+      "streetName": "Epping Rd",
+      "postCode": " 2113",
+      "type": "street",
+      "matchQuality": 234,
+      "isBest": false,
+      "parent": {
+        "id": "placeID:95352007:-1",
+        "name": "Macquarie Park",
+        "type": "locality"
+      }
+    },
+    {
+      "id": "streetID:1500000059::95352010:-1:Epping Rd:North Ryde:Epping Rd::Epping Rd: 2113:ANY:DIVA_STREET:4882535:3746736:GDAV:nsw",
+      "name": "Epping Rd, North Ryde",
+      "disassembledName": "Epping Rd",
+      "coord": [
+        -33.791681,
+        151.130893
+      ],
+      "streetName": "Epping Rd",
+      "postCode": " 2113",
+      "type": "street",
+      "matchQuality": 234,
+      "isBest": false,
+      "parent": {
+        "id": "placeID:95352010:-1",
+        "name": "North Ryde",
+        "type": "locality"
+      }
+    },
+    {
+      "id": "streetID:1500000056::95352005:-1:Epping Av:Eastwood:Epping Av::Epping Av: 2122:ANY:DIVA_STREET:4877456:3745723:GDAV:nsw",
+      "name": "Epping Av, Eastwood",
+      "disassembledName": "Epping Av",
+      "coord": [
+        -33.784391,
+        151.075736
+      ],
+      "streetName": "Epping Av",
+      "postCode": " 2122",
+      "type": "street",
+      "matchQuality": 233,
+      "isBest": false,
+      "parent": {
+        "id": "placeID:95352005:-1",
+        "name": "Eastwood",
+        "type": "locality"
+      }
+    },
+    {
+      "id": "streetID:1500000048::95352008:-1:Epping Rd:Marsfield:Epping Rd::Epping Rd: 2122:ANY:DIVA_STREET:4880135:3744589:GDAV:nsw",
+      "name": "Epping Rd, Marsfield",
+      "disassembledName": "Epping Rd",
+      "coord": [
+        -33.773231,
+        151.104111
+      ],
+      "streetName": "Epping Rd",
+      "postCode": " 2122",
+      "type": "street",
+      "matchQuality": 234,
+      "isBest": false,
+      "parent": {
+        "id": "placeID:95352008:-1",
+        "name": "Marsfield",
+        "type": "locality"
+      }
+    },
+    {
+      "id": "streetID:1500000022::95969009:-1:Epping Rd:Pilliga:Epping Rd::Epping Rd: 2388:ANY:DIVA_STREET:4651528:3357871:GDAV:nsw",
+      "name": "Epping Rd, Pilliga",
+      "disassembledName": "Epping Rd",
+      "coord": [
+        -30.343219,
+        148.576445
+      ],
+      "streetName": "Epping Rd",
+      "postCode": " 2388",
+      "type": "street",
+      "matchQuality": 234,
+      "isBest": false,
+      "parent": {
+        "id": "placeID:95969009:-1",
+        "name": "Pilliga",
+        "type": "locality"
+      }
+    },
+    {
+      "id": "streetID:1500000015::95313017:-1:Epping Forest Dr:Kearns:Epping Forest Dr::Epping Forest Dr: 2558:ANY:DIVA_STREET:4851239:3771136:GDAV:nsw",
+      "name": "Epping Forest Dr, Kearns",
+      "disassembledName": "Epping Forest Dr",
+      "coord": [
+        -34.02211,
+        150.803369
+      ],
+      "streetName": "Epping Forest Dr",
+      "postCode": " 2558",
+      "type": "street",
+      "matchQuality": 231,
+      "isBest": false,
+      "parent": {
+        "id": "placeID:95313017:-1",
+        "name": "Kearns",
+        "type": "locality"
+      }
+    },
+    {
+      "id": "streetID:1500000027::95313012:-1:Epping Forest Dr:Eschol Park:Epping Forest Dr::Epping Forest Dr: 2558:ANY:DIVA_STREET:4851771:3772028:GDAV:nsw",
+      "name": "Epping Forest Dr, Eschol Park",
+      "disassembledName": "Epping Forest Dr",
+      "coord": [
+        -34.029959,
+        150.809478
+      ],
+      "streetName": "Epping Forest Dr",
+      "postCode": " 2558",
+      "type": "street",
+      "matchQuality": 231,
+      "isBest": false,
+      "parent": {
+        "id": "placeID:95313012:-1",
+        "name": "Eschol Park",
+        "type": "locality"
+      }
+    },
+    {
+      "id": "streetID:1500000032::95701033:-1:Eppalock St:Duffy (ACT):Eppalock St::Eppalock St: 2611:ANY:DIVA_STREET:4684833:3911753:GDAV:nsw",
+      "name": "Eppalock St, Duffy (ACT)",
+      "disassembledName": "Eppalock St",
+      "coord": [
+        -35.331945,
+        149.033635
+      ],
+      "streetName": "Eppalock St",
+      "postCode": " 2611",
+      "type": "street",
+      "matchQuality": 232,
+      "isBest": false,
+      "parent": {
+        "id": "placeID:95701033:-1",
+        "name": "Duffy (ACT)",
+        "type": "locality"
+      }
+    },
+    {
+      "id": "streetID:1500000035::95347004:-1:Epping Cl:Cambridge Park:Epping Cl::Epping Cl: 2747:ANY:DIVA_STREET:4845257:3741051:GDAV:nsw",
+      "name": "Epping Cl, Cambridge Park",
+      "disassembledName": "Epping Cl",
+      "coord": [
+        -33.753334,
+        150.726905
+      ],
+      "streetName": "Epping Cl",
+      "postCode": " 2747",
+      "type": "street",
+      "matchQuality": 234,
+      "isBest": false,
+      "parent": {
+        "id": "placeID:95347004:-1",
+        "name": "Cambridge Park",
+        "type": "locality"
+      }
+    },
+    {
+      "id": "streetID:1500000010::95969005:-1:Epping Rd:Come By Chance:Epping Rd::Epping Rd: 2832:ANY:DIVA_STREET:4647632:3350570:GDAV:nsw",
+      "name": "Epping Rd, Come By Chance",
+      "disassembledName": "Epping Rd",
+      "coord": [
+        -30.277839,
+        148.534898
+      ],
+      "streetName": "Epping Rd",
+      "postCode": " 2832",
+      "type": "street",
+      "matchQuality": 234,
+      "isBest": false,
+      "parent": {
+        "id": "placeID:95969005:-1",
+        "name": "Come By Chance",
+        "type": "locality"
+      }
+    },
+    {
+      "id": "poiID:858290415:95365003:-1:Epping Reserve:Double Bay:Epping Reserve:ANY:POI:4892840:3757323:GDAV:nsw",
+      "name": "Epping Reserve, Double Bay",
+      "disassembledName": "Epping Reserve",
+      "coord": [
+        -33.883131,
+        151.246626
+      ],
+      "type": "poi",
+      "matchQuality": 233,
+      "isBest": false,
+      "parent": {
+        "id": "placeID:95365003:-1",
+        "name": "Double Bay",
+        "type": "locality"
+      }
+    },
+    {
+      "id": "suburbID:95325016:1:Epping:4878178:3744296:GDAV",
+      "name": "Epping",
+      "coord": [
+        -33.771296,
+        151.082905
+      ],
+      "type": "suburb",
+      "matchQuality": 241,
+      "isBest": false,
+      "parent": {
+        "id": "placeID:95325016:1",
+        "name": "Epping",
+        "type": "locality"
+      }
+    },
+    {
+      "id": "poiID:858288436:95325016:-1:Arden Anglican School Epping Secondary Campus:Epping:Arden Anglican School Epping Secondary Campus:ANY:POI:4878290:3744208:GDAV:nsw",
+      "name": "Arden Anglican School Epping Secondary Campus, Epping",
+      "disassembledName": "Arden Anglican School Epping Secondary Campus",
+      "coord": [
+        -33.770464,
+        151.084073
+      ],
+      "type": "poi",
+      "matchQuality": 227,
+      "isBest": false,
+      "parent": {
+        "id": "placeID:95325016:-1",
+        "name": "Epping",
+        "type": "locality"
+      }
+    },
+    {
+      "id": "poiID:858285812:95325016:-1:Epping Aquatic Centre:Epping:Epping Aquatic Centre:ANY:POI:4879050:3744724:GDAV:nsw",
+      "name": "Epping Aquatic Centre, Epping",
+      "disassembledName": "Epping Aquatic Centre",
+      "coord": [
+        -33.774834,
+        151.092481
+      ],
+      "type": "poi",
+      "matchQuality": 230,
+      "isBest": false,
+      "parent": {
+        "id": "placeID:95325016:-1",
+        "name": "Epping",
+        "type": "locality"
+      }
+    },
+    {
+      "id": "poiID:858311208:95325016:-1:Epping Bakery:Epping:Epping Bakery:ANY:POI:4878056:3744496:GDAV:nsw",
+      "name": "Epping Bakery, Epping",
+      "disassembledName": "Epping Bakery",
+      "coord": [
+        -33.773139,
+        151.081676
+      ],
+      "type": "poi",
+      "matchQuality": 233,
+      "isBest": false,
+      "parent": {
+        "id": "placeID:95325016:-1",
+        "name": "Epping",
+        "type": "locality"
+      }
+    },
+    {
+      "id": "poiID:858269671:95325016:-1:Epping Baptist Church:Epping:Epping Baptist Church:ANY:POI:4877893:3744250:GDAV:nsw",
+      "name": "Epping Baptist Church, Epping",
+      "disassembledName": "Epping Baptist Church",
+      "coord": [
+        -33.770984,
+        151.079815
+      ],
+      "type": "poi",
+      "matchQuality": 230,
+      "isBest": false,
+      "parent": {
+        "id": "placeID:95325016:-1",
+        "name": "Epping",
+        "type": "locality"
+      }
+    },
+    {
+      "id": "poiID:858269672:95325016:-1:Epping Church Of Christ:Epping:Epping Church Of Christ:ANY:POI:4877809:3744629:GDAV:nsw",
+      "name": "Epping Church Of Christ, Epping",
+      "disassembledName": "Epping Church Of Christ",
+      "coord": [
+        -33.774423,
+        151.079072
+      ],
+      "type": "poi",
+      "matchQuality": 229,
+      "isBest": false,
+      "parent": {
+        "id": "placeID:95325016:-1",
+        "name": "Epping",
+        "type": "locality"
+      }
+    },
+    {
+      "id": "poiID:858310764:95325016:-1:Epping Community Hall:Epping:Epping Community Hall:ANY:POI:4878134:3744323:GDAV:nsw",
+      "name": "Epping Community Hall, Epping",
+      "disassembledName": "Epping Community Hall",
+      "coord": [
+        -33.771554,
+        151.082442
+      ],
+      "type": "poi",
+      "matchQuality": 230,
+      "isBest": false,
+      "parent": {
+        "id": "placeID:95325016:-1",
+        "name": "Epping",
+        "type": "locality"
+      }
+    },
+    {
+      "id": "poiID:858310759:95325016:-1:Epping Creative Centre:Epping:Epping Creative Centre:ANY:POI:4878987:3744650:GDAV:nsw",
+      "name": "Epping Creative Centre, Epping",
+      "disassembledName": "Epping Creative Centre",
+      "coord": [
+        -33.774191,
+        151.091771
+      ],
+      "type": "poi",
+      "matchQuality": 230,
+      "isBest": false,
+      "parent": {
+        "id": "placeID:95325016:-1",
+        "name": "Epping",
+        "type": "locality"
+      }
+    },
+    {
+      "id": "poiID:858294434:95325016:-1:Epping Crust:Epping:Epping Crust:ANY:POI:4878149:3744474:GDAV:nsw",
+      "name": "Epping Crust, Epping",
+      "disassembledName": "Epping Crust",
+      "coord": [
+        -33.772907,
+        151.082668
+      ],
+      "type": "poi",
+      "matchQuality": 234,
+      "isBest": false,
+      "parent": {
+        "id": "placeID:95325016:-1",
+        "name": "Epping",
+        "type": "locality"
+      }
+    },
+    {
+      "id": "poiID:858269673:95325016:-1:Epping Gospel Chapel:Epping:Epping Gospel Chapel:ANY:POI:4876611:3744543:GDAV:nsw",
+      "name": "Epping Gospel Chapel, Epping",
+      "disassembledName": "Epping Gospel Chapel",
+      "coord": [
+        -33.774076,
+        151.066129
+      ],
+      "type": "poi",
+      "matchQuality": 230,
+      "isBest": false,
+      "parent": {
+        "id": "placeID:95325016:-1",
+        "name": "Epping",
+        "type": "locality"
+      }
+    },
+    {
+      "id": "poiID:858283004:95325016:-1:Epping Heights Public School:Epping:Epping Heights Public School:ANY:POI:4877363:3743320:GDAV:nsw",
+      "name": "Epping Heights Public School, Epping",
+      "disassembledName": "Epping Heights Public School",
+      "coord": [
+        -33.762806,
+        151.073709
+      ],
+      "type": "poi",
+      "matchQuality": 229,
+      "isBest": false,
+      "parent": {
+        "id": "placeID:95325016:-1",
+        "name": "Epping",
+        "type": "locality"
+      }
+    },
+    {
+      "id": "poiID:858273236:95325016:-1:Epping Library:Epping:Epping Library:ANY:POI:4878275:3744510:GDAV:nsw",
+      "name": "Epping Library, Epping",
+      "disassembledName": "Epping Library",
+      "coord": [
+        -33.773186,
+        151.084041
+      ],
+      "type": "poi",
+      "matchQuality": 233,
+      "isBest": false,
+      "parent": {
+        "id": "placeID:95325016:-1",
+        "name": "Epping",
+        "type": "locality"
+      }
+    },
+    {
+      "id": "poiID:858281405:95325016:-1:Epping Post Office:Epping:Epping Post Office:ANY:POI:4878138:3744363:GDAV:nsw",
+      "name": "Epping Post Office, Epping",
+      "disassembledName": "Epping Post Office",
+      "coord": [
+        -33.771913,
+        151.082502
+      ],
+      "type": "poi",
+      "matchQuality": 231,
+      "isBest": false,
+      "parent": {
+        "id": "placeID:95325016:-1",
+        "name": "Epping",
+        "type": "locality"
+      }
+    },
+    {
+      "id": "poiID:858269674:95325016:-1:Epping Presbyterian Church:Epping:Epping Presbyterian Church:ANY:POI:4878016:3744610:GDAV:nsw",
+      "name": "Epping Presbyterian Church, Epping",
+      "disassembledName": "Epping Presbyterian Church",
+      "coord": [
+        -33.774178,
+        151.081294
+      ],
+      "type": "poi",
+      "matchQuality": 229,
+      "isBest": false,
+      "parent": {
+        "id": "placeID:95325016:-1",
+        "name": "Epping",
+        "type": "locality"
+      }
+    },
+    {
+      "id": "poiID:858283006:95325016:-1:Epping Public School:Epping:Epping Public School:ANY:POI:4878635:3744245:GDAV:nsw",
+      "name": "Epping Public School, Epping",
+      "disassembledName": "Epping Public School",
+      "coord": [
+        -33.770674,
+        151.087806
+      ],
+      "type": "poi",
+      "matchQuality": 230,
+      "isBest": false,
+      "parent": {
+        "id": "placeID:95325016:-1",
+        "name": "Epping",
+        "type": "locality"
+      }
+    },
+    {
+      "id": "poiID:858311276:95325016:-1:Epping Scout Group:Epping:Epping Scout Group:ANY:POI:4878317:3744172:GDAV:nsw",
+      "name": "Epping Scout Group, Epping",
+      "disassembledName": "Epping Scout Group",
+      "coord": [
+        -33.770131,
+        151.084349
+      ],
+      "type": "poi",
+      "matchQuality": 231,
+      "isBest": false,
+      "parent": {
+        "id": "placeID:95325016:-1",
+        "name": "Epping",
+        "type": "locality"
+      }
+    },
+    {
+      "id": "212110",
+      "isGlobalId": true,
+      "name": "Epping Station, Epping",
+      "disassembledName": "Epping Station",
+      "coord": [
+        -33.772837,
+        151.082082
+      ],
+      "type": "stop",
+      "matchQuality": 979,
+      "isBest": true,
+      "parent": {
+        "id": "placeID:95325016:1",
+        "name": "Epping",
+        "type": "locality"
+      },
+      "properties": {
+        "stopId": "10101429",
+        "mainLocality": "Epping"
+      },
+      "modes": [
+        1,
+        2,
+        5,
+        11
+      ]
+    },
+    {
+      "id": "poiID:858288730:95325016:-1:Epping Surgery Centre:Epping:Epping Surgery Centre:ANY:POI:4878206:3744272:GDAV:nsw",
+      "name": "Epping Surgery Centre, Epping",
+      "disassembledName": "Epping Surgery Centre",
+      "coord": [
+        -33.77107,
+        151.083196
+      ],
+      "type": "poi",
+      "matchQuality": 230,
+      "isBest": false,
+      "parent": {
+        "id": "placeID:95325016:-1",
+        "name": "Epping",
+        "type": "locality"
+      }
+    },
+    {
+      "id": "poiID:858269675:95325016:-1:Epping Uniting Church:Epping:Epping Uniting Church:ANY:POI:4878309:3744045:GDAV:nsw",
+      "name": "Epping Uniting Church, Epping",
+      "disassembledName": "Epping Uniting Church",
+      "coord": [
+        -33.768991,
+        151.084208
+      ],
+      "type": "poi",
+      "matchQuality": 230,
+      "isBest": false,
+      "parent": {
+        "id": "placeID:95325016:-1",
+        "name": "Epping",
+        "type": "locality"
+      }
+    },
+    {
+      "id": "poiID:858283007:95325016:-1:Epping West Public School:Epping:Epping West Public School:ANY:POI:4876795:3744411:GDAV:nsw",
+      "name": "Epping West Public School, Epping",
+      "disassembledName": "Epping West Public School",
+      "coord": [
+        -33.772823,
+        151.068055
+      ],
+      "type": "poi",
+      "matchQuality": 229,
+      "isBest": false,
+      "parent": {
+        "id": "placeID:95325016:-1",
+        "name": "Epping",
+        "type": "locality"
+      }
+    },
+    {
+      "id": "poiID:858302695:95325016:-1:Onit Gym Epping:Epping:Onit Gym Epping:ANY:POI:4876757:3744548:GDAV:nsw",
+      "name": "Onit Gym Epping, Epping",
+      "disassembledName": "Onit Gym Epping",
+      "coord": [
+        -33.774069,
+        151.067704
+      ],
+      "type": "poi",
+      "matchQuality": 232,
+      "isBest": false,
+      "parent": {
+        "id": "placeID:95325016:-1",
+        "name": "Epping",
+        "type": "locality"
+      }
+    },
+    {
+      "id": "poiID:858307848:95325016:-1:The Epping Club:Epping:The Epping Club:ANY:POI:4877955:3744502:GDAV:nsw",
+      "name": "The Epping Club, Epping",
+      "disassembledName": "The Epping Club",
+      "coord": [
+        -33.773229,
+        151.08059
+      ],
+      "type": "poi",
+      "matchQuality": 232,
+      "isBest": false,
+      "parent": {
+        "id": "placeID:95325016:-1",
+        "name": "Epping",
+        "type": "locality"
+      }
+    },
+    {
+      "id": "poiID:858280478:95325016:-1:The Epping Hotel:Epping:The Epping Hotel:ANY:POI:4878049:3744439:GDAV:nsw",
+      "name": "The Epping Hotel, Epping",
+      "disassembledName": "The Epping Hotel",
+      "coord": [
+        -33.772628,
+        151.081576
+      ],
+      "type": "poi",
+      "matchQuality": 231,
+      "isBest": false,
+      "parent": {
+        "id": "placeID:95325016:-1",
+        "name": "Epping",
+        "type": "locality"
+      }
+    },
+    {
+      "id": "poiID:858310760:95325016:-1:West Epping Community Centre:Epping:West Epping Community Centre:ANY:POI:4876764:3744290:GDAV:nsw",
+      "name": "West Epping Community Centre, Epping",
+      "disassembledName": "West Epping Community Centre",
+      "coord": [
+        -33.771746,
+        151.06767
+      ],
+      "type": "poi",
+      "matchQuality": 229,
+      "isBest": false,
+      "parent": {
+        "id": "placeID:95325016:-1",
+        "name": "Epping",
+        "type": "locality"
+      }
+    },
+    {
+      "id": "poiID:858278685:95325016:-1:West Epping Park:Epping:West Epping Park:ANY:POI:4876766:3744190:GDAV:nsw",
+      "name": "West Epping Park, Epping",
+      "disassembledName": "West Epping Park",
+      "coord": [
+        -33.770845,
+        151.067649
+      ],
+      "type": "poi",
+      "matchQuality": 231,
+      "isBest": false,
+      "parent": {
+        "id": "placeID:95325016:-1",
+        "name": "Epping",
+        "type": "locality"
+      }
+    },
+    {
+      "id": "poiID:858283003:95352008:-1:Epping Boys High School:Marsfield:Epping Boys High School:ANY:POI:4879768:3744161:GDAV:nsw",
+      "name": "Epping Boys High School, Marsfield",
+      "disassembledName": "Epping Boys High School",
+      "coord": [
+        -33.769512,
+        151.099974
+      ],
+      "type": "poi",
+      "matchQuality": 229,
+      "isBest": false,
+      "parent": {
+        "id": "placeID:95352008:-1",
+        "name": "Marsfield",
+        "type": "locality"
+      }
+    },
+    {
+      "id": "suburbID:95325027:1:North Epping:4879211:3742959:GDAV",
+      "name": "North Epping",
+      "coord": [
+        -33.758899,
+        151.093459
+      ],
+      "type": "suburb",
+      "matchQuality": 234,
+      "isBest": false,
+      "parent": {
+        "id": "placeID:95325027:1",
+        "name": "North Epping",
+        "type": "locality"
+      }
+    },
+    {
+      "id": "poiID:858283005:95325027:-1:Epping North Public School:North Epping:Epping North Public School:ANY:POI:4879400:3742818:GDAV:nsw",
+      "name": "Epping North Public School, North Epping",
+      "disassembledName": "Epping North Public School",
+      "coord": [
+        -33.757562,
+        151.095435
+      ],
+      "type": "poi",
+      "matchQuality": 229,
+      "isBest": false,
+      "parent": {
+        "id": "placeID:95325027:-1",
+        "name": "North Epping",
+        "type": "locality"
+      }
+    },
+    {
+      "id": "poiID:858275399:95325027:-1:Epping Oval:North Epping:Epping Oval:ANY:POI:4878725:3743458:GDAV:nsw",
+      "name": "Epping Oval, North Epping",
+      "disassembledName": "Epping Oval",
+      "coord": [
+        -33.763561,
+        151.088438
+      ],
+      "type": "poi",
+      "matchQuality": 234,
+      "isBest": false,
+      "parent": {
+        "id": "placeID:95325027:-1",
+        "name": "North Epping",
+        "type": "locality"
+      }
+    },
+    {
+      "id": "poiID:858291107:95325027:-1:North Epping Bowling Club:North Epping:North Epping Bowling Club:ANY:POI:4879087:3742443:GDAV:nsw",
+      "name": "North Epping Bowling Club, North Epping",
+      "disassembledName": "North Epping Bowling Club",
+      "coord": [
+        -33.754301,
+        151.091903
+      ],
+      "type": "poi",
+      "matchQuality": 229,
+      "isBest": false,
+      "parent": {
+        "id": "placeID:95325027:-1",
+        "name": "North Epping",
+        "type": "locality"
+      }
+    },
+    {
+      "id": "poiID:858288823:95325027:-1:North Epping Family Practice:North Epping:North Epping Family Practice:ANY:POI:4879212:3742973:GDAV:nsw",
+      "name": "North Epping Family Practice, North Epping",
+      "disassembledName": "North Epping Family Practice",
+      "coord": [
+        -33.759024,
+        151.093476
+      ],
+      "type": "poi",
+      "matchQuality": 229,
+      "isBest": false,
+      "parent": {
+        "id": "placeID:95325027:-1",
+        "name": "North Epping",
+        "type": "locality"
+      }
+    },
+    {
+      "id": "poiID:858277263:95325027:-1:North Epping Park:North Epping:North Epping Park:ANY:POI:4879885:3743018:GDAV:nsw",
+      "name": "North Epping Park, North Epping",
+      "disassembledName": "North Epping Park",
+      "coord": [
+        -33.759188,
+        151.100744
+      ],
+      "type": "poi",
+      "matchQuality": 231,
+      "isBest": false,
+      "parent": {
+        "id": "placeID:95325027:-1",
+        "name": "North Epping",
+        "type": "locality"
+      }
+    }
+  ]
+}

@@ -106,6 +106,7 @@ export default function TripDetailScreen() {
       <Stack.Screen
         options={{
           title: 'Trip Details',
+          headerBackTitle: 'Back',
           headerRight: () => (
             <ViewToggle 
               mode={viewMode} 
@@ -163,6 +164,12 @@ export default function TripDetailScreen() {
                   {journey.ranking.why}
                 </Text>
               )}
+              {/* Fare display - prefer enrichedFare from GraphQL */}
+              {journey.enrichedFare?.total && (
+                <Text style={[styles.fareText, { color: colors.text }]}>
+                  ${journey.enrichedFare.total.toFixed(2)} Opal
+                </Text>
+              )}
             </View>
           </Card>
 
@@ -179,14 +186,27 @@ export default function TripDetailScreen() {
             <Text style={[styles.sectionTitle, { color: colors.text }]}>
               Journey Details
             </Text>
-            {journey.legs.map((leg, index) => (
-              <LegDetail 
-                key={index} 
-                leg={leg} 
-                isFirst={index === 0}
-                isLast={index === journey.legs.length - 1}
-              />
-            ))}
+            {journey.legs.map((leg, index) => {
+              // Find occupancy for this leg
+              const legOccupancy = journey.occupancy?.find(o => o.legIndex === index);
+              // Find travel-in-cars info for this leg
+              const legTravelInCars = journey.travelInCars?.find(t => t.legIndex === index);
+              
+              return (
+                <LegDetail 
+                  key={index} 
+                  leg={leg} 
+                  isFirst={index === 0}
+                  isLast={index === journey.legs.length - 1}
+                  occupancy={legOccupancy?.status}
+                  travelInCars={legTravelInCars ? {
+                    from: legTravelInCars.from,
+                    to: legTravelInCars.to,
+                    message: legTravelInCars.message,
+                  } : undefined}
+                />
+              );
+            })}
           </View>
 
           {/* Map Preview Button */}
@@ -297,6 +317,10 @@ const styles = StyleSheet.create({
   },
   metaText: {
     fontSize: 13,
+  },
+  fareText: {
+    fontSize: 16,
+    fontWeight: '600',
   },
   legsSection: {
     gap: 12,

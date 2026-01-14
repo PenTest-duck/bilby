@@ -51,7 +51,7 @@ export function ModeIcon({ mode, size = 'md', style }: ModeIconProps) {
   const imageSource = MODE_IMAGES[modeName];
   const dimension = SIZES[size];
 
-  if (modeName === 'walking' || !imageSource) {
+  if (!imageSource) {
     return (
       <View 
         style={[

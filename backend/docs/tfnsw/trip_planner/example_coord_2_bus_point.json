@@ -1,0 +1,4427 @@
+{
+  "version": "10.6.21.17",
+  "locations": [
+    {
+      "id": "2000466",
+      "isGlobalId": true,
+      "name": "Central Station, Platform 26, Sydney",
+      "disassembledName": "Central Station, Platform 26, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.884117,
+        151.206381
+      ],
+      "parent": {
+        "id": "2000466",
+        "isGlobalId": true,
+        "name": "Central Station, Platform 26, Sydney",
+        "disassembledName": "Central Station, Platform 26",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 9,
+        "STOP_GLOBAL_ID": "200060",
+        "STOPPOINT_GLOBAL_ID": "2000466",
+        "STOP_NAME_WITH_PLACE": "Central Station, Sydney",
+        "STOP_NAME": "Central Station",
+        "STOP_AREA_NAME": "P2627",
+        "STOP_POINT_LONGNAME": "Platform 26",
+        "IDENTIFIER": "CE26"
+      }
+    },
+    {
+      "id": "2000467",
+      "isGlobalId": true,
+      "name": "Central Station, Platform 27, Sydney",
+      "disassembledName": "Central Station, Platform 27, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.884142,
+        151.206436
+      ],
+      "parent": {
+        "id": "2000467",
+        "isGlobalId": true,
+        "name": "Central Station, Platform 27, Sydney",
+        "disassembledName": "Central Station, Platform 27",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 15,
+        "STOP_GLOBAL_ID": "200060",
+        "STOPPOINT_GLOBAL_ID": "2000467",
+        "STOP_NAME_WITH_PLACE": "Central Station, Sydney",
+        "STOP_NAME": "Central Station",
+        "STOP_AREA_NAME": "P2627",
+        "STOP_POINT_LONGNAME": "Platform 27",
+        "IDENTIFIER": "CE27"
+      }
+    },
+    {
+      "id": "2000332",
+      "isGlobalId": true,
+      "name": "Central Station, Platform 12, Sydney",
+      "disassembledName": "Central Station, Platform 12, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.883716,
+        151.206534
+      ],
+      "parent": {
+        "id": "2000332",
+        "isGlobalId": true,
+        "name": "Central Station, Platform 12, Sydney",
+        "disassembledName": "Central Station, Platform 12",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 47,
+        "STOP_GLOBAL_ID": "200060",
+        "STOPPOINT_GLOBAL_ID": "2000332",
+        "STOP_NAME_WITH_PLACE": "Central Station, Sydney",
+        "STOP_NAME": "Central Station",
+        "STOP_AREA_NAME": "P1213",
+        "STOP_POINT_LONGNAME": "Platform 12",
+        "IDENTIFIER": "SD12"
+      }
+    },
+    {
+      "id": "2000333",
+      "isGlobalId": true,
+      "name": "Central Station, Platform 13, Sydney",
+      "disassembledName": "Central Station, Platform 13, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.883758,
+        151.206611
+      ],
+      "parent": {
+        "id": "2000333",
+        "isGlobalId": true,
+        "name": "Central Station, Platform 13, Sydney",
+        "disassembledName": "Central Station, Platform 13",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 47,
+        "STOP_GLOBAL_ID": "200060",
+        "STOPPOINT_GLOBAL_ID": "2000333",
+        "STOP_NAME_WITH_PLACE": "Central Station, Sydney",
+        "STOP_NAME": "Central Station",
+        "STOP_AREA_NAME": "P1213",
+        "STOP_POINT_LONGNAME": "Platform 13",
+        "IDENTIFIER": "SD13"
+      }
+    },
+    {
+      "id": "2000331",
+      "isGlobalId": true,
+      "name": "Central Station, Platform 11, Sydney",
+      "disassembledName": "Central Station, Platform 11, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.883665,
+        151.206434
+      ],
+      "parent": {
+        "id": "2000331",
+        "isGlobalId": true,
+        "name": "Central Station, Platform 11, Sydney",
+        "disassembledName": "Central Station, Platform 11",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 48,
+        "STOP_GLOBAL_ID": "200060",
+        "STOPPOINT_GLOBAL_ID": "2000331",
+        "STOP_NAME_WITH_PLACE": "Central Station, Sydney",
+        "STOP_NAME": "Central Station",
+        "STOP_AREA_NAME": "P1011",
+        "STOP_POINT_LONGNAME": "Platform 11",
+        "IDENTIFIER": "SD11"
+      }
+    },
+    {
+      "id": "2000334",
+      "isGlobalId": true,
+      "name": "Central Station, Platform 14, Sydney",
+      "disassembledName": "Central Station, Platform 14, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.883808,
+        151.206733
+      ],
+      "parent": {
+        "id": "2000334",
+        "isGlobalId": true,
+        "name": "Central Station, Platform 14, Sydney",
+        "disassembledName": "Central Station, Platform 14",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 51,
+        "STOP_GLOBAL_ID": "200060",
+        "STOPPOINT_GLOBAL_ID": "2000334",
+        "STOP_NAME_WITH_PLACE": "Central Station, Sydney",
+        "STOP_NAME": "Central Station",
+        "STOP_AREA_NAME": "P14",
+        "STOP_POINT_LONGNAME": "Platform 14",
+        "IDENTIFIER": "CE14"
+      }
+    },
+    {
+      "id": "2000336",
+      "isGlobalId": true,
+      "name": "Central Station, Platform 16, Sydney",
+      "disassembledName": "Central Station, Platform 16, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.883967,
+        151.206838
+      ],
+      "parent": {
+        "id": "2000336",
+        "isGlobalId": true,
+        "name": "Central Station, Platform 16, Sydney",
+        "disassembledName": "Central Station, Platform 16",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 52,
+        "STOP_GLOBAL_ID": "200060",
+        "STOPPOINT_GLOBAL_ID": "2000336",
+        "STOP_NAME_WITH_PLACE": "Central Station, Sydney",
+        "STOP_NAME": "Central Station",
+        "STOP_AREA_NAME": "P1617",
+        "STOP_POINT_LONGNAME": "Platform 16",
+        "IDENTIFIER": "CE16"
+      }
+    },
+    {
+      "id": "2000330",
+      "isGlobalId": true,
+      "name": "Central Station, Platform 10, Sydney",
+      "disassembledName": "Central Station, Platform 10, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.883623,
+        151.206356
+      ],
+      "parent": {
+        "id": "2000330",
+        "isGlobalId": true,
+        "name": "Central Station, Platform 10, Sydney",
+        "disassembledName": "Central Station, Platform 10",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 52,
+        "STOP_GLOBAL_ID": "200060",
+        "STOPPOINT_GLOBAL_ID": "2000330",
+        "STOP_NAME_WITH_PLACE": "Central Station, Sydney",
+        "STOP_NAME": "Central Station",
+        "STOP_AREA_NAME": "P1011",
+        "STOP_POINT_LONGNAME": "Platform 10",
+        "IDENTIFIER": "SD10"
+      }
+    },
+    {
+      "id": "2000337",
+      "isGlobalId": true,
+      "name": "Central Station, Platform 17, Sydney",
+      "disassembledName": "Central Station, Platform 17, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.884001,
+        151.206893
+      ],
+      "parent": {
+        "id": "2000337",
+        "isGlobalId": true,
+        "name": "Central Station, Platform 17, Sydney",
+        "disassembledName": "Central Station, Platform 17",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 56,
+        "STOP_GLOBAL_ID": "200060",
+        "STOPPOINT_GLOBAL_ID": "2000337",
+        "STOP_NAME_WITH_PLACE": "Central Station, Sydney",
+        "STOP_NAME": "Central Station",
+        "STOP_AREA_NAME": "P1617",
+        "STOP_POINT_LONGNAME": "Platform 17",
+        "IDENTIFIER": "CE17"
+      }
+    },
+    {
+      "id": "2000329",
+      "isGlobalId": true,
+      "name": "Central Station, Platform 9, Sydney",
+      "disassembledName": "Central Station, Platform 9, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.883554,
+        151.206245
+      ],
+      "parent": {
+        "id": "2000329",
+        "isGlobalId": true,
+        "name": "Central Station, Platform 9, Sydney",
+        "disassembledName": "Central Station, Platform 9",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 59,
+        "STOP_GLOBAL_ID": "200060",
+        "STOPPOINT_GLOBAL_ID": "2000329",
+        "STOP_NAME_WITH_PLACE": "Central Station, Sydney",
+        "STOP_NAME": "Central Station",
+        "STOP_AREA_NAME": "P89",
+        "STOP_POINT_LONGNAME": "Platform 9",
+        "IDENTIFIER": "SD09"
+      }
+    },
+    {
+      "id": "2000338",
+      "isGlobalId": true,
+      "name": "Central Station, Platform 18, Sydney",
+      "disassembledName": "Central Station, Platform 18, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.884052,
+        151.206982
+      ],
+      "parent": {
+        "id": "2000338",
+        "isGlobalId": true,
+        "name": "Central Station, Platform 18, Sydney",
+        "disassembledName": "Central Station, Platform 18",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 64,
+        "STOP_GLOBAL_ID": "200060",
+        "STOPPOINT_GLOBAL_ID": "2000338",
+        "STOP_NAME_WITH_PLACE": "Central Station, Sydney",
+        "STOP_NAME": "Central Station",
+        "STOP_AREA_NAME": "P1819",
+        "STOP_POINT_LONGNAME": "Platform 18",
+        "IDENTIFIER": "CE18"
+      }
+    },
+    {
+      "id": "2000328",
+      "isGlobalId": true,
+      "name": "Central Station, Platform 8, Sydney",
+      "disassembledName": "Central Station, Platform 8, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.883512,
+        151.206178
+      ],
+      "parent": {
+        "id": "2000328",
+        "isGlobalId": true,
+        "name": "Central Station, Platform 8, Sydney",
+        "disassembledName": "Central Station, Platform 8",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 64,
+        "STOP_GLOBAL_ID": "200060",
+        "STOPPOINT_GLOBAL_ID": "2000328",
+        "STOP_NAME_WITH_PLACE": "Central Station, Sydney",
+        "STOP_NAME": "Central Station",
+        "STOP_AREA_NAME": "P89",
+        "STOP_POINT_LONGNAME": "Platform 8",
+        "IDENTIFIER": "SD08"
+      }
+    },
+    {
+      "id": "2000339",
+      "isGlobalId": true,
+      "name": "Central Station, Platform 19, Sydney",
+      "disassembledName": "Central Station, Platform 19, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.884094,
+        151.20706
+      ],
+      "parent": {
+        "id": "2000339",
+        "isGlobalId": true,
+        "name": "Central Station, Platform 19, Sydney",
+        "disassembledName": "Central Station, Platform 19",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 71,
+        "STOP_GLOBAL_ID": "200060",
+        "STOPPOINT_GLOBAL_ID": "2000339",
+        "STOP_NAME_WITH_PLACE": "Central Station, Sydney",
+        "STOP_NAME": "Central Station",
+        "STOP_AREA_NAME": "P1819",
+        "STOP_POINT_LONGNAME": "Platform 19",
+        "IDENTIFIER": "CE19"
+      }
+    },
+    {
+      "id": "2000327",
+      "isGlobalId": true,
+      "name": "Central Station, Platform 7, Sydney",
+      "disassembledName": "Central Station, Platform 7, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.883452,
+        151.206067
+      ],
+      "parent": {
+        "id": "2000327",
+        "isGlobalId": true,
+        "name": "Central Station, Platform 7, Sydney",
+        "disassembledName": "Central Station, Platform 7",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 73,
+        "STOP_GLOBAL_ID": "200060",
+        "STOPPOINT_GLOBAL_ID": "2000327",
+        "STOP_NAME_WITH_PLACE": "Central Station, Sydney",
+        "STOP_NAME": "Central Station",
+        "STOP_AREA_NAME": "P67",
+        "STOP_POINT_LONGNAME": "Platform 7",
+        "IDENTIFIER": "SD07"
+      }
+    },
+    {
+      "id": "2000340",
+      "isGlobalId": true,
+      "name": "Central Station, Platform 20, Sydney",
+      "disassembledName": "Central Station, Platform 20, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.884137,
+        151.207127
+      ],
+      "parent": {
+        "id": "2000340",
+        "isGlobalId": true,
+        "name": "Central Station, Platform 20, Sydney",
+        "disassembledName": "Central Station, Platform 20",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 78,
+        "STOP_GLOBAL_ID": "200060",
+        "STOPPOINT_GLOBAL_ID": "2000340",
+        "STOP_NAME_WITH_PLACE": "Central Station, Sydney",
+        "STOP_NAME": "Central Station",
+        "STOP_AREA_NAME": "P2021",
+        "STOP_POINT_LONGNAME": "Platform 20",
+        "IDENTIFIER": "CE20"
+      }
+    },
+    {
+      "id": "2000326",
+      "isGlobalId": true,
+      "name": "Central Station, Platform 6, Sydney",
+      "disassembledName": "Central Station, Platform 6, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.883418,
+        151.206011
+      ],
+      "parent": {
+        "id": "2000326",
+        "isGlobalId": true,
+        "name": "Central Station, Platform 6, Sydney",
+        "disassembledName": "Central Station, Platform 6",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 78,
+        "STOP_GLOBAL_ID": "200060",
+        "STOPPOINT_GLOBAL_ID": "2000326",
+        "STOP_NAME_WITH_PLACE": "Central Station, Sydney",
+        "STOP_NAME": "Central Station",
+        "STOP_AREA_NAME": "P67",
+        "STOP_POINT_LONGNAME": "Platform 6",
+        "IDENTIFIER": "SD06"
+      }
+    },
+    {
+      "id": "2000341",
+      "isGlobalId": true,
+      "name": "Central Station, Platform 21, Sydney",
+      "disassembledName": "Central Station, Platform 21, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.884179,
+        151.207215
+      ],
+      "parent": {
+        "id": "2000341",
+        "isGlobalId": true,
+        "name": "Central Station, Platform 21, Sydney",
+        "disassembledName": "Central Station, Platform 21",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 86,
+        "STOP_GLOBAL_ID": "200060",
+        "STOPPOINT_GLOBAL_ID": "2000341",
+        "STOP_NAME_WITH_PLACE": "Central Station, Sydney",
+        "STOP_NAME": "Central Station",
+        "STOP_AREA_NAME": "P2021",
+        "STOP_POINT_LONGNAME": "Platform 21",
+        "IDENTIFIER": "CE21"
+      }
+    },
+    {
+      "id": "2000325",
+      "isGlobalId": true,
+      "name": "Central Station, Platform 5, Sydney",
+      "disassembledName": "Central Station, Platform 5, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.88336,
+        151.205879
+      ],
+      "parent": {
+        "id": "2000325",
+        "isGlobalId": true,
+        "name": "Central Station, Platform 5, Sydney",
+        "disassembledName": "Central Station, Platform 5",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 89,
+        "STOP_GLOBAL_ID": "200060",
+        "STOPPOINT_GLOBAL_ID": "2000325",
+        "STOP_NAME_WITH_PLACE": "Central Station, Sydney",
+        "STOP_NAME": "Central Station",
+        "STOP_AREA_NAME": "P45",
+        "STOP_POINT_LONGNAME": "Platform 5",
+        "IDENTIFIER": "SD05"
+      }
+    },
+    {
+      "id": "2000342",
+      "isGlobalId": true,
+      "name": "Central Station, Platform 22, Sydney",
+      "disassembledName": "Central Station, Platform 22, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.884222,
+        151.207282
+      ],
+      "parent": {
+        "id": "2000342",
+        "isGlobalId": true,
+        "name": "Central Station, Platform 22, Sydney",
+        "disassembledName": "Central Station, Platform 22",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 93,
+        "STOP_GLOBAL_ID": "200060",
+        "STOPPOINT_GLOBAL_ID": "2000342",
+        "STOP_NAME_WITH_PLACE": "Central Station, Sydney",
+        "STOP_NAME": "Central Station",
+        "STOP_AREA_NAME": "P2223",
+        "STOP_POINT_LONGNAME": "Platform 22",
+        "IDENTIFIER": "CE22"
+      }
+    },
+    {
+      "id": "2000324",
+      "isGlobalId": true,
+      "name": "Central Station, Platform 4, Sydney",
+      "disassembledName": "Central Station, Platform 4, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.883317,
+        151.205812
+      ],
+      "parent": {
+        "id": "2000324",
+        "isGlobalId": true,
+        "name": "Central Station, Platform 4, Sydney",
+        "disassembledName": "Central Station, Platform 4",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 96,
+        "STOP_GLOBAL_ID": "200060",
+        "STOPPOINT_GLOBAL_ID": "2000324",
+        "STOP_NAME_WITH_PLACE": "Central Station, Sydney",
+        "STOP_NAME": "Central Station",
+        "STOP_AREA_NAME": "P45",
+        "STOP_POINT_LONGNAME": "Platform 4",
+        "IDENTIFIER": "SD04"
+      }
+    },
+    {
+      "id": "2000343",
+      "isGlobalId": true,
+      "name": "Central Station, Platform 23, Sydney",
+      "disassembledName": "Central Station, Platform 23, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.884264,
+        151.20736
+      ],
+      "parent": {
+        "id": "2000343",
+        "isGlobalId": true,
+        "name": "Central Station, Platform 23, Sydney",
+        "disassembledName": "Central Station, Platform 23",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 101,
+        "STOP_GLOBAL_ID": "200060",
+        "STOPPOINT_GLOBAL_ID": "2000343",
+        "STOP_NAME_WITH_PLACE": "Central Station, Sydney",
+        "STOP_NAME": "Central Station",
+        "STOP_AREA_NAME": "P2223",
+        "STOP_POINT_LONGNAME": "Platform 23",
+        "IDENTIFIER": "CE23"
+      }
+    },
+    {
+      "id": "2000323",
+      "isGlobalId": true,
+      "name": "Central Station, Platform 3, Sydney",
+      "disassembledName": "Central Station, Platform 3, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.883258,
+        151.205701
+      ],
+      "parent": {
+        "id": "2000323",
+        "isGlobalId": true,
+        "name": "Central Station, Platform 3, Sydney",
+        "disassembledName": "Central Station, Platform 3",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 107,
+        "STOP_GLOBAL_ID": "200060",
+        "STOPPOINT_GLOBAL_ID": "2000323",
+        "STOP_NAME_WITH_PLACE": "Central Station, Sydney",
+        "STOP_NAME": "Central Station",
+        "STOP_AREA_NAME": "P23",
+        "STOP_POINT_LONGNAME": "Platform 3",
+        "IDENTIFIER": "SD03"
+      }
+    },
+    {
+      "id": "2000322",
+      "isGlobalId": true,
+      "name": "Central Station, Platform 2, Sydney",
+      "disassembledName": "Central Station, Platform 2, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.883224,
+        151.205634
+      ],
+      "parent": {
+        "id": "2000322",
+        "isGlobalId": true,
+        "name": "Central Station, Platform 2, Sydney",
+        "disassembledName": "Central Station, Platform 2",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 113,
+        "STOP_GLOBAL_ID": "200060",
+        "STOPPOINT_GLOBAL_ID": "2000322",
+        "STOP_NAME_WITH_PLACE": "Central Station, Sydney",
+        "STOP_NAME": "Central Station",
+        "STOP_AREA_NAME": "P23",
+        "STOP_POINT_LONGNAME": "Platform 2",
+        "IDENTIFIER": "SD02"
+      }
+    },
+    {
+      "id": "2000448",
+      "isGlobalId": true,
+      "name": "Central Chalmers Street Light Rail, Sydney",
+      "disassembledName": "Central Chalmers Street Light Rail, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.884193,
+        151.207605
+      ],
+      "parent": {
+        "id": "2000448",
+        "isGlobalId": true,
+        "name": "Central Chalmers Street Light Rail, Sydney",
+        "disassembledName": "Central Chalmers Street Light Rail",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 122,
+        "STOP_GLOBAL_ID": "200060",
+        "STOPPOINT_GLOBAL_ID": "2000448",
+        "STOP_NAME_WITH_PLACE": "Central Station, Sydney",
+        "STOP_NAME": "Central Station",
+        "STOP_AREA_NAME": "LR2",
+        "STOP_POINT_LONGNAME": "Central Chalmers Street Light Rail",
+        "IDENTIFIER": "LR2"
+      }
+    },
+    {
+      "id": "2000321",
+      "isGlobalId": true,
+      "name": "Central Station, Platform 1, Sydney",
+      "disassembledName": "Central Station, Platform 1, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.883165,
+        151.205523
+      ],
+      "parent": {
+        "id": "2000321",
+        "isGlobalId": true,
+        "name": "Central Station, Platform 1, Sydney",
+        "disassembledName": "Central Station, Platform 1",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 125,
+        "STOP_GLOBAL_ID": "200060",
+        "STOPPOINT_GLOBAL_ID": "2000321",
+        "STOP_NAME_WITH_PLACE": "Central Station, Sydney",
+        "STOP_NAME": "Central Station",
+        "STOP_AREA_NAME": "P1",
+        "STOP_POINT_LONGNAME": "Platform 1",
+        "IDENTIFIER": "SD01"
+      }
+    },
+    {
+      "id": "2000447",
+      "isGlobalId": true,
+      "name": "Central Chalmers Street Light Rail, Sydney",
+      "disassembledName": "Central Chalmers Street Light Rail, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.884226,
+        151.207671
+      ],
+      "parent": {
+        "id": "2000447",
+        "isGlobalId": true,
+        "name": "Central Chalmers Street Light Rail, Sydney",
+        "disassembledName": "Central Chalmers Street Light Rail",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 129,
+        "STOP_GLOBAL_ID": "200060",
+        "STOPPOINT_GLOBAL_ID": "2000447",
+        "STOP_NAME_WITH_PLACE": "Central Station, Sydney",
+        "STOP_NAME": "Central Station",
+        "STOP_AREA_NAME": "LR2",
+        "STOP_POINT_LONGNAME": "Central Chalmers Street Light Rail",
+        "IDENTIFIER": "LR1"
+      }
+    },
+    {
+      "id": "2000344",
+      "isGlobalId": true,
+      "name": "Central Station, Platform 24, Sydney",
+      "disassembledName": "Central Station, Platform 24, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.885155,
+        151.206874
+      ],
+      "parent": {
+        "id": "2000344",
+        "isGlobalId": true,
+        "name": "Central Station, Platform 24, Sydney",
+        "disassembledName": "Central Station, Platform 24",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 131,
+        "STOP_GLOBAL_ID": "200060",
+        "STOPPOINT_GLOBAL_ID": "2000344",
+        "STOP_NAME_WITH_PLACE": "Central Station, Sydney",
+        "STOP_NAME": "Central Station",
+        "STOP_AREA_NAME": "P2425",
+        "STOP_POINT_LONGNAME": "Platform 24",
+        "IDENTIFIER": "CE24"
+      }
+    },
+    {
+      "id": "2010107",
+      "isGlobalId": true,
+      "name": "Central Chalmers Street Light Rail, Sydney",
+      "disassembledName": "Central Chalmers Street Light Rail, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.884252,
+        151.207716
+      ],
+      "parent": {
+        "id": "2010107",
+        "isGlobalId": true,
+        "name": "Central Chalmers Street Light Rail, Sydney",
+        "disassembledName": "Central Chalmers Street Light Rail",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 133,
+        "STOP_GLOBAL_ID": "200060",
+        "STOPPOINT_GLOBAL_ID": "2010107",
+        "STOP_NAME_WITH_PLACE": "Central Station, Sydney",
+        "STOP_NAME": "Central Station",
+        "STOP_AREA_NAME": "LR2",
+        "STOP_POINT_LONGNAME": "Central Chalmers Street Light Rail",
+        "IDENTIFIER": "LRT"
+      }
+    },
+    {
+      "id": "2000296",
+      "isGlobalId": true,
+      "name": "Central Station, Forecourt, Coach Bay 2, Sydney",
+      "disassembledName": "Central Station, Forecourt, Coach Bay 2, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.883073,
+        151.205292
+      ],
+      "parent": {
+        "id": "2000296",
+        "isGlobalId": true,
+        "name": "Central Station, Forecourt, Coach Bay 2, Sydney",
+        "disassembledName": "Central Station, Forecourt, Coach Bay 2",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 146,
+        "STOP_GLOBAL_ID": "200060",
+        "STOPPOINT_GLOBAL_ID": "2000296",
+        "STOP_NAME_WITH_PLACE": "Central Station, Sydney",
+        "STOP_NAME": "Central Station",
+        "STOP_AREA_NAME": "BUS6",
+        "STOP_POINT_LONGNAME": "Central Station, Forecourt, Coach Bay 2",
+        "IDENTIFIER": "C2"
+      }
+    },
+    {
+      "id": "2000345",
+      "isGlobalId": true,
+      "name": "Central Station, Platform 25, Sydney",
+      "disassembledName": "Central Station, Platform 25, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.885307,
+        151.206882
+      ],
+      "parent": {
+        "id": "2000345",
+        "isGlobalId": true,
+        "name": "Central Station, Platform 25, Sydney",
+        "disassembledName": "Central Station, Platform 25",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 146,
+        "STOP_GLOBAL_ID": "200060",
+        "STOPPOINT_GLOBAL_ID": "2000345",
+        "STOP_NAME_WITH_PLACE": "Central Station, Sydney",
+        "STOP_NAME": "Central Station",
+        "STOP_AREA_NAME": "P2425",
+        "STOP_POINT_LONGNAME": "Platform 25",
+        "IDENTIFIER": "CE25"
+      }
+    },
+    {
+      "id": "2000213",
+      "isGlobalId": true,
+      "name": "Central Station, Forecourt, Coach Bay 1, Sydney",
+      "disassembledName": "Central Station, Forecourt, Coach Bay 1, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.882925,
+        151.205425
+      ],
+      "parent": {
+        "id": "2000213",
+        "isGlobalId": true,
+        "name": "Central Station, Forecourt, Coach Bay 1, Sydney",
+        "disassembledName": "Central Station, Forecourt, Coach Bay 1",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 152,
+        "STOP_GLOBAL_ID": "200060",
+        "STOPPOINT_GLOBAL_ID": "2000213",
+        "STOP_NAME_WITH_PLACE": "Central Station, Sydney",
+        "STOP_NAME": "Central Station",
+        "STOP_AREA_NAME": "BUS6",
+        "STOP_POINT_LONGNAME": "Central Station, Forecourt, Coach Bay 1",
+        "IDENTIFIER": "C1"
+      }
+    },
+    {
+      "id": "2000240",
+      "isGlobalId": true,
+      "name": "Central Station, Forecourt, Coach Bay 3, Sydney",
+      "disassembledName": "Central Station, Forecourt, Coach Bay 3, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.883266,
+        151.204923
+      ],
+      "parent": {
+        "id": "2000240",
+        "isGlobalId": true,
+        "name": "Central Station, Forecourt, Coach Bay 3, Sydney",
+        "disassembledName": "Central Station, Forecourt, Coach Bay 3",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 156,
+        "STOP_GLOBAL_ID": "200060",
+        "STOPPOINT_GLOBAL_ID": "2000240",
+        "STOP_NAME_WITH_PLACE": "Central Station, Sydney",
+        "STOP_NAME": "Central Station",
+        "STOP_AREA_NAME": "BUS6",
+        "STOP_POINT_LONGNAME": "Central Station, Forecourt, Coach Bay 3",
+        "IDENTIFIER": "C3"
+      }
+    },
+    {
+      "id": "2000308",
+      "isGlobalId": true,
+      "name": "Central Station, Forecourt, Coach Bay 4, Sydney",
+      "disassembledName": "Central Station, Forecourt, Coach Bay 4, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.883252,
+        151.204545
+      ],
+      "parent": {
+        "id": "2000308",
+        "isGlobalId": true,
+        "name": "Central Station, Forecourt, Coach Bay 4, Sydney",
+        "disassembledName": "Central Station, Forecourt, Coach Bay 4",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 186,
+        "STOP_GLOBAL_ID": "200060",
+        "STOPPOINT_GLOBAL_ID": "2000308",
+        "STOP_NAME_WITH_PLACE": "Central Station, Sydney",
+        "STOP_NAME": "Central Station",
+        "STOP_AREA_NAME": "BUS6",
+        "STOP_POINT_LONGNAME": "Central Station, Forecourt, Coach Bay 4",
+        "IDENTIFIER": "C4"
+      }
+    },
+    {
+      "id": "201080",
+      "isGlobalId": true,
+      "name": "Central Station, Elizabeth St, Stand E, Sydney",
+      "disassembledName": "Central Station, Elizabeth St, Stand E, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.884105,
+        151.208314
+      ],
+      "parent": {
+        "id": "201080",
+        "isGlobalId": true,
+        "name": "Central Station, Elizabeth St, Stand E, Sydney",
+        "disassembledName": "Central Station, Elizabeth St, Stand E",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 187,
+        "STOP_GLOBAL_ID": "200060",
+        "STOPPOINT_GLOBAL_ID": "201080",
+        "STOP_NAME_WITH_PLACE": "Central Station, Sydney",
+        "STOP_NAME": "Central Station",
+        "STOP_AREA_NAME": "BUS3",
+        "STOP_POINT_LONGNAME": "Central Station, Elizabeth St, Stand E",
+        "IDENTIFIER": "E"
+      }
+    },
+    {
+      "id": "2000257",
+      "isGlobalId": true,
+      "name": "Central Grand Concourse Light Rail, Sydney",
+      "disassembledName": "Central Grand Concourse Light Rail, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.882422,
+        151.206686
+      ],
+      "parent": {
+        "id": "2000257",
+        "isGlobalId": true,
+        "name": "Central Grand Concourse Light Rail, Sydney",
+        "disassembledName": "Central Grand Concourse Light Rail",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 188,
+        "STOP_GLOBAL_ID": "200060",
+        "STOPPOINT_GLOBAL_ID": "2000257",
+        "STOP_NAME_WITH_PLACE": "Central Station, Sydney",
+        "STOP_NAME": "Central Station",
+        "STOP_AREA_NAME": "LR1",
+        "STOP_POINT_LONGNAME": "Central Grand Concourse Light Rail",
+        "IDENTIFIER": "L1"
+      }
+    },
+    {
+      "id": "2000112",
+      "isGlobalId": true,
+      "name": "Central Station, Forecourt, Coach Bay 5, Sydney",
+      "disassembledName": "Central Station, Forecourt, Coach Bay 5, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.882859,
+        151.20472
+      ],
+      "parent": {
+        "id": "2000112",
+        "isGlobalId": true,
+        "name": "Central Station, Forecourt, Coach Bay 5, Sydney",
+        "disassembledName": "Central Station, Forecourt, Coach Bay 5",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 199,
+        "STOP_GLOBAL_ID": "200060",
+        "STOPPOINT_GLOBAL_ID": "2000112",
+        "STOP_NAME_WITH_PLACE": "Central Station, Sydney",
+        "STOP_NAME": "Central Station",
+        "STOP_AREA_NAME": "BUS5",
+        "STOP_POINT_LONGNAME": "Central Station, Forecourt, Coach Bay 5",
+        "IDENTIFIER": "C5"
+      }
+    },
+    {
+      "id": "2000316",
+      "isGlobalId": true,
+      "name": "Central Station, Forecourt, Coach Bay 6, Sydney",
+      "disassembledName": "Central Station, Forecourt, Coach Bay 6, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.882671,
+        151.204937
+      ],
+      "parent": {
+        "id": "2000316",
+        "isGlobalId": true,
+        "name": "Central Station, Forecourt, Coach Bay 6, Sydney",
+        "disassembledName": "Central Station, Forecourt, Coach Bay 6",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 201,
+        "STOP_GLOBAL_ID": "200060",
+        "STOPPOINT_GLOBAL_ID": "2000316",
+        "STOP_NAME_WITH_PLACE": "Central Station, Sydney",
+        "STOP_NAME": "Central Station",
+        "STOP_AREA_NAME": "BUS5",
+        "STOP_POINT_LONGNAME": "Central Station, Forecourt, Coach Bay 6",
+        "IDENTIFIER": "C6"
+      }
+    },
+    {
+      "id": "2000190",
+      "isGlobalId": true,
+      "name": "Central Station, Eddy Ave, Sydney",
+      "disassembledName": "Central Station, Eddy Ave, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.88266,
+        151.207627
+      ],
+      "parent": {
+        "id": "2000190",
+        "isGlobalId": true,
+        "name": "Central Station, Eddy Ave, Sydney",
+        "disassembledName": "Central Station, Eddy Ave",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 201,
+        "STOP_GLOBAL_ID": "200060",
+        "STOPPOINT_GLOBAL_ID": "2000190",
+        "STOP_NAME_WITH_PLACE": "Central Station, Sydney",
+        "STOP_NAME": "Central Station",
+        "STOP_AREA_NAME": "BUS1",
+        "STOP_POINT_LONGNAME": "Central Station, Eddy Ave",
+        "IDENTIFIER": "X1"
+      }
+    },
+    {
+      "id": "2000115",
+      "isGlobalId": true,
+      "name": "Central Station, Forecourt, Coach Bay 7, Sydney",
+      "disassembledName": "Central Station, Forecourt, Coach Bay 7, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.882492,
+        151.205166
+      ],
+      "parent": {
+        "id": "2000115",
+        "isGlobalId": true,
+        "name": "Central Station, Forecourt, Coach Bay 7, Sydney",
+        "disassembledName": "Central Station, Forecourt, Coach Bay 7",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 205,
+        "STOP_GLOBAL_ID": "200060",
+        "STOPPOINT_GLOBAL_ID": "2000115",
+        "STOP_NAME_WITH_PLACE": "Central Station, Sydney",
+        "STOP_NAME": "Central Station",
+        "STOP_AREA_NAME": "BUS5",
+        "STOP_POINT_LONGNAME": "Central Station, Forecourt, Coach Bay 7",
+        "IDENTIFIER": "C7"
+      }
+    },
+    {
+      "id": "2000110",
+      "isGlobalId": true,
+      "name": "Central Grand Concourse, Light Rail Trackwork, Sydney",
+      "disassembledName": "Central Grand Concourse, Light Rail Trackwork, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.882227,
+        151.206342
+      ],
+      "parent": {
+        "id": "2000110",
+        "isGlobalId": true,
+        "name": "Central Grand Concourse, Light Rail Trackwork, Sydney",
+        "disassembledName": "Central Grand Concourse, Light Rail Trackwork",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 206,
+        "STOP_GLOBAL_ID": "200060",
+        "STOPPOINT_GLOBAL_ID": "2000110",
+        "STOP_NAME_WITH_PLACE": "Central Station, Sydney",
+        "STOP_NAME": "Central Station",
+        "STOP_AREA_NAME": "LR1",
+        "STOP_POINT_LONGNAME": "Central Grand Concourse, Light Rail Trackwork",
+        "IDENTIFIER": "LTW"
+      }
+    },
+    {
+      "id": "200039",
+      "isGlobalId": true,
+      "name": "Central Station, Eddy Ave, Stand A, Sydney",
+      "disassembledName": "Central Station, Eddy Ave, Stand A, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.882206,
+        151.206665
+      ],
+      "parent": {
+        "id": "200039",
+        "isGlobalId": true,
+        "name": "Central Station, Eddy Ave, Stand A, Sydney",
+        "disassembledName": "Central Station, Eddy Ave, Stand A",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 211,
+        "STOP_GLOBAL_ID": "200060",
+        "STOPPOINT_GLOBAL_ID": "200039",
+        "STOP_NAME_WITH_PLACE": "Central Station, Sydney",
+        "STOP_NAME": "Central Station",
+        "STOP_AREA_NAME": "BUS1",
+        "STOP_POINT_LONGNAME": "Central Station, Eddy Ave, Stand A",
+        "IDENTIFIER": "A"
+      }
+    },
+    {
+      "id": "2000241",
+      "isGlobalId": true,
+      "name": "Central Station, Forecourt, Coach Bay 10, Sydney",
+      "disassembledName": "Central Station, Forecourt, Coach Bay 10, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.882181,
+        151.205842
+      ],
+      "parent": {
+        "id": "2000241",
+        "isGlobalId": true,
+        "name": "Central Station, Forecourt, Coach Bay 10, Sydney",
+        "disassembledName": "Central Station, Forecourt, Coach Bay 10",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 216,
+        "STOP_GLOBAL_ID": "200060",
+        "STOPPOINT_GLOBAL_ID": "2000241",
+        "STOP_NAME_WITH_PLACE": "Central Station, Sydney",
+        "STOP_NAME": "Central Station",
+        "STOP_AREA_NAME": "BUS6",
+        "STOP_POINT_LONGNAME": "Central Station, Forecourt, Coach Bay 10",
+        "IDENTIFIER": "C10"
+      }
+    },
+    {
+      "id": "2000132",
+      "isGlobalId": true,
+      "name": "Central Station, Forecourt, Coach Bay 8, Sydney",
+      "disassembledName": "Central Station, Forecourt, Coach Bay 8, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.882266,
+        151.205447
+      ],
+      "parent": {
+        "id": "2000132",
+        "isGlobalId": true,
+        "name": "Central Station, Forecourt, Coach Bay 8, Sydney",
+        "disassembledName": "Central Station, Forecourt, Coach Bay 8",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 217,
+        "STOP_GLOBAL_ID": "200060",
+        "STOPPOINT_GLOBAL_ID": "2000132",
+        "STOP_NAME_WITH_PLACE": "Central Station, Sydney",
+        "STOP_NAME": "Central Station",
+        "STOP_AREA_NAME": "BUS5",
+        "STOP_POINT_LONGNAME": "Central Station, Forecourt, Coach Bay 8",
+        "IDENTIFIER": "C8"
+      }
+    },
+    {
+      "id": "2000124",
+      "isGlobalId": true,
+      "name": "Central Station, Forecourt, Coach Bay 9, Sydney",
+      "disassembledName": "Central Station, Forecourt, Coach Bay 9, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.882144,
+        151.205603
+      ],
+      "parent": {
+        "id": "2000124",
+        "isGlobalId": true,
+        "name": "Central Station, Forecourt, Coach Bay 9, Sydney",
+        "disassembledName": "Central Station, Forecourt, Coach Bay 9",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 225,
+        "STOP_GLOBAL_ID": "200060",
+        "STOPPOINT_GLOBAL_ID": "2000124",
+        "STOP_NAME_WITH_PLACE": "Central Station, Sydney",
+        "STOP_NAME": "Central Station",
+        "STOP_AREA_NAME": "BUS5",
+        "STOP_POINT_LONGNAME": "Central Station, Forecourt, Coach Bay 9",
+        "IDENTIFIER": "C9"
+      }
+    },
+    {
+      "id": "200051",
+      "isGlobalId": true,
+      "name": "Central Station, Eddy Ave, Stand B, Sydney",
+      "disassembledName": "Central Station, Eddy Ave, Stand B, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.882296,
+        151.207458
+      ],
+      "parent": {
+        "id": "200051",
+        "isGlobalId": true,
+        "name": "Central Station, Eddy Ave, Stand B, Sydney",
+        "disassembledName": "Central Station, Eddy Ave, Stand B",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 226,
+        "STOP_GLOBAL_ID": "200060",
+        "STOPPOINT_GLOBAL_ID": "200051",
+        "STOP_NAME_WITH_PLACE": "Central Station, Sydney",
+        "STOP_NAME": "Central Station",
+        "STOP_AREA_NAME": "BUS1",
+        "STOP_POINT_LONGNAME": "Central Station, Eddy Ave, Stand B",
+        "IDENTIFIER": "B"
+      }
+    },
+    {
+      "id": "200053",
+      "isGlobalId": true,
+      "name": "Central Station, Eddy Ave, Stand C, Sydney",
+      "disassembledName": "Central Station, Eddy Ave, Stand C, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.882127,
+        151.207147
+      ],
+      "parent": {
+        "id": "200053",
+        "isGlobalId": true,
+        "name": "Central Station, Eddy Ave, Stand C, Sydney",
+        "disassembledName": "Central Station, Eddy Ave, Stand C",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 231,
+        "STOP_GLOBAL_ID": "200060",
+        "STOPPOINT_GLOBAL_ID": "200053",
+        "STOP_NAME_WITH_PLACE": "Central Station, Sydney",
+        "STOP_NAME": "Central Station",
+        "STOP_AREA_NAME": "BUS1",
+        "STOP_POINT_LONGNAME": "Central Station, Eddy Ave, Stand C",
+        "IDENTIFIER": "C"
+      }
+    },
+    {
+      "id": "200054",
+      "isGlobalId": true,
+      "name": "Central Station, Eddy Ave, Stand D, Sydney",
+      "disassembledName": "Central Station, Eddy Ave, Stand D, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.882042,
+        151.206991
+      ],
+      "parent": {
+        "id": "200054",
+        "isGlobalId": true,
+        "name": "Central Station, Eddy Ave, Stand D, Sydney",
+        "disassembledName": "Central Station, Eddy Ave, Stand D",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 236,
+        "STOP_GLOBAL_ID": "200060",
+        "STOPPOINT_GLOBAL_ID": "200054",
+        "STOP_NAME_WITH_PLACE": "Central Station, Sydney",
+        "STOP_NAME": "Central Station",
+        "STOP_AREA_NAME": "BUS1",
+        "STOP_POINT_LONGNAME": "Central Station, Eddy Ave, Stand D",
+        "IDENTIFIER": "D"
+      }
+    },
+    {
+      "id": "200061",
+      "isGlobalId": true,
+      "name": "Central Station, Railway Square, Lee St, Sydney",
+      "disassembledName": "Central Station, Railway Square, Lee St, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.883421,
+        151.203829
+      ],
+      "parent": {
+        "id": "200061",
+        "isGlobalId": true,
+        "name": "Central Station, Railway Square, Lee St, Sydney",
+        "disassembledName": "Central Station, Railway Square, Lee St",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 240,
+        "STOP_GLOBAL_ID": "200812",
+        "STOPPOINT_GLOBAL_ID": "200061",
+        "STOP_NAME_WITH_PLACE": "Railway Square, Sydney",
+        "STOP_NAME": "Railway Square",
+        "STOP_AREA_NAME": "BUS1",
+        "STOP_POINT_LONGNAME": "Central Station, Railway Square, Lee St",
+        "IDENTIFIER": "X1"
+      }
+    },
+    {
+      "id": "201016",
+      "isGlobalId": true,
+      "name": "Central Station, Chalmers St, Stand G, Sydney",
+      "disassembledName": "Central Station, Chalmers St, Stand G, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.886259,
+        151.206713
+      ],
+      "parent": {
+        "id": "201016",
+        "isGlobalId": true,
+        "name": "Central Station, Chalmers St, Stand G, Sydney",
+        "disassembledName": "Central Station, Chalmers St, Stand G",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 245,
+        "STOP_GLOBAL_ID": "200060",
+        "STOPPOINT_GLOBAL_ID": "201016",
+        "STOP_NAME_WITH_PLACE": "Central Station, Sydney",
+        "STOP_NAME": "Central Station",
+        "STOP_AREA_NAME": "BUS2",
+        "STOP_POINT_LONGNAME": "Central Station, Chalmers St, Stand G",
+        "IDENTIFIER": "G"
+      }
+    },
+    {
+      "id": "200819",
+      "isGlobalId": true,
+      "name": "Central Station, Railway Square, Stand N, Sydney",
+      "disassembledName": "Central Station, Railway Square, Stand N, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.884058,
+        151.203623
+      ],
+      "parent": {
+        "id": "200819",
+        "isGlobalId": true,
+        "name": "Central Station, Railway Square, Stand N, Sydney",
+        "disassembledName": "Central Station, Railway Square, Stand N",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 247,
+        "STOP_GLOBAL_ID": "200812",
+        "STOPPOINT_GLOBAL_ID": "200819",
+        "STOP_NAME_WITH_PLACE": "Railway Square, Sydney",
+        "STOP_NAME": "Railway Square",
+        "STOP_AREA_NAME": "BUS1",
+        "STOP_POINT_LONGNAME": "Central Station, Railway Square, Stand N",
+        "IDENTIFIER": "N"
+      }
+    },
+    {
+      "id": "200062",
+      "isGlobalId": true,
+      "name": "Central Station, Railway Square, Stand K, Sydney",
+      "disassembledName": "Central Station, Railway Square, Stand K, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.883854,
+        151.203537
+      ],
+      "parent": {
+        "id": "200062",
+        "isGlobalId": true,
+        "name": "Central Station, Railway Square, Stand K, Sydney",
+        "disassembledName": "Central Station, Railway Square, Stand K",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 257,
+        "STOP_GLOBAL_ID": "200812",
+        "STOPPOINT_GLOBAL_ID": "200062",
+        "STOP_NAME_WITH_PLACE": "Railway Square, Sydney",
+        "STOP_NAME": "Railway Square",
+        "STOP_AREA_NAME": "BUS1",
+        "STOP_POINT_LONGNAME": "Central Station, Railway Square, Stand K",
+        "IDENTIFIER": "K"
+      }
+    },
+    {
+      "id": "200017",
+      "isGlobalId": true,
+      "name": "Central Station, Railway Square, Stand J, Sydney",
+      "disassembledName": "Central Station, Railway Square, Stand J, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.88316,
+        151.203557
+      ],
+      "parent": {
+        "id": "200017",
+        "isGlobalId": true,
+        "name": "Central Station, Railway Square, Stand J, Sydney",
+        "disassembledName": "Central Station, Railway Square, Stand J",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 273,
+        "STOP_GLOBAL_ID": "200812",
+        "STOPPOINT_GLOBAL_ID": "200017",
+        "STOP_NAME_WITH_PLACE": "Railway Square, Sydney",
+        "STOP_NAME": "Railway Square",
+        "STOP_AREA_NAME": "BUS2",
+        "STOP_POINT_LONGNAME": "Central Station, Railway Square, Stand J",
+        "IDENTIFIER": "J"
+      }
+    },
+    {
+      "id": "200064",
+      "isGlobalId": true,
+      "name": "Central Station, Railway Square, Stand M, Sydney",
+      "disassembledName": "Central Station, Railway Square, Stand M, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.88367,
+        151.203377
+      ],
+      "parent": {
+        "id": "200064",
+        "isGlobalId": true,
+        "name": "Central Station, Railway Square, Stand M, Sydney",
+        "disassembledName": "Central Station, Railway Square, Stand M",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 274,
+        "STOP_GLOBAL_ID": "200812",
+        "STOPPOINT_GLOBAL_ID": "200064",
+        "STOP_NAME_WITH_PLACE": "Railway Square, Sydney",
+        "STOP_NAME": "Railway Square",
+        "STOP_AREA_NAME": "BUS1",
+        "STOP_POINT_LONGNAME": "Central Station, Railway Square, Stand M",
+        "IDENTIFIER": "M"
+      }
+    },
+    {
+      "id": "201039",
+      "isGlobalId": true,
+      "name": "Central Station, Foveaux St, Stand F, Sydney",
+      "disassembledName": "Central Station, Foveaux St, Stand F, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.883929,
+        151.209245
+      ],
+      "parent": {
+        "id": "201039",
+        "isGlobalId": true,
+        "name": "Central Station, Foveaux St, Stand F, Sydney",
+        "disassembledName": "Central Station, Foveaux St, Stand F",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 274,
+        "STOP_GLOBAL_ID": "200060",
+        "STOPPOINT_GLOBAL_ID": "201039",
+        "STOP_NAME_WITH_PLACE": "Central Station, Sydney",
+        "STOP_NAME": "Central Station",
+        "STOP_AREA_NAME": "BUS4",
+        "STOP_POINT_LONGNAME": "Central Station, Foveaux St, Stand F",
+        "IDENTIFIER": "F"
+      }
+    },
+    {
+      "id": "200063",
+      "isGlobalId": true,
+      "name": "Central Station, Railway Square, Stand L, Sydney",
+      "disassembledName": "Central Station, Railway Square, Stand L, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.883859,
+        151.203116
+      ],
+      "parent": {
+        "id": "200063",
+        "isGlobalId": true,
+        "name": "Central Station, Railway Square, Stand L, Sydney",
+        "disassembledName": "Central Station, Railway Square, Stand L",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 295,
+        "STOP_GLOBAL_ID": "200812",
+        "STOPPOINT_GLOBAL_ID": "200063",
+        "STOP_NAME_WITH_PLACE": "Railway Square, Sydney",
+        "STOP_NAME": "Railway Square",
+        "STOP_AREA_NAME": "BUS1",
+        "STOP_POINT_LONGNAME": "Central Station, Railway Square, Stand L",
+        "IDENTIFIER": "L"
+      }
+    },
+    {
+      "id": "201081",
+      "isGlobalId": true,
+      "name": "Elizabeth St at Devonshire St, Surry Hills",
+      "disassembledName": "Elizabeth St at Devonshire St, Surry Hills",
+      "type": "platform",
+      "coord": [
+        -33.886214,
+        151.208299
+      ],
+      "parent": {
+        "id": "201081",
+        "isGlobalId": true,
+        "name": "Elizabeth St at Devonshire St, Surry Hills",
+        "disassembledName": "Elizabeth St at Devonshire St",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301027:1",
+          "name": "Surry Hills",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 301,
+        "STOP_GLOBAL_ID": "G201081",
+        "STOPPOINT_GLOBAL_ID": "201081",
+        "STOP_NAME_WITH_PLACE": "Elizabeth St at Devonshire St, Surry Hills",
+        "STOP_NAME": "Elizabeth St at Devonshire St",
+        "STOP_AREA_NAME": "Swa",
+        "STOP_POINT_LONGNAME": "Elizabeth St at Devonshire St",
+        "IDENTIFIER": "X1"
+      }
+    },
+    {
+      "id": "2000446",
+      "isGlobalId": true,
+      "name": "Haymarket Light Rail, Haymarket",
+      "disassembledName": "Haymarket Light Rail, Haymarket",
+      "type": "platform",
+      "coord": [
+        -33.881469,
+        151.2053
+      ],
+      "parent": {
+        "id": "2000446",
+        "isGlobalId": true,
+        "name": "Haymarket Light Rail, Haymarket",
+        "disassembledName": "Haymarket Light Rail",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301017:1",
+          "name": "Haymarket",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 305,
+        "STOP_GLOBAL_ID": "2000168",
+        "STOPPOINT_GLOBAL_ID": "2000446",
+        "STOP_NAME_WITH_PLACE": "Haymarket Light Rail, Haymarket",
+        "STOP_NAME": "Haymarket Light Rail",
+        "STOP_AREA_NAME": "LR",
+        "STOP_POINT_LONGNAME": "Haymarket Light Rail",
+        "IDENTIFIER": "LR2"
+      }
+    },
+    {
+      "id": "2000445",
+      "isGlobalId": true,
+      "name": "Haymarket Light Rail, Haymarket",
+      "disassembledName": "Haymarket Light Rail, Haymarket",
+      "type": "platform",
+      "coord": [
+        -33.881431,
+        151.205363
+      ],
+      "parent": {
+        "id": "2000445",
+        "isGlobalId": true,
+        "name": "Haymarket Light Rail, Haymarket",
+        "disassembledName": "Haymarket Light Rail",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301017:1",
+          "name": "Haymarket",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 307,
+        "STOP_GLOBAL_ID": "2000168",
+        "STOPPOINT_GLOBAL_ID": "2000445",
+        "STOP_NAME_WITH_PLACE": "Haymarket Light Rail, Haymarket",
+        "STOP_NAME": "Haymarket Light Rail",
+        "STOP_AREA_NAME": "LR",
+        "STOP_POINT_LONGNAME": "Haymarket Light Rail",
+        "IDENTIFIER": "LR1"
+      }
+    },
+    {
+      "id": "2000428",
+      "isGlobalId": true,
+      "name": "Pitt St at Barlow St, Haymarket",
+      "disassembledName": "Pitt St at Barlow St, Haymarket",
+      "type": "platform",
+      "coord": [
+        -33.881305,
+        151.206145
+      ],
+      "parent": {
+        "id": "2000428",
+        "isGlobalId": true,
+        "name": "Pitt St at Barlow St, Haymarket",
+        "disassembledName": "Pitt St at Barlow St",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301017:1",
+          "name": "Haymarket",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 309,
+        "STOP_GLOBAL_ID": "G2000428",
+        "STOPPOINT_GLOBAL_ID": "2000428",
+        "STOP_NAME_WITH_PLACE": "Pitt St at Barlow St, Haymarket",
+        "STOP_NAME": "Pitt St at Barlow St",
+        "STOP_AREA_NAME": "Swa",
+        "STOP_POINT_LONGNAME": "Pitt St at Barlow St",
+        "IDENTIFIER": "X1"
+      }
+    },
+    {
+      "id": "200083",
+      "isGlobalId": true,
+      "name": "Pitt St opp Barlow St, Haymarket",
+      "disassembledName": "Pitt St opp Barlow St, Haymarket",
+      "type": "platform",
+      "coord": [
+        -33.881146,
+        151.20658
+      ],
+      "parent": {
+        "id": "200083",
+        "isGlobalId": true,
+        "name": "Pitt St opp Barlow St, Haymarket",
+        "disassembledName": "Pitt St opp Barlow St",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301017:1",
+          "name": "Haymarket",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 327,
+        "STOP_GLOBAL_ID": "G200083",
+        "STOPPOINT_GLOBAL_ID": "200083",
+        "STOP_NAME_WITH_PLACE": "Pitt St opp Barlow St, Haymarket",
+        "STOP_NAME": "Pitt St opp Barlow St",
+        "STOP_AREA_NAME": "Swa",
+        "STOP_POINT_LONGNAME": "Pitt St opp Barlow St",
+        "IDENTIFIER": "X1"
+      }
+    },
+    {
+      "id": "2000163",
+      "isGlobalId": true,
+      "name": "Haymarket Light Rail Stop, Rawson Pl, Haymarket",
+      "disassembledName": "Haymarket Light Rail Stop, Rawson Pl, Haymarket",
+      "type": "platform",
+      "coord": [
+        -33.881267,
+        151.205149
+      ],
+      "parent": {
+        "id": "2000163",
+        "isGlobalId": true,
+        "name": "Haymarket Light Rail Stop, Rawson Pl, Haymarket",
+        "disassembledName": "Haymarket Light Rail Stop, Rawson Pl",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301017:1",
+          "name": "Haymarket",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 330,
+        "STOP_GLOBAL_ID": "2000168",
+        "STOPPOINT_GLOBAL_ID": "2000163",
+        "STOP_NAME_WITH_PLACE": "Haymarket Light Rail, Haymarket",
+        "STOP_NAME": "Haymarket Light Rail",
+        "STOP_AREA_NAME": "BUS1",
+        "STOP_POINT_LONGNAME": "Haymarket Light Rail Stop, Rawson Pl",
+        "IDENTIFIER": "X1"
+      }
+    },
+    {
+      "id": "2000434",
+      "isGlobalId": true,
+      "name": "Pitt St before Hay St, Haymarket",
+      "disassembledName": "Pitt St before Hay St, Haymarket",
+      "type": "platform",
+      "coord": [
+        -33.880814,
+        151.206553
+      ],
+      "parent": {
+        "id": "2000434",
+        "isGlobalId": true,
+        "name": "Pitt St before Hay St, Haymarket",
+        "disassembledName": "Pitt St before Hay St",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301017:1",
+          "name": "Haymarket",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 364,
+        "STOP_GLOBAL_ID": "G2000434",
+        "STOPPOINT_GLOBAL_ID": "2000434",
+        "STOP_NAME_WITH_PLACE": "Pitt St before Hay St, Haymarket",
+        "STOP_NAME": "Pitt St before Hay St",
+        "STOP_AREA_NAME": "Swa",
+        "STOP_POINT_LONGNAME": "Pitt St before Hay St",
+        "IDENTIFIER": "X1"
+      }
+    },
+    {
+      "id": "201059",
+      "isGlobalId": true,
+      "name": "Elizabeth St at Reservoir St, Surry Hills",
+      "disassembledName": "Elizabeth St at Reservoir St, Surry Hills",
+      "type": "platform",
+      "coord": [
+        -33.881149,
+        151.20887
+      ],
+      "parent": {
+        "id": "201059",
+        "isGlobalId": true,
+        "name": "Elizabeth St at Reservoir St, Surry Hills",
+        "disassembledName": "Elizabeth St at Reservoir St",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301027:1",
+          "name": "Surry Hills",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 404,
+        "STOP_GLOBAL_ID": "G201059",
+        "STOPPOINT_GLOBAL_ID": "201059",
+        "STOP_NAME_WITH_PLACE": "Elizabeth St at Reservoir St, Surry Hills",
+        "STOP_NAME": "Elizabeth St at Reservoir St",
+        "STOP_AREA_NAME": "Swa",
+        "STOP_POINT_LONGNAME": "Elizabeth St at Reservoir St",
+        "IDENTIFIER": "X1"
+      }
+    },
+    {
+      "id": "200715",
+      "isGlobalId": true,
+      "name": "Harris St before Broadway, Ultimo",
+      "disassembledName": "Harris St before Broadway, Ultimo",
+      "type": "platform",
+      "coord": [
+        -33.883234,
+        151.201908
+      ],
+      "parent": {
+        "id": "200715",
+        "isGlobalId": true,
+        "name": "Harris St before Broadway, Ultimo",
+        "disassembledName": "Harris St before Broadway",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301030:1",
+          "name": "Ultimo",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 417,
+        "STOP_GLOBAL_ID": "G200715",
+        "STOPPOINT_GLOBAL_ID": "200715",
+        "STOP_NAME_WITH_PLACE": "Harris St before Broadway, Ultimo",
+        "STOP_NAME": "Harris St before Broadway",
+        "STOP_AREA_NAME": "Swa",
+        "STOP_POINT_LONGNAME": "Harris St before Broadway",
+        "IDENTIFIER": "X1"
+      }
+    },
+    {
+      "id": "201035",
+      "isGlobalId": true,
+      "name": "Surry Hills Childrens Court, Albion St, Surry Hills",
+      "disassembledName": "Surry Hills Childrens Court, Albion St, Surry Hills",
+      "type": "platform",
+      "coord": [
+        -33.882388,
+        151.210314
+      ],
+      "parent": {
+        "id": "201035",
+        "isGlobalId": true,
+        "name": "Surry Hills Childrens Court, Albion St, Surry Hills",
+        "disassembledName": "Surry Hills Childrens Court, Albion St",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301027:1",
+          "name": "Surry Hills",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 418,
+        "STOP_GLOBAL_ID": "G201035",
+        "STOPPOINT_GLOBAL_ID": "201035",
+        "STOP_NAME_WITH_PLACE": "Surry Hills Childrens Court, Albion St, Surry Hills",
+        "STOP_NAME": "Surry Hills Childrens Court, Albion St",
+        "STOP_AREA_NAME": "Swa",
+        "STOP_POINT_LONGNAME": "Surry Hills Childrens Court, Albion St",
+        "IDENTIFIER": "X1"
+      }
+    },
+    {
+      "id": "200047",
+      "isGlobalId": true,
+      "name": "Elizabeth St at Hay St, Haymarket",
+      "disassembledName": "Elizabeth St at Hay St, Haymarket",
+      "type": "platform",
+      "coord": [
+        -33.880869,
+        151.208641
+      ],
+      "parent": {
+        "id": "200047",
+        "isGlobalId": true,
+        "name": "Elizabeth St at Hay St, Haymarket",
+        "disassembledName": "Elizabeth St at Hay St",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301017:1",
+          "name": "Haymarket",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 418,
+        "STOP_GLOBAL_ID": "G200047",
+        "STOPPOINT_GLOBAL_ID": "200047",
+        "STOP_NAME_WITH_PLACE": "Elizabeth St at Hay St, Haymarket",
+        "STOP_NAME": "Elizabeth St at Hay St",
+        "STOP_AREA_NAME": "Swa",
+        "STOP_POINT_LONGNAME": "Elizabeth St at Hay St",
+        "IDENTIFIER": "X1"
+      }
+    },
+    {
+      "id": "2000158",
+      "isGlobalId": true,
+      "name": "Belmore Park, Hay St, Haymarket",
+      "disassembledName": "Belmore Park, Hay St, Haymarket",
+      "type": "platform",
+      "coord": [
+        -33.880339,
+        151.207783
+      ],
+      "parent": {
+        "id": "2000158",
+        "isGlobalId": true,
+        "name": "Belmore Park, Hay St, Haymarket",
+        "disassembledName": "Belmore Park, Hay St",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301017:1",
+          "name": "Haymarket",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 438,
+        "STOP_GLOBAL_ID": "G2000429",
+        "STOPPOINT_GLOBAL_ID": "2000158",
+        "STOP_NAME_WITH_PLACE": "Belmore Park, Hay St, Haymarket",
+        "STOP_NAME": "Belmore Park, Hay St",
+        "STOP_AREA_NAME": "Swa",
+        "STOP_POINT_LONGNAME": "Belmore Park, Hay St",
+        "IDENTIFIER": "X2"
+      }
+    },
+    {
+      "id": "201015",
+      "isGlobalId": true,
+      "name": "Prince Alfred Park, Chalmers St, Surry Hills",
+      "disassembledName": "Prince Alfred Park, Chalmers St, Surry Hills",
+      "type": "platform",
+      "coord": [
+        -33.888165,
+        151.206299
+      ],
+      "parent": {
+        "id": "201015",
+        "isGlobalId": true,
+        "name": "Prince Alfred Park, Chalmers St, Surry Hills",
+        "disassembledName": "Prince Alfred Park, Chalmers St",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301027:1",
+          "name": "Surry Hills",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 453,
+        "STOP_GLOBAL_ID": "G201015",
+        "STOPPOINT_GLOBAL_ID": "201015",
+        "STOP_NAME_WITH_PLACE": "Prince Alfred Park, Chalmers St, Surry Hills",
+        "STOP_NAME": "Prince Alfred Park, Chalmers St",
+        "STOP_AREA_NAME": "Swa",
+        "STOP_POINT_LONGNAME": "Prince Alfred Park, Chalmers St",
+        "IDENTIFIER": "X1"
+      }
+    },
+    {
+      "id": "2000429",
+      "isGlobalId": true,
+      "name": "Hay St opp Belmore Park, Haymarket",
+      "disassembledName": "Hay St opp Belmore Park, Haymarket",
+      "type": "platform",
+      "coord": [
+        -33.880202,
+        151.2081
+      ],
+      "parent": {
+        "id": "2000429",
+        "isGlobalId": true,
+        "name": "Hay St opp Belmore Park, Haymarket",
+        "disassembledName": "Hay St opp Belmore Park",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301017:1",
+          "name": "Haymarket",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 463,
+        "STOP_GLOBAL_ID": "G2000429",
+        "STOPPOINT_GLOBAL_ID": "2000429",
+        "STOP_NAME_WITH_PLACE": "Belmore Park, Hay St, Haymarket",
+        "STOP_NAME": "Belmore Park, Hay St",
+        "STOP_AREA_NAME": "Swa",
+        "STOP_POINT_LONGNAME": "Hay St opp Belmore Park",
+        "IDENTIFIER": "X1"
+      }
+    },
+    {
+      "id": "200723",
+      "isGlobalId": true,
+      "name": "University of Technology Sydney, Broadway, Ultimo",
+      "disassembledName": "University of Technology Sydney, Broadway, Ultimo",
+      "type": "platform",
+      "coord": [
+        -33.884096,
+        151.201216
+      ],
+      "parent": {
+        "id": "200723",
+        "isGlobalId": true,
+        "name": "University of Technology Sydney, Broadway, Ultimo",
+        "disassembledName": "University of Technology Sydney, Broadway",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301030:1",
+          "name": "Ultimo",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 470,
+        "STOP_GLOBAL_ID": "G200723",
+        "STOPPOINT_GLOBAL_ID": "200723",
+        "STOP_NAME_WITH_PLACE": "University of Technology Sydney, Broadway, Ultimo",
+        "STOP_NAME": "University of Technology Sydney, Broadway",
+        "STOP_AREA_NAME": "Swa",
+        "STOP_POINT_LONGNAME": "University of Technology Sydney, Broadway",
+        "IDENTIFIER": "X1"
+      }
+    },
+    {
+      "id": "2000256",
+      "isGlobalId": true,
+      "name": "Capitol Square Light Rail, Haymarket",
+      "disassembledName": "Capitol Square Light Rail, Haymarket",
+      "type": "platform",
+      "coord": [
+        -33.879812,
+        151.205553
+      ],
+      "parent": {
+        "id": "2000256",
+        "isGlobalId": true,
+        "name": "Capitol Square Light Rail, Haymarket",
+        "disassembledName": "Capitol Square Light Rail",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301017:1",
+          "name": "Haymarket",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 480,
+        "STOP_GLOBAL_ID": "2000200",
+        "STOPPOINT_GLOBAL_ID": "2000256",
+        "STOP_NAME_WITH_PLACE": "Capitol Square Light Rail, Haymarket",
+        "STOP_NAME": "Capitol Square Light Rail",
+        "STOP_AREA_NAME": "LR",
+        "STOP_POINT_LONGNAME": "Capitol Square Light Rail",
+        "IDENTIFIER": "L2"
+      }
+    },
+    {
+      "id": "2000255",
+      "isGlobalId": true,
+      "name": "Capitol Square Light Rail, Haymarket",
+      "disassembledName": "Capitol Square Light Rail, Haymarket",
+      "type": "platform",
+      "coord": [
+        -33.87977,
+        151.205713
+      ],
+      "parent": {
+        "id": "2000255",
+        "isGlobalId": true,
+        "name": "Capitol Square Light Rail, Haymarket",
+        "disassembledName": "Capitol Square Light Rail",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301017:1",
+          "name": "Haymarket",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 482,
+        "STOP_GLOBAL_ID": "2000200",
+        "STOPPOINT_GLOBAL_ID": "2000255",
+        "STOP_NAME_WITH_PLACE": "Capitol Square Light Rail, Haymarket",
+        "STOP_NAME": "Capitol Square Light Rail",
+        "STOP_AREA_NAME": "LR",
+        "STOP_POINT_LONGNAME": "Capitol Square Light Rail",
+        "IDENTIFIER": "L1"
+      }
+    },
+    {
+      "id": "201025",
+      "isGlobalId": true,
+      "name": "Campbell St at Foster St, Surry Hills",
+      "disassembledName": "Campbell St at Foster St, Surry Hills",
+      "type": "platform",
+      "coord": [
+        -33.880114,
+        151.20964
+      ],
+      "parent": {
+        "id": "201025",
+        "isGlobalId": true,
+        "name": "Campbell St at Foster St, Surry Hills",
+        "disassembledName": "Campbell St at Foster St",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301027:1",
+          "name": "Surry Hills",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 539,
+        "STOP_GLOBAL_ID": "G201025",
+        "STOPPOINT_GLOBAL_ID": "201025",
+        "STOP_NAME_WITH_PLACE": "Campbell St at Foster St, Surry Hills",
+        "STOP_NAME": "Campbell St at Foster St",
+        "STOP_AREA_NAME": "Swa",
+        "STOP_POINT_LONGNAME": "Campbell St at Foster St",
+        "IDENTIFIER": "X1"
+      }
+    },
+    {
+      "id": "200091",
+      "isGlobalId": true,
+      "name": "Paddy's Market Light Rail, Darling Dr, Haymarket",
+      "disassembledName": "Paddy's Market Light Rail, Darling Dr, Haymarket",
+      "type": "platform",
+      "coord": [
+        -33.880623,
+        151.201855
+      ],
+      "parent": {
+        "id": "200091",
+        "isGlobalId": true,
+        "name": "Paddy's Market Light Rail, Darling Dr, Haymarket",
+        "disassembledName": "Paddy's Market Light Rail, Darling Dr",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301017:1",
+          "name": "Haymarket",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 563,
+        "STOP_GLOBAL_ID": "2000202",
+        "STOPPOINT_GLOBAL_ID": "200091",
+        "STOP_NAME_WITH_PLACE": "Paddy's Markets Light Rail, Haymarket",
+        "STOP_NAME": "Paddy's Markets Light Rail",
+        "STOP_AREA_NAME": "BUS1",
+        "STOP_POINT_LONGNAME": "Paddy's Market Light Rail, Darling Dr",
+        "IDENTIFIER": "X1"
+      }
+    },
+    {
+      "id": "201082",
+      "isGlobalId": true,
+      "name": "Elizabeth St before Cleveland St, Surry Hills",
+      "disassembledName": "Elizabeth St before Cleveland St, Surry Hills",
+      "type": "platform",
+      "coord": [
+        -33.889321,
+        151.208084
+      ],
+      "parent": {
+        "id": "201082",
+        "isGlobalId": true,
+        "name": "Elizabeth St before Cleveland St, Surry Hills",
+        "disassembledName": "Elizabeth St before Cleveland St",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301027:1",
+          "name": "Surry Hills",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 605,
+        "STOP_GLOBAL_ID": "G201082",
+        "STOPPOINT_GLOBAL_ID": "201082",
+        "STOP_NAME_WITH_PLACE": "Elizabeth St before Cleveland St, Surry Hills",
+        "STOP_NAME": "Elizabeth St before Cleveland St",
+        "STOP_AREA_NAME": "Swa",
+        "STOP_POINT_LONGNAME": "Elizabeth St before Cleveland St",
+        "IDENTIFIER": "X1"
+      }
+    },
+    {
+      "id": "201099",
+      "isGlobalId": true,
+      "name": "Prince Alfred Park, Cleveland St, Surry Hills",
+      "disassembledName": "Prince Alfred Park, Cleveland St, Surry Hills",
+      "type": "platform",
+      "coord": [
+        -33.889477,
+        151.20511
+      ],
+      "parent": {
+        "id": "201099",
+        "isGlobalId": true,
+        "name": "Prince Alfred Park, Cleveland St, Surry Hills",
+        "disassembledName": "Prince Alfred Park, Cleveland St",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301027:1",
+          "name": "Surry Hills",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 609,
+        "STOP_GLOBAL_ID": "G201099",
+        "STOPPOINT_GLOBAL_ID": "201099",
+        "STOP_NAME_WITH_PLACE": "Prince Alfred Park, Cleveland St, Surry Hills",
+        "STOP_NAME": "Prince Alfred Park, Cleveland St",
+        "STOP_AREA_NAME": "Swa",
+        "STOP_POINT_LONGNAME": "Prince Alfred Park, Cleveland St",
+        "IDENTIFIER": "X1"
+      }
+    },
+    {
+      "id": "2000443",
+      "isGlobalId": true,
+      "name": "Chinatown Light Rail, Sydney",
+      "disassembledName": "Chinatown Light Rail, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.878595,
+        151.20558
+      ],
+      "parent": {
+        "id": "2000443",
+        "isGlobalId": true,
+        "name": "Chinatown Light Rail, Sydney",
+        "disassembledName": "Chinatown Light Rail",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 613,
+        "STOP_GLOBAL_ID": "2000169",
+        "STOPPOINT_GLOBAL_ID": "2000443",
+        "STOP_NAME_WITH_PLACE": "Chinatown Light Rail, Sydney",
+        "STOP_NAME": "Chinatown Light Rail",
+        "STOP_AREA_NAME": "LR",
+        "STOP_POINT_LONGNAME": "Chinatown Light Rail",
+        "IDENTIFIER": "LR1"
+      }
+    },
+    {
+      "id": "2000444",
+      "isGlobalId": true,
+      "name": "Chinatown Light Rail, Sydney",
+      "disassembledName": "Chinatown Light Rail, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.878587,
+        151.205547
+      ],
+      "parent": {
+        "id": "2000444",
+        "isGlobalId": true,
+        "name": "Chinatown Light Rail, Sydney",
+        "disassembledName": "Chinatown Light Rail",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 615,
+        "STOP_GLOBAL_ID": "2000169",
+        "STOPPOINT_GLOBAL_ID": "2000444",
+        "STOP_NAME_WITH_PLACE": "Chinatown Light Rail, Sydney",
+        "STOP_NAME": "Chinatown Light Rail",
+        "STOP_AREA_NAME": "LR",
+        "STOP_POINT_LONGNAME": "Chinatown Light Rail",
+        "IDENTIFIER": "LR2"
+      }
+    },
+    {
+      "id": "201643",
+      "isGlobalId": true,
+      "name": "Cleveland St opp Prince Alfred Park, Surry Hills",
+      "disassembledName": "Cleveland St opp Prince Alfred Park, Surry Hills",
+      "type": "platform",
+      "coord": [
+        -33.889617,
+        151.205214
+      ],
+      "parent": {
+        "id": "201643",
+        "isGlobalId": true,
+        "name": "Cleveland St opp Prince Alfred Park, Surry Hills",
+        "disassembledName": "Cleveland St opp Prince Alfred Park",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301027:1",
+          "name": "Surry Hills",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 623,
+        "STOP_GLOBAL_ID": "G201099",
+        "STOPPOINT_GLOBAL_ID": "201643",
+        "STOP_NAME_WITH_PLACE": "Prince Alfred Park, Cleveland St, Surry Hills",
+        "STOP_NAME": "Prince Alfred Park, Cleveland St",
+        "STOP_AREA_NAME": "Swa",
+        "STOP_POINT_LONGNAME": "Cleveland St opp Prince Alfred Park",
+        "IDENTIFIER": "X2"
+      }
+    },
+    {
+      "id": "2000253",
+      "isGlobalId": true,
+      "name": "Paddy's Markets Light Rail, Haymarket",
+      "disassembledName": "Paddy's Markets Light Rail, Haymarket",
+      "type": "platform",
+      "coord": [
+        -33.879276,
+        151.202772
+      ],
+      "parent": {
+        "id": "2000253",
+        "isGlobalId": true,
+        "name": "Paddy's Markets Light Rail, Haymarket",
+        "disassembledName": "Paddy's Markets Light Rail",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301017:1",
+          "name": "Haymarket",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 626,
+        "STOP_GLOBAL_ID": "2000202",
+        "STOPPOINT_GLOBAL_ID": "2000253",
+        "STOP_NAME_WITH_PLACE": "Paddy's Markets Light Rail, Haymarket",
+        "STOP_NAME": "Paddy's Markets Light Rail",
+        "STOP_AREA_NAME": "LR",
+        "STOP_POINT_LONGNAME": "Paddy's Markets Light Rail",
+        "IDENTIFIER": "L1"
+      }
+    },
+    {
+      "id": "2000254",
+      "isGlobalId": true,
+      "name": "Paddy's Markets Light Rail, Haymarket",
+      "disassembledName": "Paddy's Markets Light Rail, Haymarket",
+      "type": "platform",
+      "coord": [
+        -33.879317,
+        151.202623
+      ],
+      "parent": {
+        "id": "2000254",
+        "isGlobalId": true,
+        "name": "Paddy's Markets Light Rail, Haymarket",
+        "disassembledName": "Paddy's Markets Light Rail",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301017:1",
+          "name": "Haymarket",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 629,
+        "STOP_GLOBAL_ID": "2000202",
+        "STOPPOINT_GLOBAL_ID": "2000254",
+        "STOP_NAME_WITH_PLACE": "Paddy's Markets Light Rail, Haymarket",
+        "STOP_NAME": "Paddy's Markets Light Rail",
+        "STOP_AREA_NAME": "LR",
+        "STOP_POINT_LONGNAME": "Paddy's Markets Light Rail",
+        "IDENTIFIER": "L2"
+      }
+    },
+    {
+      "id": "200717",
+      "isGlobalId": true,
+      "name": "Harris St at Mary Ann St, Ultimo",
+      "disassembledName": "Harris St at Mary Ann St, Ultimo",
+      "type": "platform",
+      "coord": [
+        -33.88099,
+        151.20035
+      ],
+      "parent": {
+        "id": "200717",
+        "isGlobalId": true,
+        "name": "Harris St at Mary Ann St, Ultimo",
+        "disassembledName": "Harris St at Mary Ann St",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301030:1",
+          "name": "Ultimo",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 649,
+        "STOP_GLOBAL_ID": "G200713",
+        "STOPPOINT_GLOBAL_ID": "200717",
+        "STOP_NAME_WITH_PLACE": "Harris St at Mary Ann St, Ultimo",
+        "STOP_NAME": "Harris St at Mary Ann St",
+        "STOP_AREA_NAME": "Swa",
+        "STOP_POINT_LONGNAME": "Harris St at Mary Ann St",
+        "IDENTIFIER": "X2"
+      }
+    },
+    {
+      "id": "201616",
+      "isGlobalId": true,
+      "name": "Chalmers St before Cleveland St, Redfern",
+      "disassembledName": "Chalmers St before Cleveland St, Redfern",
+      "type": "platform",
+      "coord": [
+        -33.890081,
+        151.205874
+      ],
+      "parent": {
+        "id": "201616",
+        "isGlobalId": true,
+        "name": "Chalmers St before Cleveland St, Redfern",
+        "disassembledName": "Chalmers St before Cleveland St",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301024:1",
+          "name": "Redfern",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 667,
+        "STOP_GLOBAL_ID": "G201616",
+        "STOPPOINT_GLOBAL_ID": "201616",
+        "STOP_NAME_WITH_PLACE": "Chalmers St before Cleveland St, Redfern",
+        "STOP_NAME": "Chalmers St before Cleveland St",
+        "STOP_AREA_NAME": "Swa",
+        "STOP_POINT_LONGNAME": "Chalmers St before Cleveland St",
+        "IDENTIFIER": "X1"
+      }
+    },
+    {
+      "id": "201026",
+      "isGlobalId": true,
+      "name": "Harmony Park, Hunt St, Surry Hills",
+      "disassembledName": "Harmony Park, Hunt St, Surry Hills",
+      "type": "platform",
+      "coord": [
+        -33.879916,
+        151.211467
+      ],
+      "parent": {
+        "id": "201026",
+        "isGlobalId": true,
+        "name": "Harmony Park, Hunt St, Surry Hills",
+        "disassembledName": "Harmony Park, Hunt St",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301027:1",
+          "name": "Surry Hills",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 667,
+        "STOP_GLOBAL_ID": "G201026",
+        "STOPPOINT_GLOBAL_ID": "201026",
+        "STOP_NAME_WITH_PLACE": "Harmony Park, Hunt St, Surry Hills",
+        "STOP_NAME": "Harmony Park, Hunt St",
+        "STOP_AREA_NAME": "Swa",
+        "STOP_POINT_LONGNAME": "Harmony Park, Hunt St",
+        "IDENTIFIER": "X1"
+      }
+    },
+    {
+      "id": "200713",
+      "isGlobalId": true,
+      "name": "Harris St at Mary Ann St, Ultimo",
+      "disassembledName": "Harris St at Mary Ann St, Ultimo",
+      "type": "platform",
+      "coord": [
+        -33.880648,
+        151.200333
+      ],
+      "parent": {
+        "id": "200713",
+        "isGlobalId": true,
+        "name": "Harris St at Mary Ann St, Ultimo",
+        "disassembledName": "Harris St at Mary Ann St",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301030:1",
+          "name": "Ultimo",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 671,
+        "STOP_GLOBAL_ID": "G200713",
+        "STOPPOINT_GLOBAL_ID": "200713",
+        "STOP_NAME_WITH_PLACE": "Harris St at Mary Ann St, Ultimo",
+        "STOP_NAME": "Harris St at Mary Ann St",
+        "STOP_AREA_NAME": "Swa",
+        "STOP_POINT_LONGNAME": "Harris St at Mary Ann St",
+        "IDENTIFIER": "X1"
+      }
+    },
+    {
+      "id": "201036",
+      "isGlobalId": true,
+      "name": "Albion St at Riley St, Surry Hills",
+      "disassembledName": "Albion St at Riley St, Surry Hills",
+      "type": "platform",
+      "coord": [
+        -33.883279,
+        151.213491
+      ],
+      "parent": {
+        "id": "201036",
+        "isGlobalId": true,
+        "name": "Albion St at Riley St, Surry Hills",
+        "disassembledName": "Albion St at Riley St",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301027:1",
+          "name": "Surry Hills",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 673,
+        "STOP_GLOBAL_ID": "G201036",
+        "STOPPOINT_GLOBAL_ID": "201036",
+        "STOP_NAME_WITH_PLACE": "Albion St at Riley St, Surry Hills",
+        "STOP_NAME": "Albion St at Riley St",
+        "STOP_AREA_NAME": "Swa",
+        "STOP_POINT_LONGNAME": "Albion St at Riley St",
+        "IDENTIFIER": "X1"
+      }
+    },
+    {
+      "id": "2000319",
+      "isGlobalId": true,
+      "name": "Wentworth Ave after Elizabeth St, Sydney",
+      "disassembledName": "Wentworth Ave after Elizabeth St, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.878891,
+        151.210077
+      ],
+      "parent": {
+        "id": "2000319",
+        "isGlobalId": true,
+        "name": "Wentworth Ave after Elizabeth St, Sydney",
+        "disassembledName": "Wentworth Ave after Elizabeth St",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 675,
+        "STOP_GLOBAL_ID": "G2000319",
+        "STOPPOINT_GLOBAL_ID": "2000319",
+        "STOP_NAME_WITH_PLACE": "Wentworth Ave after Elizabeth St, Sydney",
+        "STOP_NAME": "Wentworth Ave after Elizabeth St",
+        "STOP_AREA_NAME": "Swa",
+        "STOP_POINT_LONGNAME": "Wentworth Ave after Elizabeth St",
+        "IDENTIFIER": "X1"
+      }
+    },
+    {
+      "id": "2010108",
+      "isGlobalId": true,
+      "name": "Surry Hills Light Rail, Surry Hills",
+      "disassembledName": "Surry Hills Light Rail, Surry Hills",
+      "type": "platform",
+      "coord": [
+        -33.888073,
+        151.211901
+      ],
+      "parent": {
+        "id": "2010108",
+        "isGlobalId": true,
+        "name": "Surry Hills Light Rail, Surry Hills",
+        "disassembledName": "Surry Hills Light Rail",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301027:1",
+          "name": "Surry Hills",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 683,
+        "STOP_GLOBAL_ID": "201029",
+        "STOPPOINT_GLOBAL_ID": "2010108",
+        "STOP_NAME_WITH_PLACE": "Surry Hills Light Rail, Surry Hills",
+        "STOP_NAME": "Surry Hills Light Rail",
+        "STOP_AREA_NAME": "LR",
+        "STOP_POINT_LONGNAME": "Surry Hills Light Rail",
+        "IDENTIFIER": "LR1"
+      }
+    },
+    {
+      "id": "2010109",
+      "isGlobalId": true,
+      "name": "Surry Hills Light Rail, Surry Hills",
+      "disassembledName": "Surry Hills Light Rail, Surry Hills",
+      "type": "platform",
+      "coord": [
+        -33.888128,
+        151.211861
+      ],
+      "parent": {
+        "id": "2010109",
+        "isGlobalId": true,
+        "name": "Surry Hills Light Rail, Surry Hills",
+        "disassembledName": "Surry Hills Light Rail",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301027:1",
+          "name": "Surry Hills",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 684,
+        "STOP_GLOBAL_ID": "201029",
+        "STOPPOINT_GLOBAL_ID": "2010109",
+        "STOP_NAME_WITH_PLACE": "Surry Hills Light Rail, Surry Hills",
+        "STOP_NAME": "Surry Hills Light Rail",
+        "STOP_AREA_NAME": "LR",
+        "STOP_POINT_LONGNAME": "Surry Hills Light Rail",
+        "IDENTIFIER": "LR2"
+      }
+    },
+    {
+      "id": "200728",
+      "isGlobalId": true,
+      "name": "Thomas St after Wattle St, Ultimo",
+      "disassembledName": "Thomas St after Wattle St, Ultimo",
+      "type": "platform",
+      "coord": [
+        -33.883148,
+        151.198879
+      ],
+      "parent": {
+        "id": "200728",
+        "isGlobalId": true,
+        "name": "Thomas St after Wattle St, Ultimo",
+        "disassembledName": "Thomas St after Wattle St",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301030:1",
+          "name": "Ultimo",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 695,
+        "STOP_GLOBAL_ID": "G200728",
+        "STOPPOINT_GLOBAL_ID": "200728",
+        "STOP_NAME_WITH_PLACE": "Thomas St after Wattle St, Ultimo",
+        "STOP_NAME": "Thomas St after Wattle St",
+        "STOP_AREA_NAME": "Swa",
+        "STOP_POINT_LONGNAME": "Thomas St after Wattle St",
+        "IDENTIFIER": "X1"
+      }
+    },
+    {
+      "id": "201023",
+      "isGlobalId": true,
+      "name": "Crown St before Foveaux St, Surry Hills",
+      "disassembledName": "Crown St before Foveaux St, Surry Hills",
+      "type": "platform",
+      "coord": [
+        -33.885917,
+        151.213804
+      ],
+      "parent": {
+        "id": "201023",
+        "isGlobalId": true,
+        "name": "Crown St before Foveaux St, Surry Hills",
+        "disassembledName": "Crown St before Foveaux St",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301027:1",
+          "name": "Surry Hills",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 725,
+        "STOP_GLOBAL_ID": "G201023",
+        "STOPPOINT_GLOBAL_ID": "201023",
+        "STOP_NAME_WITH_PLACE": "Crown St before Foveaux St, Surry Hills",
+        "STOP_NAME": "Crown St before Foveaux St",
+        "STOP_AREA_NAME": "SwSA",
+        "STOP_POINT_LONGNAME": "Crown St before Foveaux St",
+        "IDENTIFIER": "X1"
+      }
+    },
+    {
+      "id": "200092",
+      "isGlobalId": true,
+      "name": "Paddy's Market Light Rail, Darling Dr, Haymarket",
+      "disassembledName": "Paddy's Market Light Rail, Darling Dr, Haymarket",
+      "type": "platform",
+      "coord": [
+        -33.879255,
+        151.201021
+      ],
+      "parent": {
+        "id": "200092",
+        "isGlobalId": true,
+        "name": "Paddy's Market Light Rail, Darling Dr, Haymarket",
+        "disassembledName": "Paddy's Market Light Rail, Darling Dr",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301017:1",
+          "name": "Haymarket",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 725,
+        "STOP_GLOBAL_ID": "2000202",
+        "STOPPOINT_GLOBAL_ID": "200092",
+        "STOP_NAME_WITH_PLACE": "Paddy's Markets Light Rail, Haymarket",
+        "STOP_NAME": "Paddy's Markets Light Rail",
+        "STOP_AREA_NAME": "BUS2",
+        "STOP_POINT_LONGNAME": "Paddy's Market Light Rail, Darling Dr",
+        "IDENTIFIER": "X2"
+      }
+    },
+    {
+      "id": "200074",
+      "isGlobalId": true,
+      "name": "Museum Station, Downing Centre, Stand A, Sydney",
+      "disassembledName": "Museum Station, Downing Centre, Stand A, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.877985,
+        151.209428
+      ],
+      "parent": {
+        "id": "200074",
+        "isGlobalId": true,
+        "name": "Museum Station, Downing Centre, Stand A, Sydney",
+        "disassembledName": "Museum Station, Downing Centre, Stand A",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 737,
+        "STOP_GLOBAL_ID": "G200049",
+        "STOPPOINT_GLOBAL_ID": "200074",
+        "STOP_NAME_WITH_PLACE": "Museum Station, Downing Centre, Sydney",
+        "STOP_NAME": "Museum Station, Downing Centre",
+        "STOP_AREA_NAME": "Swa",
+        "STOP_POINT_LONGNAME": "Museum Station, Downing Centre, Stand A",
+        "IDENTIFIER": "A"
+      }
+    },
+    {
+      "id": "201093",
+      "isGlobalId": true,
+      "name": "Shannon Reserve, Crown St, Surry Hills",
+      "disassembledName": "Shannon Reserve, Crown St, Surry Hills",
+      "type": "platform",
+      "coord": [
+        -33.885484,
+        151.214096
+      ],
+      "parent": {
+        "id": "201093",
+        "isGlobalId": true,
+        "name": "Shannon Reserve, Crown St, Surry Hills",
+        "disassembledName": "Shannon Reserve, Crown St",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301027:1",
+          "name": "Surry Hills",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 740,
+        "STOP_GLOBAL_ID": "G201093",
+        "STOPPOINT_GLOBAL_ID": "201093",
+        "STOP_NAME_WITH_PLACE": "Shannon Reserve, Crown St, Surry Hills",
+        "STOP_NAME": "Shannon Reserve, Crown St",
+        "STOP_AREA_NAME": "Swa",
+        "STOP_POINT_LONGNAME": "Shannon Reserve, Crown St",
+        "IDENTIFIER": "X1"
+      }
+    },
+    {
+      "id": "201038",
+      "isGlobalId": true,
+      "name": "Shannon Reserve, Foveaux St, Surry Hills",
+      "disassembledName": "Shannon Reserve, Foveaux St, Surry Hills",
+      "type": "platform",
+      "coord": [
+        -33.88522,
+        151.21418
+      ],
+      "parent": {
+        "id": "201038",
+        "isGlobalId": true,
+        "name": "Shannon Reserve, Foveaux St, Surry Hills",
+        "disassembledName": "Shannon Reserve, Foveaux St",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301027:1",
+          "name": "Surry Hills",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 742,
+        "STOP_GLOBAL_ID": "G201038",
+        "STOPPOINT_GLOBAL_ID": "201038",
+        "STOP_NAME_WITH_PLACE": "Shannon Reserve, Foveaux St, Surry Hills",
+        "STOP_NAME": "Shannon Reserve, Foveaux St",
+        "STOP_AREA_NAME": "Swa",
+        "STOP_POINT_LONGNAME": "Shannon Reserve, Foveaux St",
+        "IDENTIFIER": "X1"
+      }
+    },
+    {
+      "id": "201022",
+      "isGlobalId": true,
+      "name": "Crown St opp Rainford St, Surry Hills",
+      "disassembledName": "Crown St opp Rainford St, Surry Hills",
+      "type": "platform",
+      "coord": [
+        -33.887169,
+        151.213574
+      ],
+      "parent": {
+        "id": "201022",
+        "isGlobalId": true,
+        "name": "Crown St opp Rainford St, Surry Hills",
+        "disassembledName": "Crown St opp Rainford St",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301027:1",
+          "name": "Surry Hills",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 757,
+        "STOP_GLOBAL_ID": "G201022",
+        "STOPPOINT_GLOBAL_ID": "201022",
+        "STOP_NAME_WITH_PLACE": "Crown St opp Rainford St, Surry Hills",
+        "STOP_NAME": "Crown St opp Rainford St",
+        "STOP_AREA_NAME": "Swa",
+        "STOP_POINT_LONGNAME": "Crown St opp Rainford St",
+        "IDENTIFIER": "X1"
+      }
+    },
+    {
+      "id": "201027",
+      "isGlobalId": true,
+      "name": "Campbell St before Riley St, Surry Hills",
+      "disassembledName": "Campbell St before Riley St, Surry Hills",
+      "type": "platform",
+      "coord": [
+        -33.88046,
+        151.213211
+      ],
+      "parent": {
+        "id": "201027",
+        "isGlobalId": true,
+        "name": "Campbell St before Riley St, Surry Hills",
+        "disassembledName": "Campbell St before Riley St",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301027:1",
+          "name": "Surry Hills",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 757,
+        "STOP_GLOBAL_ID": "G201027",
+        "STOPPOINT_GLOBAL_ID": "201027",
+        "STOP_NAME_WITH_PLACE": "Campbell St before Riley St, Surry Hills",
+        "STOP_NAME": "Campbell St before Riley St",
+        "STOP_AREA_NAME": "SwSA",
+        "STOP_POINT_LONGNAME": "Campbell St before Riley St",
+        "IDENTIFIER": "X1"
+      }
+    },
+    {
+      "id": "201094",
+      "isGlobalId": true,
+      "name": "Crown St at Albion St, Surry Hills",
+      "disassembledName": "Crown St at Albion St, Surry Hills",
+      "type": "platform",
+      "coord": [
+        -33.883318,
+        151.214476
+      ],
+      "parent": {
+        "id": "201094",
+        "isGlobalId": true,
+        "name": "Crown St at Albion St, Surry Hills",
+        "disassembledName": "Crown St at Albion St",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301027:1",
+          "name": "Surry Hills",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 763,
+        "STOP_GLOBAL_ID": "G201094",
+        "STOPPOINT_GLOBAL_ID": "201094",
+        "STOP_NAME_WITH_PLACE": "Crown St at Albion St, Surry Hills",
+        "STOP_NAME": "Crown St at Albion St",
+        "STOP_AREA_NAME": "Swa",
+        "STOP_POINT_LONGNAME": "Crown St at Albion St",
+        "IDENTIFIER": "X1"
+      }
+    },
+    {
+      "id": "201096",
+      "isGlobalId": true,
+      "name": "Crown St opp Crown Street Public School, Surry Hills",
+      "disassembledName": "Crown St opp Crown Street Public School, Surry Hills",
+      "type": "platform",
+      "coord": [
+        -33.882745,
+        151.214372
+      ],
+      "parent": {
+        "id": "201096",
+        "isGlobalId": true,
+        "name": "Crown St opp Crown Street Public School, Surry Hills",
+        "disassembledName": "Crown St opp Crown Street Public School",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301027:1",
+          "name": "Surry Hills",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 763,
+        "STOP_GLOBAL_ID": "G201096",
+        "STOPPOINT_GLOBAL_ID": "201096",
+        "STOP_NAME_WITH_PLACE": "Crown St opp Crown Street Public School, Surry Hills",
+        "STOP_NAME": "Crown St opp Crown Street Public School",
+        "STOP_AREA_NAME": "Swa",
+        "STOP_POINT_LONGNAME": "Crown St opp Crown Street Public School",
+        "IDENTIFIER": "X1"
+      }
+    },
+    {
+      "id": "201024",
+      "isGlobalId": true,
+      "name": "Campbell St at Riley St, Surry Hills",
+      "disassembledName": "Campbell St at Riley St, Surry Hills",
+      "type": "platform",
+      "coord": [
+        -33.880659,
+        151.213459
+      ],
+      "parent": {
+        "id": "201024",
+        "isGlobalId": true,
+        "name": "Campbell St at Riley St, Surry Hills",
+        "disassembledName": "Campbell St at Riley St",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301027:1",
+          "name": "Surry Hills",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 765,
+        "STOP_GLOBAL_ID": "G201024",
+        "STOPPOINT_GLOBAL_ID": "201024",
+        "STOP_NAME_WITH_PLACE": "Campbell St at Riley St, Surry Hills",
+        "STOP_NAME": "Campbell St at Riley St",
+        "STOP_AREA_NAME": "Swa",
+        "STOP_POINT_LONGNAME": "Campbell St at Riley St",
+        "IDENTIFIER": "X1"
+      }
+    },
+    {
+      "id": "201638",
+      "isGlobalId": true,
+      "name": "Cleveland St at Walker St, Redfern",
+      "disassembledName": "Cleveland St at Walker St, Redfern",
+      "type": "platform",
+      "coord": [
+        -33.890559,
+        151.20929
+      ],
+      "parent": {
+        "id": "201638",
+        "isGlobalId": true,
+        "name": "Cleveland St at Walker St, Redfern",
+        "disassembledName": "Cleveland St at Walker St",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301024:1",
+          "name": "Redfern",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 771,
+        "STOP_GLOBAL_ID": "G201638",
+        "STOPPOINT_GLOBAL_ID": "201638",
+        "STOP_NAME_WITH_PLACE": "Cleveland St at Walker St, Redfern",
+        "STOP_NAME": "Cleveland St at Walker St",
+        "STOP_AREA_NAME": "Swa",
+        "STOP_POINT_LONGNAME": "Cleveland St at Walker St",
+        "IDENTIFIER": "X1"
+      }
+    },
+    {
+      "id": "201092",
+      "isGlobalId": true,
+      "name": "Crown St at Rainford St, Surry Hills",
+      "disassembledName": "Crown St at Rainford St, Surry Hills",
+      "type": "platform",
+      "coord": [
+        -33.887181,
+        151.213748
+      ],
+      "parent": {
+        "id": "201092",
+        "isGlobalId": true,
+        "name": "Crown St at Rainford St, Surry Hills",
+        "disassembledName": "Crown St at Rainford St",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301027:1",
+          "name": "Surry Hills",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 772,
+        "STOP_GLOBAL_ID": "G201092",
+        "STOPPOINT_GLOBAL_ID": "201092",
+        "STOP_NAME_WITH_PLACE": "Crown St at Rainford St, Surry Hills",
+        "STOP_NAME": "Crown St at Rainford St",
+        "STOP_AREA_NAME": "Swa",
+        "STOP_POINT_LONGNAME": "Crown St at Rainford St",
+        "IDENTIFIER": "X1"
+      }
+    },
+    {
+      "id": "200824",
+      "isGlobalId": true,
+      "name": "Cleveland St at Balfour St, Chippendale",
+      "disassembledName": "Cleveland St at Balfour St, Chippendale",
+      "type": "platform",
+      "coord": [
+        -33.888675,
+        151.19982
+      ],
+      "parent": {
+        "id": "200824",
+        "isGlobalId": true,
+        "name": "Cleveland St at Balfour St, Chippendale",
+        "disassembledName": "Cleveland St at Balfour St",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301008:1",
+          "name": "Chippendale",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 787,
+        "STOP_GLOBAL_ID": "G200824",
+        "STOPPOINT_GLOBAL_ID": "200824",
+        "STOP_NAME_WITH_PLACE": "Cleveland St at Balfour St, Chippendale",
+        "STOP_NAME": "Cleveland St at Balfour St",
+        "STOP_AREA_NAME": "Swa",
+        "STOP_POINT_LONGNAME": "Cleveland St at Balfour St",
+        "IDENTIFIER": "X1"
+      }
+    },
+    {
+      "id": "200058",
+      "isGlobalId": true,
+      "name": "Museum Station, Castlereagh St, Stand F, Sydney",
+      "disassembledName": "Museum Station, Castlereagh St, Stand F, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.877259,
+        151.208809
+      ],
+      "parent": {
+        "id": "200058",
+        "isGlobalId": true,
+        "name": "Museum Station, Castlereagh St, Stand F, Sydney",
+        "disassembledName": "Museum Station, Castlereagh St, Stand F",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 793,
+        "STOP_GLOBAL_ID": "G200058",
+        "STOPPOINT_GLOBAL_ID": "200058",
+        "STOP_NAME_WITH_PLACE": "Museum Station, Castlereagh St, Sydney",
+        "STOP_NAME": "Museum Station, Castlereagh St",
+        "STOP_AREA_NAME": "Swa",
+        "STOP_POINT_LONGNAME": "Museum Station, Castlereagh St, Stand F",
+        "IDENTIFIER": "F"
+      }
+    },
+    {
+      "id": "200718",
+      "isGlobalId": true,
+      "name": "Harris St at Macarthur St, Ultimo",
+      "disassembledName": "Harris St at Macarthur St, Ultimo",
+      "type": "platform",
+      "coord": [
+        -33.879647,
+        151.199571
+      ],
+      "parent": {
+        "id": "200718",
+        "isGlobalId": true,
+        "name": "Harris St at Macarthur St, Ultimo",
+        "disassembledName": "Harris St at Macarthur St",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301030:1",
+          "name": "Ultimo",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 794,
+        "STOP_GLOBAL_ID": "G200718",
+        "STOPPOINT_GLOBAL_ID": "200718",
+        "STOP_NAME_WITH_PLACE": "Harris St at Macarthur St, Ultimo",
+        "STOP_NAME": "Harris St at Macarthur St",
+        "STOP_AREA_NAME": "Swa",
+        "STOP_POINT_LONGNAME": "Harris St at Macarthur St",
+        "IDENTIFIER": "X1"
+      }
+    },
+    {
+      "id": "201640",
+      "isGlobalId": true,
+      "name": "Cleveland St at Hart St, Redfern",
+      "disassembledName": "Cleveland St at Hart St, Redfern",
+      "type": "platform",
+      "coord": [
+        -33.888871,
+        151.199884
+      ],
+      "parent": {
+        "id": "201640",
+        "isGlobalId": true,
+        "name": "Cleveland St at Hart St, Redfern",
+        "disassembledName": "Cleveland St at Hart St",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301024:1",
+          "name": "Redfern",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 797,
+        "STOP_GLOBAL_ID": "G201640",
+        "STOPPOINT_GLOBAL_ID": "201640",
+        "STOP_NAME_WITH_PLACE": "Cleveland St at Hart St, Redfern",
+        "STOP_NAME": "Cleveland St at Hart St",
+        "STOP_AREA_NAME": "Swa",
+        "STOP_POINT_LONGNAME": "Cleveland St at Hart St",
+        "IDENTIFIER": "X1"
+      }
+    },
+    {
+      "id": "201617",
+      "isGlobalId": true,
+      "name": "Elizabeth St at Cooper St, Redfern",
+      "disassembledName": "Elizabeth St at Cooper St, Redfern",
+      "type": "platform",
+      "coord": [
+        -33.89117,
+        151.207764
+      ],
+      "parent": {
+        "id": "201617",
+        "isGlobalId": true,
+        "name": "Elizabeth St at Cooper St, Redfern",
+        "disassembledName": "Elizabeth St at Cooper St",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301024:1",
+          "name": "Redfern",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 799,
+        "STOP_GLOBAL_ID": "G201617",
+        "STOPPOINT_GLOBAL_ID": "201617",
+        "STOP_NAME_WITH_PLACE": "Elizabeth St at Cooper St, Redfern",
+        "STOP_NAME": "Elizabeth St at Cooper St",
+        "STOP_AREA_NAME": "Swa",
+        "STOP_POINT_LONGNAME": "Elizabeth St at Cooper St",
+        "IDENTIFIER": "X1"
+      }
+    },
+    {
+      "id": "200049",
+      "isGlobalId": true,
+      "name": "Museum Station, Downing Centre, Stand E, Sydney",
+      "disassembledName": "Museum Station, Downing Centre, Stand E, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.877306,
+        151.209275
+      ],
+      "parent": {
+        "id": "200049",
+        "isGlobalId": true,
+        "name": "Museum Station, Downing Centre, Stand E, Sydney",
+        "disassembledName": "Museum Station, Downing Centre, Stand E",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 802,
+        "STOP_GLOBAL_ID": "G200049",
+        "STOPPOINT_GLOBAL_ID": "200049",
+        "STOP_NAME_WITH_PLACE": "Museum Station, Downing Centre, Sydney",
+        "STOP_NAME": "Museum Station, Downing Centre",
+        "STOP_AREA_NAME": "Swa",
+        "STOP_POINT_LONGNAME": "Museum Station, Downing Centre, Stand E",
+        "IDENTIFIER": "E"
+      }
+    },
+    {
+      "id": "200815",
+      "isGlobalId": true,
+      "name": "Broadway at Buckland St, Chippendale",
+      "disassembledName": "Broadway at Buckland St, Chippendale",
+      "type": "platform",
+      "coord": [
+        -33.884497,
+        151.197627
+      ],
+      "parent": {
+        "id": "200815",
+        "isGlobalId": true,
+        "name": "Broadway at Buckland St, Chippendale",
+        "disassembledName": "Broadway at Buckland St",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301008:1",
+          "name": "Chippendale",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 804,
+        "STOP_GLOBAL_ID": "G200815",
+        "STOPPOINT_GLOBAL_ID": "200815",
+        "STOP_NAME_WITH_PLACE": "Broadway at Buckland St, Chippendale",
+        "STOP_NAME": "Broadway at Buckland St",
+        "STOP_AREA_NAME": "Swa",
+        "STOP_POINT_LONGNAME": "Broadway at Buckland St",
+        "IDENTIFIER": "X1"
+      }
+    },
+    {
+      "id": "201097",
+      "isGlobalId": true,
+      "name": "Crown St at Campbell St, Surry Hills",
+      "disassembledName": "Crown St at Campbell St, Surry Hills",
+      "type": "platform",
+      "coord": [
+        -33.881147,
+        151.214704
+      ],
+      "parent": {
+        "id": "201097",
+        "isGlobalId": true,
+        "name": "Crown St at Campbell St, Surry Hills",
+        "disassembledName": "Crown St at Campbell St",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301027:1",
+          "name": "Surry Hills",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 845,
+        "STOP_GLOBAL_ID": "G201097",
+        "STOPPOINT_GLOBAL_ID": "201097",
+        "STOP_NAME_WITH_PLACE": "Crown St at Campbell St, Surry Hills",
+        "STOP_NAME": "Crown St at Campbell St",
+        "STOP_AREA_NAME": "Swa",
+        "STOP_POINT_LONGNAME": "Crown St at Campbell St",
+        "IDENTIFIER": "X2"
+      }
+    },
+    {
+      "id": "200712",
+      "isGlobalId": true,
+      "name": "Powerhouse Museum, Harris St, Ultimo",
+      "disassembledName": "Powerhouse Museum, Harris St, Ultimo",
+      "type": "platform",
+      "coord": [
+        -33.879047,
+        151.199445
+      ],
+      "parent": {
+        "id": "200712",
+        "isGlobalId": true,
+        "name": "Powerhouse Museum, Harris St, Ultimo",
+        "disassembledName": "Powerhouse Museum, Harris St",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301030:1",
+          "name": "Ultimo",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 846,
+        "STOP_GLOBAL_ID": "G200712",
+        "STOPPOINT_GLOBAL_ID": "200712",
+        "STOP_NAME_WITH_PLACE": "Powerhouse Museum, Harris St, Ultimo",
+        "STOP_NAME": "Powerhouse Museum, Harris St",
+        "STOP_AREA_NAME": "Swa",
+        "STOP_POINT_LONGNAME": "Powerhouse Museum, Harris St",
+        "IDENTIFIER": "X1"
+      }
+    },
+    {
+      "id": "201615",
+      "isGlobalId": true,
+      "name": "Chalmers St after Wells St, Redfern",
+      "disassembledName": "Chalmers St after Wells St, Redfern",
+      "type": "platform",
+      "coord": [
+        -33.891731,
+        151.205588
+      ],
+      "parent": {
+        "id": "201615",
+        "isGlobalId": true,
+        "name": "Chalmers St after Wells St, Redfern",
+        "disassembledName": "Chalmers St after Wells St",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301024:1",
+          "name": "Redfern",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 852,
+        "STOP_GLOBAL_ID": "G201615",
+        "STOPPOINT_GLOBAL_ID": "201615",
+        "STOP_NAME_WITH_PLACE": "Chalmers St after Wells St, Redfern",
+        "STOP_NAME": "Chalmers St after Wells St",
+        "STOP_AREA_NAME": "Swa",
+        "STOP_POINT_LONGNAME": "Chalmers St after Wells St",
+        "IDENTIFIER": "X1"
+      }
+    },
+    {
+      "id": "201046",
+      "isGlobalId": true,
+      "name": "Cleveland St at Marlborough St, Surry Hills",
+      "disassembledName": "Cleveland St at Marlborough St, Surry Hills",
+      "type": "platform",
+      "coord": [
+        -33.890919,
+        151.210626
+      ],
+      "parent": {
+        "id": "201046",
+        "isGlobalId": true,
+        "name": "Cleveland St at Marlborough St, Surry Hills",
+        "disassembledName": "Cleveland St at Marlborough St",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301027:1",
+          "name": "Surry Hills",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 859,
+        "STOP_GLOBAL_ID": "G201046",
+        "STOPPOINT_GLOBAL_ID": "201046",
+        "STOP_NAME_WITH_PLACE": "Cleveland St at Marlborough St, Surry Hills",
+        "STOP_NAME": "Cleveland St at Marlborough St",
+        "STOP_AREA_NAME": "Swa",
+        "STOP_POINT_LONGNAME": "Cleveland St at Marlborough St",
+        "IDENTIFIER": "X1"
+      }
+    },
+    {
+      "id": "201095",
+      "isGlobalId": true,
+      "name": "Crown St at Campbell St, Surry Hills",
+      "disassembledName": "Crown St at Campbell St, Surry Hills",
+      "type": "platform",
+      "coord": [
+        -33.881115,
+        151.214875
+      ],
+      "parent": {
+        "id": "201095",
+        "isGlobalId": true,
+        "name": "Crown St at Campbell St, Surry Hills",
+        "disassembledName": "Crown St at Campbell St",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301027:1",
+          "name": "Surry Hills",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 861,
+        "STOP_GLOBAL_ID": "G201097",
+        "STOPPOINT_GLOBAL_ID": "201095",
+        "STOP_NAME_WITH_PLACE": "Crown St at Campbell St, Surry Hills",
+        "STOP_NAME": "Crown St at Campbell St",
+        "STOP_AREA_NAME": "Swa",
+        "STOP_POINT_LONGNAME": "Crown St at Campbell St",
+        "IDENTIFIER": "X1"
+      }
+    },
+    {
+      "id": "200072",
+      "isGlobalId": true,
+      "name": "Museum Station, Liverpool St, Stand G, Sydney",
+      "disassembledName": "Museum Station, Liverpool St, Stand G, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.876973,
+        151.210318
+      ],
+      "parent": {
+        "id": "200072",
+        "isGlobalId": true,
+        "name": "Museum Station, Liverpool St, Stand G, Sydney",
+        "disassembledName": "Museum Station, Liverpool St, Stand G",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 874,
+        "STOP_GLOBAL_ID": "G200071",
+        "STOPPOINT_GLOBAL_ID": "200072",
+        "STOP_NAME_WITH_PLACE": "Museum Station, Liverpool St, Sydney",
+        "STOP_NAME": "Museum Station, Liverpool St",
+        "STOP_AREA_NAME": "Stop",
+        "STOP_POINT_LONGNAME": "Museum Station, Liverpool St, Stand G",
+        "IDENTIFIER": "G"
+      }
+    },
+    {
+      "id": "201021",
+      "isGlobalId": true,
+      "name": "Crown St at Miles St, Surry Hills",
+      "disassembledName": "Crown St at Miles St, Surry Hills",
+      "type": "platform",
+      "coord": [
+        -33.889527,
+        151.213118
+      ],
+      "parent": {
+        "id": "201021",
+        "isGlobalId": true,
+        "name": "Crown St at Miles St, Surry Hills",
+        "disassembledName": "Crown St at Miles St",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301027:1",
+          "name": "Surry Hills",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 875,
+        "STOP_GLOBAL_ID": "G201021",
+        "STOPPOINT_GLOBAL_ID": "201021",
+        "STOP_NAME_WITH_PLACE": "Crown St at Miles St, Surry Hills",
+        "STOP_NAME": "Crown St at Miles St",
+        "STOP_AREA_NAME": "Swa",
+        "STOP_POINT_LONGNAME": "Crown St at Miles St",
+        "IDENTIFIER": "X1"
+      }
+    },
+    {
+      "id": "200071",
+      "isGlobalId": true,
+      "name": "Museum Station, Liverpool St, Stand A, Sydney",
+      "disassembledName": "Museum Station, Liverpool St, Stand A, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.876752,
+        151.210458
+      ],
+      "parent": {
+        "id": "200071",
+        "isGlobalId": true,
+        "name": "Museum Station, Liverpool St, Stand A, Sydney",
+        "disassembledName": "Museum Station, Liverpool St, Stand A",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 901,
+        "STOP_GLOBAL_ID": "G200071",
+        "STOPPOINT_GLOBAL_ID": "200071",
+        "STOP_NAME_WITH_PLACE": "Museum Station, Liverpool St, Sydney",
+        "STOP_NAME": "Museum Station, Liverpool St",
+        "STOP_AREA_NAME": "Stop",
+        "STOP_POINT_LONGNAME": "Museum Station, Liverpool St, Stand A",
+        "IDENTIFIER": "A"
+      }
+    },
+    {
+      "id": "201098",
+      "isGlobalId": true,
+      "name": "Crown St opp Lansdowne St, Surry Hills",
+      "disassembledName": "Crown St opp Lansdowne St, Surry Hills",
+      "type": "platform",
+      "coord": [
+        -33.890211,
+        151.213141
+      ],
+      "parent": {
+        "id": "201098",
+        "isGlobalId": true,
+        "name": "Crown St opp Lansdowne St, Surry Hills",
+        "disassembledName": "Crown St opp Lansdowne St",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301027:1",
+          "name": "Surry Hills",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 930,
+        "STOP_GLOBAL_ID": "G201098",
+        "STOPPOINT_GLOBAL_ID": "201098",
+        "STOP_NAME_WITH_PLACE": "Crown St opp Lansdowne St, Surry Hills",
+        "STOP_NAME": "Crown St opp Lansdowne St",
+        "STOP_AREA_NAME": "Stop ",
+        "STOP_POINT_LONGNAME": "Crown St opp Lansdowne St",
+        "IDENTIFIER": "X1"
+      }
+    },
+    {
+      "id": "200719",
+      "isGlobalId": true,
+      "name": "Harris St opp Powerhouse Museum, Ultimo",
+      "disassembledName": "Harris St opp Powerhouse Museum, Ultimo",
+      "type": "platform",
+      "coord": [
+        -33.878366,
+        151.198828
+      ],
+      "parent": {
+        "id": "200719",
+        "isGlobalId": true,
+        "name": "Harris St opp Powerhouse Museum, Ultimo",
+        "disassembledName": "Harris St opp Powerhouse Museum",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301030:1",
+          "name": "Ultimo",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 939,
+        "STOP_GLOBAL_ID": "G200712",
+        "STOPPOINT_GLOBAL_ID": "200719",
+        "STOP_NAME_WITH_PLACE": "Powerhouse Museum, Harris St, Ultimo",
+        "STOP_NAME": "Powerhouse Museum, Harris St",
+        "STOP_AREA_NAME": "Swa",
+        "STOP_POINT_LONGNAME": "Harris St opp Powerhouse Museum",
+        "IDENTIFIER": "X2"
+      }
+    },
+    {
+      "id": "2000320",
+      "isGlobalId": true,
+      "name": "Museum Station, Elizabeth St, Stand B, Sydney",
+      "disassembledName": "Museum Station, Elizabeth St, Stand B, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.876077,
+        151.209636
+      ],
+      "parent": {
+        "id": "2000320",
+        "isGlobalId": true,
+        "name": "Museum Station, Elizabeth St, Stand B, Sydney",
+        "disassembledName": "Museum Station, Elizabeth St, Stand B",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 942,
+        "STOP_GLOBAL_ID": "G2000320",
+        "STOPPOINT_GLOBAL_ID": "2000320",
+        "STOP_NAME_WITH_PLACE": "Museum Station, Elizabeth St, Stand B, Sydney",
+        "STOP_NAME": "Museum Station, Elizabeth St, Stand B",
+        "STOP_AREA_NAME": "Swa",
+        "STOP_POINT_LONGNAME": "Museum Station, Elizabeth St, Stand B",
+        "IDENTIFIER": "X1"
+      }
+    },
+    {
+      "id": "2000372",
+      "isGlobalId": true,
+      "name": "Museum Station, Platform 2, Sydney",
+      "disassembledName": "Museum Station, Platform 2, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.876112,
+        151.209951
+      ],
+      "parent": {
+        "id": "2000372",
+        "isGlobalId": true,
+        "name": "Museum Station, Platform 2, Sydney",
+        "disassembledName": "Museum Station, Platform 2",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 948,
+        "STOP_GLOBAL_ID": "200040",
+        "STOPPOINT_GLOBAL_ID": "2000372",
+        "STOP_NAME_WITH_PLACE": "Museum Station, Sydney",
+        "STOP_NAME": "Museum Station",
+        "STOP_AREA_NAME": "MSM2",
+        "STOP_POINT_LONGNAME": "Platform 2",
+        "IDENTIFIER": "MSM2"
+      }
+    },
+    {
+      "id": "2000371",
+      "isGlobalId": true,
+      "name": "Museum Station, Platform 1, Sydney",
+      "disassembledName": "Museum Station, Platform 1, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.876069,
+        151.209863
+      ],
+      "parent": {
+        "id": "2000371",
+        "isGlobalId": true,
+        "name": "Museum Station, Platform 1, Sydney",
+        "disassembledName": "Museum Station, Platform 1",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 950,
+        "STOP_GLOBAL_ID": "200040",
+        "STOPPOINT_GLOBAL_ID": "2000371",
+        "STOP_NAME_WITH_PLACE": "Museum Station, Sydney",
+        "STOP_NAME": "Museum Station",
+        "STOP_AREA_NAME": "MSM1",
+        "STOP_POINT_LONGNAME": "Platform 1",
+        "IDENTIFIER": "MSM1"
+      }
+    },
+    {
+      "id": "200721",
+      "isGlobalId": true,
+      "name": "Broadway Shopping Centre, Broadway, Ultimo",
+      "disassembledName": "Broadway Shopping Centre, Broadway, Ultimo",
+      "type": "platform",
+      "coord": [
+        -33.884264,
+        151.196028
+      ],
+      "parent": {
+        "id": "200721",
+        "isGlobalId": true,
+        "name": "Broadway Shopping Centre, Broadway, Ultimo",
+        "disassembledName": "Broadway Shopping Centre, Broadway",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301030:1",
+          "name": "Ultimo",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 951,
+        "STOP_GLOBAL_ID": "G200721",
+        "STOPPOINT_GLOBAL_ID": "200721",
+        "STOP_NAME_WITH_PLACE": "Broadway Shopping Centre, Broadway, Ultimo",
+        "STOP_NAME": "Broadway Shopping Centre, Broadway",
+        "STOP_AREA_NAME": "Swa",
+        "STOP_POINT_LONGNAME": "Broadway Shopping Centre, Broadway",
+        "IDENTIFIER": "X1"
+      }
+    },
+    {
+      "id": "201056",
+      "isGlobalId": true,
+      "name": "Oxford St at Brisbane St, Surry Hills",
+      "disassembledName": "Oxford St at Brisbane St, Surry Hills",
+      "type": "platform",
+      "coord": [
+        -33.877557,
+        151.212982
+      ],
+      "parent": {
+        "id": "201056",
+        "isGlobalId": true,
+        "name": "Oxford St at Brisbane St, Surry Hills",
+        "disassembledName": "Oxford St at Brisbane St",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301027:1",
+          "name": "Surry Hills",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 954,
+        "STOP_GLOBAL_ID": "G201056",
+        "STOPPOINT_GLOBAL_ID": "201056",
+        "STOP_NAME_WITH_PLACE": "Oxford St at Brisbane St, Surry Hills",
+        "STOP_NAME": "Oxford St at Brisbane St",
+        "STOP_AREA_NAME": "Swa",
+        "STOP_POINT_LONGNAME": "Oxford St at Brisbane St",
+        "IDENTIFIER": "X1"
+      }
+    },
+    {
+      "id": "201053",
+      "isGlobalId": true,
+      "name": "Oxford St at Riley St, Darlinghurst",
+      "disassembledName": "Oxford St at Riley St, Darlinghurst",
+      "type": "platform",
+      "coord": [
+        -33.878769,
+        151.214424
+      ],
+      "parent": {
+        "id": "201053",
+        "isGlobalId": true,
+        "name": "Oxford St at Riley St, Darlinghurst",
+        "disassembledName": "Oxford St at Riley St",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301009:1",
+          "name": "Darlinghurst",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 957,
+        "STOP_GLOBAL_ID": "G201053",
+        "STOPPOINT_GLOBAL_ID": "201053",
+        "STOP_NAME_WITH_PLACE": "Oxford St at Riley St, Darlinghurst",
+        "STOP_NAME": "Oxford St at Riley St",
+        "STOP_AREA_NAME": "Swa",
+        "STOP_POINT_LONGNAME": "Oxford St at Riley St",
+        "IDENTIFIER": "X1"
+      }
+    },
+    {
+      "id": "2000109",
+      "isGlobalId": true,
+      "name": "Exhibition Centre, Darling Dr, Sydney",
+      "disassembledName": "Exhibition Centre, Darling Dr, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.877191,
+        151.19998
+      ],
+      "parent": {
+        "id": "2000109",
+        "isGlobalId": true,
+        "name": "Exhibition Centre, Darling Dr, Sydney",
+        "disassembledName": "Exhibition Centre, Darling Dr",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 963,
+        "STOP_GLOBAL_ID": "2000203",
+        "STOPPOINT_GLOBAL_ID": "2000109",
+        "STOP_NAME_WITH_PLACE": "Exhibition Centre Light Rail, Sydney",
+        "STOP_NAME": "Exhibition Centre Light Rail",
+        "STOP_AREA_NAME": "BUS1",
+        "STOP_POINT_LONGNAME": "Exhibition Centre, Darling Dr",
+        "IDENTIFIER": "X1"
+      }
+    },
+    {
+      "id": "201636",
+      "isGlobalId": true,
+      "name": "Cleveland St at Marriott St, Redfern",
+      "disassembledName": "Cleveland St at Marriott St, Redfern",
+      "type": "platform",
+      "coord": [
+        -33.891506,
+        151.211897
+      ],
+      "parent": {
+        "id": "201636",
+        "isGlobalId": true,
+        "name": "Cleveland St at Marriott St, Redfern",
+        "disassembledName": "Cleveland St at Marriott St",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301024:1",
+          "name": "Redfern",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 974,
+        "STOP_GLOBAL_ID": "G201636",
+        "STOPPOINT_GLOBAL_ID": "201636",
+        "STOP_NAME_WITH_PLACE": "Cleveland St at Marriott St, Redfern",
+        "STOP_NAME": "Cleveland St at Marriott St",
+        "STOP_AREA_NAME": "Swa",
+        "STOP_POINT_LONGNAME": "Cleveland St at Marriott St",
+        "IDENTIFIER": "X1"
+      }
+    },
+    {
+      "id": "201055",
+      "isGlobalId": true,
+      "name": "Oxford St opp Brisbane St, Darlinghurst",
+      "disassembledName": "Oxford St opp Brisbane St, Darlinghurst",
+      "type": "platform",
+      "coord": [
+        -33.877503,
+        151.21326
+      ],
+      "parent": {
+        "id": "201055",
+        "isGlobalId": true,
+        "name": "Oxford St opp Brisbane St, Darlinghurst",
+        "disassembledName": "Oxford St opp Brisbane St",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301009:1",
+          "name": "Darlinghurst",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 975,
+        "STOP_GLOBAL_ID": "G201055",
+        "STOPPOINT_GLOBAL_ID": "201055",
+        "STOP_NAME_WITH_PLACE": "Oxford St opp Brisbane St, Darlinghurst",
+        "STOP_NAME": "Oxford St opp Brisbane St",
+        "STOP_AREA_NAME": "Swa",
+        "STOP_POINT_LONGNAME": "Oxford St opp Brisbane St",
+        "IDENTIFIER": "X1"
+      }
+    },
+    {
+      "id": "2000264",
+      "isGlobalId": true,
+      "name": "Exhibition Centre Light Rail, Sydney",
+      "disassembledName": "Exhibition Centre Light Rail, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.877174,
+        151.199677
+      ],
+      "parent": {
+        "id": "2000264",
+        "isGlobalId": true,
+        "name": "Exhibition Centre Light Rail, Sydney",
+        "disassembledName": "Exhibition Centre Light Rail",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 982,
+        "STOP_GLOBAL_ID": "2000203",
+        "STOPPOINT_GLOBAL_ID": "2000264",
+        "STOP_NAME_WITH_PLACE": "Exhibition Centre Light Rail, Sydney",
+        "STOP_NAME": "Exhibition Centre Light Rail",
+        "STOP_AREA_NAME": "LR",
+        "STOP_POINT_LONGNAME": "Exhibition Centre Light Rail",
+        "IDENTIFIER": "L1"
+      }
+    },
+    {
+      "id": "2000265",
+      "isGlobalId": true,
+      "name": "Exhibition Centre Light Rail, Sydney",
+      "disassembledName": "Exhibition Centre Light Rail, Sydney",
+      "type": "platform",
+      "coord": [
+        -33.877214,
+        151.199571
+      ],
+      "parent": {
+        "id": "2000265",
+        "isGlobalId": true,
+        "name": "Exhibition Centre Light Rail, Sydney",
+        "disassembledName": "Exhibition Centre Light Rail",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301001:1",
+          "name": "Sydney",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 985,
+        "STOP_GLOBAL_ID": "2000203",
+        "STOPPOINT_GLOBAL_ID": "2000265",
+        "STOP_NAME_WITH_PLACE": "Exhibition Centre Light Rail, Sydney",
+        "STOP_NAME": "Exhibition Centre Light Rail",
+        "STOP_AREA_NAME": "LR",
+        "STOP_POINT_LONGNAME": "Exhibition Centre Light Rail",
+        "IDENTIFIER": "L2"
+      }
+    },
+    {
+      "id": "201614",
+      "isGlobalId": true,
+      "name": "Redfern St at Pitt St, Redfern",
+      "disassembledName": "Redfern St at Pitt St, Redfern",
+      "type": "platform",
+      "coord": [
+        -33.892714,
+        151.203713
+      ],
+      "parent": {
+        "id": "201614",
+        "isGlobalId": true,
+        "name": "Redfern St at Pitt St, Redfern",
+        "disassembledName": "Redfern St at Pitt St",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301024:1",
+          "name": "Redfern",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 988,
+        "STOP_GLOBAL_ID": "G201614",
+        "STOPPOINT_GLOBAL_ID": "201614",
+        "STOP_NAME_WITH_PLACE": "Redfern St at Pitt St, Redfern",
+        "STOP_NAME": "Redfern St at Pitt St",
+        "STOP_AREA_NAME": "Swa",
+        "STOP_POINT_LONGNAME": "Redfern St at Pitt St",
+        "IDENTIFIER": "X1"
+      }
+    },
+    {
+      "id": "201047",
+      "isGlobalId": true,
+      "name": "Cleveland St at Crown St, Surry Hills",
+      "disassembledName": "Cleveland St at Crown St, Surry Hills",
+      "type": "platform",
+      "coord": [
+        -33.891408,
+        151.212379
+      ],
+      "parent": {
+        "id": "201047",
+        "isGlobalId": true,
+        "name": "Cleveland St at Crown St, Surry Hills",
+        "disassembledName": "Cleveland St at Crown St",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301027:1",
+          "name": "Surry Hills",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 990,
+        "STOP_GLOBAL_ID": "G201047",
+        "STOPPOINT_GLOBAL_ID": "201047",
+        "STOP_NAME_WITH_PLACE": "Cleveland St at Crown St, Surry Hills",
+        "STOP_NAME": "Cleveland St at Crown St",
+        "STOP_AREA_NAME": "Swa",
+        "STOP_POINT_LONGNAME": "Cleveland St at Crown St",
+        "IDENTIFIER": "X1"
+      }
+    },
+    {
+      "id": "201625",
+      "isGlobalId": true,
+      "name": "Elizabeth St at Redfern St, Redfern",
+      "disassembledName": "Elizabeth St at Redfern St, Redfern",
+      "type": "platform",
+      "coord": [
+        -33.892954,
+        151.207485
+      ],
+      "parent": {
+        "id": "201625",
+        "isGlobalId": true,
+        "name": "Elizabeth St at Redfern St, Redfern",
+        "disassembledName": "Elizabeth St at Redfern St",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301024:1",
+          "name": "Redfern",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 991,
+        "STOP_GLOBAL_ID": "G201625",
+        "STOPPOINT_GLOBAL_ID": "201625",
+        "STOP_NAME_WITH_PLACE": "Elizabeth St at Redfern St, Redfern",
+        "STOP_NAME": "Elizabeth St at Redfern St",
+        "STOP_AREA_NAME": "Stop ",
+        "STOP_POINT_LONGNAME": "Elizabeth St at Redfern St",
+        "IDENTIFIER": "X1"
+      }
+    },
+    {
+      "id": "201619",
+      "isGlobalId": true,
+      "name": "Redfern St at Pitt St, Redfern",
+      "disassembledName": "Redfern St at Pitt St, Redfern",
+      "type": "platform",
+      "coord": [
+        -33.892871,
+        151.204132
+      ],
+      "parent": {
+        "id": "201619",
+        "isGlobalId": true,
+        "name": "Redfern St at Pitt St, Redfern",
+        "disassembledName": "Redfern St at Pitt St",
+        "type": "stop",
+        "parent": {
+          "id": "placeID:95301024:1",
+          "name": "Redfern",
+          "type": "locality"
+        }
+      },
+      "properties": {
+        "distance": 996,
+        "STOP_GLOBAL_ID": "G201614",
+        "STOPPOINT_GLOBAL_ID": "201619",
+        "STOP_NAME_WITH_PLACE": "Redfern St at Pitt St, Redfern",
+        "STOP_NAME": "Redfern St at Pitt St",
+        "STOP_AREA_NAME": "Swa",
+        "STOP_POINT_LONGNAME": "Redfern St at Pitt St",
+        "IDENTIFIER": "X2"
+      }
+    }
+  ]
+}

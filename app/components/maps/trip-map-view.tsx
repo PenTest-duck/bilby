@@ -125,7 +125,7 @@ export function TripMapView({
     });
   }, [journey.legs, selectedLegIndex, colors.textMuted]);
 
-  // Create markers for origin, destination, and transfers
+  // Create markers for origin, destination, transfers, and intermediate stops
   const markers = useMemo<MapMarker[]>(() => {
     const result: MapMarker[] = [];
     
@@ -175,6 +175,32 @@ export function TripMapView({
         });
       }
     }
+    
+    // Intermediate stop markers (stops we pass through on each leg)
+    journey.legs.forEach((leg, legIndex) => {
+      if (isWalkingLeg(leg)) return;
+      
+      const modeColor = getModeColor(leg.transportation?.product?.class);
+      
+      // Add markers for stops in the stopSequence
+      leg.stopSequence?.forEach((stop, stopIndex) => {
+        // Skip first and last stop of each leg (already covered by origin/destination/transfer markers)
+        if (stopIndex === 0 || stopIndex === (leg.stopSequence?.length ?? 0) - 1) return;
+        
+        if (stop.coord) {
+          result.push({
+            id: `stop-${legIndex}-${stopIndex}`,
+            coordinates: {
+              latitude: stop.coord[0],
+              longitude: stop.coord[1],
+            },
+            title: stop.name || stop.disassembledName || 'Stop',
+            icon: 'stop',
+            tintColor: modeColor,
+          });
+        }
+      });
+    });
     
     return result;
   }, [journey.legs, colors]);

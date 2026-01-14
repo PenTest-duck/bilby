@@ -1,0 +1,3555 @@
+{
+  "version": "10.6.21.17",
+  "systemMessages": [],
+  "locations": [
+    {
+      "id": "200020",
+      "isGlobalId": true,
+      "name": "Circular Quay, Sydney",
+      "disassembledName": "Circular Quay",
+      "coord": [
+        -33.861351,
+        151.210813
+      ],
+      "type": "stop",
+      "matchQuality": 100000,
+      "isBest": true,
+      "parent": {
+        "id": "placeID:95301001:1",
+        "name": "Sydney",
+        "type": "locality"
+      },
+      "assignedStops": [
+        {
+          "id": "200020",
+          "isGlobalId": true,
+          "name": "Circular Quay, Sydney",
+          "disassembledName": "Circular Quay",
+          "type": "stop",
+          "coord": [
+            -33.861351,
+            151.210813
+          ],
+          "parent": {
+            "name": "Sydney",
+            "type": "locality"
+          },
+          "connectingMode": 100,
+          "properties": {
+            "stopId": "10101103"
+          },
+          "modes": [
+            1,
+            4,
+            5,
+            9
+          ]
+        }
+      ],
+      "properties": {
+        "stopId": "10101103"
+      }
+    }
+  ],
+  "stopEvents": [
+    {
+      "realtimeStatus": [
+        "MONITORED"
+      ],
+      "isRealtimeControlled": true,
+      "location": {
+        "id": "20002",
+        "isGlobalId": true,
+        "name": "Circular Quay, Alfred St, Stand B, Sydney",
+        "disassembledName": "Circular Quay, Alfred St, Stand B, Sydney",
+        "type": "platform",
+        "coord": [
+          -33.861602,
+          151.211916
+        ],
+        "properties": {
+          "stopId": "10101103",
+          "area": "12",
+          "platform": "B",
+          "platformName": "Circular Quay, Alfred St, Stand B",
+          "plannedPlatformName": "Circular Quay, Alfred St, Stand B"
+        },
+        "parent": {
+          "id": "200020",
+          "isGlobalId": true,
+          "name": "Circular Quay, Alfred St, Stand B, Sydney",
+          "disassembledName": "Circular Quay, Alfred St, Stand B",
+          "type": "stop",
+          "parent": {
+            "name": "Sydney",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10101103"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-13T23:51:00Z",
+      "departureTimeBaseTimetable": "2026-01-13T23:51:00Z",
+      "departureTimeEstimated": "2026-01-13T23:51:00Z",
+      "transportation": {
+        "id": "nsw:30333: :H:sj2",
+        "name": "Sydney Buses Network 333",
+        "disassembledName": "333",
+        "number": "333",
+        "description": "City Circular Quay to North Bondi via Bondi Junction",
+        "product": {
+          "id": 5,
+          "class": 5,
+          "name": "Sydney Buses Network",
+          "iconId": 5
+        },
+        "operator": {
+          "id": "2509",
+          "name": "Transdev John Holland Buses"
+        },
+        "destination": {
+          "id": "10111776",
+          "name": "North Bondi",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 213,
+          "lineDisplay": "LINE",
+          "globalId": "3002",
+          "OperatorURL": "http://transportnsw.info",
+          "FrequencyLine": "1"
+        },
+        "origin": {
+          "id": "10101103",
+          "name": "Circular Quay, Sydney",
+          "type": "stop"
+        },
+        "iconId": 5
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "2565171",
+        "AVMSTripID": "2565171",
+        "pbyb": "1"
+      }
+    },
+    {
+      "realtimeStatus": [
+        "MONITORED"
+      ],
+      "isRealtimeControlled": true,
+      "location": {
+        "id": "2000351",
+        "isGlobalId": true,
+        "name": "Circular Quay, Platform 1, Sydney",
+        "disassembledName": "Circular Quay, Platform 1, Sydney",
+        "type": "platform",
+        "coord": [
+          -33.861351,
+          151.210295
+        ],
+        "properties": {
+          "occupancy": "MANY_SEATS",
+          "stopId": "10101103",
+          "area": "1",
+          "platform": "CCQ1",
+          "platformName": "Platform 1",
+          "plannedPlatformName": "Platform 1"
+        },
+        "parent": {
+          "id": "200020",
+          "isGlobalId": true,
+          "name": "Circular Quay, Platform 1, Sydney",
+          "disassembledName": "Circular Quay, Platform 1",
+          "type": "stop",
+          "parent": {
+            "name": "Sydney",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10101103"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-13T23:52:00Z",
+      "departureTimeBaseTimetable": "2026-01-13T23:52:30Z",
+      "departureTimeEstimated": "2026-01-13T23:52:00Z",
+      "transportation": {
+        "id": "nsw:020T2: :H:sj2",
+        "name": "Sydney Trains Network T2 Leppington & Inner West Line",
+        "disassembledName": "T2",
+        "number": "T2 Leppington & Inner West Line",
+        "description": "City to Parramatta or Leppington",
+        "product": {
+          "id": 1,
+          "class": 1,
+          "name": "Sydney Trains Network",
+          "iconId": 1
+        },
+        "operator": {
+          "id": "x0001",
+          "name": "Sydney Trains"
+        },
+        "destination": {
+          "id": "10101421",
+          "name": "Redfern",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 896,
+          "lineDisplay": "LINE",
+          "globalId": "3001",
+          "OperatorURL": "http://www.sydneytrains.info/"
+        },
+        "origin": {
+          "id": "10101100",
+          "name": "Central Station, Sydney",
+          "type": "stop"
+        },
+        "iconId": 1
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "26-H.1257.152.16.B.8.88111887",
+        "AVMSTripID": "26-H.1257.152.16.B.8.88111887"
+      }
+    },
+    {
+      "realtimeStatus": [
+        "MONITORED"
+      ],
+      "isRealtimeControlled": true,
+      "location": {
+        "id": "2000223",
+        "isGlobalId": true,
+        "name": "Circular Quay, Wharf 4, Side A, Sydney",
+        "disassembledName": "Circular Quay, Wharf 4, Side A, Sydney",
+        "type": "platform",
+        "coord": [
+          -33.860685,
+          151.211061
+        ],
+        "properties": {
+          "stopId": "10101103",
+          "area": "6",
+          "platform": "F4A",
+          "platformName": "Wharf 4, Side A",
+          "plannedPlatformName": "Wharf 4, Side A"
+        },
+        "parent": {
+          "id": "200020",
+          "isGlobalId": true,
+          "name": "Circular Quay, Wharf 4, Side A, Sydney",
+          "disassembledName": "Circular Quay, Wharf 4, Side A",
+          "type": "stop",
+          "parent": {
+            "name": "Sydney",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10101103"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-13T23:52:00Z",
+      "departureTimeBaseTimetable": "2026-01-13T23:52:00Z",
+      "departureTimeEstimated": "2026-01-13T23:52:00Z",
+      "transportation": {
+        "id": "nsw:090F2: :H:sj2",
+        "name": "Sydney Ferries Network F2 Taronga Zoo",
+        "disassembledName": "F2",
+        "number": "F2 Taronga Zoo",
+        "description": "Circular Quay to Taronga Zoo",
+        "product": {
+          "id": 10,
+          "class": 9,
+          "name": "Sydney Ferries Network",
+          "iconId": 9
+        },
+        "operator": {
+          "code": "SF",
+          "id": "SF",
+          "name": "Sydney Ferries"
+        },
+        "destination": {
+          "id": "10102022",
+          "name": "Taronga Zoo",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 70,
+          "lineDisplay": "LINE",
+          "globalId": "3003"
+        },
+        "origin": {
+          "id": "10101103",
+          "name": "Circular Quay, Sydney",
+          "type": "stop"
+        },
+        "iconId": 10
+      },
+      "infos": [
+        {
+          "priority": "veryLow",
+          "id": "ems-160",
+          "version": 19019037,
+          "type": "lineInfo",
+          "properties": {
+            "publisher": "ems.comm.addinfo",
+            "infoType": "lineInfo",
+            "smsText": "Departure or arrival wharf may change at short notice"
+          },
+          "infoLinks": [
+            {
+              "urlText": "Departure or arrival wharf may change at short notice",
+              "url": "https://transportnsw.info/alerts/details#/ems-160",
+              "content": "<div>Please check indicator boards and listen for announcements.</div>",
+              "subtitle": "Departure or arrival wharf may change at short notice",
+              "smsText": "Departure or arrival wharf may change at short notice"
+            }
+          ],
+          "urlText": "Departure or arrival wharf may change at short notice",
+          "url": "https://transportnsw.info/alerts/details#/ems-160",
+          "content": "<div>Please check indicator boards and listen for announcements.</div>",
+          "subtitle": "Departure or arrival wharf may change at short notice"
+        }
+      ],
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "TZ1052-OUT-WDSM.120126.31.1052",
+        "AVMSTripID": "TZ1052-OUT-WDSM.120126.31.1052"
+      }
+    },
+    {
+      "realtimeStatus": [
+        "MONITORED"
+      ],
+      "isRealtimeControlled": true,
+      "location": {
+        "id": "2000352",
+        "isGlobalId": true,
+        "name": "Circular Quay, Platform 2, Sydney",
+        "disassembledName": "Circular Quay, Platform 2, Sydney",
+        "type": "platform",
+        "coord": [
+          -33.86126,
+          151.210312
+        ],
+        "properties": {
+          "occupancy": "MANY_SEATS",
+          "stopId": "10101103",
+          "area": "2",
+          "platform": "CCQ2",
+          "platformName": "Platform 2",
+          "plannedPlatformName": "Platform 2"
+        },
+        "parent": {
+          "id": "200020",
+          "isGlobalId": true,
+          "name": "Circular Quay, Platform 2, Sydney",
+          "disassembledName": "Circular Quay, Platform 2",
+          "type": "stop",
+          "parent": {
+            "name": "Sydney",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10101103"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-13T23:53:00Z",
+      "departureTimeBaseTimetable": "2026-01-13T23:53:30Z",
+      "departureTimeEstimated": "2026-01-13T23:53:00Z",
+      "transportation": {
+        "id": "nsw:020T8: :H:sj2",
+        "name": "Sydney Trains Network T8 Airport & South Line",
+        "disassembledName": "T8",
+        "number": "T8 Airport & South Line",
+        "description": "City to Macarthur via Airport or Sydenham",
+        "product": {
+          "id": 1,
+          "class": 1,
+          "name": "Sydney Trains Network",
+          "iconId": 1
+        },
+        "operator": {
+          "id": "x0001",
+          "name": "Sydney Trains"
+        },
+        "destination": {
+          "id": "10101417",
+          "name": "Revesby via Airport",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 1248,
+          "lineDisplay": "LINE",
+          "globalId": "3001",
+          "OperatorURL": "http://www.sydneytrains.info/"
+        },
+        "origin": {
+          "id": "10101100",
+          "name": "Central Station, Sydney",
+          "type": "stop"
+        },
+        "iconId": 1
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "8--J.1257.152.16.B.8.88114182",
+        "AVMSTripID": "8--J.1257.152.16.B.8.88114182"
+      }
+    },
+    {
+      "realtimeStatus": [
+        "MONITORED"
+      ],
+      "isRealtimeControlled": true,
+      "location": {
+        "id": "2000449",
+        "isGlobalId": true,
+        "name": "Circular Quay, Circular Quay Light Rail, Sydney",
+        "disassembledName": "Circular Quay, Circular Quay Light Rail, Sydney",
+        "type": "platform",
+        "coord": [
+          -33.861485,
+          151.210042
+        ],
+        "properties": {
+          "stopId": "10101103",
+          "area": "9",
+          "platform": "LR2",
+          "platformName": "Circular Quay Light Rail",
+          "plannedPlatformName": "Circular Quay Light Rail"
+        },
+        "parent": {
+          "id": "200020",
+          "isGlobalId": true,
+          "name": "Circular Quay, Sydney",
+          "disassembledName": "Circular Quay",
+          "type": "stop",
+          "parent": {
+            "name": "Sydney",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10101103"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-13T23:54:00Z",
+      "departureTimeBaseTimetable": "2026-01-13T23:54:00Z",
+      "departureTimeEstimated": "2026-01-13T23:55:36Z",
+      "transportation": {
+        "id": "nsw:780L2: :H:sj2",
+        "name": "Sydney Light Rail Network L2 Randwick Line",
+        "disassembledName": "L2",
+        "number": "L2 Randwick Line",
+        "description": "Circular Quay to Randwick",
+        "product": {
+          "id": 13,
+          "class": 4,
+          "name": "Sydney Light Rail Network",
+          "iconId": 4
+        },
+        "operator": {
+          "id": "SLR",
+          "name": "Sydney Light Rail"
+        },
+        "destination": {
+          "id": "10101612",
+          "name": "Randwick",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 484,
+          "lineDisplay": "LINE",
+          "globalId": "3004",
+          "OperatorURL": "http://transportnsw.info",
+          "FrequencyLine": "1"
+        },
+        "origin": {
+          "id": "10101103",
+          "name": "Circular Quay, Sydney",
+          "type": "stop"
+        },
+        "iconId": 13
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "47597-10273:1001",
+        "AVMSTripID": "47597-10273:1001",
+        "pbyb": "1"
+      }
+    },
+    {
+      "realtimeStatus": [
+        "MONITORED"
+      ],
+      "isRealtimeControlled": true,
+      "location": {
+        "id": "2000351",
+        "isGlobalId": true,
+        "name": "Circular Quay, Platform 1, Sydney",
+        "disassembledName": "Circular Quay, Platform 1, Sydney",
+        "type": "platform",
+        "coord": [
+          -33.861351,
+          151.210295
+        ],
+        "properties": {
+          "stopId": "10101103",
+          "area": "1",
+          "platform": "CCQ1",
+          "platformName": "Platform 1",
+          "plannedPlatformName": "Platform 1"
+        },
+        "parent": {
+          "id": "200020",
+          "isGlobalId": true,
+          "name": "Circular Quay, Platform 1, Sydney",
+          "disassembledName": "Circular Quay, Platform 1",
+          "type": "stop",
+          "parent": {
+            "name": "Sydney",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10101103"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-13T23:55:00Z",
+      "departureTimeBaseTimetable": "2026-01-13T23:55:30Z",
+      "departureTimeEstimated": "2026-01-13T23:55:00Z",
+      "transportation": {
+        "id": "nsw:020T2: :H:sj2",
+        "name": "Sydney Trains Network T2 Leppington & Inner West Line",
+        "disassembledName": "T2",
+        "number": "T2 Leppington & Inner West Line",
+        "description": "City to Parramatta or Leppington",
+        "product": {
+          "id": 1,
+          "class": 1,
+          "name": "Sydney Trains Network",
+          "iconId": 1
+        },
+        "operator": {
+          "id": "x0001",
+          "name": "Sydney Trains"
+        },
+        "destination": {
+          "id": "10101216",
+          "name": "Homebush via Strathfield",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 1190,
+          "lineDisplay": "LINE",
+          "globalId": "3001",
+          "OperatorURL": "http://www.sydneytrains.info/"
+        },
+        "origin": {
+          "id": "10101100",
+          "name": "Central Station, Sydney",
+          "type": "stop"
+        },
+        "iconId": 1
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "92-F.1257.152.48.A.8.88112648",
+        "AVMSTripID": "92-F.1257.152.48.A.8.88112648"
+      }
+    },
+    {
+      "location": {
+        "id": "2000147",
+        "isGlobalId": true,
+        "name": "Circular Quay, Alfred St, Stand A, Sydney",
+        "disassembledName": "Circular Quay, Alfred St, Stand A, Sydney",
+        "type": "platform",
+        "coord": [
+          -33.861695,
+          151.211543
+        ],
+        "properties": {
+          "stopId": "10101103",
+          "area": "11",
+          "platform": "A",
+          "platformName": "Circular Quay, Alfred St, Stand A",
+          "plannedPlatformName": "Circular Quay, Alfred St, Stand A"
+        },
+        "parent": {
+          "id": "200020",
+          "isGlobalId": true,
+          "name": "Circular Quay, Alfred St, Stand A, Sydney",
+          "disassembledName": "Circular Quay, Alfred St, Stand A",
+          "type": "stop",
+          "parent": {
+            "name": "Sydney",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10101103"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-13T23:55:00Z",
+      "departureTimeBaseTimetable": "2026-01-13T23:55:00Z",
+      "transportation": {
+        "id": "nsw:30304: :R:sj2",
+        "name": "Sydney Buses Network 304",
+        "disassembledName": "304",
+        "number": "304",
+        "description": "City Circular Quay to Green Square (Loop Service)",
+        "product": {
+          "id": 5,
+          "class": 5,
+          "name": "Sydney Buses Network",
+          "iconId": 5
+        },
+        "operator": {
+          "id": "2509",
+          "name": "Transdev John Holland Buses"
+        },
+        "destination": {
+          "id": "10111066",
+          "name": "City Circular Quay via Green Square",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 99,
+          "lineDisplay": "LINE",
+          "globalId": "3002",
+          "OperatorURL": "http://transportnsw.info"
+        },
+        "origin": {
+          "id": "10101103",
+          "name": "Circular Quay, Sydney",
+          "type": "stop"
+        },
+        "iconId": 5
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "2372510",
+        "pbyb": "1"
+      }
+    },
+    {
+      "realtimeStatus": [
+        "MONITORED"
+      ],
+      "isRealtimeControlled": true,
+      "location": {
+        "id": "20002",
+        "isGlobalId": true,
+        "name": "Circular Quay, Alfred St, Stand B, Sydney",
+        "disassembledName": "Circular Quay, Alfred St, Stand B, Sydney",
+        "type": "platform",
+        "coord": [
+          -33.861602,
+          151.211916
+        ],
+        "properties": {
+          "stopId": "10101103",
+          "area": "12",
+          "platform": "B",
+          "platformName": "Circular Quay, Alfred St, Stand B",
+          "plannedPlatformName": "Circular Quay, Alfred St, Stand B"
+        },
+        "parent": {
+          "id": "200020",
+          "isGlobalId": true,
+          "name": "Circular Quay, Alfred St, Stand B, Sydney",
+          "disassembledName": "Circular Quay, Alfred St, Stand B",
+          "type": "stop",
+          "parent": {
+            "name": "Sydney",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10101103"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-13T23:55:00Z",
+      "departureTimeBaseTimetable": "2026-01-13T23:55:00Z",
+      "departureTimeEstimated": "2026-01-13T23:57:06Z",
+      "transportation": {
+        "id": "nsw:30333: :H:sj2",
+        "name": "Sydney Buses Network 333",
+        "disassembledName": "333",
+        "number": "333",
+        "description": "City Circular Quay to North Bondi via Bondi Junction",
+        "product": {
+          "id": 5,
+          "class": 5,
+          "name": "Sydney Buses Network",
+          "iconId": 5
+        },
+        "operator": {
+          "id": "2509",
+          "name": "Transdev John Holland Buses"
+        },
+        "destination": {
+          "id": "10111776",
+          "name": "North Bondi",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 217,
+          "lineDisplay": "LINE",
+          "globalId": "3002",
+          "OperatorURL": "http://transportnsw.info",
+          "FrequencyLine": "1"
+        },
+        "origin": {
+          "id": "10101103",
+          "name": "Circular Quay, Sydney",
+          "type": "stop"
+        },
+        "iconId": 5
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "2151610",
+        "AVMSTripID": "2151610",
+        "pbyb": "1"
+      }
+    },
+    {
+      "realtimeStatus": [
+        "MONITORED"
+      ],
+      "isRealtimeControlled": true,
+      "location": {
+        "id": "2000352",
+        "isGlobalId": true,
+        "name": "Circular Quay, Platform 2, Sydney",
+        "disassembledName": "Circular Quay, Platform 2, Sydney",
+        "type": "platform",
+        "coord": [
+          -33.86126,
+          151.210312
+        ],
+        "properties": {
+          "stopId": "10101103",
+          "area": "2",
+          "platform": "CCQ2",
+          "platformName": "Platform 2",
+          "plannedPlatformName": "Platform 2"
+        },
+        "parent": {
+          "id": "200020",
+          "isGlobalId": true,
+          "name": "Circular Quay, Platform 2, Sydney",
+          "disassembledName": "Circular Quay, Platform 2",
+          "type": "stop",
+          "parent": {
+            "name": "Sydney",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10101103"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-13T23:56:00Z",
+      "departureTimeBaseTimetable": "2026-01-13T23:56:30Z",
+      "departureTimeEstimated": "2026-01-13T23:56:00Z",
+      "transportation": {
+        "id": "nsw:020T8: :H:sj2",
+        "name": "Sydney Trains Network T8 Airport & South Line",
+        "disassembledName": "T8",
+        "number": "T8 Airport & South Line",
+        "description": "City to Macarthur via Airport or Sydenham",
+        "product": {
+          "id": 1,
+          "class": 1,
+          "name": "Sydney Trains Network",
+          "iconId": 1
+        },
+        "operator": {
+          "id": "x0001",
+          "name": "Sydney Trains"
+        },
+        "destination": {
+          "id": "10101326",
+          "name": "Sydenham",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 927,
+          "lineDisplay": "LINE",
+          "globalId": "3001",
+          "OperatorURL": "http://www.sydneytrains.info/"
+        },
+        "origin": {
+          "id": "10101100",
+          "name": "Central Station, Sydney",
+          "type": "stop"
+        },
+        "iconId": 1
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "85-D.1257.152.56.A.8.88113015",
+        "AVMSTripID": "85-D.1257.152.56.A.8.88113015"
+      }
+    },
+    {
+      "realtimeStatus": [
+        "MONITORED"
+      ],
+      "isRealtimeControlled": true,
+      "location": {
+        "id": "2000215",
+        "isGlobalId": true,
+        "name": "Circular Quay, Wharf 2, Side B, Sydney",
+        "disassembledName": "Circular Quay, Wharf 2, Side B, Sydney",
+        "type": "platform",
+        "coord": [
+          -33.860771,
+          151.211951
+        ],
+        "properties": {
+          "stopId": "10101103",
+          "area": "4",
+          "platform": "F2B",
+          "platformName": "Wharf 2, Side B",
+          "plannedPlatformName": "Wharf 2, Side B"
+        },
+        "parent": {
+          "id": "200020",
+          "isGlobalId": true,
+          "name": "Circular Quay, Wharf 2, Side B, Sydney",
+          "disassembledName": "Circular Quay, Wharf 2, Side B",
+          "type": "stop",
+          "parent": {
+            "name": "Sydney",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10101103"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-13T23:57:00Z",
+      "departureTimeBaseTimetable": "2026-01-13T23:57:00Z",
+      "departureTimeEstimated": "2026-01-13T23:57:00Z",
+      "transportation": {
+        "id": "nsw:090F7: :H:sj2",
+        "name": "Sydney Ferries Network F7 Double Bay",
+        "disassembledName": "F7",
+        "number": "F7 Double Bay",
+        "description": "Circular Quay to Double Bay",
+        "product": {
+          "id": 10,
+          "class": 9,
+          "name": "Sydney Ferries Network",
+          "iconId": 9
+        },
+        "operator": {
+          "code": "SF",
+          "id": "SF",
+          "name": "Sydney Ferries"
+        },
+        "destination": {
+          "id": "10102003",
+          "name": "Double Bay",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 55,
+          "lineDisplay": "LINE",
+          "globalId": "3003"
+        },
+        "origin": {
+          "id": "10101103",
+          "name": "Circular Quay, Sydney",
+          "type": "stop"
+        },
+        "iconId": 10
+      },
+      "infos": [
+        {
+          "priority": "veryLow",
+          "id": "ems-160",
+          "version": 19019037,
+          "type": "lineInfo",
+          "properties": {
+            "publisher": "ems.comm.addinfo",
+            "infoType": "lineInfo",
+            "smsText": "Departure or arrival wharf may change at short notice"
+          },
+          "infoLinks": [
+            {
+              "urlText": "Departure or arrival wharf may change at short notice",
+              "url": "https://transportnsw.info/alerts/details#/ems-160",
+              "content": "<div>Please check indicator boards and listen for announcements.</div>",
+              "subtitle": "Departure or arrival wharf may change at short notice",
+              "smsText": "Departure or arrival wharf may change at short notice"
+            }
+          ],
+          "urlText": "Departure or arrival wharf may change at short notice",
+          "url": "https://transportnsw.info/alerts/details#/ems-160",
+          "content": "<div>Please check indicator boards and listen for announcements.</div>",
+          "subtitle": "Departure or arrival wharf may change at short notice"
+        }
+      ],
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "ES1057-OUT-WDSM.120126.31.1057",
+        "AVMSTripID": "ES1057-OUT-WDSM.120126.31.1057"
+      }
+    },
+    {
+      "realtimeStatus": [
+        "MONITORED"
+      ],
+      "isRealtimeControlled": true,
+      "location": {
+        "id": "2000450",
+        "isGlobalId": true,
+        "name": "Circular Quay, Circular Quay Light Rail, Sydney",
+        "disassembledName": "Circular Quay, Circular Quay Light Rail, Sydney",
+        "type": "platform",
+        "coord": [
+          -33.861512,
+          151.210043
+        ],
+        "properties": {
+          "stopId": "10101103",
+          "area": "9",
+          "platform": "LR1",
+          "platformName": "Circular Quay Light Rail",
+          "plannedPlatformName": "Circular Quay Light Rail"
+        },
+        "parent": {
+          "id": "200020",
+          "isGlobalId": true,
+          "name": "Circular Quay, Sydney",
+          "disassembledName": "Circular Quay",
+          "type": "stop",
+          "parent": {
+            "name": "Sydney",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10101103"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-13T23:58:00Z",
+      "departureTimeBaseTimetable": "2026-01-13T23:58:00Z",
+      "departureTimeEstimated": "2026-01-13T23:58:06Z",
+      "transportation": {
+        "id": "nsw:780L3: :H:sj2",
+        "name": "Sydney Light Rail Network L3 Kingsford Line",
+        "disassembledName": "L3",
+        "number": "L3 Kingsford Line",
+        "description": "Circular Quay to Juniors Kingsford",
+        "product": {
+          "id": 13,
+          "class": 4,
+          "name": "Sydney Light Rail Network",
+          "iconId": 4
+        },
+        "operator": {
+          "id": "SLR",
+          "name": "Sydney Light Rail"
+        },
+        "destination": {
+          "id": "10101617",
+          "name": "Juniors Kingsford",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 541,
+          "lineDisplay": "LINE",
+          "globalId": "3004",
+          "OperatorURL": "http://transportnsw.info",
+          "FrequencyLine": "1"
+        },
+        "origin": {
+          "id": "10101103",
+          "name": "Circular Quay, Sydney",
+          "type": "stop"
+        },
+        "iconId": 13
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "47597-10275:1001",
+        "AVMSTripID": "47597-10275:1001",
+        "pbyb": "1"
+      }
+    },
+    {
+      "realtimeStatus": [
+        "MONITORED"
+      ],
+      "isRealtimeControlled": true,
+      "location": {
+        "id": "2000352",
+        "isGlobalId": true,
+        "name": "Circular Quay, Platform 2, Sydney",
+        "disassembledName": "Circular Quay, Platform 2, Sydney",
+        "type": "platform",
+        "coord": [
+          -33.86126,
+          151.210312
+        ],
+        "properties": {
+          "stopId": "10101103",
+          "area": "2",
+          "platform": "CCQ2",
+          "platformName": "Platform 2",
+          "plannedPlatformName": "Platform 2"
+        },
+        "parent": {
+          "id": "200020",
+          "isGlobalId": true,
+          "name": "Circular Quay, Platform 2, Sydney",
+          "disassembledName": "Circular Quay, Platform 2",
+          "type": "stop",
+          "parent": {
+            "name": "Sydney",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10101103"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-13T23:59:00Z",
+      "departureTimeBaseTimetable": "2026-01-13T23:59:30Z",
+      "departureTimeEstimated": "2026-01-13T23:59:00Z",
+      "transportation": {
+        "id": "nsw:020T8: :H:sj2",
+        "name": "Sydney Trains Network T8 Airport & South Line",
+        "disassembledName": "T8",
+        "number": "T8 Airport & South Line",
+        "description": "City to Macarthur via Airport or Sydenham",
+        "product": {
+          "id": 1,
+          "class": 1,
+          "name": "Sydney Trains Network",
+          "iconId": 1
+        },
+        "operator": {
+          "id": "x0001",
+          "name": "Sydney Trains"
+        },
+        "destination": {
+          "id": "10101297",
+          "name": "Macarthur via Airport",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 1401,
+          "lineDisplay": "LINE",
+          "globalId": "3001",
+          "OperatorURL": "http://www.sydneytrains.info/"
+        },
+        "origin": {
+          "id": "10101100",
+          "name": "Central Station, Sydney",
+          "type": "stop"
+        },
+        "iconId": 1
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "63-F.1257.152.56.M.8.88111304",
+        "AVMSTripID": "63-F.1257.152.56.M.8.88111304"
+      }
+    },
+    {
+      "location": {
+        "id": "20002",
+        "isGlobalId": true,
+        "name": "Circular Quay, Alfred St, Stand B, Sydney",
+        "disassembledName": "Circular Quay, Alfred St, Stand B, Sydney",
+        "type": "platform",
+        "coord": [
+          -33.861602,
+          151.211916
+        ],
+        "properties": {
+          "stopId": "10101103",
+          "area": "12",
+          "platform": "B",
+          "platformName": "Circular Quay, Alfred St, Stand B",
+          "plannedPlatformName": "Circular Quay, Alfred St, Stand B"
+        },
+        "parent": {
+          "id": "200020",
+          "isGlobalId": true,
+          "name": "Circular Quay, Alfred St, Stand B, Sydney",
+          "disassembledName": "Circular Quay, Alfred St, Stand B",
+          "type": "stop",
+          "parent": {
+            "name": "Sydney",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10101103"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-13T23:59:00Z",
+      "departureTimeBaseTimetable": "2026-01-13T23:59:00Z",
+      "transportation": {
+        "id": "nsw:30333: :H:sj2",
+        "name": "Sydney Buses Network 333",
+        "disassembledName": "333",
+        "number": "333",
+        "description": "City Circular Quay to North Bondi via Bondi Junction",
+        "product": {
+          "id": 5,
+          "class": 5,
+          "name": "Sydney Buses Network",
+          "iconId": 5
+        },
+        "operator": {
+          "id": "2509",
+          "name": "Transdev John Holland Buses"
+        },
+        "destination": {
+          "id": "10111776",
+          "name": "North Bondi",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 221,
+          "lineDisplay": "LINE",
+          "globalId": "3002",
+          "OperatorURL": "http://transportnsw.info",
+          "FrequencyLine": "1"
+        },
+        "origin": {
+          "id": "10101103",
+          "name": "Circular Quay, Sydney",
+          "type": "stop"
+        },
+        "iconId": 5
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "2564797",
+        "pbyb": "1"
+      }
+    },
+    {
+      "location": {
+        "id": "2000234",
+        "isGlobalId": true,
+        "name": "Circular Quay, Wharf 6, Side A, Sydney",
+        "disassembledName": "Circular Quay, Wharf 6, Side A, Sydney",
+        "type": "platform",
+        "coord": [
+          -33.860556,
+          151.210083
+        ],
+        "properties": {
+          "stopId": "10101103",
+          "area": "8",
+          "platform": "F6A",
+          "platformName": "Wharf 6, Side A",
+          "plannedPlatformName": "Wharf 6, Side A"
+        },
+        "parent": {
+          "id": "200020",
+          "isGlobalId": true,
+          "name": "Circular Quay, Wharf 6, Side A, Sydney",
+          "disassembledName": "Circular Quay, Wharf 6, Side A",
+          "type": "stop",
+          "parent": {
+            "name": "Sydney",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10101103"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T00:00:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T00:00:00Z",
+      "transportation": {
+        "id": "nsw:04CCS:H:H:sj2",
+        "name": "Private ferry and fast ferry services CCSH Shark Island Ferry",
+        "disassembledName": "CCSH",
+        "number": "CCSH Shark Island Ferry",
+        "description": "City to Shark Island",
+        "product": {
+          "id": 12,
+          "class": 9,
+          "name": "Private ferry and fast ferry services",
+          "iconId": 9
+        },
+        "operator": {
+          "id": "305",
+          "name": "Captain Cook Cruises"
+        },
+        "destination": {
+          "id": "10102051",
+          "name": "Shark Island",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 12,
+          "specialFares": "ROUTE_WITH_SUPPLEMENT_NO_FARE_CALCULATION",
+          "lineDisplay": "LINE",
+          "globalId": "3000"
+        },
+        "origin": {
+          "id": "10101103",
+          "name": "Circular Quay, Sydney",
+          "type": "stop"
+        },
+        "iconId": 12
+      },
+      "infos": [
+        {
+          "priority": "veryLow",
+          "id": "ems-160",
+          "version": 19019037,
+          "type": "lineInfo",
+          "properties": {
+            "publisher": "ems.comm.addinfo",
+            "infoType": "lineInfo",
+            "smsText": "Departure or arrival wharf may change at short notice"
+          },
+          "infoLinks": [
+            {
+              "urlText": "Departure or arrival wharf may change at short notice",
+              "url": "https://transportnsw.info/alerts/details#/ems-160",
+              "content": "<div>Please check indicator boards and listen for announcements.</div>",
+              "subtitle": "Departure or arrival wharf may change at short notice",
+              "smsText": "Departure or arrival wharf may change at short notice"
+            }
+          ],
+          "urlText": "Departure or arrival wharf may change at short notice",
+          "url": "https://transportnsw.info/alerts/details#/ems-160",
+          "content": "<div>Please check indicator boards and listen for announcements.</div>",
+          "subtitle": "Departure or arrival wharf may change at short notice"
+        }
+      ],
+      "properties": {
+        "WheelchairAccess": "true",
+        "NO_FARES": "1",
+        "lineType": "SUPPLEMENT"
+      }
+    },
+    {
+      "location": {
+        "id": "2000234",
+        "isGlobalId": true,
+        "name": "Circular Quay, Wharf 6, Side A, Sydney",
+        "disassembledName": "Circular Quay, Wharf 6, Side A, Sydney",
+        "type": "platform",
+        "coord": [
+          -33.860556,
+          151.210083
+        ],
+        "properties": {
+          "stopId": "10101103",
+          "area": "8",
+          "platform": "F6A",
+          "platformName": "Wharf 6, Side A",
+          "plannedPlatformName": "Wharf 6, Side A"
+        },
+        "parent": {
+          "id": "200020",
+          "isGlobalId": true,
+          "name": "Circular Quay, Wharf 6, Side A, Sydney",
+          "disassembledName": "Circular Quay, Wharf 6, Side A",
+          "type": "stop",
+          "parent": {
+            "name": "Sydney",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10101103"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T00:00:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T00:00:00Z",
+      "transportation": {
+        "id": "nsw:04CCT:Z:H:sj2",
+        "name": "Private ferry and fast ferry services CCTZ Taronga Zoo Ferry",
+        "disassembledName": "CCTZ",
+        "number": "CCTZ Taronga Zoo Ferry",
+        "description": "City to Taronga Zoo",
+        "product": {
+          "id": 12,
+          "class": 9,
+          "name": "Private ferry and fast ferry services",
+          "iconId": 9
+        },
+        "operator": {
+          "id": "305",
+          "name": "Captain Cook Cruises"
+        },
+        "destination": {
+          "id": "10102022",
+          "name": "Taronga Zoo",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 18,
+          "specialFares": "ROUTE_WITH_SUPPLEMENT_NO_FARE_CALCULATION",
+          "lineDisplay": "LINE",
+          "globalId": "3000"
+        },
+        "origin": {
+          "id": "10101103",
+          "name": "Circular Quay, Sydney",
+          "type": "stop"
+        },
+        "iconId": 12
+      },
+      "infos": [
+        {
+          "priority": "veryLow",
+          "id": "ems-160",
+          "version": 19019037,
+          "type": "lineInfo",
+          "properties": {
+            "publisher": "ems.comm.addinfo",
+            "infoType": "lineInfo",
+            "smsText": "Departure or arrival wharf may change at short notice"
+          },
+          "infoLinks": [
+            {
+              "urlText": "Departure or arrival wharf may change at short notice",
+              "url": "https://transportnsw.info/alerts/details#/ems-160",
+              "content": "<div>Please check indicator boards and listen for announcements.</div>",
+              "subtitle": "Departure or arrival wharf may change at short notice",
+              "smsText": "Departure or arrival wharf may change at short notice"
+            }
+          ],
+          "urlText": "Departure or arrival wharf may change at short notice",
+          "url": "https://transportnsw.info/alerts/details#/ems-160",
+          "content": "<div>Please check indicator boards and listen for announcements.</div>",
+          "subtitle": "Departure or arrival wharf may change at short notice"
+        }
+      ],
+      "properties": {
+        "WheelchairAccess": "true",
+        "NO_FARES": "1",
+        "lineType": "SUPPLEMENT"
+      }
+    },
+    {
+      "location": {
+        "id": "2000234",
+        "isGlobalId": true,
+        "name": "Circular Quay, Wharf 6, Side A, Sydney",
+        "disassembledName": "Circular Quay, Wharf 6, Side A, Sydney",
+        "type": "platform",
+        "coord": [
+          -33.860556,
+          151.210083
+        ],
+        "properties": {
+          "stopId": "10101103",
+          "area": "8",
+          "platform": "F6A",
+          "platformName": "Wharf 6, Side A",
+          "plannedPlatformName": "Wharf 6, Side A"
+        },
+        "parent": {
+          "id": "200020",
+          "isGlobalId": true,
+          "name": "Circular Quay, Wharf 6, Side A, Sydney",
+          "disassembledName": "Circular Quay, Wharf 6, Side A",
+          "type": "stop",
+          "parent": {
+            "name": "Sydney",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10101103"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T00:00:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T00:00:00Z",
+      "transportation": {
+        "id": "nsw:04CCW:M:H:sj2",
+        "name": "Private ferry and fast ferry services CCWM Manly & Watsons Bay Ferry",
+        "disassembledName": "CCWM",
+        "number": "CCWM Manly & Watsons Bay Ferry",
+        "description": "City to Manly via Watsons Bay",
+        "product": {
+          "id": 12,
+          "class": 9,
+          "name": "Private ferry and fast ferry services",
+          "iconId": 9
+        },
+        "operator": {
+          "id": "305",
+          "name": "Captain Cook Cruises"
+        },
+        "destination": {
+          "id": "10102027",
+          "name": "Manly",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 21,
+          "specialFares": "ROUTE_WITH_SUPPLEMENT_NO_FARE_CALCULATION",
+          "lineDisplay": "LINE",
+          "globalId": "3000"
+        },
+        "origin": {
+          "id": "10101103",
+          "name": "Circular Quay, Sydney",
+          "type": "stop"
+        },
+        "iconId": 12
+      },
+      "infos": [
+        {
+          "priority": "veryLow",
+          "id": "ems-160",
+          "version": 19019037,
+          "type": "lineInfo",
+          "properties": {
+            "publisher": "ems.comm.addinfo",
+            "infoType": "lineInfo",
+            "smsText": "Departure or arrival wharf may change at short notice"
+          },
+          "infoLinks": [
+            {
+              "urlText": "Departure or arrival wharf may change at short notice",
+              "url": "https://transportnsw.info/alerts/details#/ems-160",
+              "content": "<div>Please check indicator boards and listen for announcements.</div>",
+              "subtitle": "Departure or arrival wharf may change at short notice",
+              "smsText": "Departure or arrival wharf may change at short notice"
+            }
+          ],
+          "urlText": "Departure or arrival wharf may change at short notice",
+          "url": "https://transportnsw.info/alerts/details#/ems-160",
+          "content": "<div>Please check indicator boards and listen for announcements.</div>",
+          "subtitle": "Departure or arrival wharf may change at short notice"
+        }
+      ],
+      "properties": {
+        "WheelchairAccess": "true",
+        "NO_FARES": "1",
+        "lineType": "SUPPLEMENT"
+      }
+    },
+    {
+      "realtimeStatus": [
+        "MONITORED"
+      ],
+      "isRealtimeControlled": true,
+      "location": {
+        "id": "2000212",
+        "isGlobalId": true,
+        "name": "Circular Quay, Wharf 2, Side A, Sydney",
+        "disassembledName": "Circular Quay, Wharf 2, Side A, Sydney",
+        "type": "platform",
+        "coord": [
+          -33.860783,
+          151.212124
+        ],
+        "properties": {
+          "stopId": "10101103",
+          "area": "4",
+          "platform": "F2A",
+          "platformName": "Wharf 2, Side A",
+          "plannedPlatformName": "Wharf 2, Side A"
+        },
+        "parent": {
+          "id": "200020",
+          "isGlobalId": true,
+          "name": "Circular Quay, Wharf 2, Side A, Sydney",
+          "disassembledName": "Circular Quay, Wharf 2, Side A",
+          "type": "stop",
+          "parent": {
+            "name": "Sydney",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10101103"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T00:00:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T00:00:00Z",
+      "departureTimeEstimated": "2026-01-14T00:00:00Z",
+      "transportation": {
+        "id": "nsw:05MFF: :H:sj2",
+        "name": "Private ferry and fast ferry services MFF Manly Fast Ferry",
+        "disassembledName": "MFF",
+        "number": "MFF Manly Fast Ferry",
+        "description": "Circular Quay to Manly",
+        "product": {
+          "id": 12,
+          "class": 9,
+          "name": "Private ferry and fast ferry services",
+          "iconId": 9
+        },
+        "operator": {
+          "id": "MFF",
+          "name": "Manly Fast Ferries"
+        },
+        "destination": {
+          "id": "10102027",
+          "name": "Manly",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 129,
+          "lineDisplay": "LINE",
+          "globalId": "3003",
+          "OperatorURL": "http://transportnsw.info"
+        },
+        "origin": {
+          "id": "10101103",
+          "name": "Circular Quay, Sydney",
+          "type": "stop"
+        },
+        "iconId": 12
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "MFF.VJ1196",
+        "AVMSTripID": "MFF.VJ1196"
+      }
+    },
+    {
+      "realtimeStatus": [
+        "MONITORED"
+      ],
+      "isRealtimeControlled": true,
+      "location": {
+        "id": "2000223",
+        "isGlobalId": true,
+        "name": "Circular Quay, Wharf 4, Side A, Sydney",
+        "disassembledName": "Circular Quay, Wharf 4, Side A, Sydney",
+        "type": "platform",
+        "coord": [
+          -33.860685,
+          151.211061
+        ],
+        "properties": {
+          "stopId": "10101103",
+          "area": "6",
+          "platform": "F4A",
+          "platformName": "Wharf 4, Side A",
+          "plannedPlatformName": "Wharf 4, Side A"
+        },
+        "parent": {
+          "id": "200020",
+          "isGlobalId": true,
+          "name": "Circular Quay, Wharf 4, Side A, Sydney",
+          "disassembledName": "Circular Quay, Wharf 4, Side A",
+          "type": "stop",
+          "parent": {
+            "name": "Sydney",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10101103"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T00:00:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T00:00:00Z",
+      "departureTimeEstimated": "2026-01-14T00:00:00Z",
+      "transportation": {
+        "id": "nsw:090F6: :H:sj2",
+        "name": "Sydney Ferries Network F6 Mosman Bay",
+        "disassembledName": "F6",
+        "number": "F6 Mosman Bay",
+        "description": "Circular Quay to Mosman Bay",
+        "product": {
+          "id": 10,
+          "class": 9,
+          "name": "Sydney Ferries Network",
+          "iconId": 9
+        },
+        "operator": {
+          "code": "SF",
+          "id": "SF",
+          "name": "Sydney Ferries"
+        },
+        "destination": {
+          "id": "10102020",
+          "name": "Mosman Bay",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 93,
+          "lineDisplay": "LINE",
+          "globalId": "3003"
+        },
+        "origin": {
+          "id": "10101103",
+          "name": "Circular Quay, Sydney",
+          "type": "stop"
+        },
+        "iconId": 10
+      },
+      "infos": [
+        {
+          "priority": "veryLow",
+          "id": "ems-160",
+          "version": 19019037,
+          "type": "lineInfo",
+          "properties": {
+            "publisher": "ems.comm.addinfo",
+            "infoType": "lineInfo",
+            "smsText": "Departure or arrival wharf may change at short notice"
+          },
+          "infoLinks": [
+            {
+              "urlText": "Departure or arrival wharf may change at short notice",
+              "url": "https://transportnsw.info/alerts/details#/ems-160",
+              "content": "<div>Please check indicator boards and listen for announcements.</div>",
+              "subtitle": "Departure or arrival wharf may change at short notice",
+              "smsText": "Departure or arrival wharf may change at short notice"
+            }
+          ],
+          "urlText": "Departure or arrival wharf may change at short notice",
+          "url": "https://transportnsw.info/alerts/details#/ems-160",
+          "content": "<div>Please check indicator boards and listen for announcements.</div>",
+          "subtitle": "Departure or arrival wharf may change at short notice"
+        }
+      ],
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "MS1100-OUT-WDSM.120126.31.1100",
+        "AVMSTripID": "MS1100-OUT-WDSM.120126.31.1100"
+      }
+    },
+    {
+      "realtimeStatus": [
+        "MONITORED"
+      ],
+      "isRealtimeControlled": true,
+      "location": {
+        "id": "2000147",
+        "isGlobalId": true,
+        "name": "Circular Quay, Alfred St, Stand A, Sydney",
+        "disassembledName": "Circular Quay, Alfred St, Stand A, Sydney",
+        "type": "platform",
+        "coord": [
+          -33.861695,
+          151.211543
+        ],
+        "properties": {
+          "stopId": "10101103",
+          "area": "11",
+          "platform": "A",
+          "platformName": "Circular Quay, Alfred St, Stand A",
+          "plannedPlatformName": "Circular Quay, Alfred St, Stand A"
+        },
+        "parent": {
+          "id": "200020",
+          "isGlobalId": true,
+          "name": "Circular Quay, Alfred St, Stand A, Sydney",
+          "disassembledName": "Circular Quay, Alfred St, Stand A",
+          "type": "stop",
+          "parent": {
+            "name": "Sydney",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10101103"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T00:00:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T00:00:00Z",
+      "departureTimeEstimated": "2026-01-14T00:00:00Z",
+      "transportation": {
+        "id": "nsw:30343: :H:sj2",
+        "name": "Sydney Buses Network 343",
+        "disassembledName": "343",
+        "number": "343",
+        "description": "City Circular Quay to Kingsford",
+        "product": {
+          "id": 5,
+          "class": 5,
+          "name": "Sydney Buses Network",
+          "iconId": 5
+        },
+        "operator": {
+          "id": "2509",
+          "name": "Transdev John Holland Buses"
+        },
+        "destination": {
+          "id": "10112155",
+          "name": "Kingsford",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 333,
+          "lineDisplay": "LINE",
+          "globalId": "3002",
+          "OperatorURL": "http://transportnsw.info"
+        },
+        "origin": {
+          "id": "10101103",
+          "name": "Circular Quay, Sydney",
+          "type": "stop"
+        },
+        "iconId": 5
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "2357626",
+        "AVMSTripID": "2357626",
+        "pbyb": "1"
+      }
+    },
+    {
+      "realtimeStatus": [
+        "MONITORED"
+      ],
+      "isRealtimeControlled": true,
+      "location": {
+        "id": "20002",
+        "isGlobalId": true,
+        "name": "Circular Quay, Alfred St, Stand B, Sydney",
+        "disassembledName": "Circular Quay, Alfred St, Stand B, Sydney",
+        "type": "platform",
+        "coord": [
+          -33.861602,
+          151.211916
+        ],
+        "properties": {
+          "stopId": "10101103",
+          "area": "12",
+          "platform": "B",
+          "platformName": "Circular Quay, Alfred St, Stand B",
+          "plannedPlatformName": "Circular Quay, Alfred St, Stand B"
+        },
+        "parent": {
+          "id": "200020",
+          "isGlobalId": true,
+          "name": "Circular Quay, Alfred St, Stand B, Sydney",
+          "disassembledName": "Circular Quay, Alfred St, Stand B",
+          "type": "stop",
+          "parent": {
+            "name": "Sydney",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10101103"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T00:00:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T00:00:00Z",
+      "departureTimeEstimated": "2026-01-14T00:00:00Z",
+      "transportation": {
+        "id": "nsw:30396: :H:sj2",
+        "name": "Sydney Buses Network 396",
+        "disassembledName": "396",
+        "number": "396",
+        "description": "City Circular Quay to Maroubra Beach",
+        "product": {
+          "id": 5,
+          "class": 5,
+          "name": "Sydney Buses Network",
+          "iconId": 5
+        },
+        "operator": {
+          "id": "2509",
+          "name": "Transdev John Holland Buses"
+        },
+        "destination": {
+          "id": "10112405",
+          "name": "Maroubra Beach",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 289,
+          "lineDisplay": "LINE",
+          "globalId": "3002",
+          "OperatorURL": "http://transportnsw.info"
+        },
+        "origin": {
+          "id": "10101103",
+          "name": "Circular Quay, Sydney",
+          "type": "stop"
+        },
+        "iconId": 5
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "2136980",
+        "AVMSTripID": "2136980",
+        "pbyb": "1"
+      }
+    },
+    {
+      "realtimeStatus": [
+        "MONITORED"
+      ],
+      "isRealtimeControlled": true,
+      "location": {
+        "id": "2000449",
+        "isGlobalId": true,
+        "name": "Circular Quay, Circular Quay Light Rail, Sydney",
+        "disassembledName": "Circular Quay, Circular Quay Light Rail, Sydney",
+        "type": "platform",
+        "coord": [
+          -33.861485,
+          151.210042
+        ],
+        "properties": {
+          "stopId": "10101103",
+          "area": "9",
+          "platform": "LR2",
+          "platformName": "Circular Quay Light Rail",
+          "plannedPlatformName": "Circular Quay Light Rail"
+        },
+        "parent": {
+          "id": "200020",
+          "isGlobalId": true,
+          "name": "Circular Quay, Sydney",
+          "disassembledName": "Circular Quay",
+          "type": "stop",
+          "parent": {
+            "name": "Sydney",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10101103"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T00:02:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T00:02:00Z",
+      "departureTimeEstimated": "2026-01-14T00:02:18Z",
+      "transportation": {
+        "id": "nsw:780L2: :H:sj2",
+        "name": "Sydney Light Rail Network L2 Randwick Line",
+        "disassembledName": "L2",
+        "number": "L2 Randwick Line",
+        "description": "Circular Quay to Randwick",
+        "product": {
+          "id": 13,
+          "class": 4,
+          "name": "Sydney Light Rail Network",
+          "iconId": 4
+        },
+        "operator": {
+          "id": "SLR",
+          "name": "Sydney Light Rail"
+        },
+        "destination": {
+          "id": "10101612",
+          "name": "Randwick",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 679,
+          "lineDisplay": "LINE",
+          "globalId": "3004",
+          "OperatorURL": "http://transportnsw.info",
+          "FrequencyLine": "1"
+        },
+        "origin": {
+          "id": "10101103",
+          "name": "Circular Quay, Sydney",
+          "type": "stop"
+        },
+        "iconId": 13
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "47597-10279:1001",
+        "AVMSTripID": "47597-10279:1001",
+        "pbyb": "1"
+      }
+    },
+    {
+      "realtimeStatus": [
+        "MONITORED"
+      ],
+      "isRealtimeControlled": true,
+      "location": {
+        "id": "20002",
+        "isGlobalId": true,
+        "name": "Circular Quay, Alfred St, Stand B, Sydney",
+        "disassembledName": "Circular Quay, Alfred St, Stand B, Sydney",
+        "type": "platform",
+        "coord": [
+          -33.861602,
+          151.211916
+        ],
+        "properties": {
+          "stopId": "10101103",
+          "area": "12",
+          "platform": "B",
+          "platformName": "Circular Quay, Alfred St, Stand B",
+          "plannedPlatformName": "Circular Quay, Alfred St, Stand B"
+        },
+        "parent": {
+          "id": "200020",
+          "isGlobalId": true,
+          "name": "Circular Quay, Alfred St, Stand B, Sydney",
+          "disassembledName": "Circular Quay, Alfred St, Stand B",
+          "type": "stop",
+          "parent": {
+            "name": "Sydney",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10101103"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T00:03:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T00:03:00Z",
+      "departureTimeEstimated": "2026-01-14T00:04:54Z",
+      "transportation": {
+        "id": "nsw:30333: :H:sj2",
+        "name": "Sydney Buses Network 333",
+        "disassembledName": "333",
+        "number": "333",
+        "description": "City Circular Quay to North Bondi via Bondi Junction",
+        "product": {
+          "id": 5,
+          "class": 5,
+          "name": "Sydney Buses Network",
+          "iconId": 5
+        },
+        "operator": {
+          "id": "2509",
+          "name": "Transdev John Holland Buses"
+        },
+        "destination": {
+          "id": "10111776",
+          "name": "North Bondi",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 225,
+          "lineDisplay": "LINE",
+          "globalId": "3002",
+          "OperatorURL": "http://transportnsw.info",
+          "FrequencyLine": "1"
+        },
+        "origin": {
+          "id": "10101103",
+          "name": "Circular Quay, Sydney",
+          "type": "stop"
+        },
+        "iconId": 5
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "2565094",
+        "AVMSTripID": "2565094",
+        "pbyb": "1"
+      }
+    },
+    {
+      "realtimeStatus": [
+        "MONITORED"
+      ],
+      "isRealtimeControlled": true,
+      "location": {
+        "id": "2000351",
+        "isGlobalId": true,
+        "name": "Circular Quay, Platform 1, Sydney",
+        "disassembledName": "Circular Quay, Platform 1, Sydney",
+        "type": "platform",
+        "coord": [
+          -33.861351,
+          151.210295
+        ],
+        "properties": {
+          "stopId": "10101103",
+          "area": "1",
+          "platform": "CCQ1",
+          "platformName": "Platform 1",
+          "plannedPlatformName": "Platform 1"
+        },
+        "parent": {
+          "id": "200020",
+          "isGlobalId": true,
+          "name": "Circular Quay, Platform 1, Sydney",
+          "disassembledName": "Circular Quay, Platform 1",
+          "type": "stop",
+          "parent": {
+            "name": "Sydney",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10101103"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T00:04:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T00:04:30Z",
+      "departureTimeEstimated": "2026-01-14T00:04:00Z",
+      "transportation": {
+        "id": "nsw:020T2: :H:sj2",
+        "name": "Sydney Trains Network T2 Leppington & Inner West Line",
+        "disassembledName": "T2",
+        "number": "T2 Leppington & Inner West Line",
+        "description": "City to Parramatta or Leppington",
+        "product": {
+          "id": 1,
+          "class": 1,
+          "name": "Sydney Trains Network",
+          "iconId": 1
+        },
+        "operator": {
+          "id": "x0001",
+          "name": "Sydney Trains"
+        },
+        "destination": {
+          "id": "10101428",
+          "name": "Leppington via Granville",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 1483,
+          "lineDisplay": "LINE",
+          "globalId": "3001",
+          "OperatorURL": "http://www.sydneytrains.info/"
+        },
+        "origin": {
+          "id": "10101100",
+          "name": "Central Station, Sydney",
+          "type": "stop"
+        },
+        "iconId": 1
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "97-H.1257.152.16.A.8.88113733",
+        "AVMSTripID": "97-H.1257.152.16.A.8.88113733"
+      }
+    },
+    {
+      "location": {
+        "id": "2000147",
+        "isGlobalId": true,
+        "name": "Circular Quay, Alfred St, Stand A, Sydney",
+        "disassembledName": "Circular Quay, Alfred St, Stand A, Sydney",
+        "type": "platform",
+        "coord": [
+          -33.861695,
+          151.211543
+        ],
+        "properties": {
+          "stopId": "10101103",
+          "area": "11",
+          "platform": "A",
+          "platformName": "Circular Quay, Alfred St, Stand A",
+          "plannedPlatformName": "Circular Quay, Alfred St, Stand A"
+        },
+        "parent": {
+          "id": "200020",
+          "isGlobalId": true,
+          "name": "Circular Quay, Alfred St, Stand A, Sydney",
+          "disassembledName": "Circular Quay, Alfred St, Stand A",
+          "type": "stop",
+          "parent": {
+            "name": "Sydney",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10101103"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T00:05:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T00:05:00Z",
+      "transportation": {
+        "id": "nsw:30304: :R:sj2",
+        "name": "Sydney Buses Network 304",
+        "disassembledName": "304",
+        "number": "304",
+        "description": "City Circular Quay to Green Square (Loop Service)",
+        "product": {
+          "id": 5,
+          "class": 5,
+          "name": "Sydney Buses Network",
+          "iconId": 5
+        },
+        "operator": {
+          "id": "2509",
+          "name": "Transdev John Holland Buses"
+        },
+        "destination": {
+          "id": "10111066",
+          "name": "City Circular Quay via Green Square",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 101,
+          "lineDisplay": "LINE",
+          "globalId": "3002",
+          "OperatorURL": "http://transportnsw.info"
+        },
+        "origin": {
+          "id": "10101103",
+          "name": "Circular Quay, Sydney",
+          "type": "stop"
+        },
+        "iconId": 5
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "2371045",
+        "pbyb": "1"
+      }
+    },
+    {
+      "realtimeStatus": [
+        "MONITORED"
+      ],
+      "isRealtimeControlled": true,
+      "location": {
+        "id": "2000450",
+        "isGlobalId": true,
+        "name": "Circular Quay, Circular Quay Light Rail, Sydney",
+        "disassembledName": "Circular Quay, Circular Quay Light Rail, Sydney",
+        "type": "platform",
+        "coord": [
+          -33.861512,
+          151.210043
+        ],
+        "properties": {
+          "stopId": "10101103",
+          "area": "9",
+          "platform": "LR1",
+          "platformName": "Circular Quay Light Rail",
+          "plannedPlatformName": "Circular Quay Light Rail"
+        },
+        "parent": {
+          "id": "200020",
+          "isGlobalId": true,
+          "name": "Circular Quay, Sydney",
+          "disassembledName": "Circular Quay",
+          "type": "stop",
+          "parent": {
+            "name": "Sydney",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10101103"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T00:06:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T00:06:00Z",
+      "departureTimeEstimated": "2026-01-14T00:08:06Z",
+      "transportation": {
+        "id": "nsw:780L3: :H:sj2",
+        "name": "Sydney Light Rail Network L3 Kingsford Line",
+        "disassembledName": "L3",
+        "number": "L3 Kingsford Line",
+        "description": "Circular Quay to Juniors Kingsford",
+        "product": {
+          "id": 13,
+          "class": 4,
+          "name": "Sydney Light Rail Network",
+          "iconId": 4
+        },
+        "operator": {
+          "id": "SLR",
+          "name": "Sydney Light Rail"
+        },
+        "destination": {
+          "id": "10101617",
+          "name": "Juniors Kingsford",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 543,
+          "lineDisplay": "LINE",
+          "globalId": "3004",
+          "OperatorURL": "http://transportnsw.info",
+          "FrequencyLine": "1"
+        },
+        "origin": {
+          "id": "10101103",
+          "name": "Circular Quay, Sydney",
+          "type": "stop"
+        },
+        "iconId": 13
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "47597-10281:1001",
+        "AVMSTripID": "47597-10281:1001",
+        "pbyb": "1"
+      }
+    },
+    {
+      "realtimeStatus": [
+        "MONITORED"
+      ],
+      "isRealtimeControlled": true,
+      "location": {
+        "id": "2000351",
+        "isGlobalId": true,
+        "name": "Circular Quay, Platform 1, Sydney",
+        "disassembledName": "Circular Quay, Platform 1, Sydney",
+        "type": "platform",
+        "coord": [
+          -33.861351,
+          151.210295
+        ],
+        "properties": {
+          "stopId": "10101103",
+          "area": "1",
+          "platform": "CCQ1",
+          "platformName": "Platform 1",
+          "plannedPlatformName": "Platform 1"
+        },
+        "parent": {
+          "id": "200020",
+          "isGlobalId": true,
+          "name": "Circular Quay, Platform 1, Sydney",
+          "disassembledName": "Circular Quay, Platform 1",
+          "type": "stop",
+          "parent": {
+            "name": "Sydney",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10101103"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T00:07:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T00:07:30Z",
+      "departureTimeEstimated": "2026-01-14T00:07:00Z",
+      "transportation": {
+        "id": "nsw:020T3: :H:sj2",
+        "name": "Sydney Trains Network T3 Liverpool & Inner West Line",
+        "disassembledName": "T3",
+        "number": "T3 Liverpool & Inner West Line",
+        "description": "City to Liverpool or Lidcombe",
+        "product": {
+          "id": 1,
+          "class": 1,
+          "name": "Sydney Trains Network",
+          "iconId": 1
+        },
+        "operator": {
+          "id": "x0001",
+          "name": "Sydney Trains"
+        },
+        "destination": {
+          "id": "10101289",
+          "name": "Liverpool via Regents Park",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 336,
+          "lineDisplay": "LINE",
+          "globalId": "3001",
+          "OperatorURL": "http://www.sydneytrains.info/"
+        },
+        "origin": {
+          "id": "10101100",
+          "name": "Central Station, Sydney",
+          "type": "stop"
+        },
+        "iconId": 1
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "87-M.1257.152.24.A.8.88114020",
+        "AVMSTripID": "87-M.1257.152.24.A.8.88114020"
+      }
+    },
+    {
+      "realtimeStatus": [
+        "MONITORED"
+      ],
+      "isRealtimeControlled": true,
+      "location": {
+        "id": "2000229",
+        "isGlobalId": true,
+        "name": "Circular Quay, Wharf 5, Side B, Sydney",
+        "disassembledName": "Circular Quay, Wharf 5, Side B, Sydney",
+        "type": "platform",
+        "coord": [
+          -33.860608,
+          151.21042
+        ],
+        "properties": {
+          "stopId": "10101103",
+          "area": "7",
+          "platform": "F5B",
+          "platformName": "Wharf 5, Side B",
+          "plannedPlatformName": "Wharf 5, Side B"
+        },
+        "parent": {
+          "id": "200020",
+          "isGlobalId": true,
+          "name": "Circular Quay, Wharf 5, Side B, Sydney",
+          "disassembledName": "Circular Quay, Wharf 5, Side B",
+          "type": "stop",
+          "parent": {
+            "name": "Sydney",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10101103"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T00:07:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T00:07:00Z",
+      "departureTimeEstimated": "2026-01-14T00:07:00Z",
+      "transportation": {
+        "id": "nsw:090F3: :H:sj2",
+        "name": "Sydney Ferries Network F3 Parramatta River",
+        "disassembledName": "F3",
+        "number": "F3 Parramatta River",
+        "description": "Circular Quay to Parramatta",
+        "product": {
+          "id": 10,
+          "class": 9,
+          "name": "Sydney Ferries Network",
+          "iconId": 9
+        },
+        "operator": {
+          "code": "SF",
+          "id": "SF",
+          "name": "Sydney Ferries"
+        },
+        "destination": {
+          "id": "10102032",
+          "name": "Parramatta",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 362,
+          "lineDisplay": "LINE",
+          "globalId": "3003"
+        },
+        "origin": {
+          "id": "10101103",
+          "name": "Circular Quay, Sydney",
+          "type": "stop"
+        },
+        "iconId": 10
+      },
+      "infos": [
+        {
+          "priority": "veryLow",
+          "id": "ems-160",
+          "version": 19019037,
+          "type": "lineInfo",
+          "properties": {
+            "publisher": "ems.comm.addinfo",
+            "infoType": "lineInfo",
+            "smsText": "Departure or arrival wharf may change at short notice"
+          },
+          "infoLinks": [
+            {
+              "urlText": "Departure or arrival wharf may change at short notice",
+              "url": "https://transportnsw.info/alerts/details#/ems-160",
+              "content": "<div>Please check indicator boards and listen for announcements.</div>",
+              "subtitle": "Departure or arrival wharf may change at short notice",
+              "smsText": "Departure or arrival wharf may change at short notice"
+            }
+          ],
+          "urlText": "Departure or arrival wharf may change at short notice",
+          "url": "https://transportnsw.info/alerts/details#/ems-160",
+          "content": "<div>Please check indicator boards and listen for announcements.</div>",
+          "subtitle": "Departure or arrival wharf may change at short notice"
+        }
+      ],
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "RV1107-PAR-OUT-WDSM.140126.4.1107",
+        "AVMSTripID": "RV1107-PAR-OUT-WDSM.140126.4.1107"
+      }
+    },
+    {
+      "realtimeStatus": [
+        "MONITORED"
+      ],
+      "isRealtimeControlled": true,
+      "location": {
+        "id": "20002",
+        "isGlobalId": true,
+        "name": "Circular Quay, Alfred St, Stand B, Sydney",
+        "disassembledName": "Circular Quay, Alfred St, Stand B, Sydney",
+        "type": "platform",
+        "coord": [
+          -33.861602,
+          151.211916
+        ],
+        "properties": {
+          "stopId": "10101103",
+          "area": "12",
+          "platform": "B",
+          "platformName": "Circular Quay, Alfred St, Stand B",
+          "plannedPlatformName": "Circular Quay, Alfred St, Stand B"
+        },
+        "parent": {
+          "id": "200020",
+          "isGlobalId": true,
+          "name": "Circular Quay, Alfred St, Stand B, Sydney",
+          "disassembledName": "Circular Quay, Alfred St, Stand B",
+          "type": "stop",
+          "parent": {
+            "name": "Sydney",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10101103"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T00:07:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T00:07:00Z",
+      "departureTimeEstimated": "2026-01-14T00:07:00Z",
+      "transportation": {
+        "id": "nsw:30333: :H:sj2",
+        "name": "Sydney Buses Network 333",
+        "disassembledName": "333",
+        "number": "333",
+        "description": "City Circular Quay to North Bondi via Bondi Junction",
+        "product": {
+          "id": 5,
+          "class": 5,
+          "name": "Sydney Buses Network",
+          "iconId": 5
+        },
+        "operator": {
+          "id": "2509",
+          "name": "Transdev John Holland Buses"
+        },
+        "destination": {
+          "id": "10111776",
+          "name": "North Bondi",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 229,
+          "lineDisplay": "LINE",
+          "globalId": "3002",
+          "OperatorURL": "http://transportnsw.info",
+          "FrequencyLine": "1"
+        },
+        "origin": {
+          "id": "10101103",
+          "name": "Circular Quay, Sydney",
+          "type": "stop"
+        },
+        "iconId": 5
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "2564968",
+        "AVMSTripID": "2564968",
+        "pbyb": "1"
+      }
+    },
+    {
+      "realtimeStatus": [
+        "MONITORED"
+      ],
+      "isRealtimeControlled": true,
+      "location": {
+        "id": "2000352",
+        "isGlobalId": true,
+        "name": "Circular Quay, Platform 2, Sydney",
+        "disassembledName": "Circular Quay, Platform 2, Sydney",
+        "type": "platform",
+        "coord": [
+          -33.86126,
+          151.210312
+        ],
+        "properties": {
+          "stopId": "10101103",
+          "area": "2",
+          "platform": "CCQ2",
+          "platformName": "Platform 2",
+          "plannedPlatformName": "Platform 2"
+        },
+        "parent": {
+          "id": "200020",
+          "isGlobalId": true,
+          "name": "Circular Quay, Platform 2, Sydney",
+          "disassembledName": "Circular Quay, Platform 2",
+          "type": "stop",
+          "parent": {
+            "name": "Sydney",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10101103"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T00:08:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T00:08:30Z",
+      "departureTimeEstimated": "2026-01-14T00:08:24Z",
+      "transportation": {
+        "id": "nsw:020T8: :H:sj2",
+        "name": "Sydney Trains Network T8 Airport & South Line",
+        "disassembledName": "T8",
+        "number": "T8 Airport & South Line",
+        "description": "City to Macarthur via Airport or Sydenham",
+        "product": {
+          "id": 1,
+          "class": 1,
+          "name": "Sydney Trains Network",
+          "iconId": 1
+        },
+        "operator": {
+          "id": "x0001",
+          "name": "Sydney Trains"
+        },
+        "destination": {
+          "id": "10101417",
+          "name": "Revesby via Airport",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 1205,
+          "lineDisplay": "LINE",
+          "globalId": "3001",
+          "OperatorURL": "http://www.sydneytrains.info/"
+        },
+        "origin": {
+          "id": "10101100",
+          "name": "Central Station, Sydney",
+          "type": "stop"
+        },
+        "iconId": 1
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "84-K.1257.152.48.A.8.88110777",
+        "AVMSTripID": "84-K.1257.152.48.A.8.88110777"
+      }
+    },
+    {
+      "realtimeStatus": [
+        "MONITORED"
+      ],
+      "isRealtimeControlled": true,
+      "location": {
+        "id": "2000351",
+        "isGlobalId": true,
+        "name": "Circular Quay, Platform 1, Sydney",
+        "disassembledName": "Circular Quay, Platform 1, Sydney",
+        "type": "platform",
+        "coord": [
+          -33.861351,
+          151.210295
+        ],
+        "properties": {
+          "stopId": "10101103",
+          "area": "1",
+          "platform": "CCQ1",
+          "platformName": "Platform 1",
+          "plannedPlatformName": "Platform 1"
+        },
+        "parent": {
+          "id": "200020",
+          "isGlobalId": true,
+          "name": "Circular Quay, Platform 1, Sydney",
+          "disassembledName": "Circular Quay, Platform 1",
+          "type": "stop",
+          "parent": {
+            "name": "Sydney",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10101103"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T00:10:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T00:10:30Z",
+      "departureTimeEstimated": "2026-01-14T00:10:00Z",
+      "transportation": {
+        "id": "nsw:020T2: :H:sj2",
+        "name": "Sydney Trains Network T2 Leppington & Inner West Line",
+        "disassembledName": "T2",
+        "number": "T2 Leppington & Inner West Line",
+        "description": "City to Parramatta or Leppington",
+        "product": {
+          "id": 1,
+          "class": 1,
+          "name": "Sydney Trains Network",
+          "iconId": 1
+        },
+        "operator": {
+          "id": "x0001",
+          "name": "Sydney Trains"
+        },
+        "destination": {
+          "id": "10101229",
+          "name": "Parramatta via Strathfield",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 1353,
+          "lineDisplay": "LINE",
+          "globalId": "3001",
+          "OperatorURL": "http://www.sydneytrains.info/"
+        },
+        "origin": {
+          "id": "10101100",
+          "name": "Central Station, Sydney",
+          "type": "stop"
+        },
+        "iconId": 1
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "82-J.1257.152.60.A.8.88110772",
+        "AVMSTripID": "82-J.1257.152.60.A.8.88110772"
+      }
+    },
+    {
+      "realtimeStatus": [
+        "MONITORED"
+      ],
+      "isRealtimeControlled": true,
+      "location": {
+        "id": "2000147",
+        "isGlobalId": true,
+        "name": "Circular Quay, Alfred St, Stand A, Sydney",
+        "disassembledName": "Circular Quay, Alfred St, Stand A, Sydney",
+        "type": "platform",
+        "coord": [
+          -33.861695,
+          151.211543
+        ],
+        "properties": {
+          "stopId": "10101103",
+          "area": "11",
+          "platform": "A",
+          "platformName": "Circular Quay, Alfred St, Stand A",
+          "plannedPlatformName": "Circular Quay, Alfred St, Stand A"
+        },
+        "parent": {
+          "id": "200020",
+          "isGlobalId": true,
+          "name": "Circular Quay, Alfred St, Stand A, Sydney",
+          "disassembledName": "Circular Quay, Alfred St, Stand A",
+          "type": "stop",
+          "parent": {
+            "name": "Sydney",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10101103"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T00:10:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T00:10:00Z",
+      "departureTimeEstimated": "2026-01-14T00:10:00Z",
+      "transportation": {
+        "id": "nsw:30343: :H:sj2",
+        "name": "Sydney Buses Network 343",
+        "disassembledName": "343",
+        "number": "343",
+        "description": "City Circular Quay to Kingsford",
+        "product": {
+          "id": 5,
+          "class": 5,
+          "name": "Sydney Buses Network",
+          "iconId": 5
+        },
+        "operator": {
+          "id": "2509",
+          "name": "Transdev John Holland Buses"
+        },
+        "destination": {
+          "id": "10112155",
+          "name": "Kingsford",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 334,
+          "lineDisplay": "LINE",
+          "globalId": "3002",
+          "OperatorURL": "http://transportnsw.info"
+        },
+        "origin": {
+          "id": "10101103",
+          "name": "Circular Quay, Sydney",
+          "type": "stop"
+        },
+        "iconId": 5
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "2356022",
+        "AVMSTripID": "2356022",
+        "pbyb": "1"
+      }
+    },
+    {
+      "realtimeStatus": [
+        "MONITORED"
+      ],
+      "isRealtimeControlled": true,
+      "location": {
+        "id": "20002",
+        "isGlobalId": true,
+        "name": "Circular Quay, Alfred St, Stand B, Sydney",
+        "disassembledName": "Circular Quay, Alfred St, Stand B, Sydney",
+        "type": "platform",
+        "coord": [
+          -33.861602,
+          151.211916
+        ],
+        "properties": {
+          "stopId": "10101103",
+          "area": "12",
+          "platform": "B",
+          "platformName": "Circular Quay, Alfred St, Stand B",
+          "plannedPlatformName": "Circular Quay, Alfred St, Stand B"
+        },
+        "parent": {
+          "id": "200020",
+          "isGlobalId": true,
+          "name": "Circular Quay, Alfred St, Stand B, Sydney",
+          "disassembledName": "Circular Quay, Alfred St, Stand B",
+          "type": "stop",
+          "parent": {
+            "name": "Sydney",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10101103"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T00:10:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T00:10:00Z",
+      "departureTimeEstimated": "2026-01-14T00:10:00Z",
+      "transportation": {
+        "id": "nsw:30396: :H:sj2",
+        "name": "Sydney Buses Network 396",
+        "disassembledName": "396",
+        "number": "396",
+        "description": "City Circular Quay to Maroubra Beach",
+        "product": {
+          "id": 5,
+          "class": 5,
+          "name": "Sydney Buses Network",
+          "iconId": 5
+        },
+        "operator": {
+          "id": "2509",
+          "name": "Transdev John Holland Buses"
+        },
+        "destination": {
+          "id": "10112405",
+          "name": "Maroubra Beach",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 290,
+          "lineDisplay": "LINE",
+          "globalId": "3002",
+          "OperatorURL": "http://transportnsw.info"
+        },
+        "origin": {
+          "id": "10101103",
+          "name": "Circular Quay, Sydney",
+          "type": "stop"
+        },
+        "iconId": 5
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "2140857",
+        "AVMSTripID": "2140857",
+        "pbyb": "1"
+      }
+    },
+    {
+      "realtimeStatus": [
+        "MONITORED"
+      ],
+      "isRealtimeControlled": true,
+      "location": {
+        "id": "2000449",
+        "isGlobalId": true,
+        "name": "Circular Quay, Circular Quay Light Rail, Sydney",
+        "disassembledName": "Circular Quay, Circular Quay Light Rail, Sydney",
+        "type": "platform",
+        "coord": [
+          -33.861485,
+          151.210042
+        ],
+        "properties": {
+          "stopId": "10101103",
+          "area": "9",
+          "platform": "LR2",
+          "platformName": "Circular Quay Light Rail",
+          "plannedPlatformName": "Circular Quay Light Rail"
+        },
+        "parent": {
+          "id": "200020",
+          "isGlobalId": true,
+          "name": "Circular Quay, Sydney",
+          "disassembledName": "Circular Quay",
+          "type": "stop",
+          "parent": {
+            "name": "Sydney",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10101103"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T00:10:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T00:10:00Z",
+      "departureTimeEstimated": "2026-01-14T00:11:36Z",
+      "transportation": {
+        "id": "nsw:780L2: :H:sj2",
+        "name": "Sydney Light Rail Network L2 Randwick Line",
+        "disassembledName": "L2",
+        "number": "L2 Randwick Line",
+        "description": "Circular Quay to Randwick",
+        "product": {
+          "id": 13,
+          "class": 4,
+          "name": "Sydney Light Rail Network",
+          "iconId": 4
+        },
+        "operator": {
+          "id": "SLR",
+          "name": "Sydney Light Rail"
+        },
+        "destination": {
+          "id": "10101612",
+          "name": "Randwick",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 487,
+          "lineDisplay": "LINE",
+          "globalId": "3004",
+          "OperatorURL": "http://transportnsw.info",
+          "FrequencyLine": "1"
+        },
+        "origin": {
+          "id": "10101103",
+          "name": "Circular Quay, Sydney",
+          "type": "stop"
+        },
+        "iconId": 13
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "47597-10285:1001",
+        "AVMSTripID": "47597-10285:1001",
+        "pbyb": "1"
+      }
+    },
+    {
+      "realtimeStatus": [
+        "MONITORED"
+      ],
+      "isRealtimeControlled": true,
+      "location": {
+        "id": "2000352",
+        "isGlobalId": true,
+        "name": "Circular Quay, Platform 2, Sydney",
+        "disassembledName": "Circular Quay, Platform 2, Sydney",
+        "type": "platform",
+        "coord": [
+          -33.86126,
+          151.210312
+        ],
+        "properties": {
+          "stopId": "10101103",
+          "area": "2",
+          "platform": "CCQ2",
+          "platformName": "Platform 2",
+          "plannedPlatformName": "Platform 2"
+        },
+        "parent": {
+          "id": "200020",
+          "isGlobalId": true,
+          "name": "Circular Quay, Platform 2, Sydney",
+          "disassembledName": "Circular Quay, Platform 2",
+          "type": "stop",
+          "parent": {
+            "name": "Sydney",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10101103"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T00:11:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T00:11:30Z",
+      "departureTimeEstimated": "2026-01-14T00:11:00Z",
+      "transportation": {
+        "id": "nsw:020T8: :H:sj2",
+        "name": "Sydney Trains Network T8 Airport & South Line",
+        "disassembledName": "T8",
+        "number": "T8 Airport & South Line",
+        "description": "City to Macarthur via Airport or Sydenham",
+        "product": {
+          "id": 1,
+          "class": 1,
+          "name": "Sydney Trains Network",
+          "iconId": 1
+        },
+        "operator": {
+          "id": "x0001",
+          "name": "Sydney Trains"
+        },
+        "destination": {
+          "id": "10101326",
+          "name": "Sydenham",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 929,
+          "lineDisplay": "LINE",
+          "globalId": "3001",
+          "OperatorURL": "http://www.sydneytrains.info/"
+        },
+        "origin": {
+          "id": "10101100",
+          "name": "Central Station, Sydney",
+          "type": "stop"
+        },
+        "iconId": 1
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "91-K.1257.152.56.A.8.88114283",
+        "AVMSTripID": "91-K.1257.152.56.A.8.88114283"
+      }
+    },
+    {
+      "realtimeStatus": [
+        "MONITORED"
+      ],
+      "isRealtimeControlled": true,
+      "location": {
+        "id": "20002",
+        "isGlobalId": true,
+        "name": "Circular Quay, Alfred St, Stand B, Sydney",
+        "disassembledName": "Circular Quay, Alfred St, Stand B, Sydney",
+        "type": "platform",
+        "coord": [
+          -33.861602,
+          151.211916
+        ],
+        "properties": {
+          "stopId": "10101103",
+          "area": "12",
+          "platform": "B",
+          "platformName": "Circular Quay, Alfred St, Stand B",
+          "plannedPlatformName": "Circular Quay, Alfred St, Stand B"
+        },
+        "parent": {
+          "id": "200020",
+          "isGlobalId": true,
+          "name": "Circular Quay, Alfred St, Stand B, Sydney",
+          "disassembledName": "Circular Quay, Alfred St, Stand B",
+          "type": "stop",
+          "parent": {
+            "name": "Sydney",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10101103"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T00:11:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T00:11:00Z",
+      "departureTimeEstimated": "2026-01-14T00:11:00Z",
+      "transportation": {
+        "id": "nsw:30333: :H:sj2",
+        "name": "Sydney Buses Network 333",
+        "disassembledName": "333",
+        "number": "333",
+        "description": "City Circular Quay to North Bondi via Bondi Junction",
+        "product": {
+          "id": 5,
+          "class": 5,
+          "name": "Sydney Buses Network",
+          "iconId": 5
+        },
+        "operator": {
+          "id": "2509",
+          "name": "Transdev John Holland Buses"
+        },
+        "destination": {
+          "id": "10111776",
+          "name": "North Bondi",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 234,
+          "lineDisplay": "LINE",
+          "globalId": "3002",
+          "OperatorURL": "http://transportnsw.info",
+          "FrequencyLine": "1"
+        },
+        "origin": {
+          "id": "10101103",
+          "name": "Circular Quay, Sydney",
+          "type": "stop"
+        },
+        "iconId": 5
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "2564678",
+        "AVMSTripID": "2564678",
+        "pbyb": "1"
+      }
+    },
+    {
+      "realtimeStatus": [
+        "MONITORED"
+      ],
+      "isRealtimeControlled": true,
+      "location": {
+        "id": "2000225",
+        "isGlobalId": true,
+        "name": "Circular Quay, Wharf 4, Side B, Sydney",
+        "disassembledName": "Circular Quay, Wharf 4, Side B, Sydney",
+        "type": "platform",
+        "coord": [
+          -33.860663,
+          151.210909
+        ],
+        "properties": {
+          "stopId": "10101103",
+          "area": "6",
+          "platform": "F4B",
+          "platformName": "Wharf 4, Side B",
+          "plannedPlatformName": "Wharf 4, Side B"
+        },
+        "parent": {
+          "id": "200020",
+          "isGlobalId": true,
+          "name": "Circular Quay, Wharf 4, Side B, Sydney",
+          "disassembledName": "Circular Quay, Wharf 4, Side B",
+          "type": "stop",
+          "parent": {
+            "name": "Sydney",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10101103"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T00:12:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T00:12:00Z",
+      "departureTimeEstimated": "2026-01-14T00:12:00Z",
+      "transportation": {
+        "id": "nsw:090F2: :H:sj2",
+        "name": "Sydney Ferries Network F2 Taronga Zoo",
+        "disassembledName": "F2",
+        "number": "F2 Taronga Zoo",
+        "description": "Circular Quay to Taronga Zoo",
+        "product": {
+          "id": 10,
+          "class": 9,
+          "name": "Sydney Ferries Network",
+          "iconId": 9
+        },
+        "operator": {
+          "code": "SF",
+          "id": "SF",
+          "name": "Sydney Ferries"
+        },
+        "destination": {
+          "id": "10102022",
+          "name": "Taronga Zoo",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 91,
+          "lineDisplay": "LINE",
+          "globalId": "3003"
+        },
+        "origin": {
+          "id": "10101103",
+          "name": "Circular Quay, Sydney",
+          "type": "stop"
+        },
+        "iconId": 10
+      },
+      "infos": [
+        {
+          "priority": "veryLow",
+          "id": "ems-160",
+          "version": 19019037,
+          "type": "lineInfo",
+          "properties": {
+            "publisher": "ems.comm.addinfo",
+            "infoType": "lineInfo",
+            "smsText": "Departure or arrival wharf may change at short notice"
+          },
+          "infoLinks": [
+            {
+              "urlText": "Departure or arrival wharf may change at short notice",
+              "url": "https://transportnsw.info/alerts/details#/ems-160",
+              "content": "<div>Please check indicator boards and listen for announcements.</div>",
+              "subtitle": "Departure or arrival wharf may change at short notice",
+              "smsText": "Departure or arrival wharf may change at short notice"
+            }
+          ],
+          "urlText": "Departure or arrival wharf may change at short notice",
+          "url": "https://transportnsw.info/alerts/details#/ems-160",
+          "content": "<div>Please check indicator boards and listen for announcements.</div>",
+          "subtitle": "Departure or arrival wharf may change at short notice"
+        }
+      ],
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "TZ1112-OUT-WDSM.120126.31.1112",
+        "AVMSTripID": "TZ1112-OUT-WDSM.120126.31.1112"
+      }
+    },
+    {
+      "realtimeStatus": [
+        "MONITORED"
+      ],
+      "isRealtimeControlled": true,
+      "location": {
+        "id": "2000229",
+        "isGlobalId": true,
+        "name": "Circular Quay, Wharf 5, Side B, Sydney",
+        "disassembledName": "Circular Quay, Wharf 5, Side B, Sydney",
+        "type": "platform",
+        "coord": [
+          -33.860608,
+          151.21042
+        ],
+        "properties": {
+          "stopId": "10101103",
+          "area": "7",
+          "platform": "F5B",
+          "platformName": "Wharf 5, Side B",
+          "plannedPlatformName": "Wharf 5, Side B"
+        },
+        "parent": {
+          "id": "200020",
+          "isGlobalId": true,
+          "name": "Circular Quay, Wharf 5, Side B, Sydney",
+          "disassembledName": "Circular Quay, Wharf 5, Side B",
+          "type": "stop",
+          "parent": {
+            "name": "Sydney",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10101103"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T00:12:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T00:12:00Z",
+      "departureTimeEstimated": "2026-01-14T00:12:00Z",
+      "transportation": {
+        "id": "nsw:090F4: :H:sj2",
+        "name": "Sydney Ferries Network F4 Pyrmont Bay",
+        "disassembledName": "F4",
+        "number": "F4 Pyrmont Bay",
+        "description": "Circular Quay to Pyrmont Bay",
+        "product": {
+          "id": 10,
+          "class": 9,
+          "name": "Sydney Ferries Network",
+          "iconId": 9
+        },
+        "operator": {
+          "code": "SF",
+          "id": "SF",
+          "name": "Sydney Ferries"
+        },
+        "destination": {
+          "id": "10102033",
+          "name": "Pyrmont Bay",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 180,
+          "lineDisplay": "LINE",
+          "globalId": "3003"
+        },
+        "origin": {
+          "id": "10101103",
+          "name": "Circular Quay, Sydney",
+          "type": "stop"
+        },
+        "iconId": 10
+      },
+      "infos": [
+        {
+          "priority": "veryLow",
+          "id": "ems-160",
+          "version": 19019037,
+          "type": "lineInfo",
+          "properties": {
+            "publisher": "ems.comm.addinfo",
+            "infoType": "lineInfo",
+            "smsText": "Departure or arrival wharf may change at short notice"
+          },
+          "infoLinks": [
+            {
+              "urlText": "Departure or arrival wharf may change at short notice",
+              "url": "https://transportnsw.info/alerts/details#/ems-160",
+              "content": "<div>Please check indicator boards and listen for announcements.</div>",
+              "subtitle": "Departure or arrival wharf may change at short notice",
+              "smsText": "Departure or arrival wharf may change at short notice"
+            }
+          ],
+          "urlText": "Departure or arrival wharf may change at short notice",
+          "url": "https://transportnsw.info/alerts/details#/ems-160",
+          "content": "<div>Please check indicator boards and listen for announcements.</div>",
+          "subtitle": "Departure or arrival wharf may change at short notice"
+        }
+      ],
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "DH1112-OUT-WDSM.120126.31.1112",
+        "AVMSTripID": "DH1112-OUT-WDSM.120126.31.1112"
+      }
+    },
+    {
+      "realtimeStatus": [
+        "MONITORED"
+      ],
+      "isRealtimeControlled": true,
+      "location": {
+        "id": "2000352",
+        "isGlobalId": true,
+        "name": "Circular Quay, Platform 2, Sydney",
+        "disassembledName": "Circular Quay, Platform 2, Sydney",
+        "type": "platform",
+        "coord": [
+          -33.86126,
+          151.210312
+        ],
+        "properties": {
+          "stopId": "10101103",
+          "area": "2",
+          "platform": "CCQ2",
+          "platformName": "Platform 2",
+          "plannedPlatformName": "Platform 2"
+        },
+        "parent": {
+          "id": "200020",
+          "isGlobalId": true,
+          "name": "Circular Quay, Platform 2, Sydney",
+          "disassembledName": "Circular Quay, Platform 2",
+          "type": "stop",
+          "parent": {
+            "name": "Sydney",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10101103"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T00:14:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T00:14:30Z",
+      "departureTimeEstimated": "2026-01-14T00:14:00Z",
+      "transportation": {
+        "id": "nsw:020T8: :H:sj2",
+        "name": "Sydney Trains Network T8 Airport & South Line",
+        "disassembledName": "T8",
+        "number": "T8 Airport & South Line",
+        "description": "City to Macarthur via Airport or Sydenham",
+        "product": {
+          "id": 1,
+          "class": 1,
+          "name": "Sydney Trains Network",
+          "iconId": 1
+        },
+        "operator": {
+          "id": "x0001",
+          "name": "Sydney Trains"
+        },
+        "destination": {
+          "id": "10101297",
+          "name": "Macarthur via Airport",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 1414,
+          "lineDisplay": "LINE",
+          "globalId": "3001",
+          "OperatorURL": "http://www.sydneytrains.info/"
+        },
+        "origin": {
+          "id": "10101100",
+          "name": "Central Station, Sydney",
+          "type": "stop"
+        },
+        "iconId": 1
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "81-G.1257.152.52.A.8.88111836",
+        "AVMSTripID": "81-G.1257.152.52.A.8.88111836"
+      }
+    },
+    {
+      "realtimeStatus": [
+        "MONITORED"
+      ],
+      "isRealtimeControlled": true,
+      "location": {
+        "id": "2000450",
+        "isGlobalId": true,
+        "name": "Circular Quay, Circular Quay Light Rail, Sydney",
+        "disassembledName": "Circular Quay, Circular Quay Light Rail, Sydney",
+        "type": "platform",
+        "coord": [
+          -33.861512,
+          151.210043
+        ],
+        "properties": {
+          "stopId": "10101103",
+          "area": "9",
+          "platform": "LR1",
+          "platformName": "Circular Quay Light Rail",
+          "plannedPlatformName": "Circular Quay Light Rail"
+        },
+        "parent": {
+          "id": "200020",
+          "isGlobalId": true,
+          "name": "Circular Quay, Sydney",
+          "disassembledName": "Circular Quay",
+          "type": "stop",
+          "parent": {
+            "name": "Sydney",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10101103"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T00:14:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T00:14:00Z",
+      "departureTimeEstimated": "2026-01-14T00:16:06Z",
+      "transportation": {
+        "id": "nsw:780L3: :H:sj2",
+        "name": "Sydney Light Rail Network L3 Kingsford Line",
+        "disassembledName": "L3",
+        "number": "L3 Kingsford Line",
+        "description": "Circular Quay to Juniors Kingsford",
+        "product": {
+          "id": 13,
+          "class": 4,
+          "name": "Sydney Light Rail Network",
+          "iconId": 4
+        },
+        "operator": {
+          "id": "SLR",
+          "name": "Sydney Light Rail"
+        },
+        "destination": {
+          "id": "10101617",
+          "name": "Juniors Kingsford",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 546,
+          "lineDisplay": "LINE",
+          "globalId": "3004",
+          "OperatorURL": "http://transportnsw.info",
+          "FrequencyLine": "1"
+        },
+        "origin": {
+          "id": "10101103",
+          "name": "Circular Quay, Sydney",
+          "type": "stop"
+        },
+        "iconId": 13
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "47597-10287:1001",
+        "AVMSTripID": "47597-10287:1001",
+        "pbyb": "1"
+      }
+    },
+    {
+      "realtimeStatus": [
+        "MONITORED"
+      ],
+      "isRealtimeControlled": true,
+      "location": {
+        "id": "2000216",
+        "isGlobalId": true,
+        "name": "Circular Quay, Wharf 3, Side A, Sydney",
+        "disassembledName": "Circular Quay, Wharf 3, Side A, Sydney",
+        "type": "platform",
+        "coord": [
+          -33.860747,
+          151.211604
+        ],
+        "properties": {
+          "stopId": "10101103",
+          "area": "5",
+          "platform": "F3A",
+          "platformName": "Wharf 3, Side A",
+          "plannedPlatformName": "Wharf 3, Side A"
+        },
+        "parent": {
+          "id": "200020",
+          "isGlobalId": true,
+          "name": "Circular Quay, Wharf 3, Side A, Sydney",
+          "disassembledName": "Circular Quay, Wharf 3, Side A",
+          "type": "stop",
+          "parent": {
+            "name": "Sydney",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10101103"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T00:15:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T00:15:00Z",
+      "departureTimeEstimated": "2026-01-14T00:15:00Z",
+      "transportation": {
+        "id": "nsw:090F1: :H:sj2",
+        "name": "Sydney Ferries Network F1 Manly",
+        "disassembledName": "F1",
+        "number": "F1 Manly",
+        "description": "Circular Quay to Manly",
+        "product": {
+          "id": 10,
+          "class": 9,
+          "name": "Sydney Ferries Network",
+          "iconId": 9
+        },
+        "operator": {
+          "code": "SF",
+          "id": "SF",
+          "name": "Sydney Ferries"
+        },
+        "destination": {
+          "id": "10102027",
+          "name": "Manly",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 135,
+          "lineDisplay": "LINE",
+          "globalId": "3003"
+        },
+        "origin": {
+          "id": "10101103",
+          "name": "Circular Quay, Sydney",
+          "type": "stop"
+        },
+        "iconId": 10
+      },
+      "infos": [
+        {
+          "priority": "veryLow",
+          "id": "ems-160",
+          "version": 19019037,
+          "type": "lineInfo",
+          "properties": {
+            "publisher": "ems.comm.addinfo",
+            "infoType": "lineInfo",
+            "smsText": "Departure or arrival wharf may change at short notice"
+          },
+          "infoLinks": [
+            {
+              "urlText": "Departure or arrival wharf may change at short notice",
+              "url": "https://transportnsw.info/alerts/details#/ems-160",
+              "content": "<div>Please check indicator boards and listen for announcements.</div>",
+              "subtitle": "Departure or arrival wharf may change at short notice",
+              "smsText": "Departure or arrival wharf may change at short notice"
+            }
+          ],
+          "urlText": "Departure or arrival wharf may change at short notice",
+          "url": "https://transportnsw.info/alerts/details#/ems-160",
+          "content": "<div>Please check indicator boards and listen for announcements.</div>",
+          "subtitle": "Departure or arrival wharf may change at short notice"
+        }
+      ],
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "ML1115-OUT-WD.120126.31.1115",
+        "AVMSTripID": "ML1115-OUT-WD.120126.31.1115"
+      }
+    }
+  ]
+}

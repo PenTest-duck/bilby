@@ -4,9 +4,11 @@ import SwiftUI
 @main
 struct exportWidgets: WidgetBundle {
     var body: some Widget {
-        // Export widgets here
+        // Home screen widgets
         widget()
         widgetControl()
-        WidgetLiveActivity()
+        
+        // Live Activities
+        BilbyLiveActivity()
     }
 }

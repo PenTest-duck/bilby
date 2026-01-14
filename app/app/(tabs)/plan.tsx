@@ -2,7 +2,7 @@
  * Plan Tab - Trip Planning
  */
 
-import { useState, useCallback, useRef } from 'react';
+import { useState, useCallback } from 'react';
 import { 
   View, 
   Text, 
@@ -23,6 +23,8 @@ import { StopSearchModal } from '@/components/stop-search';
 import { JourneyCard } from '@/components/trip';
 import { useTripPlan } from '@/lib/api/trips';
 import { usePreferencesStore } from '@/stores/preferences-store';
+import { useAuthStore } from '@/stores/auth-store';
+import { api } from '@/lib/api/client';
 import { Skeleton } from '@/components/ui/skeleton';
 import { ErrorView } from '@/components/ui/error-view';
 import type { Stop, RankedJourney, RankingStrategy } from '@/lib/api/types';
@@ -49,15 +51,14 @@ export default function PlanScreen() {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const _insets = useSafeAreaInsets();
   const { defaultStrategy, accessibilityRequired } = usePreferencesStore();
+  const { isAuthenticated } = useAuthStore();
   
-  // Store the selected journey for navigation
-  const selectedJourneyRef = useRef<RankedJourney | null>(null);
-
   const [fromStop, setFromStop] = useState<LocationStop | null>(null);
   const [toStop, setToStop] = useState<LocationStop | null>(null);
   const [strategy, setStrategy] = useState<RankingStrategy>(defaultStrategy);
   const [searchTarget, setSearchTarget] = useState<SearchTarget>(null);
   const [isGettingLocation, setIsGettingLocation] = useState(false);
+  const [isSavingTrip, setIsSavingTrip] = useState(false);
 
   const canSearch = fromStop && toStop;
   
@@ -85,12 +86,45 @@ export default function PlanScreen() {
   }, [fromStop, toStop]);
 
   const handleJourneyPress = useCallback((journey: RankedJourney, index: number) => {
-    // Store journey data and navigate to trip details
-    selectedJourneyRef.current = journey;
-    // Navigate to trip detail screen with index as ID
-    router.push(`/trip/${index}`);
+    // Navigate to trip detail screen with journey data
+    router.push({
+      pathname: '/trip/[id]',
+      params: {
+        id: String(index),
+        journey: JSON.stringify(journey),
+      },
+    });
   }, [router]);
   
+  const handleSaveTrip = useCallback(async () => {
+    if (!fromStop || !toStop || !isAuthenticated) return;
+    
+    // Don't save if using current location (no stable ID)
+    if ((fromStop as LocationStop).isCurrentLocation) {
+      Alert.alert('Cannot Save', 'Trips using "My Location" cannot be saved. Please select a specific stop.');
+      return;
+    }
+    
+    setIsSavingTrip(true);
+    try {
+      const tripName = `${fromStop.disassembledName || fromStop.name} → ${toStop.disassembledName || toStop.name}`;
+      await api.post('/api/user/trips', {
+        name: tripName,
+        origin_id: fromStop.id,
+        origin_name: fromStop.name,
+        destination_id: toStop.id,
+        destination_name: toStop.name,
+        preferred_strategy: strategy,
+      });
+      Alert.alert('Trip Saved', 'Your trip has been saved for quick access.');
+    } catch (error) {
+      console.error('Save trip error:', error);
+      Alert.alert('Error', 'Failed to save trip. Please try again.');
+    } finally {
+      setIsSavingTrip(false);
+    }
+  }, [fromStop, toStop, isAuthenticated, strategy]);
+
   const handleUseMyLocation = useCallback(async () => {
     setIsGettingLocation(true);
     try {
@@ -175,6 +209,24 @@ export default function PlanScreen() {
             placeholder="Where to?"
             onPress={() => setSearchTarget('to')}
           />
+          
+          {/* Save Trip Button - only show when authenticated and both stops selected */}
+          {isAuthenticated && canSearch && !(fromStop as LocationStop)?.isCurrentLocation && (
+            <Pressable
+              style={[styles.saveButton, { backgroundColor: colors.backgroundSecondary }]}
+              onPress={handleSaveTrip}
+              disabled={isSavingTrip}
+            >
+              <IconSymbol 
+                name={isSavingTrip ? "hourglass" : "bookmark"} 
+                size={16} 
+                color={colors.tint} 
+              />
+              <Text style={[styles.saveButtonText, { color: colors.tint }]}>
+                {isSavingTrip ? 'Saving...' : 'Save Trip'}
+              </Text>
+            </Pressable>
+          )}
         </View>
 
         {/* Strategy Picker */}
@@ -393,6 +445,20 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     zIndex: 1,
+  },
+  saveButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: 10,
+    paddingHorizontal: 16,
+    borderRadius: 10,
+    gap: 8,
+    marginTop: 8,
+  },
+  saveButtonText: {
+    fontSize: 14,
+    fontWeight: '600',
   },
   strategyContainer: {
     paddingHorizontal: 16,

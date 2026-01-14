@@ -120,6 +120,21 @@ export const StopSequenceItemSchema = z.object({
 })
 export type StopSequenceItem = z.infer<typeof StopSequenceItemSchema>
 
+/** Location properties with travel in cars and occupancy data */
+export const LocationPropertiesSchema = z.object({
+  WheelchairAccess: z.string().optional(),
+  platform: z.string().optional(),
+  platformName: z.string().optional(),
+  // Travel in Cars data (for trains)
+  NumberOfCars: z.string().optional(),
+  TravelInCarsFrom: z.string().optional(),
+  TravelInCarsTo: z.string().optional(),
+  TravelInCarsMessage: z.string().optional(),
+  // Occupancy data
+  occupancy: z.string().optional(),
+}).passthrough()  // Allow additional unknown properties
+export type LocationProperties = z.infer<typeof LocationPropertiesSchema>
+
 /** Journey leg origin/destination */
 export const LegLocationSchema = z.object({
   id: z.string().optional(),
@@ -132,7 +147,7 @@ export const LegLocationSchema = z.object({
   departureTimeEstimated: z.string().optional(),
   arrivalTimePlanned: z.string().optional(),
   arrivalTimeEstimated: z.string().optional(),
-  properties: z.record(z.unknown()).optional(),
+  properties: LocationPropertiesSchema.optional(),
 })
 export type LegLocation = z.infer<typeof LegLocationSchema>
 
@@ -276,6 +291,7 @@ export const TripQuerySchema = z.object({
   arriveBy: z.boolean().optional(),
   strategy: RankingStrategySchema.optional(),
   modes: z.array(z.string()).optional(),
+  excludeModes: z.array(z.string()).optional(),
   accessible: z.boolean().optional(),
 })
 export type TripQuery = z.infer<typeof TripQuerySchema>

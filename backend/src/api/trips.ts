@@ -7,6 +7,7 @@ import { Router, type Router as RouterType } from 'express'
 import { planTrip, planTripFromCoords, planTripMixed, getModeCode } from '../lib/tfnsw-tp-client.js'
 import { loadRealtimeData, mergeJourneyRealtime, filterAlertsForJourney } from '../lib/realtime-merger.js'
 import { getBestAndAlternatives } from '../lib/ranking.js'
+import { enrichJourneysWithFares, isFareEnrichmentEnabled, extractTravelInCars, extractOccupancy } from '../lib/fare-enricher.js'
 import type { RankingStrategy, TripQuery } from '../types/trip-planner.js'
 
 const router: RouterType = Router()
@@ -34,7 +35,7 @@ function parseCoordinate(value: string): { lat: number; lng: number } | null {
  * Plan a trip with ranked options
  */
 router.get('/', async (req, res) => {
-  const { from, to, when, arriveBy, strategy, modes, accessible } = req.query
+  const { from, to, when, arriveBy, strategy, modes, excludeModes, accessible } = req.query
 
   // Validate required params
   if (!from || !to) {
@@ -72,9 +73,14 @@ router.get('/', async (req, res) => {
       return
     }
 
-    // Parse modes
-    const modeList = modes 
+    // Parse modes (inclusion list)
+    const includedModes = modes 
       ? (modes as string).split(',').map(m => getModeCode(m.trim())).filter(Boolean) as number[]
+      : undefined
+
+    // Parse excluded modes
+    const excludedModes = excludeModes
+      ? (excludeModes as string).split(',').map(m => getModeCode(m.trim())).filter(Boolean) as number[]
       : undefined
 
     // Build query object
@@ -85,6 +91,7 @@ router.get('/', async (req, res) => {
       arriveBy: arriveBy === 'true',
       strategy: rankingStrategy,
       modes: modes ? (modes as string).split(',') : undefined,
+      excludeModes: excludeModes ? (excludeModes as string).split(',') : undefined,
       accessible: accessible === 'true',
     }
 
@@ -103,7 +110,7 @@ router.get('/', async (req, res) => {
         fromCoord.lat, fromCoord.lng,
         toCoord.lat, toCoord.lng,
         departureTime,
-        { arriveBy: arriveBy === 'true', accessible: accessible === 'true', modes: modeList }
+        { arriveBy: arriveBy === 'true', accessible: accessible === 'true', includedModes, excludedModes }
       )
     } else if (isFromCoord || isToCoord) {
       // Mixed: one is coordinate, one is stop ID
@@ -125,14 +132,15 @@ router.get('/', async (req, res) => {
           lng: toCoord?.lng,
         },
         departureTime,
-        { arriveBy: arriveBy === 'true', accessible: accessible === 'true', modes: modeList }
+        { arriveBy: arriveBy === 'true', accessible: accessible === 'true', includedModes, excludedModes }
       )
     } else {
       // Both are stop IDs
       journeys = await planTrip(fromStr, toStr, departureTime, {
         arriveBy: arriveBy === 'true',
         accessible: accessible === 'true',
-        modes: modeList,
+        includedModes,
+        excludedModes,
       })
     }
 
@@ -157,20 +165,44 @@ router.get('/', async (req, res) => {
     const realtimeData = await loadRealtimeData()
     const mergedJourneys = journeys.map(j => mergeJourneyRealtime(j, realtimeData))
 
-    // Rank journeys
-    const { best, alternatives } = getBestAndAlternatives(mergedJourneys, rankingStrategy)
-
-    // Add alerts to best journey
-    if (best) {
-      const alerts = filterAlertsForJourney(best, realtimeData.alerts)
-      ;(best as unknown as Record<string, unknown>).alerts = alerts
+    // Enrich with fare data from GraphQL (if enabled)
+    let enrichedJourneys = mergedJourneys
+    let fareSource: 'graphql' | 'unavailable' = 'unavailable'
+    if (isFareEnrichmentEnabled()) {
+      const withFares = await enrichJourneysWithFares(
+        mergedJourneys,
+        fromStr,
+        toStr,
+        { excludedModes }
+      )
+      enrichedJourneys = withFares as typeof mergedJourneys
+      fareSource = withFares.some(j => j.enrichedFare) ? 'graphql' : 'unavailable'
     }
+
+    // Rank journeys
+    const { best, alternatives } = getBestAndAlternatives(enrichedJourneys, rankingStrategy)
+
+    // Helper to add extras to a journey
+    const addJourneyExtras = (journey: typeof best) => {
+      if (!journey) return null
+      const j = journey as unknown as Record<string, unknown>
+      j.alerts = filterAlertsForJourney(journey, realtimeData.alerts)
+      const travelInCars = extractTravelInCars(journey)
+      const occupancy = extractOccupancy(journey)
+      if (travelInCars.length > 0) j.travelInCars = travelInCars
+      if (occupancy.length > 0) j.occupancy = occupancy
+      return journey
+    }
+
+    // Add extras to best and all alternatives
+    const enrichedBest = addJourneyExtras(best)
+    const enrichedAlternatives = alternatives.map(addJourneyExtras).filter(Boolean)
 
     res.json({
       success: true,
       data: {
-        best,
-        alternatives,
+        best: enrichedBest,
+        alternatives: enrichedAlternatives,
         query,
         totalOptions: journeys.length,
       },
@@ -178,6 +210,7 @@ router.get('/', async (req, res) => {
         timestamp: Date.now(),
         realtimeStatus: realtimeData.status,
         realtimeAge: realtimeData.ageSeconds,
+        fareSource,
       },
     })
   } catch (error) {
@@ -195,7 +228,7 @@ router.get('/', async (req, res) => {
  * Plan a trip with body parameters (for complex queries)
  */
 router.post('/', async (req, res) => {
-  const { from, to, when, arriveBy, strategy, modes, accessible } = req.body
+  const { from, to, when, arriveBy, strategy, modes, excludeModes, accessible } = req.body
 
   if (!from || !to) {
     res.status(400).json({
@@ -213,6 +246,7 @@ router.post('/', async (req, res) => {
   if (arriveBy) query.set('arriveBy', String(arriveBy))
   if (strategy) query.set('strategy', strategy)
   if (modes) query.set('modes', Array.isArray(modes) ? modes.join(',') : modes)
+  if (excludeModes) query.set('excludeModes', Array.isArray(excludeModes) ? excludeModes.join(',') : excludeModes)
   if (accessible) query.set('accessible', String(accessible))
 
   // Forward to GET handler
@@ -222,8 +256,11 @@ router.post('/', async (req, res) => {
   try {
     const departureTime = when && when !== 'now' ? new Date(when) : new Date()
     const rankingStrategy = (strategy as RankingStrategy) ?? 'best'
-    const modeList = modes 
+    const includedModes = modes 
       ? (Array.isArray(modes) ? modes : modes.split(',')).map((m: string) => getModeCode(m.trim())).filter(Boolean) as number[]
+      : undefined
+    const excludedModesList = excludeModes
+      ? (Array.isArray(excludeModes) ? excludeModes : excludeModes.split(',')).map((m: string) => getModeCode(m.trim())).filter(Boolean) as number[]
       : undefined
 
     const tripQuery: TripQuery = {
@@ -233,24 +270,56 @@ router.post('/', async (req, res) => {
       arriveBy: Boolean(arriveBy),
       strategy: rankingStrategy,
       modes: modes ? (Array.isArray(modes) ? modes : modes.split(',')) : undefined,
+      excludeModes: excludeModes ? (Array.isArray(excludeModes) ? excludeModes : excludeModes.split(',')) : undefined,
       accessible: Boolean(accessible),
     }
 
     const journeys = await planTrip(from, to, departureTime, {
       arriveBy: Boolean(arriveBy),
       accessible: Boolean(accessible),
-      modes: modeList,
+      includedModes,
+      excludedModes: excludedModesList,
     })
 
     const realtimeData = await loadRealtimeData()
     const mergedJourneys = journeys.map(j => mergeJourneyRealtime(j, realtimeData))
-    const { best, alternatives } = getBestAndAlternatives(mergedJourneys, rankingStrategy)
+
+    // Enrich with fare data from GraphQL (if enabled)
+    let enrichedJourneys = mergedJourneys
+    let fareSource: 'graphql' | 'unavailable' = 'unavailable'
+    if (isFareEnrichmentEnabled()) {
+      const withFares = await enrichJourneysWithFares(
+        mergedJourneys,
+        from,
+        to,
+        { excludedModes: excludedModesList }
+      )
+      enrichedJourneys = withFares as typeof mergedJourneys
+      fareSource = withFares.some(j => j.enrichedFare) ? 'graphql' : 'unavailable'
+    }
+
+    const { best, alternatives } = getBestAndAlternatives(enrichedJourneys, rankingStrategy)
+
+    // Helper to add extras to a journey
+    const addJourneyExtras = (journey: typeof best) => {
+      if (!journey) return null
+      const j = journey as unknown as Record<string, unknown>
+      const travelInCars = extractTravelInCars(journey)
+      const occupancy = extractOccupancy(journey)
+      if (travelInCars.length > 0) j.travelInCars = travelInCars
+      if (occupancy.length > 0) j.occupancy = occupancy
+      return journey
+    }
+
+    // Add extras to best and all alternatives
+    const enrichedBest = addJourneyExtras(best)
+    const enrichedAlternatives = alternatives.map(addJourneyExtras).filter(Boolean)
 
     res.json({
       success: true,
       data: {
-        best,
-        alternatives,
+        best: enrichedBest,
+        alternatives: enrichedAlternatives,
         query: tripQuery,
         totalOptions: journeys.length,
       },
@@ -258,6 +327,7 @@ router.post('/', async (req, res) => {
         timestamp: Date.now(),
         realtimeStatus: realtimeData.status,
         realtimeAge: realtimeData.ageSeconds,
+        fareSource,
       },
     })
   } catch (error) {

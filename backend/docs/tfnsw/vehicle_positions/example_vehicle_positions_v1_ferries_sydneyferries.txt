@@ -1,0 +1,740 @@
+header {
+  gtfs_realtime_version: "1.0"
+  incrementality: FULL_DATASET
+  timestamp: 1768353690
+}
+entity {
+  id: "20260114_122130_1"
+  vehicle {
+    trip {
+      trip_id: "CI1145-WDSM-IN.120126.31.1219"
+      start_time: "12:19:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "9-F8-sj2-1"
+    }
+    position {
+      latitude: -33.841442
+      longitude: 151.17548
+      bearing: 6.0
+      speed: 6.02
+    }
+    current_stop_sequence: 2
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353685
+    congestion_level: UNKNOWN_CONGESTION_LEVEL
+    stop_id: "211033"
+    vehicle {
+      id: "Scarborough"
+      label: "12:19pm Cockatoo Island - Circular Quay"
+      license_plate: ""
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "First Fleet"
+        performing_prior_trip: false
+        special_vehicle_attributes: 0
+      }
+    }
+  }
+}
+entity {
+  id: "20260114_122130_2"
+  vehicle {
+    trip {
+      trip_id: "DH1127-WDSM-IN.120126.31.1201"
+      start_time: "12:01:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "9-F4-sj2-1"
+    }
+    position {
+      latitude: -33.85
+      longitude: 151.21117
+      bearing: 158.0
+      speed: 0.0
+    }
+    current_stop_sequence: 5
+    current_status: STOPPED_AT
+    timestamp: 1768353688
+    congestion_level: UNKNOWN_CONGESTION_LEVEL
+    stop_id: "206126"
+    vehicle {
+      id: "Catherine Hamlin"
+      label: "12:01pm Pyrmont Bay - Circular Quay"
+      license_plate: ""
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "Emerald"
+        performing_prior_trip: false
+        special_vehicle_attributes: 0
+      }
+    }
+  }
+}
+entity {
+  id: "20260114_122130_3"
+  vehicle {
+    trip {
+      trip_id: "DH1142-WDSM-IN.120126.31.1216"
+      start_time: "12:16:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "9-F4-sj2-1"
+    }
+    position {
+      latitude: -33.86485
+      longitude: 151.20006
+      bearing: 309.5
+      speed: 3.09
+    }
+    current_stop_sequence: 2
+    current_status: STOPPED_AT
+    timestamp: 1768353686
+    congestion_level: UNKNOWN_CONGESTION_LEVEL
+    stop_id: "2000239"
+    vehicle {
+      id: "Olive Cotton"
+      label: "12:16pm Pyrmont Bay - Circular Quay"
+      license_plate: ""
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "River"
+        performing_prior_trip: false
+        special_vehicle_attributes: 0
+      }
+    }
+  }
+}
+entity {
+  id: "20260114_122130_4"
+  vehicle {
+    trip {
+      trip_id: "DH1157-OUT-WDSM.120126.31.1157"
+      start_time: "11:57:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "9-F4-sj2-1"
+    }
+    position {
+      latitude: -33.864517
+      longitude: 151.20007
+      bearing: 111.0
+      speed: 3.5
+    }
+    current_stop_sequence: 5
+    current_status: STOPPED_AT
+    timestamp: 1768353686
+    congestion_level: UNKNOWN_CONGESTION_LEVEL
+    stop_id: "2000238"
+    vehicle {
+      id: "Charlotte"
+      label: "11:57am Circular Quay - Pyrmont Bay"
+      license_plate: ""
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "First Fleet"
+        performing_prior_trip: false
+        special_vehicle_attributes: 0
+      }
+    }
+  }
+}
+entity {
+  id: "20260114_122130_5"
+  vehicle {
+    trip {
+      trip_id: "DH1212-OUT-WDSM.120126.31.1212"
+      start_time: "12:12:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "9-F4-sj2-1"
+    }
+    position {
+      latitude: -33.84876
+      longitude: 151.20944
+      bearing: 306.0
+      speed: 4.32
+    }
+    current_stop_sequence: 3
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353685
+    congestion_level: UNKNOWN_CONGESTION_LEVEL
+    stop_id: "206122"
+    vehicle {
+      id: "Supply"
+      label: "12:12pm Circular Quay - Pyrmont Bay"
+      license_plate: ""
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "First Fleet"
+        performing_prior_trip: false
+        special_vehicle_attributes: 0
+      }
+    }
+  }
+}
+entity {
+  id: "20260114_122130_6"
+  vehicle {
+    trip {
+      trip_id: "DH1220-WD-OUT-BWB.120126.31.1220"
+      start_time: "12:20:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "9-F10-sj2-1"
+    }
+    position {
+      latitude: -33.864765
+      longitude: 151.19946
+      bearing: 47.0
+      speed: 1.85
+    }
+    current_stop_sequence: 2
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353682
+    congestion_level: UNKNOWN_CONGESTION_LEVEL
+    stop_id: "2000238"
+    vehicle {
+      id: "Me-mel"
+      label: "12:20pm Barangaroo - Blackwattle Bay"
+      license_plate: ""
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: false
+        wheelchair_accessible: 1
+        vehicle_model: "MiniCat"
+        performing_prior_trip: false
+        special_vehicle_attributes: 0
+      }
+    }
+  }
+}
+entity {
+  id: "20260114_122130_7"
+  vehicle {
+    trip {
+      trip_id: "ES1157-WDSM-IN.120126.31.1220"
+      start_time: "12:20:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "9-F7-sj2-1"
+    }
+    position {
+      latitude: -33.87228
+      longitude: 151.24286
+      bearing: 65.0
+      speed: 0.31
+    }
+    current_stop_sequence: 2
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353683
+    congestion_level: UNKNOWN_CONGESTION_LEVEL
+    stop_id: "20281"
+    vehicle {
+      id: "Cheryl Salisbury"
+      label: "12:20pm Double Bay - Circular Quay"
+      license_plate: ""
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "River"
+        performing_prior_trip: false
+        special_vehicle_attributes: 0
+      }
+    }
+  }
+}
+entity {
+  id: "20260114_122130_8"
+  vehicle {
+    trip {
+      trip_id: "ML1145-WD-IN.120126.31.1215"
+      start_time: "12:15:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "9-F1-sj2-1"
+    }
+    position {
+      latitude: -33.832832
+      longitude: 151.2685
+      bearing: 219.0
+      speed: 12.4
+    }
+    current_stop_sequence: 2
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353690
+    congestion_level: UNKNOWN_CONGESTION_LEVEL
+    stop_id: "20951"
+    vehicle {
+      id: "Victor Chang"
+      label: "12:15pm Manly - Circular Quay"
+      license_plate: ""
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "Emerald"
+        performing_prior_trip: false
+        special_vehicle_attributes: 0
+      }
+    }
+  }
+}
+entity {
+  id: "20260114_122130_10"
+  vehicle {
+    trip {
+      trip_id: "ML1215-OUT-WD.120126.31.1215"
+      start_time: "12:15:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "9-F1-sj2-1"
+    }
+    position {
+      latitude: -33.85602
+      longitude: 151.2131
+      bearing: 34.0
+      speed: 3.76
+    }
+    current_stop_sequence: 2
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353687
+    congestion_level: UNKNOWN_CONGESTION_LEVEL
+    stop_id: "2000216"
+    vehicle {
+      id: "Fairlight"
+      label: "12:15pm Circular Quay - Manly"
+      license_plate: ""
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "Emerald"
+        performing_prior_trip: false
+        special_vehicle_attributes: 0
+      }
+    }
+  }
+}
+entity {
+  id: "20260114_122130_11"
+  vehicle {
+    trip {
+      trip_id: "RV1007-PAR-WDSMIN.140126.4.1138"
+      start_time: "11:38:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "9-F3-sj2-1"
+    }
+    position {
+      latitude: -33.840588
+      longitude: 151.1163
+      bearing: 104.0
+      speed: 5.09
+    }
+    current_stop_sequence: 6
+    current_status: STOPPED_AT
+    timestamp: 1768353685
+    congestion_level: UNKNOWN_CONGESTION_LEVEL
+    stop_id: "2137185"
+    vehicle {
+      id: "Dawn Fraser"
+      label: "11:38am Parramatta - Circular Quay"
+      license_plate: ""
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "RiverCat"
+        performing_prior_trip: false
+        special_vehicle_attributes: 0
+      }
+    }
+  }
+}
+entity {
+  id: "20260114_122130_12"
+  vehicle {
+    trip {
+      trip_id: "RV1027-SOP-WDSM-IN.140126.4.1138"
+      start_time: "11:38:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "9-F3-sj2-1"
+    }
+    position {
+      latitude: -33.858135
+      longitude: 151.19745
+      bearing: 169.5
+      speed: 12.55
+    }
+    current_stop_sequence: 10
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353686
+    congestion_level: UNKNOWN_CONGESTION_LEVEL
+    stop_id: "211033"
+    vehicle {
+      id: "Jack Mundey"
+      label: "11:38am Sydney Olympic Park - Circular Quay"
+      license_plate: ""
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "Parramatta"
+        performing_prior_trip: false
+        special_vehicle_attributes: 0
+      }
+    }
+  }
+}
+entity {
+  id: "20260114_122130_13"
+  vehicle {
+    trip {
+      trip_id: "RV1047-SOP-WDSM-IN.140126.4.1153"
+      start_time: "11:53:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "9-F3-sj2-1"
+    }
+    position {
+      latitude: -33.842083
+      longitude: 151.14717
+      bearing: 75.0
+      speed: 5.5
+    }
+    current_stop_sequence: 8
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353687
+    congestion_level: UNKNOWN_CONGESTION_LEVEL
+    stop_id: "211158"
+    vehicle {
+      id: "Frances Bodkin"
+      label: "11:53am Sydney Olympic Park - Circular Quay"
+      license_plate: ""
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "Parramatta"
+        performing_prior_trip: false
+        special_vehicle_attributes: 0
+      }
+    }
+  }
+}
+entity {
+  id: "20260114_122130_14"
+  vehicle {
+    trip {
+      trip_id: "RV1107-PAR-OUT-WDSM.140126.4.1107"
+      start_time: "11:07:00"
+      start_date: "20260114"
+      schedule_relationship: REPLACEMENT
+      route_id: "9-F3-sj2-1"
+    }
+    position {
+      latitude: -33.818913
+      longitude: 151.035
+      bearing: 281.2
+      speed: 3.6
+    }
+    current_stop_sequence: 13
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353684
+    congestion_level: UNKNOWN_CONGESTION_LEVEL
+    stop_id: "21151"
+    vehicle {
+      id: "Ruby Langford"
+      label: "11:07am Circular Quay - Parramatta"
+      license_plate: ""
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "River"
+        performing_prior_trip: false
+        special_vehicle_attributes: 0
+      }
+    }
+  }
+}
+entity {
+  id: "20260114_122130_15"
+  vehicle {
+    trip {
+      trip_id: "RV1127-SOP-OUT-WDSM.140126.4.1127"
+      start_time: "11:27:00"
+      start_date: "20260114"
+      schedule_relationship: REPLACEMENT
+      route_id: "9-F3-sj2-1"
+    }
+    position {
+      latitude: -33.821743
+      longitude: 151.07951
+      bearing: 281.7
+      speed: 5.25
+    }
+    current_stop_sequence: 11
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353688
+    congestion_level: UNKNOWN_CONGESTION_LEVEL
+    stop_id: "21141"
+    vehicle {
+      id: "Esme Timbery"
+      label: "11:27am Circular Quay - Sydney Olympic Park"
+      license_plate: ""
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "River"
+        performing_prior_trip: false
+        special_vehicle_attributes: 0
+      }
+    }
+  }
+}
+entity {
+  id: "20260114_122130_16"
+  vehicle {
+    trip {
+      trip_id: "RV1147-SOP-OUT-WDSM.140126.4.1147"
+      start_time: "11:47:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "9-F3-sj2-1"
+    }
+    position {
+      latitude: -33.842236
+      longitude: 151.14203
+      bearing: 254.0
+      speed: 0.0
+    }
+    current_stop_sequence: 5
+    current_status: STOPPED_AT
+    timestamp: 1768353688
+    congestion_level: UNKNOWN_CONGESTION_LEVEL
+    stop_id: "211158"
+    vehicle {
+      id: "John Nutt"
+      label: "11:47am Circular Quay - Sydney Olympic Park"
+      license_plate: ""
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "Parramatta"
+        performing_prior_trip: false
+        special_vehicle_attributes: 0
+      }
+    }
+  }
+}
+entity {
+  id: "20260114_122130_17"
+  vehicle {
+    trip {
+      trip_id: "RV1207-PAR-OUT-WDSM.140126.4.1207"
+      start_time: "12:07:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "9-F3-sj2-1"
+    }
+    position {
+      latitude: -33.86389
+      longitude: 151.19974
+      bearing: 115.0
+      speed: 0.77
+    }
+    current_stop_sequence: 3
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353690
+    congestion_level: UNKNOWN_CONGESTION_LEVEL
+    stop_id: "2000237"
+    vehicle {
+      id: "Ruth Park"
+      label: "12:07pm Circular Quay - Parramatta"
+      license_plate: ""
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "River"
+        performing_prior_trip: false
+        special_vehicle_attributes: 0
+      }
+    }
+  }
+}
+entity {
+  id: "20260114_122130_18"
+  vehicle {
+    trip {
+      trip_id: "RV1216-CAB-WDSM-IN.140126.4.1216"
+      start_time: "12:16:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "9-F3-sj2-1"
+    }
+    position {
+      latitude: -33.843334
+      longitude: 151.13034
+      bearing: 88.0
+      speed: 5.2
+    }
+    current_stop_sequence: 3
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353688
+    congestion_level: UNKNOWN_CONGESTION_LEVEL
+    stop_id: "20461"
+    vehicle {
+      id: "May Gibbs"
+      label: "12:16pm Cabarita - Circular Quay"
+      license_plate: ""
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "Emerald"
+        performing_prior_trip: false
+        special_vehicle_attributes: 0
+      }
+    }
+  }
+}
+entity {
+  id: "20260114_122130_19"
+  vehicle {
+    trip {
+      trip_id: "TZ1152-WDSM-IN.120126.31.1214"
+      start_time: "12:14:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "9-F2-sj2-1"
+    }
+    position {
+      latitude: -33.854065
+      longitude: 151.21701
+      bearing: 283.0
+      speed: 5.86
+    }
+    current_stop_sequence: 2
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353684
+    congestion_level: UNKNOWN_CONGESTION_LEVEL
+    stop_id: "20883"
+    vehicle {
+      id: "Golden Grove"
+      label: "12:14pm Taronga Zoo - Circular Quay"
+      license_plate: ""
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "First Fleet"
+        performing_prior_trip: false
+        special_vehicle_attributes: 0
+      }
+    }
+  }
+}
+entity {
+  id: "20260114_122130_20"
+  vehicle {
+    trip {
+      trip_id: "TZ1212-OUT-WDSM.120126.31.1212"
+      start_time: "12:12:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "9-F2-sj2-1"
+    }
+    position {
+      latitude: -33.851406
+      longitude: 151.23418
+      bearing: 54.0
+      speed: 6.07
+    }
+    current_stop_sequence: 2
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353683
+    congestion_level: UNKNOWN_CONGESTION_LEVEL
+    stop_id: "2000225"
+    vehicle {
+      id: "Friendship"
+      label: "12:12pm Circular Quay - Taronga Zoo"
+      license_plate: ""
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "First Fleet"
+        performing_prior_trip: false
+        special_vehicle_attributes: 0
+      }
+    }
+  }
+}
+entity {
+  id: "20260114_122130_21"
+  vehicle {
+    trip {
+      trip_id: "WB1145-WDSM-IN.120126.31.1215"
+      start_time: "12:15:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "9-F9-sj2-1"
+    }
+    position {
+      latitude: -33.844612
+      longitude: 151.27464
+      bearing: 252.0
+      speed: 12.6
+    }
+    current_stop_sequence: 2
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353689
+    congestion_level: UNKNOWN_CONGESTION_LEVEL
+    stop_id: "20301"
+    vehicle {
+      id: "Bungaree"
+      label: "12:15pm Watsons Bay - Circular Quay"
+      license_plate: ""
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "Emerald"
+        performing_prior_trip: false
+        special_vehicle_attributes: 0
+      }
+    }
+  }
+}
+entity {
+  id: "20260114_122130_22"
+  vehicle {
+    trip {
+      trip_id: "WB1215-OUT-WDSM.120126.31.1215"
+      start_time: "12:15:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "9-F9-sj2-1"
+    }
+    position {
+      latitude: -33.857334
+      longitude: 151.24
+      bearing: 98.0
+      speed: 11.27
+    }
+    current_stop_sequence: 2
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353690
+    congestion_level: UNKNOWN_CONGESTION_LEVEL
+    stop_id: "2000215"
+    vehicle {
+      id: "Pemulwuy"
+      label: "12:15pm Circular Quay - Watsons Bay"
+      license_plate: ""
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "Emerald"
+        performing_prior_trip: false
+        special_vehicle_attributes: 0
+      }
+    }
+  }
+}

@@ -3,7 +3,8 @@
  * Full alert information with recommendations
  */
 
-import { View, Text, StyleSheet, ScrollView, Pressable, Linking } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, Pressable, Linking, useWindowDimensions } from 'react-native';
+import RenderHTML from 'react-native-render-html';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Colors } from '@/constants/theme';
 import { useColorScheme } from '@/hooks/use-color-scheme';
@@ -55,6 +56,7 @@ export function AlertDetailModal({ alert, onClose }: AlertDetailModalProps) {
   const colorScheme = useColorScheme() ?? 'light';
   const colors = Colors[colorScheme];
   const insets = useSafeAreaInsets();
+  const { width } = useWindowDimensions();
   const severity = alert.severity as keyof typeof SEVERITY_CONFIG;
   const config = SEVERITY_CONFIG[severity];
 
@@ -93,9 +95,35 @@ export function AlertDetailModal({ alert, onClose }: AlertDetailModalProps) {
         </Text>
 
         {alert.description && (
-          <Text style={[styles.description, { color: colors.textSecondary }]}>
-            {alert.description}
-          </Text>
+          <ScrollView style={styles.description}>
+            <RenderHTML
+              contentWidth={Math.max(0, width - 32)}
+              source={{ html: alert.description }}
+              baseStyle={{
+                color: colors.textSecondary,
+                fontSize: 16,
+                lineHeight: 24,
+              }}
+              tagsStyles={{
+                p: { marginTop: 0, marginBottom: 12 },
+                a: { color: colors.tint, textDecorationLine: 'underline' },
+                li: { marginBottom: 6 },
+                ul: { marginTop: 0, marginBottom: 12 },
+                ol: { marginTop: 0, marginBottom: 12 },
+                strong: { color: colors.text },
+                em: { fontStyle: 'italic' },
+              }}
+              ignoredDomTags={['script', 'style']}
+              defaultTextProps={{ selectable: true }}
+              renderersProps={{
+                a: {
+                  onPress: (_event, href) => {
+                    if (href) Linking.openURL(href);
+                  },
+                },
+              }}
+            />
+          </ScrollView>
         )}
 
         {/* Cause */}
@@ -238,8 +266,6 @@ const styles = StyleSheet.create({
     lineHeight: 28,
   },
   description: {
-    fontSize: 16,
-    lineHeight: 24,
     marginTop: 12,
   },
   section: {

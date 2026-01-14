@@ -1,0 +1,950 @@
+header {
+  gtfs_realtime_version: "1.0"
+  incrementality: FULL_DATASET
+  timestamp: 1768353734
+}
+entity {
+  id: "20260114_122214_1"
+  vehicle {
+    trip {
+      trip_id: "152.120126.127.0455"
+      start_time: "04:55:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "4T.C.152"
+    }
+    position {
+      latitude: -32.80417
+      longitude: 151.71227
+      bearing: 207.0
+      speed: 0.0
+    }
+    current_stop_sequence: 6
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353660
+    congestion_level: UNKNOWN_CONGESTION_LEVEL
+    stop_id: "24303"
+    vehicle {
+      id: "1435MO"
+      label: "04:55am Grafton City - Sydney"
+      license_plate: ""
+    }
+  }
+}
+entity {
+  id: "20260114_122214_2"
+  vehicle {
+    trip {
+      trip_id: "153.120126.127.1100"
+      start_time: "11:00:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "4T.C.153"
+    }
+    position {
+      latitude: -33.597786
+      longitude: 151.1718
+      bearing: 30.0
+      speed: 0.0
+    }
+    current_stop_sequence: 3
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353673
+    congestion_level: UNKNOWN_CONGESTION_LEVEL
+    stop_id: "2000213"
+    vehicle {
+      id: "1740MO"
+      label: "11:00am Sydney - Grafton City"
+      license_plate: ""
+    }
+  }
+}
+entity {
+  id: "20260114_122214_3"
+  vehicle {
+    trip {
+      trip_id: "154.120126.127.0415"
+      start_time: "04:15:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "4T.C.154"
+    }
+    position {
+      latitude: -32.782707
+      longitude: 151.73709
+      bearing: 235.0
+      speed: 0.0
+    }
+    current_stop_sequence: 12
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353213
+    congestion_level: UNKNOWN_CONGESTION_LEVEL
+    stop_id: "24303"
+    vehicle {
+      id: "6633MO"
+      label: "04:15am Grafton City - Sydney"
+      license_plate: ""
+    }
+  }
+}
+entity {
+  id: "20260114_122214_4"
+  vehicle {
+    trip {
+      trip_id: "512.120126.53.0900"
+      start_time: "09:00:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "4T.C.512"
+    }
+    position {
+      latitude: -31.59771
+      longitude: 147.26367
+      bearing: 122.0
+      speed: 0.0
+    }
+    current_stop_sequence: 6
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768351125
+    congestion_level: UNKNOWN_CONGESTION_LEVEL
+    stop_id: "28251"
+    vehicle {
+      id: "1890MO"
+      label: "09:00am (512)  Bourke Coach Stop - Dubbo"
+      license_plate: ""
+    }
+  }
+}
+entity {
+  id: "20260114_122214_5"
+  vehicle {
+    trip {
+      trip_id: "519.120126.21.1212"
+      start_time: "12:12:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "4T.C.519"
+    }
+    position {
+      latitude: -33.27428
+      longitude: 149.08582
+      bearing: 282.0
+      speed: 0.0
+    }
+    current_stop_sequence: 2
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353585
+    congestion_level: UNKNOWN_CONGESTION_LEVEL
+    stop_id: "28002"
+    vehicle {
+      id: "TV690B"
+      label: "12:12pm (519)  Orange - Parkes"
+      license_plate: ""
+    }
+  }
+}
+entity {
+  id: "20260114_122214_6"
+  vehicle {
+    trip {
+      trip_id: "531.120126.21.1104"
+      start_time: "11:04:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "4T.C.531"
+    }
+    position {
+      latitude: -33.717525
+      longitude: 148.86496
+      bearing: 288.0
+      speed: 0.0
+    }
+    current_stop_sequence: 6
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353650
+    congestion_level: UNKNOWN_CONGESTION_LEVEL
+    stop_id: "27971"
+    vehicle {
+      id: "7843 MO"
+      label: "11:04am (531)  Bathurst - Grenfell"
+      license_plate: ""
+    }
+  }
+}
+entity {
+  id: "20260114_122214_7"
+  vehicle {
+    trip {
+      trip_id: "547.140126.20.1000"
+      start_time: "10:00:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "4T.C.547"
+    }
+    position {
+      latitude: -32.36571
+      longitude: 149.52621
+      bearing: 318.0
+      speed: 0.0
+    }
+    current_stop_sequence: 10
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353677
+    congestion_level: UNKNOWN_CONGESTION_LEVEL
+    stop_id: "28521"
+    vehicle {
+      id: "9722 MO"
+      label: "10:00am (547)  Lithgow - Coonabarabran"
+      license_plate: ""
+    }
+  }
+}
+entity {
+  id: "20260114_122214_8"
+  vehicle {
+    trip {
+      trip_id: "563.120126.31.1127"
+      start_time: "11:27:00"
+      start_date: "20260114"
+      schedule_relationship: REPLACEMENT
+      route_id: "4T.C.563"
+    }
+    position {
+      latitude: -33.441376
+      longitude: 149.94235
+      bearing: 291.0
+      speed: 0.0
+    }
+    current_stop_sequence: 4
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768352819
+    congestion_level: UNKNOWN_CONGESTION_LEVEL
+    stop_id: "2790127"
+    vehicle {
+      id: "TV692B"
+      label: "11:27am (563)  Lithgow - Orange"
+      license_plate: ""
+    }
+  }
+}
+entity {
+  id: "20260114_122214_9"
+  vehicle {
+    trip {
+      trip_id: "592.120126.37.0900"
+      start_time: "09:00:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "4T.C.592"
+    }
+    position {
+      latitude: -33.45129
+      longitude: 149.80737
+      bearing: 81.0
+      speed: 0.0
+    }
+    current_stop_sequence: 8
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353630
+    congestion_level: UNKNOWN_CONGESTION_LEVEL
+    stop_id: "279539"
+    vehicle {
+      id: "1288MO"
+      label: "09:00am (592)  Dubbo - Lithgow"
+      license_plate: ""
+    }
+  }
+}
+entity {
+  id: "20260114_122214_10"
+  vehicle {
+    trip {
+      trip_id: "720.120126.85.0725"
+      start_time: "07:25:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "4T.C.720"
+    }
+    position {
+      latitude: -35.098156
+      longitude: 147.34851
+      bearing: 167.0
+      speed: 0.0
+    }
+    current_stop_sequence: 11
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353639
+    congestion_level: UNKNOWN_CONGESTION_LEVEL
+    stop_id: "26662"
+    vehicle {
+      id: "9789MO"
+      label: "07:25am Condobolin Town - Wagga Wagga"
+      license_plate: ""
+    }
+  }
+}
+entity {
+  id: "20260114_122214_11"
+  vehicle {
+    trip {
+      trip_id: "728.120126.21.0940"
+      start_time: "09:40:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "4T.C.728"
+    }
+    position {
+      latitude: -35.153286
+      longitude: 147.53317
+      bearing: 255.0
+      speed: 0.0
+    }
+    current_stop_sequence: 9
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353632
+    congestion_level: UNKNOWN_CONGESTION_LEVEL
+    stop_id: "27292"
+    vehicle {
+      id: "FLT868 BS00DQ"
+      label: "09:40am (728)  Tumbarumba - Wagga Wagga"
+      license_plate: ""
+    }
+  }
+}
+entity {
+  id: "20260114_122214_12"
+  vehicle {
+    trip {
+      trip_id: "754.120126.127.1130"
+      start_time: "11:30:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "4T.C.754"
+    }
+    position {
+      latitude: -34.493988
+      longitude: 150.79442
+      bearing: 209.0
+      speed: 0.0
+    }
+    current_stop_sequence: 3
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768351922
+    congestion_level: UNKNOWN_CONGESTION_LEVEL
+    stop_id: "253021"
+    vehicle {
+      id: "355353351467976"
+      label: "11:30am (754)  Wollongong - Moss Vale"
+      license_plate: ""
+    }
+  }
+}
+entity {
+  id: "20260114_122214_13"
+  vehicle {
+    trip {
+      trip_id: "775.120126.21.1155"
+      start_time: "11:55:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "4T.C.775"
+    }
+    position {
+      latitude: -35.361145
+      longitude: 149.1668
+      bearing: 171.0
+      speed: 0.0
+    }
+    current_stop_sequence: 3
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353658
+    congestion_level: UNKNOWN_CONGESTION_LEVEL
+    stop_id: "26042"
+    vehicle {
+      id: "1823MO"
+      label: "11:55am (775)  Canberra Civic - Bombala"
+      license_plate: ""
+    }
+  }
+}
+entity {
+  id: "20260114_122214_14"
+  vehicle {
+    trip {
+      trip_id: "781.120126.127.0905"
+      start_time: "09:05:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "4T.C.781"
+    }
+    position {
+      latitude: -34.556793
+      longitude: 148.40091
+      bearing: 262.0
+      speed: 0.0
+    }
+    current_stop_sequence: 10
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768351933
+    congestion_level: UNKNOWN_CONGESTION_LEVEL
+    stop_id: "25851"
+    vehicle {
+      id: "355353351455252"
+      label: "09:05am (781)  Queanbeyan - Cootamundra"
+      license_plate: ""
+    }
+  }
+}
+entity {
+  id: "20260114_122214_15"
+  vehicle {
+    trip {
+      trip_id: "794.120126.53.0820"
+      start_time: "08:20:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "4T.C.794"
+    }
+    position {
+      latitude: -34.516598
+      longitude: 148.16403
+      bearing: 153.0
+      speed: 0.0
+    }
+    current_stop_sequence: 9
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353674
+    congestion_level: UNKNOWN_CONGESTION_LEVEL
+    stop_id: "25941"
+    vehicle {
+      id: "FLT818 BS00AG"
+      label: "08:20am (794)  Bathurst - Cootamundra"
+      license_plate: ""
+    }
+  }
+}
+entity {
+  id: "20260114_122214_16"
+  vehicle {
+    trip {
+      trip_id: "KN35.140126.4.N.2.1200"
+      start_time: "12:00:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "4T.T.SCO"
+    }
+    position {
+      latitude: -34.807632
+      longitude: 150.66342
+      bearing: 256.3
+      speed: 0.0
+    }
+    current_stop_sequence: 4
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353675
+    congestion_level: UNKNOWN_CONGESTION_LEVEL
+    stop_id: "253591"
+    vehicle {
+      id: "LE2854"
+      label: "12:00pm Kiama - Bomaderry"
+      license_plate: ""
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "Endeavour"
+        performing_prior_trip: false
+        special_vehicle_attributes: 0
+      }
+    }
+  }
+}
+entity {
+  id: "20260114_122214_17"
+  vehicle {
+    trip {
+      trip_id: "NP23.1257.120126.124.P.6.88113799"
+      start_time: "09:35:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "4T.T.NP23"
+    }
+    position {
+      latitude: -32.737858
+      longitude: 151.55167
+      bearing: 339.5
+      speed: 0.0
+    }
+    current_stop_sequence: 15
+    current_status: STOPPED_AT
+    timestamp: 1768353690
+    congestion_level: UNKNOWN_CONGESTION_LEVEL
+    stop_id: "2320314"
+    vehicle {
+      id: "EA2502"
+      label: "09:35am (223)  Sydney - Armidale"
+      license_plate: ""
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "Xplorer"
+        performing_prior_trip: false
+        special_vehicle_attributes: 0
+      }
+    }
+  }
+}
+entity {
+  id: "20260114_122214_18"
+  vehicle {
+    trip {
+      trip_id: "NP24.1257.120126.124.P.6.88110738"
+      start_time: "08:40:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "4T.T.NP24"
+    }
+    position {
+      latitude: -31.934076
+      longitude: 150.87695
+      bearing: 195.8
+      speed: 0.0
+    }
+    current_stop_sequence: 17
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353697
+    congestion_level: UNKNOWN_CONGESTION_LEVEL
+    stop_id: "23383"
+    vehicle {
+      id: "EC2528"
+      label: "08:40am (224)  Armidale - Sydney"
+      license_plate: ""
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "Xplorer"
+        performing_prior_trip: false
+        special_vehicle_attributes: 0
+      }
+    }
+  }
+}
+entity {
+  id: "20260114_122214_19"
+  vehicle {
+    trip {
+      trip_id: "NT32.1257.120126.60.X.7.88466261"
+      start_time: "06:00:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "4T.T.NT32"
+    }
+    position {
+      latitude: -30.51416
+      longitude: 153.01886
+      bearing: 165.1
+      speed: 0.0
+    }
+    current_stop_sequence: 33
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353684
+    congestion_level: UNKNOWN_CONGESTION_LEVEL
+    stop_id: "245526"
+    vehicle {
+      id: "XP2008"
+      label: "06:00am (032)  Brisbane - Sydney"
+      license_plate: ""
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "XPT"
+        performing_prior_trip: false
+        special_vehicle_attributes: 0
+      }
+    }
+  }
+}
+entity {
+  id: "20260114_122214_20"
+  vehicle {
+    trip {
+      trip_id: "NT33.1257.120126.124.X.7.88113882"
+      start_time: "07:15:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "4T.T.NT33"
+    }
+    position {
+      latitude: -31.96395
+      longitude: 151.99226
+      bearing: 71.7
+      speed: 0.0
+    }
+    current_stop_sequence: 28
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353722
+    congestion_level: UNKNOWN_CONGESTION_LEVEL
+    stop_id: "242142"
+    vehicle {
+      id: "XP2015"
+      label: "07:15am (033)  Sydney - Casino"
+      license_plate: ""
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "XPT"
+        performing_prior_trip: false
+        special_vehicle_attributes: 0
+      }
+    }
+  }
+}
+entity {
+  id: "20260114_122214_21"
+  vehicle {
+    trip {
+      trip_id: "SN41.140126.4.N.2.1113"
+      start_time: "11:13:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "4T.T.SHL"
+    }
+    position {
+      latitude: -34.452988
+      longitude: 150.44589
+      bearing: 259.2
+      speed: 0.0
+    }
+    current_stop_sequence: 11
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353707
+    congestion_level: UNKNOWN_CONGESTION_LEVEL
+    stop_id: "2575132"
+    vehicle {
+      id: "TE2812"
+      label: "11:13am Campbelltown - Moss Vale"
+      license_plate: ""
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "Endeavour"
+        performing_prior_trip: false
+        special_vehicle_attributes: 0
+      }
+    }
+  }
+}
+entity {
+  id: "20260114_122214_22"
+  vehicle {
+    trip {
+      trip_id: "SN43.140126.4.N.2.1145"
+      start_time: "11:45:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "4T.T.SHL"
+    }
+    position {
+      latitude: -34.221146
+      longitude: 150.5912
+      bearing: 194.6
+      speed: 0.0
+    }
+    current_stop_sequence: 7
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353725
+    congestion_level: UNKNOWN_CONGESTION_LEVEL
+    stop_id: "2571162"
+    vehicle {
+      id: "LE2863"
+      label: "11:45am Campbelltown - Moss Vale"
+      license_plate: ""
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "Endeavour"
+        performing_prior_trip: false
+        special_vehicle_attributes: 0
+      }
+    }
+  }
+}
+entity {
+  id: "20260114_122214_23"
+  vehicle {
+    trip {
+      trip_id: "SN54.140126.4.N.2.1056"
+      start_time: "10:59:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "4T.T.SHL"
+    }
+    position {
+      latitude: -34.083336
+      longitude: 150.76883
+      bearing: 74.7
+      speed: 0.0
+    }
+    current_stop_sequence: 12
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353720
+    congestion_level: UNKNOWN_CONGESTION_LEVEL
+    stop_id: "256321"
+    vehicle {
+      id: "LE2864"
+      label: "10:58am Moss Vale - Campbelltown"
+      license_plate: ""
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "Endeavour"
+        performing_prior_trip: false
+        special_vehicle_attributes: 0
+      }
+    }
+  }
+}
+entity {
+  id: "20260114_122214_24"
+  vehicle {
+    trip {
+      trip_id: "SN56.140126.4.N.2.1156"
+      start_time: "11:59:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "4T.T.SHL"
+    }
+    position {
+      latitude: -34.41263
+      longitude: 150.5181
+      bearing: 29.1
+      speed: 0.0
+    }
+    current_stop_sequence: 5
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353686
+    congestion_level: UNKNOWN_CONGESTION_LEVEL
+    stop_id: "2575131"
+    vehicle {
+      id: "LE2856"
+      label: "11:58am Moss Vale - Campbelltown"
+      license_plate: ""
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "Endeavour"
+        performing_prior_trip: false
+        special_vehicle_attributes: 0
+      }
+    }
+  }
+}
+entity {
+  id: "20260114_122214_25"
+  vehicle {
+    trip {
+      trip_id: "SP33.140126.4.P.5.1211"
+      start_time: "12:11:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "4T.T.SP33"
+    }
+    position {
+      latitude: -33.922054
+      longitude: 151.157
+      bearing: 198.1
+      speed: 0.0
+    }
+    current_stop_sequence: 9
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353725
+    congestion_level: UNKNOWN_CONGESTION_LEVEL
+    stop_id: "2000326"
+    vehicle {
+      id: "EA2501"
+      label: "12:11pm (633)  Sydney - Canberra"
+      license_plate: ""
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "Xplorer"
+        performing_prior_trip: false
+        special_vehicle_attributes: 0
+      }
+    }
+  }
+}
+entity {
+  id: "20260114_122214_26"
+  vehicle {
+    trip {
+      trip_id: "SP34.130126.22.P.3.1158"
+      start_time: "11:58:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "4T.T.SP34"
+    }
+    position {
+      latitude: -35.350945
+      longitude: 149.35547
+      bearing: 81.2
+      speed: 0.0
+    }
+    current_stop_sequence: 3
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353679
+    congestion_level: UNKNOWN_CONGESTION_LEVEL
+    stop_id: "262030"
+    vehicle {
+      id: "EC2527"
+      label: "11:58am (634)  Canberra - Sydney"
+      license_plate: ""
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "Xplorer"
+        performing_prior_trip: false
+        special_vehicle_attributes: 0
+      }
+    }
+  }
+}
+entity {
+  id: "20260114_122214_27"
+  vehicle {
+    trip {
+      trip_id: "ST23.120126.31.X.7.0740"
+      start_time: "07:40:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "4T.T.ST23"
+    }
+    position {
+      latitude: -34.569916
+      longitude: 148.47063
+      bearing: 257.2
+      speed: 0.0
+    }
+    current_stop_sequence: 29
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353671
+    congestion_level: UNKNOWN_CONGESTION_LEVEL
+    stop_id: "258234"
+    vehicle {
+      id: "XP2002"
+      label: "07:40am (623)  Sydney - Melbourne"
+      license_plate: ""
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "XPT"
+        performing_prior_trip: false
+        special_vehicle_attributes: 0
+      }
+    }
+  }
+}
+entity {
+  id: "20260114_122214_28"
+  vehicle {
+    trip {
+      trip_id: "ST24.120126.31.X.7.0830"
+      start_time: "08:30:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "4T.T.ST24"
+    }
+    position {
+      latitude: -35.864
+      longitude: 146.9972
+      bearing: 356.6
+      speed: 0.0
+    }
+    current_stop_sequence: 30
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353695
+    congestion_level: UNKNOWN_CONGESTION_LEVEL
+    stop_id: "264086"
+    vehicle {
+      id: "XP2010"
+      label: "08:30am (624)  Melbourne - Sydney"
+      license_plate: ""
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "XPT"
+        performing_prior_trip: false
+        special_vehicle_attributes: 0
+      }
+    }
+  }
+}
+entity {
+  id: "20260114_122214_29"
+  vehicle {
+    trip {
+      trip_id: "V739.140126.4.J.2.1150"
+      start_time: "11:50:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "4T.T.HUN"
+    }
+    position {
+      latitude: -32.827583
+      longitude: 151.68358
+      bearing: 340.2
+      speed: 0.0
+    }
+    current_stop_sequence: 8
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353726
+    congestion_level: UNKNOWN_CONGESTION_LEVEL
+    stop_id: "2322232"
+    vehicle {
+      id: "HM2701"
+      label: "11:50am Newcastle Interchange - Telarah"
+      license_plate: ""
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "Hunter Railcar"
+        performing_prior_trip: false
+        special_vehicle_attributes: 0
+      }
+    }
+  }
+}
+entity {
+  id: "20260114_122214_30"
+  vehicle {
+    trip {
+      trip_id: "WT27.130126.30.X.5.0719"
+      start_time: "07:19:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "4T.T.WT27"
+    }
+    position {
+      latitude: -33.206905
+      longitude: 149.10983
+      bearing: 12.3
+      speed: 0.0
+    }
+    current_stop_sequence: 23
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353675
+    congestion_level: UNKNOWN_CONGESTION_LEVEL
+    stop_id: "280092"
+    vehicle {
+      id: "XP2017"
+      label: "07:19am (427)  Sydney - Dubbo"
+      license_plate: ""
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "XPT"
+        performing_prior_trip: false
+        special_vehicle_attributes: 0
+      }
+    }
+  }
+}

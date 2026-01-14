@@ -1,0 +1,3059 @@
+{
+  "version": "10.6.21.17",
+  "systemMessages": [],
+  "locations": [
+    {
+      "id": "G201023",
+      "isGlobalId": true,
+      "name": "Crown St before Foveaux St, Surry Hills",
+      "disassembledName": "Crown St before Foveaux St",
+      "coord": [
+        -33.885917,
+        151.213804
+      ],
+      "type": "stop",
+      "matchQuality": 100000,
+      "isBest": true,
+      "parent": {
+        "id": "placeID:95301027:1",
+        "name": "Surry Hills",
+        "type": "locality"
+      },
+      "assignedStops": [
+        {
+          "id": "G201023",
+          "isGlobalId": true,
+          "name": "Crown St before Foveaux St, Surry Hills",
+          "disassembledName": "Crown St before Foveaux St",
+          "type": "stop",
+          "coord": [
+            -33.885917,
+            151.213804
+          ],
+          "parent": {
+            "name": "Surry Hills",
+            "type": "locality"
+          },
+          "connectingMode": 100,
+          "properties": {
+            "stopId": "10111010"
+          },
+          "modes": [
+            5
+          ]
+        }
+      ],
+      "properties": {
+        "stopId": "10111010"
+      }
+    }
+  ],
+  "stopEvents": [
+    {
+      "realtimeStatus": [
+        "MONITORED"
+      ],
+      "isRealtimeControlled": true,
+      "location": {
+        "id": "201023",
+        "isGlobalId": true,
+        "name": "Crown St before Foveaux St, Surry Hills",
+        "disassembledName": "Crown St before Foveaux St, Surry Hills",
+        "type": "platform",
+        "coord": [
+          -33.885917,
+          151.213804
+        ],
+        "properties": {
+          "stopId": "10111010",
+          "area": "0",
+          "platform": "X1",
+          "platformName": "Crown St before Foveaux St",
+          "plannedPlatformName": "Crown St before Foveaux St"
+        },
+        "parent": {
+          "id": "G201023",
+          "isGlobalId": true,
+          "name": "Crown St before Foveaux St, Surry Hills",
+          "disassembledName": "Crown St before Foveaux St",
+          "type": "stop",
+          "parent": {
+            "name": "Surry Hills",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10111010"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T01:01:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T01:01:00Z",
+      "departureTimeEstimated": "2026-01-14T01:01:00Z",
+      "transportation": {
+        "id": "nsw:30304: :R:sj2",
+        "name": "Sydney Buses Network 304",
+        "disassembledName": "304",
+        "number": "304",
+        "description": "City Circular Quay to Green Square (Loop Service)",
+        "product": {
+          "id": 5,
+          "class": 5,
+          "name": "Sydney Buses Network",
+          "iconId": 5
+        },
+        "operator": {
+          "id": "2509",
+          "name": "Transdev John Holland Buses"
+        },
+        "destination": {
+          "id": "10111066",
+          "name": "City Circular Quay via Green Square",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 102,
+          "lineDisplay": "LINE",
+          "globalId": "3002",
+          "OperatorURL": "http://transportnsw.info"
+        },
+        "origin": {
+          "id": "10101103",
+          "name": "Circular Quay, Sydney",
+          "type": "stop"
+        },
+        "iconId": 5
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "2371025",
+        "AVMSTripID": "2371025"
+      }
+    },
+    {
+      "location": {
+        "id": "201023",
+        "isGlobalId": true,
+        "name": "Crown St before Foveaux St, Surry Hills",
+        "disassembledName": "Crown St before Foveaux St, Surry Hills",
+        "type": "platform",
+        "coord": [
+          -33.885917,
+          151.213804
+        ],
+        "properties": {
+          "stopId": "10111010",
+          "area": "0",
+          "platform": "X1",
+          "platformName": "Crown St before Foveaux St",
+          "plannedPlatformName": "Crown St before Foveaux St"
+        },
+        "parent": {
+          "id": "G201023",
+          "isGlobalId": true,
+          "name": "Crown St before Foveaux St, Surry Hills",
+          "disassembledName": "Crown St before Foveaux St",
+          "type": "stop",
+          "parent": {
+            "name": "Surry Hills",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10111010"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T01:11:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T01:11:00Z",
+      "transportation": {
+        "id": "nsw:30304: :R:sj2",
+        "name": "Sydney Buses Network 304",
+        "disassembledName": "304",
+        "number": "304",
+        "description": "City Circular Quay to Green Square (Loop Service)",
+        "product": {
+          "id": 5,
+          "class": 5,
+          "name": "Sydney Buses Network",
+          "iconId": 5
+        },
+        "operator": {
+          "id": "2509",
+          "name": "Transdev John Holland Buses"
+        },
+        "destination": {
+          "id": "10111066",
+          "name": "City Circular Quay via Green Square",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 103,
+          "lineDisplay": "LINE",
+          "globalId": "3002",
+          "OperatorURL": "http://transportnsw.info"
+        },
+        "origin": {
+          "id": "10101103",
+          "name": "Circular Quay, Sydney",
+          "type": "stop"
+        },
+        "iconId": 5
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "2371011"
+      }
+    },
+    {
+      "location": {
+        "id": "201023",
+        "isGlobalId": true,
+        "name": "Crown St before Foveaux St, Surry Hills",
+        "disassembledName": "Crown St before Foveaux St, Surry Hills",
+        "type": "platform",
+        "coord": [
+          -33.885917,
+          151.213804
+        ],
+        "properties": {
+          "stopId": "10111010",
+          "area": "0",
+          "platform": "X1",
+          "platformName": "Crown St before Foveaux St",
+          "plannedPlatformName": "Crown St before Foveaux St"
+        },
+        "parent": {
+          "id": "G201023",
+          "isGlobalId": true,
+          "name": "Crown St before Foveaux St, Surry Hills",
+          "disassembledName": "Crown St before Foveaux St",
+          "type": "stop",
+          "parent": {
+            "name": "Surry Hills",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10111010"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T01:21:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T01:21:00Z",
+      "transportation": {
+        "id": "nsw:30304: :R:sj2",
+        "name": "Sydney Buses Network 304",
+        "disassembledName": "304",
+        "number": "304",
+        "description": "City Circular Quay to Green Square (Loop Service)",
+        "product": {
+          "id": 5,
+          "class": 5,
+          "name": "Sydney Buses Network",
+          "iconId": 5
+        },
+        "operator": {
+          "id": "2509",
+          "name": "Transdev John Holland Buses"
+        },
+        "destination": {
+          "id": "10111066",
+          "name": "City Circular Quay via Green Square",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 104,
+          "lineDisplay": "LINE",
+          "globalId": "3002",
+          "OperatorURL": "http://transportnsw.info"
+        },
+        "origin": {
+          "id": "10101103",
+          "name": "Circular Quay, Sydney",
+          "type": "stop"
+        },
+        "iconId": 5
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "2371224"
+      }
+    },
+    {
+      "location": {
+        "id": "201023",
+        "isGlobalId": true,
+        "name": "Crown St before Foveaux St, Surry Hills",
+        "disassembledName": "Crown St before Foveaux St, Surry Hills",
+        "type": "platform",
+        "coord": [
+          -33.885917,
+          151.213804
+        ],
+        "properties": {
+          "stopId": "10111010",
+          "area": "0",
+          "platform": "X1",
+          "platformName": "Crown St before Foveaux St",
+          "plannedPlatformName": "Crown St before Foveaux St"
+        },
+        "parent": {
+          "id": "G201023",
+          "isGlobalId": true,
+          "name": "Crown St before Foveaux St, Surry Hills",
+          "disassembledName": "Crown St before Foveaux St",
+          "type": "stop",
+          "parent": {
+            "name": "Surry Hills",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10111010"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T01:24:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T01:24:00Z",
+      "transportation": {
+        "id": "nsw:30352: :R:sj2",
+        "name": "Sydney Buses Network 352",
+        "disassembledName": "352",
+        "number": "352",
+        "description": "Marrickville Metro to Bondi Junction via Oxford St, Crown St & King St",
+        "product": {
+          "id": 5,
+          "class": 5,
+          "name": "Sydney Buses Network",
+          "iconId": 5
+        },
+        "operator": {
+          "id": "2509",
+          "name": "Transdev John Holland Buses"
+        },
+        "destination": {
+          "id": "10101109",
+          "name": "Bondi Junction",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 36,
+          "lineDisplay": "LINE",
+          "globalId": "3002",
+          "OperatorURL": "http://transportnsw.info"
+        },
+        "origin": {
+          "id": "10145879",
+          "name": "Edinburgh Rd at Murray St, Marrickville",
+          "type": "stop"
+        },
+        "iconId": 5
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "2531904"
+      }
+    },
+    {
+      "location": {
+        "id": "201023",
+        "isGlobalId": true,
+        "name": "Crown St before Foveaux St, Surry Hills",
+        "disassembledName": "Crown St before Foveaux St, Surry Hills",
+        "type": "platform",
+        "coord": [
+          -33.885917,
+          151.213804
+        ],
+        "properties": {
+          "stopId": "10111010",
+          "area": "0",
+          "platform": "X1",
+          "platformName": "Crown St before Foveaux St",
+          "plannedPlatformName": "Crown St before Foveaux St"
+        },
+        "parent": {
+          "id": "G201023",
+          "isGlobalId": true,
+          "name": "Crown St before Foveaux St, Surry Hills",
+          "disassembledName": "Crown St before Foveaux St",
+          "type": "stop",
+          "parent": {
+            "name": "Surry Hills",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10111010"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T01:31:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T01:31:00Z",
+      "transportation": {
+        "id": "nsw:30304: :R:sj2",
+        "name": "Sydney Buses Network 304",
+        "disassembledName": "304",
+        "number": "304",
+        "description": "City Circular Quay to Green Square (Loop Service)",
+        "product": {
+          "id": 5,
+          "class": 5,
+          "name": "Sydney Buses Network",
+          "iconId": 5
+        },
+        "operator": {
+          "id": "2509",
+          "name": "Transdev John Holland Buses"
+        },
+        "destination": {
+          "id": "10111066",
+          "name": "City Circular Quay via Green Square",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 105,
+          "lineDisplay": "LINE",
+          "globalId": "3002",
+          "OperatorURL": "http://transportnsw.info"
+        },
+        "origin": {
+          "id": "10101103",
+          "name": "Circular Quay, Sydney",
+          "type": "stop"
+        },
+        "iconId": 5
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "2371139"
+      }
+    },
+    {
+      "location": {
+        "id": "201023",
+        "isGlobalId": true,
+        "name": "Crown St before Foveaux St, Surry Hills",
+        "disassembledName": "Crown St before Foveaux St, Surry Hills",
+        "type": "platform",
+        "coord": [
+          -33.885917,
+          151.213804
+        ],
+        "properties": {
+          "stopId": "10111010",
+          "area": "0",
+          "platform": "X1",
+          "platformName": "Crown St before Foveaux St",
+          "plannedPlatformName": "Crown St before Foveaux St"
+        },
+        "parent": {
+          "id": "G201023",
+          "isGlobalId": true,
+          "name": "Crown St before Foveaux St, Surry Hills",
+          "disassembledName": "Crown St before Foveaux St",
+          "type": "stop",
+          "parent": {
+            "name": "Surry Hills",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10111010"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T01:41:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T01:41:00Z",
+      "transportation": {
+        "id": "nsw:30304: :R:sj2",
+        "name": "Sydney Buses Network 304",
+        "disassembledName": "304",
+        "number": "304",
+        "description": "City Circular Quay to Green Square (Loop Service)",
+        "product": {
+          "id": 5,
+          "class": 5,
+          "name": "Sydney Buses Network",
+          "iconId": 5
+        },
+        "operator": {
+          "id": "2509",
+          "name": "Transdev John Holland Buses"
+        },
+        "destination": {
+          "id": "10111066",
+          "name": "City Circular Quay via Green Square",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 106,
+          "lineDisplay": "LINE",
+          "globalId": "3002",
+          "OperatorURL": "http://transportnsw.info"
+        },
+        "origin": {
+          "id": "10101103",
+          "name": "Circular Quay, Sydney",
+          "type": "stop"
+        },
+        "iconId": 5
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "2371147"
+      }
+    },
+    {
+      "location": {
+        "id": "201023",
+        "isGlobalId": true,
+        "name": "Crown St before Foveaux St, Surry Hills",
+        "disassembledName": "Crown St before Foveaux St, Surry Hills",
+        "type": "platform",
+        "coord": [
+          -33.885917,
+          151.213804
+        ],
+        "properties": {
+          "stopId": "10111010",
+          "area": "0",
+          "platform": "X1",
+          "platformName": "Crown St before Foveaux St",
+          "plannedPlatformName": "Crown St before Foveaux St"
+        },
+        "parent": {
+          "id": "G201023",
+          "isGlobalId": true,
+          "name": "Crown St before Foveaux St, Surry Hills",
+          "disassembledName": "Crown St before Foveaux St",
+          "type": "stop",
+          "parent": {
+            "name": "Surry Hills",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10111010"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T01:51:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T01:51:00Z",
+      "transportation": {
+        "id": "nsw:30304: :R:sj2",
+        "name": "Sydney Buses Network 304",
+        "disassembledName": "304",
+        "number": "304",
+        "description": "City Circular Quay to Green Square (Loop Service)",
+        "product": {
+          "id": 5,
+          "class": 5,
+          "name": "Sydney Buses Network",
+          "iconId": 5
+        },
+        "operator": {
+          "id": "2509",
+          "name": "Transdev John Holland Buses"
+        },
+        "destination": {
+          "id": "10111066",
+          "name": "City Circular Quay via Green Square",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 107,
+          "lineDisplay": "LINE",
+          "globalId": "3002",
+          "OperatorURL": "http://transportnsw.info"
+        },
+        "origin": {
+          "id": "10101103",
+          "name": "Circular Quay, Sydney",
+          "type": "stop"
+        },
+        "iconId": 5
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "2371014"
+      }
+    },
+    {
+      "location": {
+        "id": "201023",
+        "isGlobalId": true,
+        "name": "Crown St before Foveaux St, Surry Hills",
+        "disassembledName": "Crown St before Foveaux St, Surry Hills",
+        "type": "platform",
+        "coord": [
+          -33.885917,
+          151.213804
+        ],
+        "properties": {
+          "stopId": "10111010",
+          "area": "0",
+          "platform": "X1",
+          "platformName": "Crown St before Foveaux St",
+          "plannedPlatformName": "Crown St before Foveaux St"
+        },
+        "parent": {
+          "id": "G201023",
+          "isGlobalId": true,
+          "name": "Crown St before Foveaux St, Surry Hills",
+          "disassembledName": "Crown St before Foveaux St",
+          "type": "stop",
+          "parent": {
+            "name": "Surry Hills",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10111010"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T01:54:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T01:54:00Z",
+      "transportation": {
+        "id": "nsw:30352: :R:sj2",
+        "name": "Sydney Buses Network 352",
+        "disassembledName": "352",
+        "number": "352",
+        "description": "Marrickville Metro to Bondi Junction via Oxford St, Crown St & King St",
+        "product": {
+          "id": 5,
+          "class": 5,
+          "name": "Sydney Buses Network",
+          "iconId": 5
+        },
+        "operator": {
+          "id": "2509",
+          "name": "Transdev John Holland Buses"
+        },
+        "destination": {
+          "id": "10101109",
+          "name": "Bondi Junction",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 38,
+          "lineDisplay": "LINE",
+          "globalId": "3002",
+          "OperatorURL": "http://transportnsw.info"
+        },
+        "origin": {
+          "id": "10145879",
+          "name": "Edinburgh Rd at Murray St, Marrickville",
+          "type": "stop"
+        },
+        "iconId": 5
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "2531226"
+      }
+    },
+    {
+      "location": {
+        "id": "201023",
+        "isGlobalId": true,
+        "name": "Crown St before Foveaux St, Surry Hills",
+        "disassembledName": "Crown St before Foveaux St, Surry Hills",
+        "type": "platform",
+        "coord": [
+          -33.885917,
+          151.213804
+        ],
+        "properties": {
+          "stopId": "10111010",
+          "area": "0",
+          "platform": "X1",
+          "platformName": "Crown St before Foveaux St",
+          "plannedPlatformName": "Crown St before Foveaux St"
+        },
+        "parent": {
+          "id": "G201023",
+          "isGlobalId": true,
+          "name": "Crown St before Foveaux St, Surry Hills",
+          "disassembledName": "Crown St before Foveaux St",
+          "type": "stop",
+          "parent": {
+            "name": "Surry Hills",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10111010"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T02:01:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T02:01:00Z",
+      "transportation": {
+        "id": "nsw:30304: :R:sj2",
+        "name": "Sydney Buses Network 304",
+        "disassembledName": "304",
+        "number": "304",
+        "description": "City Circular Quay to Green Square (Loop Service)",
+        "product": {
+          "id": 5,
+          "class": 5,
+          "name": "Sydney Buses Network",
+          "iconId": 5
+        },
+        "operator": {
+          "id": "2509",
+          "name": "Transdev John Holland Buses"
+        },
+        "destination": {
+          "id": "10111066",
+          "name": "City Circular Quay via Green Square",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 108,
+          "lineDisplay": "LINE",
+          "globalId": "3002",
+          "OperatorURL": "http://transportnsw.info"
+        },
+        "origin": {
+          "id": "10101103",
+          "name": "Circular Quay, Sydney",
+          "type": "stop"
+        },
+        "iconId": 5
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "2371233"
+      }
+    },
+    {
+      "location": {
+        "id": "201023",
+        "isGlobalId": true,
+        "name": "Crown St before Foveaux St, Surry Hills",
+        "disassembledName": "Crown St before Foveaux St, Surry Hills",
+        "type": "platform",
+        "coord": [
+          -33.885917,
+          151.213804
+        ],
+        "properties": {
+          "stopId": "10111010",
+          "area": "0",
+          "platform": "X1",
+          "platformName": "Crown St before Foveaux St",
+          "plannedPlatformName": "Crown St before Foveaux St"
+        },
+        "parent": {
+          "id": "G201023",
+          "isGlobalId": true,
+          "name": "Crown St before Foveaux St, Surry Hills",
+          "disassembledName": "Crown St before Foveaux St",
+          "type": "stop",
+          "parent": {
+            "name": "Surry Hills",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10111010"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T02:11:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T02:11:00Z",
+      "transportation": {
+        "id": "nsw:30304: :R:sj2",
+        "name": "Sydney Buses Network 304",
+        "disassembledName": "304",
+        "number": "304",
+        "description": "City Circular Quay to Green Square (Loop Service)",
+        "product": {
+          "id": 5,
+          "class": 5,
+          "name": "Sydney Buses Network",
+          "iconId": 5
+        },
+        "operator": {
+          "id": "2509",
+          "name": "Transdev John Holland Buses"
+        },
+        "destination": {
+          "id": "10111066",
+          "name": "City Circular Quay via Green Square",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 109,
+          "lineDisplay": "LINE",
+          "globalId": "3002",
+          "OperatorURL": "http://transportnsw.info"
+        },
+        "origin": {
+          "id": "10101103",
+          "name": "Circular Quay, Sydney",
+          "type": "stop"
+        },
+        "iconId": 5
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "2371155"
+      }
+    },
+    {
+      "location": {
+        "id": "201023",
+        "isGlobalId": true,
+        "name": "Crown St before Foveaux St, Surry Hills",
+        "disassembledName": "Crown St before Foveaux St, Surry Hills",
+        "type": "platform",
+        "coord": [
+          -33.885917,
+          151.213804
+        ],
+        "properties": {
+          "stopId": "10111010",
+          "area": "0",
+          "platform": "X1",
+          "platformName": "Crown St before Foveaux St",
+          "plannedPlatformName": "Crown St before Foveaux St"
+        },
+        "parent": {
+          "id": "G201023",
+          "isGlobalId": true,
+          "name": "Crown St before Foveaux St, Surry Hills",
+          "disassembledName": "Crown St before Foveaux St",
+          "type": "stop",
+          "parent": {
+            "name": "Surry Hills",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10111010"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T02:21:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T02:21:00Z",
+      "transportation": {
+        "id": "nsw:30304: :R:sj2",
+        "name": "Sydney Buses Network 304",
+        "disassembledName": "304",
+        "number": "304",
+        "description": "City Circular Quay to Green Square (Loop Service)",
+        "product": {
+          "id": 5,
+          "class": 5,
+          "name": "Sydney Buses Network",
+          "iconId": 5
+        },
+        "operator": {
+          "id": "2509",
+          "name": "Transdev John Holland Buses"
+        },
+        "destination": {
+          "id": "10111066",
+          "name": "City Circular Quay via Green Square",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 110,
+          "lineDisplay": "LINE",
+          "globalId": "3002",
+          "OperatorURL": "http://transportnsw.info"
+        },
+        "origin": {
+          "id": "10101103",
+          "name": "Circular Quay, Sydney",
+          "type": "stop"
+        },
+        "iconId": 5
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "2371020"
+      }
+    },
+    {
+      "location": {
+        "id": "201023",
+        "isGlobalId": true,
+        "name": "Crown St before Foveaux St, Surry Hills",
+        "disassembledName": "Crown St before Foveaux St, Surry Hills",
+        "type": "platform",
+        "coord": [
+          -33.885917,
+          151.213804
+        ],
+        "properties": {
+          "stopId": "10111010",
+          "area": "0",
+          "platform": "X1",
+          "platformName": "Crown St before Foveaux St",
+          "plannedPlatformName": "Crown St before Foveaux St"
+        },
+        "parent": {
+          "id": "G201023",
+          "isGlobalId": true,
+          "name": "Crown St before Foveaux St, Surry Hills",
+          "disassembledName": "Crown St before Foveaux St",
+          "type": "stop",
+          "parent": {
+            "name": "Surry Hills",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10111010"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T02:24:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T02:24:00Z",
+      "transportation": {
+        "id": "nsw:30352: :R:sj2",
+        "name": "Sydney Buses Network 352",
+        "disassembledName": "352",
+        "number": "352",
+        "description": "Marrickville Metro to Bondi Junction via Oxford St, Crown St & King St",
+        "product": {
+          "id": 5,
+          "class": 5,
+          "name": "Sydney Buses Network",
+          "iconId": 5
+        },
+        "operator": {
+          "id": "2509",
+          "name": "Transdev John Holland Buses"
+        },
+        "destination": {
+          "id": "10101109",
+          "name": "Bondi Junction",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 40,
+          "lineDisplay": "LINE",
+          "globalId": "3002",
+          "OperatorURL": "http://transportnsw.info"
+        },
+        "origin": {
+          "id": "10145879",
+          "name": "Edinburgh Rd at Murray St, Marrickville",
+          "type": "stop"
+        },
+        "iconId": 5
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "2532276"
+      }
+    },
+    {
+      "location": {
+        "id": "201023",
+        "isGlobalId": true,
+        "name": "Crown St before Foveaux St, Surry Hills",
+        "disassembledName": "Crown St before Foveaux St, Surry Hills",
+        "type": "platform",
+        "coord": [
+          -33.885917,
+          151.213804
+        ],
+        "properties": {
+          "stopId": "10111010",
+          "area": "0",
+          "platform": "X1",
+          "platformName": "Crown St before Foveaux St",
+          "plannedPlatformName": "Crown St before Foveaux St"
+        },
+        "parent": {
+          "id": "G201023",
+          "isGlobalId": true,
+          "name": "Crown St before Foveaux St, Surry Hills",
+          "disassembledName": "Crown St before Foveaux St",
+          "type": "stop",
+          "parent": {
+            "name": "Surry Hills",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10111010"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T02:31:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T02:31:00Z",
+      "transportation": {
+        "id": "nsw:30304: :R:sj2",
+        "name": "Sydney Buses Network 304",
+        "disassembledName": "304",
+        "number": "304",
+        "description": "City Circular Quay to Green Square (Loop Service)",
+        "product": {
+          "id": 5,
+          "class": 5,
+          "name": "Sydney Buses Network",
+          "iconId": 5
+        },
+        "operator": {
+          "id": "2509",
+          "name": "Transdev John Holland Buses"
+        },
+        "destination": {
+          "id": "10111066",
+          "name": "City Circular Quay via Green Square",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 111,
+          "lineDisplay": "LINE",
+          "globalId": "3002",
+          "OperatorURL": "http://transportnsw.info"
+        },
+        "origin": {
+          "id": "10101103",
+          "name": "Circular Quay, Sydney",
+          "type": "stop"
+        },
+        "iconId": 5
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "2371125"
+      }
+    },
+    {
+      "location": {
+        "id": "201023",
+        "isGlobalId": true,
+        "name": "Crown St before Foveaux St, Surry Hills",
+        "disassembledName": "Crown St before Foveaux St, Surry Hills",
+        "type": "platform",
+        "coord": [
+          -33.885917,
+          151.213804
+        ],
+        "properties": {
+          "stopId": "10111010",
+          "area": "0",
+          "platform": "X1",
+          "platformName": "Crown St before Foveaux St",
+          "plannedPlatformName": "Crown St before Foveaux St"
+        },
+        "parent": {
+          "id": "G201023",
+          "isGlobalId": true,
+          "name": "Crown St before Foveaux St, Surry Hills",
+          "disassembledName": "Crown St before Foveaux St",
+          "type": "stop",
+          "parent": {
+            "name": "Surry Hills",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10111010"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T02:41:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T02:41:00Z",
+      "transportation": {
+        "id": "nsw:30304: :R:sj2",
+        "name": "Sydney Buses Network 304",
+        "disassembledName": "304",
+        "number": "304",
+        "description": "City Circular Quay to Green Square (Loop Service)",
+        "product": {
+          "id": 5,
+          "class": 5,
+          "name": "Sydney Buses Network",
+          "iconId": 5
+        },
+        "operator": {
+          "id": "2509",
+          "name": "Transdev John Holland Buses"
+        },
+        "destination": {
+          "id": "10111066",
+          "name": "City Circular Quay via Green Square",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 112,
+          "lineDisplay": "LINE",
+          "globalId": "3002",
+          "OperatorURL": "http://transportnsw.info"
+        },
+        "origin": {
+          "id": "10101103",
+          "name": "Circular Quay, Sydney",
+          "type": "stop"
+        },
+        "iconId": 5
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "2371044"
+      }
+    },
+    {
+      "location": {
+        "id": "201023",
+        "isGlobalId": true,
+        "name": "Crown St before Foveaux St, Surry Hills",
+        "disassembledName": "Crown St before Foveaux St, Surry Hills",
+        "type": "platform",
+        "coord": [
+          -33.885917,
+          151.213804
+        ],
+        "properties": {
+          "stopId": "10111010",
+          "area": "0",
+          "platform": "X1",
+          "platformName": "Crown St before Foveaux St",
+          "plannedPlatformName": "Crown St before Foveaux St"
+        },
+        "parent": {
+          "id": "G201023",
+          "isGlobalId": true,
+          "name": "Crown St before Foveaux St, Surry Hills",
+          "disassembledName": "Crown St before Foveaux St",
+          "type": "stop",
+          "parent": {
+            "name": "Surry Hills",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10111010"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T02:51:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T02:51:00Z",
+      "transportation": {
+        "id": "nsw:30304: :R:sj2",
+        "name": "Sydney Buses Network 304",
+        "disassembledName": "304",
+        "number": "304",
+        "description": "City Circular Quay to Green Square (Loop Service)",
+        "product": {
+          "id": 5,
+          "class": 5,
+          "name": "Sydney Buses Network",
+          "iconId": 5
+        },
+        "operator": {
+          "id": "2509",
+          "name": "Transdev John Holland Buses"
+        },
+        "destination": {
+          "id": "10111066",
+          "name": "City Circular Quay via Green Square",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 113,
+          "lineDisplay": "LINE",
+          "globalId": "3002",
+          "OperatorURL": "http://transportnsw.info"
+        },
+        "origin": {
+          "id": "10101103",
+          "name": "Circular Quay, Sydney",
+          "type": "stop"
+        },
+        "iconId": 5
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "2371171"
+      }
+    },
+    {
+      "location": {
+        "id": "201023",
+        "isGlobalId": true,
+        "name": "Crown St before Foveaux St, Surry Hills",
+        "disassembledName": "Crown St before Foveaux St, Surry Hills",
+        "type": "platform",
+        "coord": [
+          -33.885917,
+          151.213804
+        ],
+        "properties": {
+          "stopId": "10111010",
+          "area": "0",
+          "platform": "X1",
+          "platformName": "Crown St before Foveaux St",
+          "plannedPlatformName": "Crown St before Foveaux St"
+        },
+        "parent": {
+          "id": "G201023",
+          "isGlobalId": true,
+          "name": "Crown St before Foveaux St, Surry Hills",
+          "disassembledName": "Crown St before Foveaux St",
+          "type": "stop",
+          "parent": {
+            "name": "Surry Hills",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10111010"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T02:54:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T02:54:00Z",
+      "transportation": {
+        "id": "nsw:30352: :R:sj2",
+        "name": "Sydney Buses Network 352",
+        "disassembledName": "352",
+        "number": "352",
+        "description": "Marrickville Metro to Bondi Junction via Oxford St, Crown St & King St",
+        "product": {
+          "id": 5,
+          "class": 5,
+          "name": "Sydney Buses Network",
+          "iconId": 5
+        },
+        "operator": {
+          "id": "2509",
+          "name": "Transdev John Holland Buses"
+        },
+        "destination": {
+          "id": "10101109",
+          "name": "Bondi Junction",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 42,
+          "lineDisplay": "LINE",
+          "globalId": "3002",
+          "OperatorURL": "http://transportnsw.info"
+        },
+        "origin": {
+          "id": "10145879",
+          "name": "Edinburgh Rd at Murray St, Marrickville",
+          "type": "stop"
+        },
+        "iconId": 5
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "2533243"
+      }
+    },
+    {
+      "location": {
+        "id": "201023",
+        "isGlobalId": true,
+        "name": "Crown St before Foveaux St, Surry Hills",
+        "disassembledName": "Crown St before Foveaux St, Surry Hills",
+        "type": "platform",
+        "coord": [
+          -33.885917,
+          151.213804
+        ],
+        "properties": {
+          "stopId": "10111010",
+          "area": "0",
+          "platform": "X1",
+          "platformName": "Crown St before Foveaux St",
+          "plannedPlatformName": "Crown St before Foveaux St"
+        },
+        "parent": {
+          "id": "G201023",
+          "isGlobalId": true,
+          "name": "Crown St before Foveaux St, Surry Hills",
+          "disassembledName": "Crown St before Foveaux St",
+          "type": "stop",
+          "parent": {
+            "name": "Surry Hills",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10111010"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T03:01:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T03:01:00Z",
+      "transportation": {
+        "id": "nsw:30304: :R:sj2",
+        "name": "Sydney Buses Network 304",
+        "disassembledName": "304",
+        "number": "304",
+        "description": "City Circular Quay to Green Square (Loop Service)",
+        "product": {
+          "id": 5,
+          "class": 5,
+          "name": "Sydney Buses Network",
+          "iconId": 5
+        },
+        "operator": {
+          "id": "2509",
+          "name": "Transdev John Holland Buses"
+        },
+        "destination": {
+          "id": "10111066",
+          "name": "City Circular Quay via Green Square",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 114,
+          "lineDisplay": "LINE",
+          "globalId": "3002",
+          "OperatorURL": "http://transportnsw.info"
+        },
+        "origin": {
+          "id": "10101103",
+          "name": "Circular Quay, Sydney",
+          "type": "stop"
+        },
+        "iconId": 5
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "2371237"
+      }
+    },
+    {
+      "location": {
+        "id": "201023",
+        "isGlobalId": true,
+        "name": "Crown St before Foveaux St, Surry Hills",
+        "disassembledName": "Crown St before Foveaux St, Surry Hills",
+        "type": "platform",
+        "coord": [
+          -33.885917,
+          151.213804
+        ],
+        "properties": {
+          "stopId": "10111010",
+          "area": "0",
+          "platform": "X1",
+          "platformName": "Crown St before Foveaux St",
+          "plannedPlatformName": "Crown St before Foveaux St"
+        },
+        "parent": {
+          "id": "G201023",
+          "isGlobalId": true,
+          "name": "Crown St before Foveaux St, Surry Hills",
+          "disassembledName": "Crown St before Foveaux St",
+          "type": "stop",
+          "parent": {
+            "name": "Surry Hills",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10111010"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T03:11:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T03:11:00Z",
+      "transportation": {
+        "id": "nsw:30304: :R:sj2",
+        "name": "Sydney Buses Network 304",
+        "disassembledName": "304",
+        "number": "304",
+        "description": "City Circular Quay to Green Square (Loop Service)",
+        "product": {
+          "id": 5,
+          "class": 5,
+          "name": "Sydney Buses Network",
+          "iconId": 5
+        },
+        "operator": {
+          "id": "2509",
+          "name": "Transdev John Holland Buses"
+        },
+        "destination": {
+          "id": "10111066",
+          "name": "City Circular Quay via Green Square",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 115,
+          "lineDisplay": "LINE",
+          "globalId": "3002",
+          "OperatorURL": "http://transportnsw.info"
+        },
+        "origin": {
+          "id": "10101103",
+          "name": "Circular Quay, Sydney",
+          "type": "stop"
+        },
+        "iconId": 5
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "2370995"
+      }
+    },
+    {
+      "location": {
+        "id": "201023",
+        "isGlobalId": true,
+        "name": "Crown St before Foveaux St, Surry Hills",
+        "disassembledName": "Crown St before Foveaux St, Surry Hills",
+        "type": "platform",
+        "coord": [
+          -33.885917,
+          151.213804
+        ],
+        "properties": {
+          "stopId": "10111010",
+          "area": "0",
+          "platform": "X1",
+          "platformName": "Crown St before Foveaux St",
+          "plannedPlatformName": "Crown St before Foveaux St"
+        },
+        "parent": {
+          "id": "G201023",
+          "isGlobalId": true,
+          "name": "Crown St before Foveaux St, Surry Hills",
+          "disassembledName": "Crown St before Foveaux St",
+          "type": "stop",
+          "parent": {
+            "name": "Surry Hills",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10111010"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T03:21:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T03:21:00Z",
+      "transportation": {
+        "id": "nsw:30304: :R:sj2",
+        "name": "Sydney Buses Network 304",
+        "disassembledName": "304",
+        "number": "304",
+        "description": "City Circular Quay to Green Square (Loop Service)",
+        "product": {
+          "id": 5,
+          "class": 5,
+          "name": "Sydney Buses Network",
+          "iconId": 5
+        },
+        "operator": {
+          "id": "2509",
+          "name": "Transdev John Holland Buses"
+        },
+        "destination": {
+          "id": "10111066",
+          "name": "City Circular Quay via Green Square",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 116,
+          "lineDisplay": "LINE",
+          "globalId": "3002",
+          "OperatorURL": "http://transportnsw.info"
+        },
+        "origin": {
+          "id": "10101103",
+          "name": "Circular Quay, Sydney",
+          "type": "stop"
+        },
+        "iconId": 5
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "2371204"
+      }
+    },
+    {
+      "location": {
+        "id": "201023",
+        "isGlobalId": true,
+        "name": "Crown St before Foveaux St, Surry Hills",
+        "disassembledName": "Crown St before Foveaux St, Surry Hills",
+        "type": "platform",
+        "coord": [
+          -33.885917,
+          151.213804
+        ],
+        "properties": {
+          "stopId": "10111010",
+          "area": "0",
+          "platform": "X1",
+          "platformName": "Crown St before Foveaux St",
+          "plannedPlatformName": "Crown St before Foveaux St"
+        },
+        "parent": {
+          "id": "G201023",
+          "isGlobalId": true,
+          "name": "Crown St before Foveaux St, Surry Hills",
+          "disassembledName": "Crown St before Foveaux St",
+          "type": "stop",
+          "parent": {
+            "name": "Surry Hills",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10111010"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T03:24:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T03:24:00Z",
+      "transportation": {
+        "id": "nsw:30352: :R:sj2",
+        "name": "Sydney Buses Network 352",
+        "disassembledName": "352",
+        "number": "352",
+        "description": "Marrickville Metro to Bondi Junction via Oxford St, Crown St & King St",
+        "product": {
+          "id": 5,
+          "class": 5,
+          "name": "Sydney Buses Network",
+          "iconId": 5
+        },
+        "operator": {
+          "id": "2509",
+          "name": "Transdev John Holland Buses"
+        },
+        "destination": {
+          "id": "10101109",
+          "name": "Bondi Junction",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 44,
+          "lineDisplay": "LINE",
+          "globalId": "3002",
+          "OperatorURL": "http://transportnsw.info"
+        },
+        "origin": {
+          "id": "10145879",
+          "name": "Edinburgh Rd at Murray St, Marrickville",
+          "type": "stop"
+        },
+        "iconId": 5
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "2531217"
+      }
+    },
+    {
+      "location": {
+        "id": "201023",
+        "isGlobalId": true,
+        "name": "Crown St before Foveaux St, Surry Hills",
+        "disassembledName": "Crown St before Foveaux St, Surry Hills",
+        "type": "platform",
+        "coord": [
+          -33.885917,
+          151.213804
+        ],
+        "properties": {
+          "stopId": "10111010",
+          "area": "0",
+          "platform": "X1",
+          "platformName": "Crown St before Foveaux St",
+          "plannedPlatformName": "Crown St before Foveaux St"
+        },
+        "parent": {
+          "id": "G201023",
+          "isGlobalId": true,
+          "name": "Crown St before Foveaux St, Surry Hills",
+          "disassembledName": "Crown St before Foveaux St",
+          "type": "stop",
+          "parent": {
+            "name": "Surry Hills",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10111010"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T03:31:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T03:31:00Z",
+      "transportation": {
+        "id": "nsw:30304: :R:sj2",
+        "name": "Sydney Buses Network 304",
+        "disassembledName": "304",
+        "number": "304",
+        "description": "City Circular Quay to Green Square (Loop Service)",
+        "product": {
+          "id": 5,
+          "class": 5,
+          "name": "Sydney Buses Network",
+          "iconId": 5
+        },
+        "operator": {
+          "id": "2509",
+          "name": "Transdev John Holland Buses"
+        },
+        "destination": {
+          "id": "10111066",
+          "name": "City Circular Quay via Green Square",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 117,
+          "lineDisplay": "LINE",
+          "globalId": "3002",
+          "OperatorURL": "http://transportnsw.info"
+        },
+        "origin": {
+          "id": "10101103",
+          "name": "Circular Quay, Sydney",
+          "type": "stop"
+        },
+        "iconId": 5
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "2371234"
+      }
+    },
+    {
+      "location": {
+        "id": "201023",
+        "isGlobalId": true,
+        "name": "Crown St before Foveaux St, Surry Hills",
+        "disassembledName": "Crown St before Foveaux St, Surry Hills",
+        "type": "platform",
+        "coord": [
+          -33.885917,
+          151.213804
+        ],
+        "properties": {
+          "stopId": "10111010",
+          "area": "0",
+          "platform": "X1",
+          "platformName": "Crown St before Foveaux St",
+          "plannedPlatformName": "Crown St before Foveaux St"
+        },
+        "parent": {
+          "id": "G201023",
+          "isGlobalId": true,
+          "name": "Crown St before Foveaux St, Surry Hills",
+          "disassembledName": "Crown St before Foveaux St",
+          "type": "stop",
+          "parent": {
+            "name": "Surry Hills",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10111010"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T03:41:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T03:41:00Z",
+      "transportation": {
+        "id": "nsw:30304: :R:sj2",
+        "name": "Sydney Buses Network 304",
+        "disassembledName": "304",
+        "number": "304",
+        "description": "City Circular Quay to Green Square (Loop Service)",
+        "product": {
+          "id": 5,
+          "class": 5,
+          "name": "Sydney Buses Network",
+          "iconId": 5
+        },
+        "operator": {
+          "id": "2509",
+          "name": "Transdev John Holland Buses"
+        },
+        "destination": {
+          "id": "10111066",
+          "name": "City Circular Quay via Green Square",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 118,
+          "lineDisplay": "LINE",
+          "globalId": "3002",
+          "OperatorURL": "http://transportnsw.info"
+        },
+        "origin": {
+          "id": "10101103",
+          "name": "Circular Quay, Sydney",
+          "type": "stop"
+        },
+        "iconId": 5
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "2371113"
+      }
+    },
+    {
+      "location": {
+        "id": "201023",
+        "isGlobalId": true,
+        "name": "Crown St before Foveaux St, Surry Hills",
+        "disassembledName": "Crown St before Foveaux St, Surry Hills",
+        "type": "platform",
+        "coord": [
+          -33.885917,
+          151.213804
+        ],
+        "properties": {
+          "stopId": "10111010",
+          "area": "0",
+          "platform": "X1",
+          "platformName": "Crown St before Foveaux St",
+          "plannedPlatformName": "Crown St before Foveaux St"
+        },
+        "parent": {
+          "id": "G201023",
+          "isGlobalId": true,
+          "name": "Crown St before Foveaux St, Surry Hills",
+          "disassembledName": "Crown St before Foveaux St",
+          "type": "stop",
+          "parent": {
+            "name": "Surry Hills",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10111010"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T03:51:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T03:51:00Z",
+      "transportation": {
+        "id": "nsw:30304: :R:sj2",
+        "name": "Sydney Buses Network 304",
+        "disassembledName": "304",
+        "number": "304",
+        "description": "City Circular Quay to Green Square (Loop Service)",
+        "product": {
+          "id": 5,
+          "class": 5,
+          "name": "Sydney Buses Network",
+          "iconId": 5
+        },
+        "operator": {
+          "id": "2509",
+          "name": "Transdev John Holland Buses"
+        },
+        "destination": {
+          "id": "10111066",
+          "name": "City Circular Quay via Green Square",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 119,
+          "lineDisplay": "LINE",
+          "globalId": "3002",
+          "OperatorURL": "http://transportnsw.info"
+        },
+        "origin": {
+          "id": "10101103",
+          "name": "Circular Quay, Sydney",
+          "type": "stop"
+        },
+        "iconId": 5
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "2371073"
+      }
+    },
+    {
+      "location": {
+        "id": "201023",
+        "isGlobalId": true,
+        "name": "Crown St before Foveaux St, Surry Hills",
+        "disassembledName": "Crown St before Foveaux St, Surry Hills",
+        "type": "platform",
+        "coord": [
+          -33.885917,
+          151.213804
+        ],
+        "properties": {
+          "stopId": "10111010",
+          "area": "0",
+          "platform": "X1",
+          "platformName": "Crown St before Foveaux St",
+          "plannedPlatformName": "Crown St before Foveaux St"
+        },
+        "parent": {
+          "id": "G201023",
+          "isGlobalId": true,
+          "name": "Crown St before Foveaux St, Surry Hills",
+          "disassembledName": "Crown St before Foveaux St",
+          "type": "stop",
+          "parent": {
+            "name": "Surry Hills",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10111010"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T03:54:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T03:54:00Z",
+      "transportation": {
+        "id": "nsw:30352: :R:sj2",
+        "name": "Sydney Buses Network 352",
+        "disassembledName": "352",
+        "number": "352",
+        "description": "Marrickville Metro to Bondi Junction via Oxford St, Crown St & King St",
+        "product": {
+          "id": 5,
+          "class": 5,
+          "name": "Sydney Buses Network",
+          "iconId": 5
+        },
+        "operator": {
+          "id": "2509",
+          "name": "Transdev John Holland Buses"
+        },
+        "destination": {
+          "id": "10101109",
+          "name": "Bondi Junction",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 46,
+          "lineDisplay": "LINE",
+          "globalId": "3002",
+          "OperatorURL": "http://transportnsw.info"
+        },
+        "origin": {
+          "id": "10145879",
+          "name": "Edinburgh Rd at Murray St, Marrickville",
+          "type": "stop"
+        },
+        "iconId": 5
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "2533077"
+      }
+    },
+    {
+      "location": {
+        "id": "201023",
+        "isGlobalId": true,
+        "name": "Crown St before Foveaux St, Surry Hills",
+        "disassembledName": "Crown St before Foveaux St, Surry Hills",
+        "type": "platform",
+        "coord": [
+          -33.885917,
+          151.213804
+        ],
+        "properties": {
+          "stopId": "10111010",
+          "area": "0",
+          "platform": "X1",
+          "platformName": "Crown St before Foveaux St",
+          "plannedPlatformName": "Crown St before Foveaux St"
+        },
+        "parent": {
+          "id": "G201023",
+          "isGlobalId": true,
+          "name": "Crown St before Foveaux St, Surry Hills",
+          "disassembledName": "Crown St before Foveaux St",
+          "type": "stop",
+          "parent": {
+            "name": "Surry Hills",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10111010"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T04:01:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T04:01:00Z",
+      "transportation": {
+        "id": "nsw:30304: :R:sj2",
+        "name": "Sydney Buses Network 304",
+        "disassembledName": "304",
+        "number": "304",
+        "description": "City Circular Quay to Green Square (Loop Service)",
+        "product": {
+          "id": 5,
+          "class": 5,
+          "name": "Sydney Buses Network",
+          "iconId": 5
+        },
+        "operator": {
+          "id": "2509",
+          "name": "Transdev John Holland Buses"
+        },
+        "destination": {
+          "id": "10111066",
+          "name": "City Circular Quay via Green Square",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 120,
+          "lineDisplay": "LINE",
+          "globalId": "3002",
+          "OperatorURL": "http://transportnsw.info"
+        },
+        "origin": {
+          "id": "10101103",
+          "name": "Circular Quay, Sydney",
+          "type": "stop"
+        },
+        "iconId": 5
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "2371141"
+      }
+    },
+    {
+      "location": {
+        "id": "201023",
+        "isGlobalId": true,
+        "name": "Crown St before Foveaux St, Surry Hills",
+        "disassembledName": "Crown St before Foveaux St, Surry Hills",
+        "type": "platform",
+        "coord": [
+          -33.885917,
+          151.213804
+        ],
+        "properties": {
+          "stopId": "10111010",
+          "area": "0",
+          "platform": "X1",
+          "platformName": "Crown St before Foveaux St",
+          "plannedPlatformName": "Crown St before Foveaux St"
+        },
+        "parent": {
+          "id": "G201023",
+          "isGlobalId": true,
+          "name": "Crown St before Foveaux St, Surry Hills",
+          "disassembledName": "Crown St before Foveaux St",
+          "type": "stop",
+          "parent": {
+            "name": "Surry Hills",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10111010"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T04:11:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T04:11:00Z",
+      "transportation": {
+        "id": "nsw:30304: :R:sj2",
+        "name": "Sydney Buses Network 304",
+        "disassembledName": "304",
+        "number": "304",
+        "description": "City Circular Quay to Green Square (Loop Service)",
+        "product": {
+          "id": 5,
+          "class": 5,
+          "name": "Sydney Buses Network",
+          "iconId": 5
+        },
+        "operator": {
+          "id": "2509",
+          "name": "Transdev John Holland Buses"
+        },
+        "destination": {
+          "id": "10111066",
+          "name": "City Circular Quay via Green Square",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 121,
+          "lineDisplay": "LINE",
+          "globalId": "3002",
+          "OperatorURL": "http://transportnsw.info"
+        },
+        "origin": {
+          "id": "10101103",
+          "name": "Circular Quay, Sydney",
+          "type": "stop"
+        },
+        "iconId": 5
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "2371103"
+      }
+    },
+    {
+      "location": {
+        "id": "201023",
+        "isGlobalId": true,
+        "name": "Crown St before Foveaux St, Surry Hills",
+        "disassembledName": "Crown St before Foveaux St, Surry Hills",
+        "type": "platform",
+        "coord": [
+          -33.885917,
+          151.213804
+        ],
+        "properties": {
+          "stopId": "10111010",
+          "area": "0",
+          "platform": "X1",
+          "platformName": "Crown St before Foveaux St",
+          "plannedPlatformName": "Crown St before Foveaux St"
+        },
+        "parent": {
+          "id": "G201023",
+          "isGlobalId": true,
+          "name": "Crown St before Foveaux St, Surry Hills",
+          "disassembledName": "Crown St before Foveaux St",
+          "type": "stop",
+          "parent": {
+            "name": "Surry Hills",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10111010"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T04:21:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T04:21:00Z",
+      "transportation": {
+        "id": "nsw:30304: :R:sj2",
+        "name": "Sydney Buses Network 304",
+        "disassembledName": "304",
+        "number": "304",
+        "description": "City Circular Quay to Green Square (Loop Service)",
+        "product": {
+          "id": 5,
+          "class": 5,
+          "name": "Sydney Buses Network",
+          "iconId": 5
+        },
+        "operator": {
+          "id": "2509",
+          "name": "Transdev John Holland Buses"
+        },
+        "destination": {
+          "id": "10111066",
+          "name": "City Circular Quay via Green Square",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 122,
+          "lineDisplay": "LINE",
+          "globalId": "3002",
+          "OperatorURL": "http://transportnsw.info"
+        },
+        "origin": {
+          "id": "10101103",
+          "name": "Circular Quay, Sydney",
+          "type": "stop"
+        },
+        "iconId": 5
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "2371168"
+      }
+    },
+    {
+      "location": {
+        "id": "201023",
+        "isGlobalId": true,
+        "name": "Crown St before Foveaux St, Surry Hills",
+        "disassembledName": "Crown St before Foveaux St, Surry Hills",
+        "type": "platform",
+        "coord": [
+          -33.885917,
+          151.213804
+        ],
+        "properties": {
+          "stopId": "10111010",
+          "area": "0",
+          "platform": "X1",
+          "platformName": "Crown St before Foveaux St",
+          "plannedPlatformName": "Crown St before Foveaux St"
+        },
+        "parent": {
+          "id": "G201023",
+          "isGlobalId": true,
+          "name": "Crown St before Foveaux St, Surry Hills",
+          "disassembledName": "Crown St before Foveaux St",
+          "type": "stop",
+          "parent": {
+            "name": "Surry Hills",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10111010"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T04:24:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T04:24:00Z",
+      "transportation": {
+        "id": "nsw:30352: :R:sj2",
+        "name": "Sydney Buses Network 352",
+        "disassembledName": "352",
+        "number": "352",
+        "description": "Marrickville Metro to Bondi Junction via Oxford St, Crown St & King St",
+        "product": {
+          "id": 5,
+          "class": 5,
+          "name": "Sydney Buses Network",
+          "iconId": 5
+        },
+        "operator": {
+          "id": "2509",
+          "name": "Transdev John Holland Buses"
+        },
+        "destination": {
+          "id": "10101109",
+          "name": "Bondi Junction",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 48,
+          "lineDisplay": "LINE",
+          "globalId": "3002",
+          "OperatorURL": "http://transportnsw.info"
+        },
+        "origin": {
+          "id": "10145879",
+          "name": "Edinburgh Rd at Murray St, Marrickville",
+          "type": "stop"
+        },
+        "iconId": 5
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "2534441"
+      }
+    },
+    {
+      "location": {
+        "id": "201023",
+        "isGlobalId": true,
+        "name": "Crown St before Foveaux St, Surry Hills",
+        "disassembledName": "Crown St before Foveaux St, Surry Hills",
+        "type": "platform",
+        "coord": [
+          -33.885917,
+          151.213804
+        ],
+        "properties": {
+          "stopId": "10111010",
+          "area": "0",
+          "platform": "X1",
+          "platformName": "Crown St before Foveaux St",
+          "plannedPlatformName": "Crown St before Foveaux St"
+        },
+        "parent": {
+          "id": "G201023",
+          "isGlobalId": true,
+          "name": "Crown St before Foveaux St, Surry Hills",
+          "disassembledName": "Crown St before Foveaux St",
+          "type": "stop",
+          "parent": {
+            "name": "Surry Hills",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10111010"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T04:31:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T04:31:00Z",
+      "transportation": {
+        "id": "nsw:30304: :R:sj2",
+        "name": "Sydney Buses Network 304",
+        "disassembledName": "304",
+        "number": "304",
+        "description": "City Circular Quay to Green Square (Loop Service)",
+        "product": {
+          "id": 5,
+          "class": 5,
+          "name": "Sydney Buses Network",
+          "iconId": 5
+        },
+        "operator": {
+          "id": "2509",
+          "name": "Transdev John Holland Buses"
+        },
+        "destination": {
+          "id": "10111066",
+          "name": "City Circular Quay via Green Square",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 123,
+          "lineDisplay": "LINE",
+          "globalId": "3002",
+          "OperatorURL": "http://transportnsw.info"
+        },
+        "origin": {
+          "id": "10101103",
+          "name": "Circular Quay, Sydney",
+          "type": "stop"
+        },
+        "iconId": 5
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "2371146"
+      }
+    },
+    {
+      "location": {
+        "id": "201023",
+        "isGlobalId": true,
+        "name": "Crown St before Foveaux St, Surry Hills",
+        "disassembledName": "Crown St before Foveaux St, Surry Hills",
+        "type": "platform",
+        "coord": [
+          -33.885917,
+          151.213804
+        ],
+        "properties": {
+          "stopId": "10111010",
+          "area": "0",
+          "platform": "X1",
+          "platformName": "Crown St before Foveaux St",
+          "plannedPlatformName": "Crown St before Foveaux St"
+        },
+        "parent": {
+          "id": "G201023",
+          "isGlobalId": true,
+          "name": "Crown St before Foveaux St, Surry Hills",
+          "disassembledName": "Crown St before Foveaux St",
+          "type": "stop",
+          "parent": {
+            "name": "Surry Hills",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10111010"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T04:41:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T04:41:00Z",
+      "transportation": {
+        "id": "nsw:30304: :R:sj2",
+        "name": "Sydney Buses Network 304",
+        "disassembledName": "304",
+        "number": "304",
+        "description": "City Circular Quay to Green Square (Loop Service)",
+        "product": {
+          "id": 5,
+          "class": 5,
+          "name": "Sydney Buses Network",
+          "iconId": 5
+        },
+        "operator": {
+          "id": "2509",
+          "name": "Transdev John Holland Buses"
+        },
+        "destination": {
+          "id": "10111066",
+          "name": "City Circular Quay via Green Square",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 124,
+          "lineDisplay": "LINE",
+          "globalId": "3002",
+          "OperatorURL": "http://transportnsw.info"
+        },
+        "origin": {
+          "id": "10101103",
+          "name": "Circular Quay, Sydney",
+          "type": "stop"
+        },
+        "iconId": 5
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "2371071"
+      }
+    },
+    {
+      "location": {
+        "id": "201023",
+        "isGlobalId": true,
+        "name": "Crown St before Foveaux St, Surry Hills",
+        "disassembledName": "Crown St before Foveaux St, Surry Hills",
+        "type": "platform",
+        "coord": [
+          -33.885917,
+          151.213804
+        ],
+        "properties": {
+          "stopId": "10111010",
+          "area": "0",
+          "platform": "X1",
+          "platformName": "Crown St before Foveaux St",
+          "plannedPlatformName": "Crown St before Foveaux St"
+        },
+        "parent": {
+          "id": "G201023",
+          "isGlobalId": true,
+          "name": "Crown St before Foveaux St, Surry Hills",
+          "disassembledName": "Crown St before Foveaux St",
+          "type": "stop",
+          "parent": {
+            "name": "Surry Hills",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10111010"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T04:44:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T04:44:00Z",
+      "transportation": {
+        "id": "nsw:30352: :R:sj2",
+        "name": "Sydney Buses Network 352",
+        "disassembledName": "352",
+        "number": "352",
+        "description": "Marrickville Metro to Bondi Junction via Oxford St, Crown St & King St",
+        "product": {
+          "id": 5,
+          "class": 5,
+          "name": "Sydney Buses Network",
+          "iconId": 5
+        },
+        "operator": {
+          "id": "2509",
+          "name": "Transdev John Holland Buses"
+        },
+        "destination": {
+          "id": "10101109",
+          "name": "Bondi Junction",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 49,
+          "lineDisplay": "LINE",
+          "globalId": "3002",
+          "OperatorURL": "http://transportnsw.info"
+        },
+        "origin": {
+          "id": "10145879",
+          "name": "Edinburgh Rd at Murray St, Marrickville",
+          "type": "stop"
+        },
+        "iconId": 5
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "2532529"
+      }
+    },
+    {
+      "location": {
+        "id": "201023",
+        "isGlobalId": true,
+        "name": "Crown St before Foveaux St, Surry Hills",
+        "disassembledName": "Crown St before Foveaux St, Surry Hills",
+        "type": "platform",
+        "coord": [
+          -33.885917,
+          151.213804
+        ],
+        "properties": {
+          "stopId": "10111010",
+          "area": "0",
+          "platform": "X1",
+          "platformName": "Crown St before Foveaux St",
+          "plannedPlatformName": "Crown St before Foveaux St"
+        },
+        "parent": {
+          "id": "G201023",
+          "isGlobalId": true,
+          "name": "Crown St before Foveaux St, Surry Hills",
+          "disassembledName": "Crown St before Foveaux St",
+          "type": "stop",
+          "parent": {
+            "name": "Surry Hills",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10111010"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T04:51:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T04:51:00Z",
+      "transportation": {
+        "id": "nsw:30304: :R:sj2",
+        "name": "Sydney Buses Network 304",
+        "disassembledName": "304",
+        "number": "304",
+        "description": "City Circular Quay to Green Square (Loop Service)",
+        "product": {
+          "id": 5,
+          "class": 5,
+          "name": "Sydney Buses Network",
+          "iconId": 5
+        },
+        "operator": {
+          "id": "2509",
+          "name": "Transdev John Holland Buses"
+        },
+        "destination": {
+          "id": "10111066",
+          "name": "City Circular Quay via Green Square",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 125,
+          "lineDisplay": "LINE",
+          "globalId": "3002",
+          "OperatorURL": "http://transportnsw.info"
+        },
+        "origin": {
+          "id": "10101103",
+          "name": "Circular Quay, Sydney",
+          "type": "stop"
+        },
+        "iconId": 5
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "2372568"
+      }
+    },
+    {
+      "location": {
+        "id": "201023",
+        "isGlobalId": true,
+        "name": "Crown St before Foveaux St, Surry Hills",
+        "disassembledName": "Crown St before Foveaux St, Surry Hills",
+        "type": "platform",
+        "coord": [
+          -33.885917,
+          151.213804
+        ],
+        "properties": {
+          "stopId": "10111010",
+          "area": "0",
+          "platform": "X1",
+          "platformName": "Crown St before Foveaux St",
+          "plannedPlatformName": "Crown St before Foveaux St"
+        },
+        "parent": {
+          "id": "G201023",
+          "isGlobalId": true,
+          "name": "Crown St before Foveaux St, Surry Hills",
+          "disassembledName": "Crown St before Foveaux St",
+          "type": "stop",
+          "parent": {
+            "name": "Surry Hills",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10111010"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T05:01:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T05:01:00Z",
+      "transportation": {
+        "id": "nsw:30304: :R:sj2",
+        "name": "Sydney Buses Network 304",
+        "disassembledName": "304",
+        "number": "304",
+        "description": "City Circular Quay to Green Square (Loop Service)",
+        "product": {
+          "id": 5,
+          "class": 5,
+          "name": "Sydney Buses Network",
+          "iconId": 5
+        },
+        "operator": {
+          "id": "2509",
+          "name": "Transdev John Holland Buses"
+        },
+        "destination": {
+          "id": "10111066",
+          "name": "City Circular Quay via Green Square",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 127,
+          "lineDisplay": "LINE",
+          "globalId": "3002",
+          "OperatorURL": "http://transportnsw.info"
+        },
+        "origin": {
+          "id": "10101103",
+          "name": "Circular Quay, Sydney",
+          "type": "stop"
+        },
+        "iconId": 5
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "2372546"
+      }
+    },
+    {
+      "location": {
+        "id": "201023",
+        "isGlobalId": true,
+        "name": "Crown St before Foveaux St, Surry Hills",
+        "disassembledName": "Crown St before Foveaux St, Surry Hills",
+        "type": "platform",
+        "coord": [
+          -33.885917,
+          151.213804
+        ],
+        "properties": {
+          "stopId": "10111010",
+          "area": "0",
+          "platform": "X1",
+          "platformName": "Crown St before Foveaux St",
+          "plannedPlatformName": "Crown St before Foveaux St"
+        },
+        "parent": {
+          "id": "G201023",
+          "isGlobalId": true,
+          "name": "Crown St before Foveaux St, Surry Hills",
+          "disassembledName": "Crown St before Foveaux St",
+          "type": "stop",
+          "parent": {
+            "name": "Surry Hills",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10111010"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T05:04:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T05:04:00Z",
+      "transportation": {
+        "id": "nsw:30352: :R:sj2",
+        "name": "Sydney Buses Network 352",
+        "disassembledName": "352",
+        "number": "352",
+        "description": "Marrickville Metro to Bondi Junction via Oxford St, Crown St & King St",
+        "product": {
+          "id": 5,
+          "class": 5,
+          "name": "Sydney Buses Network",
+          "iconId": 5
+        },
+        "operator": {
+          "id": "2509",
+          "name": "Transdev John Holland Buses"
+        },
+        "destination": {
+          "id": "10101109",
+          "name": "Bondi Junction",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 52,
+          "lineDisplay": "LINE",
+          "globalId": "3002",
+          "OperatorURL": "http://transportnsw.info"
+        },
+        "origin": {
+          "id": "10145879",
+          "name": "Edinburgh Rd at Murray St, Marrickville",
+          "type": "stop"
+        },
+        "iconId": 5
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "2531325"
+      }
+    },
+    {
+      "location": {
+        "id": "201023",
+        "isGlobalId": true,
+        "name": "Crown St before Foveaux St, Surry Hills",
+        "disassembledName": "Crown St before Foveaux St, Surry Hills",
+        "type": "platform",
+        "coord": [
+          -33.885917,
+          151.213804
+        ],
+        "properties": {
+          "stopId": "10111010",
+          "area": "0",
+          "platform": "X1",
+          "platformName": "Crown St before Foveaux St",
+          "plannedPlatformName": "Crown St before Foveaux St"
+        },
+        "parent": {
+          "id": "G201023",
+          "isGlobalId": true,
+          "name": "Crown St before Foveaux St, Surry Hills",
+          "disassembledName": "Crown St before Foveaux St",
+          "type": "stop",
+          "parent": {
+            "name": "Surry Hills",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10111010"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T05:11:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T05:11:00Z",
+      "transportation": {
+        "id": "nsw:30304: :R:sj2",
+        "name": "Sydney Buses Network 304",
+        "disassembledName": "304",
+        "number": "304",
+        "description": "City Circular Quay to Green Square (Loop Service)",
+        "product": {
+          "id": 5,
+          "class": 5,
+          "name": "Sydney Buses Network",
+          "iconId": 5
+        },
+        "operator": {
+          "id": "2509",
+          "name": "Transdev John Holland Buses"
+        },
+        "destination": {
+          "id": "10111066",
+          "name": "City Circular Quay via Green Square",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 129,
+          "lineDisplay": "LINE",
+          "globalId": "3002",
+          "OperatorURL": "http://transportnsw.info"
+        },
+        "origin": {
+          "id": "10101103",
+          "name": "Circular Quay, Sydney",
+          "type": "stop"
+        },
+        "iconId": 5
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "2372560"
+      }
+    },
+    {
+      "location": {
+        "id": "201023",
+        "isGlobalId": true,
+        "name": "Crown St before Foveaux St, Surry Hills",
+        "disassembledName": "Crown St before Foveaux St, Surry Hills",
+        "type": "platform",
+        "coord": [
+          -33.885917,
+          151.213804
+        ],
+        "properties": {
+          "stopId": "10111010",
+          "area": "0",
+          "platform": "X1",
+          "platformName": "Crown St before Foveaux St",
+          "plannedPlatformName": "Crown St before Foveaux St"
+        },
+        "parent": {
+          "id": "G201023",
+          "isGlobalId": true,
+          "name": "Crown St before Foveaux St, Surry Hills",
+          "disassembledName": "Crown St before Foveaux St",
+          "type": "stop",
+          "parent": {
+            "name": "Surry Hills",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10111010"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T05:21:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T05:21:00Z",
+      "transportation": {
+        "id": "nsw:30304: :R:sj2",
+        "name": "Sydney Buses Network 304",
+        "disassembledName": "304",
+        "number": "304",
+        "description": "City Circular Quay to Green Square (Loop Service)",
+        "product": {
+          "id": 5,
+          "class": 5,
+          "name": "Sydney Buses Network",
+          "iconId": 5
+        },
+        "operator": {
+          "id": "2509",
+          "name": "Transdev John Holland Buses"
+        },
+        "destination": {
+          "id": "10111066",
+          "name": "City Circular Quay via Green Square",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 131,
+          "lineDisplay": "LINE",
+          "globalId": "3002",
+          "OperatorURL": "http://transportnsw.info"
+        },
+        "origin": {
+          "id": "10101103",
+          "name": "Circular Quay, Sydney",
+          "type": "stop"
+        },
+        "iconId": 5
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "2372571"
+      }
+    },
+    {
+      "location": {
+        "id": "201023",
+        "isGlobalId": true,
+        "name": "Crown St before Foveaux St, Surry Hills",
+        "disassembledName": "Crown St before Foveaux St, Surry Hills",
+        "type": "platform",
+        "coord": [
+          -33.885917,
+          151.213804
+        ],
+        "properties": {
+          "stopId": "10111010",
+          "area": "0",
+          "platform": "X1",
+          "platformName": "Crown St before Foveaux St",
+          "plannedPlatformName": "Crown St before Foveaux St"
+        },
+        "parent": {
+          "id": "G201023",
+          "isGlobalId": true,
+          "name": "Crown St before Foveaux St, Surry Hills",
+          "disassembledName": "Crown St before Foveaux St",
+          "type": "stop",
+          "parent": {
+            "name": "Surry Hills",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10111010"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T05:24:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T05:24:00Z",
+      "transportation": {
+        "id": "nsw:30352: :R:sj2",
+        "name": "Sydney Buses Network 352",
+        "disassembledName": "352",
+        "number": "352",
+        "description": "Marrickville Metro to Bondi Junction via Oxford St, Crown St & King St",
+        "product": {
+          "id": 5,
+          "class": 5,
+          "name": "Sydney Buses Network",
+          "iconId": 5
+        },
+        "operator": {
+          "id": "2509",
+          "name": "Transdev John Holland Buses"
+        },
+        "destination": {
+          "id": "10101109",
+          "name": "Bondi Junction",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 54,
+          "lineDisplay": "LINE",
+          "globalId": "3002",
+          "OperatorURL": "http://transportnsw.info"
+        },
+        "origin": {
+          "id": "10145879",
+          "name": "Edinburgh Rd at Murray St, Marrickville",
+          "type": "stop"
+        },
+        "iconId": 5
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "2532493"
+      }
+    },
+    {
+      "location": {
+        "id": "201023",
+        "isGlobalId": true,
+        "name": "Crown St before Foveaux St, Surry Hills",
+        "disassembledName": "Crown St before Foveaux St, Surry Hills",
+        "type": "platform",
+        "coord": [
+          -33.885917,
+          151.213804
+        ],
+        "properties": {
+          "stopId": "10111010",
+          "area": "0",
+          "platform": "X1",
+          "platformName": "Crown St before Foveaux St",
+          "plannedPlatformName": "Crown St before Foveaux St"
+        },
+        "parent": {
+          "id": "G201023",
+          "isGlobalId": true,
+          "name": "Crown St before Foveaux St, Surry Hills",
+          "disassembledName": "Crown St before Foveaux St",
+          "type": "stop",
+          "parent": {
+            "name": "Surry Hills",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10111010"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T05:31:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T05:31:00Z",
+      "transportation": {
+        "id": "nsw:30304: :R:sj2",
+        "name": "Sydney Buses Network 304",
+        "disassembledName": "304",
+        "number": "304",
+        "description": "City Circular Quay to Green Square (Loop Service)",
+        "product": {
+          "id": 5,
+          "class": 5,
+          "name": "Sydney Buses Network",
+          "iconId": 5
+        },
+        "operator": {
+          "id": "2509",
+          "name": "Transdev John Holland Buses"
+        },
+        "destination": {
+          "id": "10111066",
+          "name": "City Circular Quay via Green Square",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 133,
+          "lineDisplay": "LINE",
+          "globalId": "3002",
+          "OperatorURL": "http://transportnsw.info"
+        },
+        "origin": {
+          "id": "10101103",
+          "name": "Circular Quay, Sydney",
+          "type": "stop"
+        },
+        "iconId": 5
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "2372579"
+      }
+    },
+    {
+      "location": {
+        "id": "201023",
+        "isGlobalId": true,
+        "name": "Crown St before Foveaux St, Surry Hills",
+        "disassembledName": "Crown St before Foveaux St, Surry Hills",
+        "type": "platform",
+        "coord": [
+          -33.885917,
+          151.213804
+        ],
+        "properties": {
+          "stopId": "10111010",
+          "area": "0",
+          "platform": "X1",
+          "platformName": "Crown St before Foveaux St",
+          "plannedPlatformName": "Crown St before Foveaux St"
+        },
+        "parent": {
+          "id": "G201023",
+          "isGlobalId": true,
+          "name": "Crown St before Foveaux St, Surry Hills",
+          "disassembledName": "Crown St before Foveaux St",
+          "type": "stop",
+          "parent": {
+            "name": "Surry Hills",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10111010"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T05:41:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T05:41:00Z",
+      "transportation": {
+        "id": "nsw:30304: :R:sj2",
+        "name": "Sydney Buses Network 304",
+        "disassembledName": "304",
+        "number": "304",
+        "description": "City Circular Quay to Green Square (Loop Service)",
+        "product": {
+          "id": 5,
+          "class": 5,
+          "name": "Sydney Buses Network",
+          "iconId": 5
+        },
+        "operator": {
+          "id": "2509",
+          "name": "Transdev John Holland Buses"
+        },
+        "destination": {
+          "id": "10111066",
+          "name": "City Circular Quay via Green Square",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 135,
+          "lineDisplay": "LINE",
+          "globalId": "3002",
+          "OperatorURL": "http://transportnsw.info"
+        },
+        "origin": {
+          "id": "10101103",
+          "name": "Circular Quay, Sydney",
+          "type": "stop"
+        },
+        "iconId": 5
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "2372650"
+      }
+    },
+    {
+      "location": {
+        "id": "201023",
+        "isGlobalId": true,
+        "name": "Crown St before Foveaux St, Surry Hills",
+        "disassembledName": "Crown St before Foveaux St, Surry Hills",
+        "type": "platform",
+        "coord": [
+          -33.885917,
+          151.213804
+        ],
+        "properties": {
+          "stopId": "10111010",
+          "area": "0",
+          "platform": "X1",
+          "platformName": "Crown St before Foveaux St",
+          "plannedPlatformName": "Crown St before Foveaux St"
+        },
+        "parent": {
+          "id": "G201023",
+          "isGlobalId": true,
+          "name": "Crown St before Foveaux St, Surry Hills",
+          "disassembledName": "Crown St before Foveaux St",
+          "type": "stop",
+          "parent": {
+            "name": "Surry Hills",
+            "type": "locality"
+          },
+          "properties": {
+            "stopId": "10111010"
+          }
+        }
+      },
+      "departureTimePlanned": "2026-01-14T05:44:00Z",
+      "departureTimeBaseTimetable": "2026-01-14T05:44:00Z",
+      "transportation": {
+        "id": "nsw:30352: :R:sj2",
+        "name": "Sydney Buses Network 352",
+        "disassembledName": "352",
+        "number": "352",
+        "description": "Marrickville Metro to Bondi Junction via Oxford St, Crown St & King St",
+        "product": {
+          "id": 5,
+          "class": 5,
+          "name": "Sydney Buses Network",
+          "iconId": 5
+        },
+        "operator": {
+          "id": "2509",
+          "name": "Transdev John Holland Buses"
+        },
+        "destination": {
+          "id": "10101109",
+          "name": "Bondi Junction",
+          "type": "stop"
+        },
+        "properties": {
+          "isTTB": true,
+          "tripCode": 55,
+          "lineDisplay": "LINE",
+          "globalId": "3002",
+          "OperatorURL": "http://transportnsw.info"
+        },
+        "origin": {
+          "id": "10145879",
+          "name": "Edinburgh Rd at Murray St, Marrickville",
+          "type": "stop"
+        },
+        "iconId": 5
+      },
+      "properties": {
+        "WheelchairAccess": "true",
+        "RealtimeTripId": "2531327"
+      }
+    }
+  ]
+}

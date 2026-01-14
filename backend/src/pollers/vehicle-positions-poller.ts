@@ -13,7 +13,8 @@ export class VehiclePositionsPoller extends BasePoller {
     super({
       name: 'VehiclePositionsPoller',
       feedType: 'vehiclepos',
-      feeds: ['sydneytrains', 'metro', 'lightrail'],
+      // v2 feeds (trains, metro, light rail) + v1 feeds (buses, ferries)
+      feeds: ['sydneytrains', 'metro', 'lightrail', 'buses', 'ferries'],
       intervalMs: 10_000, // 10 seconds
       staggerMs: 1_500, // 1.5 second stagger between feeds
     })

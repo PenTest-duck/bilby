@@ -1,0 +1,1853 @@
+header {
+  gtfs_realtime_version: "1.0"
+  incrementality: FULL_DATASET
+  timestamp: 1768353445
+}
+entity {
+  id: "0/2026-01-14T01:17:20Z/RS018"
+  vehicle {
+    trip {
+      trip_id: "0177-001-155-006:1000"
+      start_time: "12:03:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "SMNW_M1"
+      direction_id: 1
+    }
+    position {
+      latitude: -33.729218
+      longitude: 150.99597
+      bearing: 124.96
+      speed: 26.0
+    }
+    current_stop_sequence: 6
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353440
+    congestion_level: CONGESTION
+    stop_id: "2154264"
+    vehicle {
+      id: "RS018"
+      label: "RS018"
+      license_plate: "RS018"
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "Alstom Metropolis"
+        special_vehicle_attributes: 0
+      }
+    }
+    occupancy_status: MANY_SEATS_AVAILABLE
+    [transit_realtime.consist] {
+      name: "DTC1"
+      position_in_consist: 0
+      occupancy_status: MANY_SEATS_AVAILABLE
+      quiet_carriage: false
+      toilet: NONE
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MPC1"
+      position_in_consist: 0
+      occupancy_status: MANY_SEATS_AVAILABLE
+      quiet_carriage: true
+      toilet: NONE
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MC1"
+      position_in_consist: 0
+      occupancy_status: FEW_SEATS_AVAILABLE
+      quiet_carriage: false
+      toilet: NORMAL
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MC2"
+      position_in_consist: 0
+      occupancy_status: FEW_SEATS_AVAILABLE
+      quiet_carriage: false
+      toilet: NONE
+      luggage_rack: true
+    }
+    [transit_realtime.consist] {
+      name: "MPC2"
+      position_in_consist: 0
+      occupancy_status: FEW_SEATS_AVAILABLE
+      quiet_carriage: true
+      toilet: NORMAL
+      luggage_rack: true
+    }
+    [transit_realtime.consist] {
+      name: "DTC2"
+      position_in_consist: 0
+      occupancy_status: MANY_SEATS_AVAILABLE
+      quiet_carriage: true
+      toilet: NONE
+      luggage_rack: true
+    }
+  }
+}
+entity {
+  id: "1/2026-01-14T01:17:17Z/RS016"
+  vehicle {
+    trip {
+      trip_id: "0177-001-106-009:1000"
+      start_time: "12:03:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "SMNW_M1"
+      direction_id: 0
+    }
+    position {
+      latitude: -33.83632
+      longitude: 151.20732
+      bearing: 9.44
+      speed: 12.0
+    }
+    current_stop_sequence: 6
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353437
+    congestion_level: RUNNING_SMOOTHLY
+    stop_id: "2000461"
+    vehicle {
+      id: "RS016"
+      label: "RS016"
+      license_plate: "RS016"
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "Alstom Metropolis"
+        special_vehicle_attributes: 0
+      }
+    }
+    occupancy_status: MANY_SEATS_AVAILABLE
+    [transit_realtime.consist] {
+      name: "DTC1"
+      position_in_consist: 0
+      occupancy_status: MANY_SEATS_AVAILABLE
+      quiet_carriage: false
+      toilet: NONE
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MPC1"
+      position_in_consist: 0
+      occupancy_status: FEW_SEATS_AVAILABLE
+      quiet_carriage: true
+      toilet: NONE
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MC1"
+      position_in_consist: 0
+      occupancy_status: MANY_SEATS_AVAILABLE
+      quiet_carriage: false
+      toilet: NORMAL
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MC2"
+      position_in_consist: 0
+      occupancy_status: FEW_SEATS_AVAILABLE
+      quiet_carriage: false
+      toilet: NONE
+      luggage_rack: true
+    }
+    [transit_realtime.consist] {
+      name: "MPC2"
+      position_in_consist: 0
+      occupancy_status: FEW_SEATS_AVAILABLE
+      quiet_carriage: true
+      toilet: NORMAL
+      luggage_rack: true
+    }
+    [transit_realtime.consist] {
+      name: "DTC2"
+      position_in_consist: 0
+      occupancy_status: FEW_SEATS_AVAILABLE
+      quiet_carriage: true
+      toilet: NONE
+      luggage_rack: true
+    }
+  }
+}
+entity {
+  id: "2/2026-01-14T01:17:23Z/RS021"
+  vehicle {
+    trip {
+      trip_id: "0177-001-112-008:1000"
+      start_time: "12:13:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "SMNW_M1"
+      direction_id: 1
+    }
+    position {
+      latitude: -33.71094
+      longitude: 150.93396
+      bearing: 153.21
+      speed: 22.0
+    }
+    current_stop_sequence: 2
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353443
+    congestion_level: RUNNING_SMOOTHLY
+    stop_id: "2155267"
+    vehicle {
+      id: "RS021"
+      label: "RS021"
+      license_plate: "RS021"
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "Alstom Metropolis"
+        special_vehicle_attributes: 0
+      }
+    }
+    occupancy_status: MANY_SEATS_AVAILABLE
+    [transit_realtime.consist] {
+      name: "DTC1"
+      position_in_consist: 0
+      occupancy_status: MANY_SEATS_AVAILABLE
+      quiet_carriage: false
+      toilet: NONE
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MPC1"
+      position_in_consist: 0
+      occupancy_status: MANY_SEATS_AVAILABLE
+      quiet_carriage: true
+      toilet: NONE
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MC1"
+      position_in_consist: 0
+      occupancy_status: MANY_SEATS_AVAILABLE
+      quiet_carriage: false
+      toilet: NORMAL
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MC2"
+      position_in_consist: 0
+      occupancy_status: MANY_SEATS_AVAILABLE
+      quiet_carriage: false
+      toilet: NONE
+      luggage_rack: true
+    }
+    [transit_realtime.consist] {
+      name: "MPC2"
+      position_in_consist: 0
+      occupancy_status: FEW_SEATS_AVAILABLE
+      quiet_carriage: true
+      toilet: NORMAL
+      luggage_rack: true
+    }
+    [transit_realtime.consist] {
+      name: "DTC2"
+      position_in_consist: 0
+      occupancy_status: MANY_SEATS_AVAILABLE
+      quiet_carriage: true
+      toilet: NONE
+      luggage_rack: true
+    }
+  }
+}
+entity {
+  id: "3/2026-01-14T01:17:23Z/RS014"
+  vehicle {
+    trip {
+      trip_id: "0177-001-118-007:1000"
+      start_time: "11:53:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "SMNW_M1"
+      direction_id: 0
+    }
+    position {
+      latitude: -33.79276
+      longitude: 151.1559
+      bearing: 228.53
+      speed: 28.0
+    }
+    current_stop_sequence: 9
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353443
+    congestion_level: RUNNING_SMOOTHLY
+    stop_id: "2067143"
+    vehicle {
+      id: "RS014"
+      label: "RS014"
+      license_plate: "RS014"
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "Alstom Metropolis"
+        special_vehicle_attributes: 0
+      }
+    }
+    occupancy_status: FEW_SEATS_AVAILABLE
+    [transit_realtime.consist] {
+      name: "DTC1"
+      position_in_consist: 0
+      occupancy_status: FEW_SEATS_AVAILABLE
+      quiet_carriage: false
+      toilet: NONE
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MPC1"
+      position_in_consist: 0
+      occupancy_status: FEW_SEATS_AVAILABLE
+      quiet_carriage: true
+      toilet: NONE
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MC1"
+      position_in_consist: 0
+      occupancy_status: FEW_SEATS_AVAILABLE
+      quiet_carriage: false
+      toilet: NORMAL
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MC2"
+      position_in_consist: 0
+      occupancy_status: FEW_SEATS_AVAILABLE
+      quiet_carriage: false
+      toilet: NONE
+      luggage_rack: true
+    }
+    [transit_realtime.consist] {
+      name: "MPC2"
+      position_in_consist: 0
+      occupancy_status: FEW_SEATS_AVAILABLE
+      quiet_carriage: true
+      toilet: NORMAL
+      luggage_rack: true
+    }
+    [transit_realtime.consist] {
+      name: "DTC2"
+      position_in_consist: 0
+      occupancy_status: MANY_SEATS_AVAILABLE
+      quiet_carriage: true
+      toilet: NONE
+      luggage_rack: true
+    }
+  }
+}
+entity {
+  id: "4/2026-01-14T01:17:20Z/RS045"
+  vehicle {
+    trip {
+      trip_id: "0177-001-115-007:1000"
+      start_time: "11:33:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "SMNW_M1"
+      direction_id: 0
+    }
+    position {
+      latitude: -33.727154
+      longitude: 150.99072
+      bearing: 270.43
+      speed: 19.0
+    }
+    current_stop_sequence: 15
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353440
+    congestion_level: RUNNING_SMOOTHLY
+    stop_id: "2154263"
+    vehicle {
+      id: "RS045"
+      label: "RS045"
+      license_plate: "RS045"
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "Alstom Metropolis"
+        special_vehicle_attributes: 0
+      }
+    }
+    occupancy_status: MANY_SEATS_AVAILABLE
+    [transit_realtime.consist] {
+      name: "DTC1"
+      position_in_consist: 0
+      occupancy_status: MANY_SEATS_AVAILABLE
+      quiet_carriage: false
+      toilet: NONE
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MPC1"
+      position_in_consist: 0
+      occupancy_status: MANY_SEATS_AVAILABLE
+      quiet_carriage: true
+      toilet: NONE
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MC1"
+      position_in_consist: 0
+      occupancy_status: MANY_SEATS_AVAILABLE
+      quiet_carriage: false
+      toilet: NORMAL
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MC2"
+      position_in_consist: 0
+      occupancy_status: MANY_SEATS_AVAILABLE
+      quiet_carriage: false
+      toilet: NONE
+      luggage_rack: true
+    }
+    [transit_realtime.consist] {
+      name: "MPC2"
+      position_in_consist: 0
+      occupancy_status: MANY_SEATS_AVAILABLE
+      quiet_carriage: true
+      toilet: NORMAL
+      luggage_rack: true
+    }
+    [transit_realtime.consist] {
+      name: "DTC2"
+      position_in_consist: 0
+      occupancy_status: MANY_SEATS_AVAILABLE
+      quiet_carriage: true
+      toilet: NONE
+      luggage_rack: true
+    }
+  }
+}
+entity {
+  id: "5/2026-01-14T01:17:14Z/RS030"
+  vehicle {
+    trip {
+      trip_id: "0177-001-154-006:1000"
+      start_time: "11:58:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "SMNW_M1"
+      direction_id: 1
+    }
+    position {
+      latitude: -33.73804
+      longitude: 151.03432
+      bearing: 119.38
+      speed: 16.0
+    }
+    current_stop_sequence: 8
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353434
+    congestion_level: CONGESTION
+    stop_id: "2126159"
+    vehicle {
+      id: "RS030"
+      label: "RS030"
+      license_plate: "RS030"
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "Alstom Metropolis"
+        special_vehicle_attributes: 0
+      }
+    }
+    occupancy_status: FEW_SEATS_AVAILABLE
+    [transit_realtime.consist] {
+      name: "DTC1"
+      position_in_consist: 0
+      occupancy_status: FEW_SEATS_AVAILABLE
+      quiet_carriage: false
+      toilet: NONE
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MPC1"
+      position_in_consist: 0
+      occupancy_status: STANDING_ROOM_ONLY
+      quiet_carriage: true
+      toilet: NONE
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MC1"
+      position_in_consist: 0
+      occupancy_status: FEW_SEATS_AVAILABLE
+      quiet_carriage: false
+      toilet: NORMAL
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MC2"
+      position_in_consist: 0
+      occupancy_status: FEW_SEATS_AVAILABLE
+      quiet_carriage: false
+      toilet: NONE
+      luggage_rack: true
+    }
+    [transit_realtime.consist] {
+      name: "MPC2"
+      position_in_consist: 0
+      occupancy_status: FEW_SEATS_AVAILABLE
+      quiet_carriage: true
+      toilet: NORMAL
+      luggage_rack: true
+    }
+    [transit_realtime.consist] {
+      name: "DTC2"
+      position_in_consist: 0
+      occupancy_status: MANY_SEATS_AVAILABLE
+      quiet_carriage: true
+      toilet: NONE
+      luggage_rack: true
+    }
+  }
+}
+entity {
+  id: "6/2026-01-14T01:17:11Z/RS029"
+  vehicle {
+    trip {
+      trip_id: "0177-001-124-006:1000"
+      start_time: "11:33:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "SMNW_M1"
+      direction_id: 1
+    }
+    position {
+      latitude: -33.83726
+      longitude: 151.2073
+      bearing: 189.43
+      speed: 11.0
+    }
+    current_stop_sequence: 15
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353431
+    congestion_level: CONGESTION
+    stop_id: "2060115"
+    vehicle {
+      id: "RS029"
+      label: "RS029"
+      license_plate: "RS029"
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "Alstom Metropolis"
+        special_vehicle_attributes: 0
+      }
+    }
+    occupancy_status: MANY_SEATS_AVAILABLE
+    [transit_realtime.consist] {
+      name: "DTC1"
+      position_in_consist: 0
+      occupancy_status: MANY_SEATS_AVAILABLE
+      quiet_carriage: false
+      toilet: NONE
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MPC1"
+      position_in_consist: 0
+      occupancy_status: FEW_SEATS_AVAILABLE
+      quiet_carriage: true
+      toilet: NONE
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MC1"
+      position_in_consist: 0
+      occupancy_status: STANDING_ROOM_ONLY
+      quiet_carriage: false
+      toilet: NORMAL
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MC2"
+      position_in_consist: 0
+      occupancy_status: STANDING_ROOM_ONLY
+      quiet_carriage: false
+      toilet: NONE
+      luggage_rack: true
+    }
+    [transit_realtime.consist] {
+      name: "MPC2"
+      position_in_consist: 0
+      occupancy_status: STANDING_ROOM_ONLY
+      quiet_carriage: true
+      toilet: NORMAL
+      luggage_rack: true
+    }
+    [transit_realtime.consist] {
+      name: "DTC2"
+      position_in_consist: 0
+      occupancy_status: FEW_SEATS_AVAILABLE
+      quiet_carriage: true
+      toilet: NONE
+      luggage_rack: true
+    }
+  }
+}
+entity {
+  id: "7/2026-01-14T01:17:20Z/RS008"
+  vehicle {
+    trip {
+      trip_id: "0177-001-109-008:1000"
+      start_time: "11:38:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "SMNW_M1"
+      direction_id: 1
+    }
+    position {
+      latitude: -33.81065
+      longitude: 151.18143
+      bearing: 150.31
+      speed: 24.0
+    }
+    current_stop_sequence: 13
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353440
+    congestion_level: RUNNING_SMOOTHLY
+    stop_id: "2067142"
+    vehicle {
+      id: "RS008"
+      label: "RS008"
+      license_plate: "RS008"
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "Alstom Metropolis"
+        special_vehicle_attributes: 0
+      }
+    }
+    occupancy_status: MANY_SEATS_AVAILABLE
+    [transit_realtime.consist] {
+      name: "DTC1"
+      position_in_consist: 0
+      occupancy_status: MANY_SEATS_AVAILABLE
+      quiet_carriage: false
+      toilet: NONE
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MPC1"
+      position_in_consist: 0
+      occupancy_status: MANY_SEATS_AVAILABLE
+      quiet_carriage: true
+      toilet: NONE
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MC1"
+      position_in_consist: 0
+      occupancy_status: FEW_SEATS_AVAILABLE
+      quiet_carriage: false
+      toilet: NORMAL
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MC2"
+      position_in_consist: 0
+      occupancy_status: STANDING_ROOM_ONLY
+      quiet_carriage: false
+      toilet: NONE
+      luggage_rack: true
+    }
+    [transit_realtime.consist] {
+      name: "MPC2"
+      position_in_consist: 0
+      occupancy_status: STANDING_ROOM_ONLY
+      quiet_carriage: true
+      toilet: NORMAL
+      luggage_rack: true
+    }
+    [transit_realtime.consist] {
+      name: "DTC2"
+      position_in_consist: 0
+      occupancy_status: FEW_SEATS_AVAILABLE
+      quiet_carriage: true
+      toilet: NONE
+      luggage_rack: true
+    }
+  }
+}
+entity {
+  id: "8/2026-01-14T01:17:13Z/RS006"
+  vehicle {
+    trip {
+      trip_id: "0177-001-153-006:1000"
+      start_time: "11:53:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "SMNW_M1"
+      direction_id: 1
+    }
+    position {
+      latitude: -33.774014
+      longitude: 151.08278
+      bearing: 160.71
+      speed: 0.0
+    }
+    current_stop_sequence: 9
+    current_status: STOPPED_AT
+    timestamp: 1768353433
+    congestion_level: SEVERE_CONGESTION
+    stop_id: "2121225"
+    vehicle {
+      id: "RS006"
+      label: "RS006"
+      license_plate: "RS006"
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "Alstom Metropolis"
+        special_vehicle_attributes: 0
+      }
+    }
+    occupancy_status: MANY_SEATS_AVAILABLE
+    [transit_realtime.consist] {
+      name: "DTC1"
+      position_in_consist: 0
+      occupancy_status: MANY_SEATS_AVAILABLE
+      quiet_carriage: false
+      toilet: NONE
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MPC1"
+      position_in_consist: 0
+      occupancy_status: FEW_SEATS_AVAILABLE
+      quiet_carriage: true
+      toilet: NONE
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MC1"
+      position_in_consist: 0
+      occupancy_status: STANDING_ROOM_ONLY
+      quiet_carriage: false
+      toilet: NORMAL
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MC2"
+      position_in_consist: 0
+      occupancy_status: MANY_SEATS_AVAILABLE
+      quiet_carriage: false
+      toilet: NONE
+      luggage_rack: true
+    }
+    [transit_realtime.consist] {
+      name: "MPC2"
+      position_in_consist: 0
+      occupancy_status: STANDING_ROOM_ONLY
+      quiet_carriage: true
+      toilet: NORMAL
+      luggage_rack: true
+    }
+    [transit_realtime.consist] {
+      name: "DTC2"
+      position_in_consist: 0
+      occupancy_status: MANY_SEATS_AVAILABLE
+      quiet_carriage: true
+      toilet: NONE
+      luggage_rack: true
+    }
+  }
+}
+entity {
+  id: "9/2026-01-14T01:17:19Z/RS015"
+  vehicle {
+    trip {
+      trip_id: "0177-001-121-007:1000"
+      start_time: "12:13:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "SMNW_M1"
+      direction_id: 0
+    }
+    position {
+      latitude: -33.88931
+      longitude: 151.20227
+      bearing: 32.99
+      speed: 23.0
+    }
+    current_stop_sequence: 2
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353439
+    congestion_level: RUNNING_SMOOTHLY
+    stop_id: "2017077"
+    vehicle {
+      id: "RS015"
+      label: "RS015"
+      license_plate: "RS015"
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "Alstom Metropolis"
+        special_vehicle_attributes: 0
+      }
+    }
+    occupancy_status: MANY_SEATS_AVAILABLE
+    [transit_realtime.consist] {
+      name: "DTC1"
+      position_in_consist: 0
+      occupancy_status: MANY_SEATS_AVAILABLE
+      quiet_carriage: false
+      toilet: NONE
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MPC1"
+      position_in_consist: 0
+      occupancy_status: MANY_SEATS_AVAILABLE
+      quiet_carriage: true
+      toilet: NONE
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MC1"
+      position_in_consist: 0
+      occupancy_status: MANY_SEATS_AVAILABLE
+      quiet_carriage: false
+      toilet: NORMAL
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MC2"
+      position_in_consist: 0
+      occupancy_status: MANY_SEATS_AVAILABLE
+      quiet_carriage: false
+      toilet: NONE
+      luggage_rack: true
+    }
+    [transit_realtime.consist] {
+      name: "MPC2"
+      position_in_consist: 0
+      occupancy_status: MANY_SEATS_AVAILABLE
+      quiet_carriage: true
+      toilet: NORMAL
+      luggage_rack: true
+    }
+    [transit_realtime.consist] {
+      name: "DTC2"
+      position_in_consist: 0
+      occupancy_status: MANY_SEATS_AVAILABLE
+      quiet_carriage: true
+      toilet: NONE
+      luggage_rack: true
+    }
+  }
+}
+entity {
+  id: "10/2026-01-14T01:17:15Z/RS007"
+  vehicle {
+    trip {
+      trip_id: "0177-001-120-007:1000"
+      start_time: "12:08:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "SMNW_M1"
+      direction_id: 0
+    }
+    position {
+      latitude: -33.866238
+      longitude: 151.21
+      bearing: 6.06
+      speed: 1.0
+    }
+    current_stop_sequence: 4
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353435
+    congestion_level: RUNNING_SMOOTHLY
+    stop_id: "2000465"
+    vehicle {
+      id: "RS007"
+      label: "RS007"
+      license_plate: "RS007"
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "Alstom Metropolis"
+        special_vehicle_attributes: 0
+      }
+    }
+    occupancy_status: FEW_SEATS_AVAILABLE
+    [transit_realtime.consist] {
+      name: "DTC1"
+      position_in_consist: 0
+      occupancy_status: FEW_SEATS_AVAILABLE
+      quiet_carriage: false
+      toilet: NONE
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MPC1"
+      position_in_consist: 0
+      occupancy_status: FEW_SEATS_AVAILABLE
+      quiet_carriage: true
+      toilet: NONE
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MC1"
+      position_in_consist: 0
+      occupancy_status: FEW_SEATS_AVAILABLE
+      quiet_carriage: false
+      toilet: NORMAL
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MC2"
+      position_in_consist: 0
+      occupancy_status: FEW_SEATS_AVAILABLE
+      quiet_carriage: false
+      toilet: NONE
+      luggage_rack: true
+    }
+    [transit_realtime.consist] {
+      name: "MPC2"
+      position_in_consist: 0
+      occupancy_status: MANY_SEATS_AVAILABLE
+      quiet_carriage: true
+      toilet: NORMAL
+      luggage_rack: true
+    }
+    [transit_realtime.consist] {
+      name: "DTC2"
+      position_in_consist: 0
+      occupancy_status: MANY_SEATS_AVAILABLE
+      quiet_carriage: true
+      toilet: NONE
+      luggage_rack: true
+    }
+  }
+}
+entity {
+  id: "11/2026-01-14T01:17:20Z/RS032"
+  vehicle {
+    trip {
+      trip_id: "0177-001-103-009:1000"
+      start_time: "11:38:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "SMNW_M1"
+      direction_id: 0
+    }
+    position {
+      latitude: -33.737015
+      longitude: 151.03235
+      bearing: 307.54
+      speed: 13.0
+    }
+    current_stop_sequence: 13
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353440
+    congestion_level: RUNNING_SMOOTHLY
+    stop_id: "2121226"
+    vehicle {
+      id: "RS032"
+      label: "RS032"
+      license_plate: "RS032"
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "Alstom Metropolis"
+        special_vehicle_attributes: 0
+      }
+    }
+    occupancy_status: FEW_SEATS_AVAILABLE
+    [transit_realtime.consist] {
+      name: "DTC1"
+      position_in_consist: 0
+      occupancy_status: FEW_SEATS_AVAILABLE
+      quiet_carriage: false
+      toilet: NONE
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MPC1"
+      position_in_consist: 0
+      occupancy_status: FEW_SEATS_AVAILABLE
+      quiet_carriage: true
+      toilet: NONE
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MC1"
+      position_in_consist: 0
+      occupancy_status: FEW_SEATS_AVAILABLE
+      quiet_carriage: false
+      toilet: NORMAL
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MC2"
+      position_in_consist: 0
+      occupancy_status: FEW_SEATS_AVAILABLE
+      quiet_carriage: false
+      toilet: NONE
+      luggage_rack: true
+    }
+    [transit_realtime.consist] {
+      name: "MPC2"
+      position_in_consist: 0
+      occupancy_status: FEW_SEATS_AVAILABLE
+      quiet_carriage: true
+      toilet: NORMAL
+      luggage_rack: true
+    }
+    [transit_realtime.consist] {
+      name: "DTC2"
+      position_in_consist: 0
+      occupancy_status: MANY_SEATS_AVAILABLE
+      quiet_carriage: true
+      toilet: NONE
+      luggage_rack: true
+    }
+  }
+}
+entity {
+  id: "12/2026-01-14T01:17:14Z/RS044"
+  vehicle {
+    trip {
+      trip_id: "0177-001-152-008:1000"
+      start_time: "12:08:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "SMNW_M1"
+      direction_id: 1
+    }
+    position {
+      latitude: -33.73733
+      longitude: 150.95464
+      bearing: 98.37
+      speed: 28.0
+    }
+    current_stop_sequence: 4
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353434
+    congestion_level: RUNNING_SMOOTHLY
+    stop_id: "2153402"
+    vehicle {
+      id: "RS044"
+      label: "RS044"
+      license_plate: "RS044"
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "Alstom Metropolis"
+        special_vehicle_attributes: 0
+      }
+    }
+    occupancy_status: MANY_SEATS_AVAILABLE
+    [transit_realtime.consist] {
+      name: "DTC1"
+      position_in_consist: 0
+      occupancy_status: MANY_SEATS_AVAILABLE
+      quiet_carriage: false
+      toilet: NONE
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MPC1"
+      position_in_consist: 0
+      occupancy_status: MANY_SEATS_AVAILABLE
+      quiet_carriage: true
+      toilet: NONE
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MC1"
+      position_in_consist: 0
+      occupancy_status: MANY_SEATS_AVAILABLE
+      quiet_carriage: false
+      toilet: NORMAL
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MC2"
+      position_in_consist: 0
+      occupancy_status: MANY_SEATS_AVAILABLE
+      quiet_carriage: false
+      toilet: NONE
+      luggage_rack: true
+    }
+    [transit_realtime.consist] {
+      name: "MPC2"
+      position_in_consist: 0
+      occupancy_status: MANY_SEATS_AVAILABLE
+      quiet_carriage: true
+      toilet: NORMAL
+      luggage_rack: true
+    }
+    [transit_realtime.consist] {
+      name: "DTC2"
+      position_in_consist: 0
+      occupancy_status: MANY_SEATS_AVAILABLE
+      quiet_carriage: true
+      toilet: NONE
+      luggage_rack: true
+    }
+  }
+}
+entity {
+  id: "13/2026-01-14T01:17:14Z/RS011"
+  vehicle {
+    trip {
+      trip_id: "0177-001-111-008:1000"
+      start_time: "11:48:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "SMNW_M1"
+      direction_id: 1
+    }
+    position {
+      latitude: -33.78513
+      longitude: 151.12862
+      bearing: 131.33
+      speed: 8.0
+    }
+    current_stop_sequence: 10
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353434
+    congestion_level: RUNNING_SMOOTHLY
+    stop_id: "2113351"
+    vehicle {
+      id: "RS011"
+      label: "RS011"
+      license_plate: "RS011"
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "Alstom Metropolis"
+        special_vehicle_attributes: 0
+      }
+    }
+    occupancy_status: MANY_SEATS_AVAILABLE
+    [transit_realtime.consist] {
+      name: "DTC1"
+      position_in_consist: 0
+      occupancy_status: MANY_SEATS_AVAILABLE
+      quiet_carriage: false
+      toilet: NONE
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MPC1"
+      position_in_consist: 0
+      occupancy_status: FEW_SEATS_AVAILABLE
+      quiet_carriage: true
+      toilet: NONE
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MC1"
+      position_in_consist: 0
+      occupancy_status: FEW_SEATS_AVAILABLE
+      quiet_carriage: false
+      toilet: NORMAL
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MC2"
+      position_in_consist: 0
+      occupancy_status: FEW_SEATS_AVAILABLE
+      quiet_carriage: false
+      toilet: NONE
+      luggage_rack: true
+    }
+    [transit_realtime.consist] {
+      name: "MPC2"
+      position_in_consist: 0
+      occupancy_status: FEW_SEATS_AVAILABLE
+      quiet_carriage: true
+      toilet: NORMAL
+      luggage_rack: true
+    }
+    [transit_realtime.consist] {
+      name: "DTC2"
+      position_in_consist: 0
+      occupancy_status: MANY_SEATS_AVAILABLE
+      quiet_carriage: true
+      toilet: NONE
+      luggage_rack: true
+    }
+  }
+}
+entity {
+  id: "14/2026-01-14T01:17:11Z/RS012"
+  vehicle {
+    trip {
+      trip_id: "0177-001-108-008:1000"
+      start_time: "11:23:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "SMNW_M1"
+      direction_id: 1
+    }
+    position {
+      latitude: -33.897297
+      longitude: 151.20027
+      bearing: 164.72
+      speed: 12.0
+    }
+    current_stop_sequence: 19
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353431
+    congestion_level: RUNNING_SMOOTHLY
+    stop_id: "2000467"
+    vehicle {
+      id: "RS012"
+      label: "RS012"
+      license_plate: "RS012"
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "Alstom Metropolis"
+        special_vehicle_attributes: 0
+      }
+    }
+    occupancy_status: MANY_SEATS_AVAILABLE
+    [transit_realtime.consist] {
+      name: "DTC1"
+      position_in_consist: 0
+      occupancy_status: MANY_SEATS_AVAILABLE
+      quiet_carriage: false
+      toilet: NONE
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MPC1"
+      position_in_consist: 0
+      occupancy_status: FEW_SEATS_AVAILABLE
+      quiet_carriage: true
+      toilet: NONE
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MC1"
+      position_in_consist: 0
+      occupancy_status: FEW_SEATS_AVAILABLE
+      quiet_carriage: false
+      toilet: NORMAL
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MC2"
+      position_in_consist: 0
+      occupancy_status: MANY_SEATS_AVAILABLE
+      quiet_carriage: false
+      toilet: NONE
+      luggage_rack: true
+    }
+    [transit_realtime.consist] {
+      name: "MPC2"
+      position_in_consist: 0
+      occupancy_status: FEW_SEATS_AVAILABLE
+      quiet_carriage: true
+      toilet: NORMAL
+      luggage_rack: true
+    }
+    [transit_realtime.consist] {
+      name: "DTC2"
+      position_in_consist: 0
+      occupancy_status: MANY_SEATS_AVAILABLE
+      quiet_carriage: true
+      toilet: NONE
+      luggage_rack: true
+    }
+  }
+}
+entity {
+  id: "15/2026-01-14T01:17:23Z/RS023"
+  vehicle {
+    trip {
+      trip_id: "0177-001-114-007:1000"
+      start_time: "11:28:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "SMNW_M1"
+      direction_id: 0
+    }
+    position {
+      latitude: -33.73495
+      longitude: 150.9474
+      bearing: 308.66
+      speed: 27.0
+    }
+    current_stop_sequence: 17
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353443
+    congestion_level: RUNNING_SMOOTHLY
+    stop_id: "2153405"
+    vehicle {
+      id: "RS023"
+      label: "RS023"
+      license_plate: "RS023"
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "Alstom Metropolis"
+        special_vehicle_attributes: 0
+      }
+    }
+    occupancy_status: MANY_SEATS_AVAILABLE
+    [transit_realtime.consist] {
+      name: "DTC1"
+      position_in_consist: 0
+      occupancy_status: MANY_SEATS_AVAILABLE
+      quiet_carriage: false
+      toilet: NONE
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MPC1"
+      position_in_consist: 0
+      occupancy_status: MANY_SEATS_AVAILABLE
+      quiet_carriage: true
+      toilet: NONE
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MC1"
+      position_in_consist: 0
+      occupancy_status: MANY_SEATS_AVAILABLE
+      quiet_carriage: false
+      toilet: NORMAL
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MC2"
+      position_in_consist: 0
+      occupancy_status: FEW_SEATS_AVAILABLE
+      quiet_carriage: false
+      toilet: NONE
+      luggage_rack: true
+    }
+    [transit_realtime.consist] {
+      name: "MPC2"
+      position_in_consist: 0
+      occupancy_status: FEW_SEATS_AVAILABLE
+      quiet_carriage: true
+      toilet: NORMAL
+      luggage_rack: true
+    }
+    [transit_realtime.consist] {
+      name: "DTC2"
+      position_in_consist: 0
+      occupancy_status: MANY_SEATS_AVAILABLE
+      quiet_carriage: true
+      toilet: NONE
+      luggage_rack: true
+    }
+  }
+}
+entity {
+  id: "16/2026-01-14T01:17:23Z/RS027"
+  vehicle {
+    trip {
+      trip_id: "0177-001-102-009:1000"
+      start_time: "11:23:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "SMNW_M1"
+      direction_id: 0
+    }
+    position {
+      latitude: -33.70186
+      longitude: 150.92993
+      bearing: 342.75
+      speed: 26.0
+    }
+    current_stop_sequence: 19
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353443
+    congestion_level: RUNNING_SMOOTHLY
+    stop_id: "2155266"
+    vehicle {
+      id: "RS027"
+      label: "RS027"
+      license_plate: "RS027"
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "Alstom Metropolis"
+        special_vehicle_attributes: 0
+      }
+    }
+    occupancy_status: FEW_SEATS_AVAILABLE
+    [transit_realtime.consist] {
+      name: "DTC1"
+      position_in_consist: 0
+      occupancy_status: FEW_SEATS_AVAILABLE
+      quiet_carriage: false
+      toilet: NONE
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MPC1"
+      position_in_consist: 0
+      occupancy_status: FEW_SEATS_AVAILABLE
+      quiet_carriage: true
+      toilet: NONE
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MC1"
+      position_in_consist: 0
+      occupancy_status: MANY_SEATS_AVAILABLE
+      quiet_carriage: false
+      toilet: NORMAL
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MC2"
+      position_in_consist: 0
+      occupancy_status: MANY_SEATS_AVAILABLE
+      quiet_carriage: false
+      toilet: NONE
+      luggage_rack: true
+    }
+    [transit_realtime.consist] {
+      name: "MPC2"
+      position_in_consist: 0
+      occupancy_status: MANY_SEATS_AVAILABLE
+      quiet_carriage: true
+      toilet: NORMAL
+      luggage_rack: true
+    }
+    [transit_realtime.consist] {
+      name: "DTC2"
+      position_in_consist: 0
+      occupancy_status: MANY_SEATS_AVAILABLE
+      quiet_carriage: true
+      toilet: NONE
+      luggage_rack: true
+    }
+  }
+}
+entity {
+  id: "17/2026-01-14T01:17:14Z/RS024"
+  vehicle {
+    trip {
+      trip_id: "0177-001-117-007:1000"
+      start_time: "11:48:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "SMNW_M1"
+      direction_id: 0
+    }
+    position {
+      latitude: -33.782516
+      longitude: 151.12483
+      bearing: 311.34
+      speed: 22.0
+    }
+    current_stop_sequence: 11
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353434
+    congestion_level: RUNNING_SMOOTHLY
+    stop_id: "2113342"
+    vehicle {
+      id: "RS024"
+      label: "RS024"
+      license_plate: "RS024"
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "Alstom Metropolis"
+        special_vehicle_attributes: 0
+      }
+    }
+    occupancy_status: FEW_SEATS_AVAILABLE
+    [transit_realtime.consist] {
+      name: "DTC1"
+      position_in_consist: 0
+      occupancy_status: FEW_SEATS_AVAILABLE
+      quiet_carriage: false
+      toilet: NONE
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MPC1"
+      position_in_consist: 0
+      occupancy_status: FEW_SEATS_AVAILABLE
+      quiet_carriage: true
+      toilet: NONE
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MC1"
+      position_in_consist: 0
+      occupancy_status: FEW_SEATS_AVAILABLE
+      quiet_carriage: false
+      toilet: NORMAL
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MC2"
+      position_in_consist: 0
+      occupancy_status: FEW_SEATS_AVAILABLE
+      quiet_carriage: false
+      toilet: NONE
+      luggage_rack: true
+    }
+    [transit_realtime.consist] {
+      name: "MPC2"
+      position_in_consist: 0
+      occupancy_status: FEW_SEATS_AVAILABLE
+      quiet_carriage: true
+      toilet: NORMAL
+      luggage_rack: true
+    }
+    [transit_realtime.consist] {
+      name: "DTC2"
+      position_in_consist: 0
+      occupancy_status: MANY_SEATS_AVAILABLE
+      quiet_carriage: true
+      toilet: NONE
+      luggage_rack: true
+    }
+  }
+}
+entity {
+  id: "18/2026-01-14T01:17:17Z/RS034"
+  vehicle {
+    trip {
+      trip_id: "0177-001-123-006:1000"
+      start_time: "11:28:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "SMNW_M1"
+      direction_id: 1
+    }
+    position {
+      latitude: -33.86755
+      longitude: 151.21059
+      bearing: 186.06
+      speed: 6.0
+    }
+    current_stop_sequence: 17
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353437
+    congestion_level: RUNNING_SMOOTHLY
+    stop_id: "2000463"
+    vehicle {
+      id: "RS034"
+      label: "RS034"
+      license_plate: "RS034"
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "Alstom Metropolis"
+        special_vehicle_attributes: 0
+      }
+    }
+    occupancy_status: FEW_SEATS_AVAILABLE
+    [transit_realtime.consist] {
+      name: "DTC1"
+      position_in_consist: 0
+      occupancy_status: FEW_SEATS_AVAILABLE
+      quiet_carriage: false
+      toilet: NONE
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MPC1"
+      position_in_consist: 0
+      occupancy_status: FEW_SEATS_AVAILABLE
+      quiet_carriage: true
+      toilet: NONE
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MC1"
+      position_in_consist: 0
+      occupancy_status: FEW_SEATS_AVAILABLE
+      quiet_carriage: false
+      toilet: NORMAL
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MC2"
+      position_in_consist: 0
+      occupancy_status: STANDING_ROOM_ONLY
+      quiet_carriage: false
+      toilet: NONE
+      luggage_rack: true
+    }
+    [transit_realtime.consist] {
+      name: "MPC2"
+      position_in_consist: 0
+      occupancy_status: STANDING_ROOM_ONLY
+      quiet_carriage: true
+      toilet: NORMAL
+      luggage_rack: true
+    }
+    [transit_realtime.consist] {
+      name: "DTC2"
+      position_in_consist: 0
+      occupancy_status: FEW_SEATS_AVAILABLE
+      quiet_carriage: true
+      toilet: NONE
+      luggage_rack: true
+    }
+  }
+}
+entity {
+  id: "19/2026-01-14T01:17:20Z/RS017"
+  vehicle {
+    trip {
+      trip_id: "0177-001-110-008:1000"
+      start_time: "11:43:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "SMNW_M1"
+      direction_id: 1
+    }
+    position {
+      latitude: -33.783897
+      longitude: 151.1629
+      bearing: 17.38
+      speed: 26.0
+    }
+    current_stop_sequence: 12
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353440
+    congestion_level: RUNNING_SMOOTHLY
+    stop_id: "2113361"
+    vehicle {
+      id: "RS017"
+      label: "RS017"
+      license_plate: "RS017"
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "Alstom Metropolis"
+        special_vehicle_attributes: 0
+      }
+    }
+    occupancy_status: MANY_SEATS_AVAILABLE
+    [transit_realtime.consist] {
+      name: "DTC1"
+      position_in_consist: 0
+      occupancy_status: MANY_SEATS_AVAILABLE
+      quiet_carriage: false
+      toilet: NONE
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MPC1"
+      position_in_consist: 0
+      occupancy_status: MANY_SEATS_AVAILABLE
+      quiet_carriage: true
+      toilet: NONE
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MC1"
+      position_in_consist: 0
+      occupancy_status: FEW_SEATS_AVAILABLE
+      quiet_carriage: false
+      toilet: NORMAL
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MC2"
+      position_in_consist: 0
+      occupancy_status: FEW_SEATS_AVAILABLE
+      quiet_carriage: false
+      toilet: NONE
+      luggage_rack: true
+    }
+    [transit_realtime.consist] {
+      name: "MPC2"
+      position_in_consist: 0
+      occupancy_status: STANDING_ROOM_ONLY
+      quiet_carriage: true
+      toilet: NORMAL
+      luggage_rack: true
+    }
+    [transit_realtime.consist] {
+      name: "DTC2"
+      position_in_consist: 0
+      occupancy_status: MANY_SEATS_AVAILABLE
+      quiet_carriage: true
+      toilet: NONE
+      luggage_rack: true
+    }
+  }
+}
+entity {
+  id: "20/2026-01-14T01:17:11Z/RS005"
+  vehicle {
+    trip {
+      trip_id: "0177-001-105-009:1000"
+      start_time: "11:58:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "SMNW_M1"
+      direction_id: 0
+    }
+    position {
+      latitude: -33.806942
+      longitude: 151.18028
+      bearing: 5.53
+      speed: 26.0
+    }
+    current_stop_sequence: 8
+    current_status: IN_TRANSIT_TO
+    timestamp: 1768353431
+    congestion_level: RUNNING_SMOOTHLY
+    stop_id: "2065164"
+    vehicle {
+      id: "RS005"
+      label: "RS005"
+      license_plate: "RS005"
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "Alstom Metropolis"
+        special_vehicle_attributes: 0
+      }
+    }
+    occupancy_status: FEW_SEATS_AVAILABLE
+    [transit_realtime.consist] {
+      name: "DTC1"
+      position_in_consist: 0
+      occupancy_status: FEW_SEATS_AVAILABLE
+      quiet_carriage: false
+      toilet: NONE
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MPC1"
+      position_in_consist: 0
+      occupancy_status: FEW_SEATS_AVAILABLE
+      quiet_carriage: true
+      toilet: NONE
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MC1"
+      position_in_consist: 0
+      occupancy_status: FEW_SEATS_AVAILABLE
+      quiet_carriage: false
+      toilet: NORMAL
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MC2"
+      position_in_consist: 0
+      occupancy_status: STANDING_ROOM_ONLY
+      quiet_carriage: false
+      toilet: NONE
+      luggage_rack: true
+    }
+    [transit_realtime.consist] {
+      name: "MPC2"
+      position_in_consist: 0
+      occupancy_status: FEW_SEATS_AVAILABLE
+      quiet_carriage: true
+      toilet: NORMAL
+      luggage_rack: true
+    }
+    [transit_realtime.consist] {
+      name: "DTC2"
+      position_in_consist: 0
+      occupancy_status: MANY_SEATS_AVAILABLE
+      quiet_carriage: true
+      toilet: NONE
+      luggage_rack: true
+    }
+  }
+}
+entity {
+  id: "21/2026-01-14T01:17:22Z/RS003"
+  vehicle {
+    trip {
+      trip_id: "0177-001-104-009:1000"
+      start_time: "11:43:00"
+      start_date: "20260114"
+      schedule_relationship: SCHEDULED
+      route_id: "SMNW_M1"
+      direction_id: 0
+    }
+    position {
+      latitude: -33.773083
+      longitude: 151.08206
+      bearing: 340.71
+      speed: 0.0
+    }
+    current_stop_sequence: 13
+    current_status: STOPPED_AT
+    timestamp: 1768353442
+    congestion_level: SEVERE_CONGESTION
+    stop_id: "2121226"
+    vehicle {
+      id: "RS003"
+      label: "RS003"
+      license_plate: "RS003"
+      [transit_realtime.tfnsw_vehicle_descriptor] {
+        air_conditioned: true
+        wheelchair_accessible: 1
+        vehicle_model: "Alstom Metropolis"
+        special_vehicle_attributes: 0
+      }
+    }
+    occupancy_status: FEW_SEATS_AVAILABLE
+    [transit_realtime.consist] {
+      name: "DTC1"
+      position_in_consist: 0
+      occupancy_status: FEW_SEATS_AVAILABLE
+      quiet_carriage: false
+      toilet: NONE
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MPC1"
+      position_in_consist: 0
+      occupancy_status: FEW_SEATS_AVAILABLE
+      quiet_carriage: true
+      toilet: NONE
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MC1"
+      position_in_consist: 0
+      occupancy_status: FEW_SEATS_AVAILABLE
+      quiet_carriage: false
+      toilet: NORMAL
+      luggage_rack: false
+    }
+    [transit_realtime.consist] {
+      name: "MC2"
+      position_in_consist: 0
+      occupancy_status: FEW_SEATS_AVAILABLE
+      quiet_carriage: false
+      toilet: NONE
+      luggage_rack: true
+    }
+    [transit_realtime.consist] {
+      name: "MPC2"
+      position_in_consist: 0
+      occupancy_status: FEW_SEATS_AVAILABLE
+      quiet_carriage: true
+      toilet: NORMAL
+      luggage_rack: true
+    }
+    [transit_realtime.consist] {
+      name: "DTC2"
+      position_in_consist: 0
+      occupancy_status: FEW_SEATS_AVAILABLE
+      quiet_carriage: true
+      toilet: NONE
+      luggage_rack: true
+    }
+  }
+}

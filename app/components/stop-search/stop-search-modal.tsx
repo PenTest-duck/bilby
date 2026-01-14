@@ -243,9 +243,12 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: 12,
+    paddingRight: 4,
   },
   cancelButton: {
     paddingVertical: 8,
+    paddingHorizontal: 4,
+    flexShrink: 0,
   },
   cancelText: {
     fontSize: 16,
