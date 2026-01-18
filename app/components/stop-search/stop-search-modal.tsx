@@ -81,11 +81,37 @@ export function StopSearchModal({
       
       const { latitude, longitude } = location.coords;
       
+      // Try reverse geocoding to get street address
+      let displayName = 'My Location';
+      let disassembledName = 'Current Location';
+      
+      try {
+        const [address] = await Location.reverseGeocodeAsync({ latitude, longitude });
+        if (address) {
+          // Build a readable street address
+          const parts: string[] = [];
+          if (address.streetNumber) parts.push(address.streetNumber);
+          if (address.street) parts.push(address.street);
+          
+          if (parts.length > 0) {
+            displayName = parts.join(' ');
+            disassembledName = address.city || address.subregion || displayName;
+          } else if (address.name) {
+            displayName = address.name;
+            disassembledName = address.city || address.subregion || 'Current Location';
+          }
+        }
+      } catch (geocodeError) {
+        // Fallback to coordinates if reverse geocoding fails
+        console.warn('Reverse geocoding failed:', geocodeError);
+        displayName = `${latitude.toFixed(6)}, ${longitude.toFixed(6)}`;
+      }
+      
       const myLocation: LocationStop = {
-        id: 'my-location',
-        name: 'My Location',
-        disassembledName: 'Current Location',
-        type: 'poi',
+        id: `coord:${latitude},${longitude}`,
+        name: displayName,
+        disassembledName: disassembledName,
+        type: 'singlehouse',
         isCurrentLocation: true,
         coordinates: `${latitude},${longitude}`,
         coord: [latitude, longitude],

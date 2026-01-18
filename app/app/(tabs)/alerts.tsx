@@ -24,6 +24,18 @@ import { useDisruptions } from '@/lib/api/alerts';
 import { Skeleton } from '@/components/ui/skeleton';
 import type { DisruptionAlert } from '@/lib/api/types';
 
+/** TfNSW alert priority levels */
+type AlertPriority = 'veryHigh' | 'high' | 'normal' | 'low' | 'veryLow';
+
+/** Priority to numeric value for sorting (lower = more important) */
+const PRIORITY_ORDER: Record<AlertPriority, number> = {
+  veryHigh: 1,
+  high: 2,
+  normal: 3,
+  low: 4,
+  veryLow: 5,
+};
+
 type FilterCategory = 'all' | 'current' | 'upcoming';
 type EffectFilter = 'all' | 'no_service' | 'significant_delays' | 'modified_service' | 'detour' | 'other';
 type CauseFilter = 'all' | 'maintenance' | 'construction' | 'accident' | 'weather' | 'other';
@@ -230,9 +242,28 @@ export default function AlertsScreen() {
       return true;
     });
 
-    // Group by effect (GTFS effect type), sorted by priority
+    // Sort all filtered alerts by TfNSW priority first (if available), then by effect priority
+    // Note: priority field comes from backend /add_info endpoint
+    const sortedFiltered = [...filtered].sort((a, b) => {
+      // First sort by TfNSW priority (veryHigh > high > normal > low > veryLow)
+      const aPriority = (a as DisruptionAlert & { priority?: AlertPriority }).priority;
+      const bPriority = (b as DisruptionAlert & { priority?: AlertPriority }).priority;
+      const priorityA = aPriority ? (PRIORITY_ORDER[aPriority] ?? 99) : 99;
+      const priorityB = bPriority ? (PRIORITY_ORDER[bPriority] ?? 99) : 99;
+      if (priorityA !== priorityB) return priorityA - priorityB;
+      
+      // Then by effect priority
+      const effectPriorityA = EFFECT_CONFIG[a.effect]?.priority ?? 99;
+      const effectPriorityB = EFFECT_CONFIG[b.effect]?.priority ?? 99;
+      if (effectPriorityA !== effectPriorityB) return effectPriorityA - effectPriorityB;
+      
+      // Finally by updatedAt (most recent first)
+      return (b.updatedAt ?? 0) - (a.updatedAt ?? 0);
+    });
+
+    // Group by effect (GTFS effect type)
     const effectGroups: Record<string, DisruptionAlert[]> = {};
-    for (const alert of filtered) {
+    for (const alert of sortedFiltered) {
       const effect = alert.effect || 'unknown';
       if (!effectGroups[effect]) effectGroups[effect] = [];
       effectGroups[effect].push(alert);

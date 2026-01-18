@@ -51,13 +51,28 @@ function calculateCountdown(targetTime: string | Date | null): CountdownResult {
   const now = new Date();
   const diffMs = target.getTime() - now.getTime();
 
-  if (diffMs < -60000) {
-    // More than 1 minute past
-    return { minutes: 0, seconds: 0, isNow: false, isPast: true, display: 'Gone' };
+  // Handle past departures with "X min ago" format
+  if (diffMs < -30000) {
+    // More than 30 seconds past - show "X min ago"
+    const pastMinutes = Math.floor(Math.abs(diffMs) / 60000);
+    const pastSeconds = Math.floor((Math.abs(diffMs) % 60000) / 1000);
+    
+    let display: string;
+    if (pastMinutes >= 60) {
+      const hours = Math.floor(pastMinutes / 60);
+      const mins = pastMinutes % 60;
+      display = mins > 0 ? `${hours}h ${mins}m ago` : `${hours}h ago`;
+    } else if (pastMinutes === 0) {
+      display = 'Now';
+    } else {
+      display = `${pastMinutes} min ago`;
+    }
+    
+    return { minutes: -pastMinutes, seconds: pastSeconds, isNow: false, isPast: true, display };
   }
 
   if (diffMs < 30000) {
-    // Less than 30 seconds - show "Now"
+    // Within 30 seconds of departure - show "Now"
     return { minutes: 0, seconds: 0, isNow: true, isPast: false, display: 'Now' };
   }
 
@@ -71,7 +86,7 @@ function calculateCountdown(targetTime: string | Date | null): CountdownResult {
     const mins = minutes % 60;
     display = mins > 0 ? `${hours}h ${mins}m` : `${hours}h`;
   } else {
-    display = `${minutes}`;
+    display = `${minutes} min`;
   }
 
   return {

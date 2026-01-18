@@ -407,6 +407,40 @@ export interface DeparturesResponse {
 // DISRUPTIONS/ALERTS - /api/disruptions/*
 // =============================================================================
 
+/** Alert priority levels from TfNSW (descending order of importance) */
+export type AlertPriority = 'veryHigh' | 'high' | 'normal' | 'low' | 'veryLow';
+
+/** Alert severity levels mapped from priority */
+export type AlertSeverity = 'severe' | 'warning' | 'info' | 'unknown';
+
+/** Alert type categories derived from content analysis */
+export type AlertType = 
+  | 'infrastructure'   // Lift/escalator issues
+  | 'cancellation'     // Service cancellations
+  | 'delay'            // Service delays
+  | 'closure'          // Station/line closures
+  | 'planned_works'    // Planned trackwork/maintenance
+  | 'info';            // General information
+
+/** Priority to numeric value mapping for sorting (lower = more important) */
+export const ALERT_PRIORITY_ORDER: Record<AlertPriority, number> = {
+  veryHigh: 1,
+  high: 2,
+  normal: 3,
+  low: 4,
+  veryLow: 5,
+};
+
+/** Alert type to display config */
+export const ALERT_TYPE_CONFIG: Record<AlertType, { label: string; icon: string }> = {
+  infrastructure: { label: 'Infrastructure', icon: 'wrench.and.screwdriver.fill' },
+  cancellation: { label: 'Cancellation', icon: 'xmark.octagon.fill' },
+  delay: { label: 'Delay', icon: 'clock.badge.exclamationmark.fill' },
+  closure: { label: 'Closure', icon: 'door.left.hand.closed' },
+  planned_works: { label: 'Planned Works', icon: 'calendar.badge.clock' },
+  info: { label: 'Information', icon: 'info.circle.fill' },
+};
+
 /**
  * Combined alert from GTFS and Trip Planner sources
  */
@@ -419,11 +453,15 @@ export interface DisruptionAlert {
   description?: string;
   /** Link for more information */
   url?: string;
-  /** Severity level */
-  severity: 'info' | 'warning' | 'severe' | 'unknown';
-  /** Effect on service */
+  /** Severity level (mapped from priority) */
+  severity: AlertSeverity;
+  /** TfNSW priority level (for sorting) */
+  priority?: AlertPriority;
+  /** Alert type category */
+  type?: AlertType;
+  /** Effect on service (GTFS effect) */
   effect: string;
-  /** Cause of disruption */
+  /** Cause of disruption (GTFS cause) */
   cause: string;
   /** Time periods when alert is active */
   activePeriods: { start?: number; end?: number }[];
@@ -431,8 +469,17 @@ export interface DisruptionAlert {
   affectedRoutes: string[];
   /** Affected stop IDs */
   affectedStops: string[];
+  /** Affected lines with detailed info */
+  affectedLines?: {
+    id?: string;
+    name?: string;
+    number?: string;
+    mode?: number;
+  }[];
+  /** Validity periods */
+  validity?: { from?: string; to?: string }[];
   /** Data source */
-  source: 'gtfs' | 'trip_planner';
+  source?: 'gtfs' | 'trip_planner' | 'trip_planner_add_info';
   /** Last update timestamp (Unix seconds) */
   updatedAt?: number;
 }

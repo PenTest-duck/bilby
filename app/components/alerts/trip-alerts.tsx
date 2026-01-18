@@ -9,6 +9,18 @@ import { useColorScheme } from '@/hooks/use-color-scheme';
 import { IconSymbol } from '@/components/ui/icon-symbol';
 import type { DisruptionAlert, RankedJourney } from '@/lib/api/types';
 
+/** TfNSW alert priority levels */
+type AlertPriority = 'veryHigh' | 'high' | 'normal' | 'low' | 'veryLow';
+
+/** Priority to numeric value for sorting (lower = more important) */
+const PRIORITY_ORDER: Record<AlertPriority, number> = {
+  veryHigh: 1,
+  high: 2,
+  normal: 3,
+  low: 4,
+  veryLow: 5,
+};
+
 interface TripAlertsProps {
   journey: RankedJourney;
   onAlertPress?: (alert: DisruptionAlert) => void;
@@ -114,11 +126,19 @@ export function TripAlerts({ journey, onAlertPress, compact = false }: TripAlert
     return null;
   }
 
-  // Sort alerts by effect priority (most severe first)
+  // Sort alerts by TfNSW priority first (if available), then by effect priority
   const sortedAlerts = [...alerts].sort((a, b) => {
-    const priorityA = EFFECT_CONFIG[a.effect]?.priority ?? 99;
-    const priorityB = EFFECT_CONFIG[b.effect]?.priority ?? 99;
-    return priorityA - priorityB;
+    // First sort by TfNSW priority (veryHigh > high > normal > low > veryLow)
+    const aPriority = (a as DisruptionAlert & { priority?: AlertPriority }).priority;
+    const bPriority = (b as DisruptionAlert & { priority?: AlertPriority }).priority;
+    const priorityA = aPriority ? (PRIORITY_ORDER[aPriority] ?? 99) : 99;
+    const priorityB = bPriority ? (PRIORITY_ORDER[bPriority] ?? 99) : 99;
+    if (priorityA !== priorityB) return priorityA - priorityB;
+    
+    // Then by effect priority
+    const effectPriorityA = EFFECT_CONFIG[a.effect]?.priority ?? 99;
+    const effectPriorityB = EFFECT_CONFIG[b.effect]?.priority ?? 99;
+    return effectPriorityA - effectPriorityB;
   });
 
   // Get highest priority effect for compact banner

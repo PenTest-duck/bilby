@@ -2,7 +2,7 @@
  * Departures Tab - Live Departures
  */
 
-import { useState, useCallback, useMemo } from 'react';
+import { useState, useCallback, useMemo, useEffect } from 'react';
 import { 
   View, 
   Text, 
@@ -12,6 +12,7 @@ import {
   FlatList,
   RefreshControl,
 } from 'react-native';
+import { useLocalSearchParams } from 'expo-router';
 import { Colors } from '@/constants/theme';
 import { useColorScheme } from '@/hooks/use-color-scheme';
 import { IconSymbol } from '@/components/ui/icon-symbol';
@@ -23,9 +24,18 @@ import { SkeletonDeparture } from '@/components/ui/skeleton';
 import { ErrorView } from '@/components/ui/error-view';
 import type { Stop, Departure } from '@/lib/api/types';
 
+/** Route params for departures screen */
+interface DeparturesParams {
+  /** Stop ID to pre-select */
+  stopId?: string;
+  /** Stop name for display */
+  stopName?: string;
+}
+
 export default function DeparturesScreen() {
   const colorScheme = useColorScheme() ?? 'light';
   const colors = Colors[colorScheme];
+  const params = useLocalSearchParams() as unknown as DeparturesParams;
 
   const [selectedStop, setSelectedStop] = useState<Stop | null>(null);
   const [showSearch, setShowSearch] = useState(false);
@@ -34,6 +44,21 @@ export default function DeparturesScreen() {
   // Fetch real recent stops from API
   const { data: recentStopsData } = useRecentStops();
   const addRecentStop = useAddRecentStop();
+
+  // Handle URL params - pre-select stop if provided (runs once on mount with params)
+  useEffect(() => {
+    if (params.stopId && params.stopName) {
+      const stop: Stop = {
+        id: params.stopId,
+        name: params.stopName,
+        type: 'stop',
+      };
+      setSelectedStop(stop);
+      // Track this stop in recents
+      addRecentStop.mutate({ stop_id: stop.id, stop_name: stop.name });
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [params.stopId, params.stopName]);
   
   // Convert recent stops to Stop format for display
   const recentStops = useMemo<Stop[]>(() => {

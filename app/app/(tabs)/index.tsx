@@ -87,13 +87,27 @@ export default function HomeScreen() {
   }, [recentStopsData]);
 
   const handleTripPress = (trip: DisplayTrip) => {
-    // Navigate to Plan tab with pre-filled stops
-    router.push('/plan');
+    // Navigate to trip details with origin/destination for fresh data
+    // The trip/[id] screen will fetch the best journey for this route
+    router.push({
+      pathname: '/trip/[id]',
+      params: {
+        id: trip.id,
+        from: tripsData?.trips?.find(t => t.id === trip.id)?.origin_id ?? '',
+        to: tripsData?.trips?.find(t => t.id === trip.id)?.destination_id ?? '',
+      },
+    });
   };
 
   const handleStopPress = (stop: DisplayStop) => {
     // Navigate to Departures tab with pre-selected stop
-    router.push('/departures');
+    router.push({
+      pathname: '/departures',
+      params: {
+        stopId: stop.id,
+        stopName: stop.name,
+      },
+    });
   };
 
   // Derive status info
@@ -256,30 +270,6 @@ export default function HomeScreen() {
             <LastUpdated dataUpdatedAt={dataUpdatedAt} />
           </Card>
         </View>
-
-        {/* Quick Actions */}
-        <View style={styles.quickActions}>
-          <QuickAction
-            icon="map.fill"
-            label="Plan Trip"
-            onPress={() => router.push('/plan')}
-          />
-          <QuickAction
-            icon="clock.fill"
-            label="Departures"
-            onPress={() => router.push('/departures')}
-          />
-          <QuickAction
-            icon="exclamationmark.triangle.fill"
-            label="Alerts"
-            onPress={() => router.push('/alerts')}
-          />
-          <QuickAction
-            icon="gearshape.fill"
-            label="Settings"
-            onPress={() => router.push('/settings')}
-          />
-        </View>
       </ScrollView>
 
       {/* Alert Detail Modal */}
@@ -368,6 +358,7 @@ function QuickTripCard({
   );
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function QuickAction({ 
   icon, 
   label, 

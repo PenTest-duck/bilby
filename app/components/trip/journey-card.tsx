@@ -6,9 +6,10 @@
 import { View, Text, StyleSheet, Pressable } from 'react-native';
 import { Colors } from '@/constants/theme';
 import { useColorScheme } from '@/hooks/use-color-scheme';
+import { useCountdown } from '@/hooks/use-countdown';
 import { ModeIcon } from '@/components/transport/mode-icon';
 import { LineBadge } from '@/components/transport/line-badge';
-import { formatTime, formatDuration, formatCountdown } from '@/lib/date';
+import { formatTime, formatDuration } from '@/lib/date';
 import { usePreferencesStore } from '@/stores/preferences-store';
 import type { RankedJourney, Leg, OpalCardType } from '@/lib/api/types';
 
@@ -24,7 +25,8 @@ const CARD_TYPE_TO_PERSON: Record<OpalCardType, string> = {
 /** Extract fare for a specific card type from journey fare data */
 function extractFareForCardType(journey: RankedJourney, cardType: OpalCardType): number | null {
   // Priority 1: Use enriched fare from GraphQL (most reliable)
-  if (journey.enrichedFare?.total) {
+  // Use typeof check instead of falsy check to handle $0.00 fares
+  if (journey.enrichedFare && typeof journey.enrichedFare.total === 'number') {
     // enrichedFare.total is already the adult fare
     // For other card types, apply approximate discount (GraphQL may have per-type data)
     const baseFare = journey.enrichedFare.total;
@@ -51,13 +53,14 @@ function extractFareForCardType(journey: RankedJourney, cardType: OpalCardType):
     t => t.person === personType && t.properties?.evaluationTicket
   );
   
-  if (totalTicket?.properties?.priceTotalFare) {
+  // Use typeof check instead of falsy check to handle $0.00 fares
+  if (totalTicket?.properties && typeof totalTicket.properties.priceTotalFare === 'number') {
     return totalTicket.properties.priceTotalFare as number;
   }
   
   // Fallback: find any ticket for this person type
   const anyTicket = fare.tickets.find(t => t.person === personType);
-  if (anyTicket?.priceBrutto) {
+  if (anyTicket && typeof anyTicket.priceBrutto === 'number') {
     return anyTicket.priceBrutto;
   }
   
@@ -83,9 +86,8 @@ export function JourneyCard({ journey, onPress, isBest = false }: JourneyCardPro
   const departureTime = formatTime(departurePlanned);
   const arrivalTime = formatTime(lastLeg?.destination?.arrivalTimePlanned ?? '');
   
-  // Countdown to departure (use estimated if available, otherwise planned)
-  const countdown = formatCountdown(departureEstimated || departurePlanned);
-  const isNow = countdown === 'Now';
+  // Real-time countdown to departure (use estimated if available, otherwise planned)
+  const countdown = useCountdown(departureEstimated || departurePlanned);
   
   // Compute total duration from legs (duration is in seconds, convert to minutes)
   const totalDurationSecs = journey.legs.reduce((sum, leg) => sum + (leg.duration ?? 0), 0);
@@ -116,16 +118,23 @@ export function JourneyCard({ journey, onPress, isBest = false }: JourneyCardPro
         </View>
       )}
 
-      {/* Countdown Badge */}
+      {/* Countdown Badge - updates in real-time, positioned below best badge if present */}
       <View style={[
         styles.countdownBadge, 
-        { backgroundColor: isNow ? colors.success : colors.backgroundSecondary }
+        isBest && styles.countdownBadgeWithBest,
+        { 
+          backgroundColor: countdown.isNow 
+            ? colors.success 
+            : countdown.isPast 
+              ? colors.textMuted 
+              : colors.backgroundSecondary 
+        }
       ]}>
         <Text style={[
           styles.countdownText, 
-          { color: isNow ? '#FFFFFF' : colors.text }
+          { color: countdown.isNow || countdown.isPast ? '#FFFFFF' : colors.text }
         ]}>
-          {isNow ? 'Now' : `${countdown} min`}
+          {countdown.display}
         </Text>
       </View>
 
@@ -257,6 +266,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     paddingVertical: 4,
     borderRadius: 12,
+  },
+  countdownBadgeWithBest: {
+    top: 28,
   },
   countdownText: {
     fontSize: 13,

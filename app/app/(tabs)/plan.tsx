@@ -99,12 +99,6 @@ export default function PlanScreen() {
   const handleSaveTrip = useCallback(async () => {
     if (!fromStop || !toStop || !isAuthenticated) return;
     
-    // Don't save if using current location (no stable ID)
-    if ((fromStop as LocationStop).isCurrentLocation) {
-      Alert.alert('Cannot Save', 'Trips using "My Location" cannot be saved. Please select a specific stop.');
-      return;
-    }
-    
     setIsSavingTrip(true);
     try {
       const tripName = `${fromStop.disassembledName || fromStop.name} → ${toStop.disassembledName || toStop.name}`;
@@ -146,11 +140,37 @@ export default function PlanScreen() {
       
       const { latitude, longitude } = location.coords;
       
+      // Try reverse geocoding to get street address
+      let displayName = 'My Location';
+      let disassembledName = 'Current Location';
+      
+      try {
+        const [address] = await Location.reverseGeocodeAsync({ latitude, longitude });
+        if (address) {
+          // Build a readable street address
+          const parts: string[] = [];
+          if (address.streetNumber) parts.push(address.streetNumber);
+          if (address.street) parts.push(address.street);
+          
+          if (parts.length > 0) {
+            displayName = parts.join(' ');
+            disassembledName = address.city || address.subregion || displayName;
+          } else if (address.name) {
+            displayName = address.name;
+            disassembledName = address.city || address.subregion || 'Current Location';
+          }
+        }
+      } catch (geocodeError) {
+        // Fallback to coordinates if reverse geocoding fails
+        console.warn('Reverse geocoding failed:', geocodeError);
+        displayName = `${latitude.toFixed(6)}, ${longitude.toFixed(6)}`;
+      }
+      
       const myLocation: LocationStop = {
-        id: 'my-location',
-        name: 'My Location',
-        disassembledName: 'Current Location',
-        type: 'poi',
+        id: `coord:${latitude},${longitude}`,
+        name: displayName,
+        disassembledName: disassembledName,
+        type: 'singlehouse',
         isCurrentLocation: true,
         coordinates: `${latitude},${longitude}`,
         coord: [latitude, longitude],
@@ -211,7 +231,7 @@ export default function PlanScreen() {
           />
           
           {/* Save Trip Button - only show when authenticated and both stops selected */}
-          {isAuthenticated && canSearch && !(fromStop as LocationStop)?.isCurrentLocation && (
+          {isAuthenticated && canSearch && (
             <Pressable
               style={[styles.saveButton, { backgroundColor: colors.backgroundSecondary }]}
               onPress={handleSaveTrip}
